@@ -1,0 +1,4 @@
+interface:
+  display_name: "AD-Alterome Report"
+  short_description: "Fixed AD-Alterome evidence reports"
+  default_prompt: "Use $adalterome-report to summarize AD-Alterome evidence for MAPT in the fixed format."
