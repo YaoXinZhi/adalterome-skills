@@ -11,6 +11,9 @@ These skills are designed for users who want to explore AD-related genes, phenot
 | `adalterome-api` | Stable | Query AD-Alterome REST API for schema, hypotheses, gene events, term events, hypothesis support, overviews, two-gene comparison, original evidence sentences, and PubMed links. | "query AD-Alterome", "gene events", "term events", "hypothesis support", "PubMed evidence", "PMID evidence" |
 | `adalterome-report` | Stable | Convert AD-Alterome API results into fixed-format evidence reports with stable sections, source links, original sentences, and caveats. | "fixed report", "standard report", "evidence summary", "AD-Alterome report" |
 | `adalterome-gene-report` | Advanced | Generate deep researcher-facing gene reports with overview statistics, high-quality evidence rows, PubMed links, term/hypothesis interpretation, mechanism synthesis, and research gaps. | "deep gene report", "MAPT report", "APOE evidence dossier", "mechanism synthesis" |
+| `adalterome-term-report` | Advanced | Generate deep phenotype, ontology term, or pathological-process reports with top genes, hypotheses, original sentences, PubMed links, and broad-term caveats. | "phenotype report", "term report", "mitochondrial dysfunction", "neuroinflammation" |
+| `adalterome-hypothesis-report` | Advanced | Generate deep AD hypothesis support reports with top genes, top terms, source-traceable evidence, and support pattern synthesis. | "hypothesis report", "Amyloid Hypothesis", "Tau Protein Hypothesis", "support evidence" |
+| `adalterome-compare-report` | Advanced | Generate two-gene comparison reports with shared/distinct terms, shared/distinct hypotheses, and evidence traces for each gene. | "compare genes", "APOE vs APP", "gene comparison", "shared mechanisms" |
 
 ## Requirements
 
@@ -52,6 +55,9 @@ mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 cp -R skills/adalterome-api "${CODEX_HOME:-$HOME/.codex}/skills/"
 cp -R skills/adalterome-report "${CODEX_HOME:-$HOME/.codex}/skills/"
 cp -R skills/adalterome-gene-report "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R skills/adalterome-term-report "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R skills/adalterome-hypothesis-report "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R skills/adalterome-compare-report "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
 Restart Codex after installation so the skills can be discovered.
@@ -138,6 +144,70 @@ Expected outputs:
 - `outputs/mapt_deep/data/query.json`
 - `outputs/mapt_deep/data/overview.json`
 - `outputs/mapt_deep/data/evidence.json`
+
+## Deep Term / Phenotype Report
+
+Use `adalterome-term-report` for a phenotype, ontology term, or pathological process:
+
+```text
+Use $adalterome-term-report to create a deep AD-Alterome report for mitochondrial dysfunction.
+```
+
+Equivalent script:
+
+```bash
+python skills/adalterome-term-report/scripts/build_term_report.py --term "mitochondrial dysfunction" --output-dir outputs/mitochondrial_dysfunction --top-k 12
+```
+
+Expected outputs:
+
+- `outputs/mitochondrial_dysfunction/report.md`
+- `outputs/mitochondrial_dysfunction/data/query.json`
+- `outputs/mitochondrial_dysfunction/data/overview.json`
+- `outputs/mitochondrial_dysfunction/data/evidence.json`
+
+## Deep Hypothesis Report
+
+Use `adalterome-hypothesis-report` for an AD hypothesis support dossier:
+
+```text
+Use $adalterome-hypothesis-report to summarize evidence for the Amyloid Hypothesis.
+```
+
+Equivalent script:
+
+```bash
+python skills/adalterome-hypothesis-report/scripts/build_hypothesis_report.py --hypothesis "Amyloid Hypothesis" --output-dir outputs/amyloid_hypothesis --top-k 12
+```
+
+Expected outputs:
+
+- `outputs/amyloid_hypothesis/report.md`
+- `outputs/amyloid_hypothesis/data/query.json`
+- `outputs/amyloid_hypothesis/data/overview.json`
+- `outputs/amyloid_hypothesis/data/evidence.json`
+
+## Two-Gene Compare Report
+
+Use `adalterome-compare-report` for shared and distinct AD-Alterome patterns between two genes:
+
+```text
+Use $adalterome-compare-report to compare APOE and APP with evidence traces.
+```
+
+Equivalent script:
+
+```bash
+python skills/adalterome-compare-report/scripts/build_compare_report.py --gene-a APOE --gene-b APP --output-dir outputs/apoe_vs_app --top-k 8
+```
+
+Expected outputs:
+
+- `outputs/apoe_vs_app/report.md`
+- `outputs/apoe_vs_app/data/query.json`
+- `outputs/apoe_vs_app/data/compare.json`
+- `outputs/apoe_vs_app/data/gene_a_evidence.json`
+- `outputs/apoe_vs_app/data/gene_b_evidence.json`
 
 ## Evidence Payload
 

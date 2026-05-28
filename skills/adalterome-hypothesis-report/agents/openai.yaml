@@ -1,0 +1,4 @@
+interface:
+  display_name: "AD-Alterome Hypothesis Report"
+  short_description: "Deep AD hypothesis evidence reports"
+  default_prompt: "Use $adalterome-hypothesis-report to summarize evidence for the Amyloid Hypothesis."

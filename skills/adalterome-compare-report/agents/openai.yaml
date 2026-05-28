@@ -1,0 +1,4 @@
+interface:
+  display_name: "AD-Alterome Compare Report"
+  short_description: "Compare two AD-Alterome genes"
+  default_prompt: "Use $adalterome-compare-report to compare APOE and APP with evidence traces."

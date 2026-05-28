@@ -19,6 +19,21 @@ This repository follows the layered style of `r1seee/cucurlitbase-skills`.
    - Builds a deep Markdown draft for one gene.
    - Supports mechanism synthesis, evidence caveats, and follow-up gap analysis.
 
+4. `adalterome-term-report`
+   - Research-style report skill for phenotypes, ontology terms, and pathological processes.
+   - Uses `/term/overview` and `/term/events`.
+   - Emphasizes top genes, top hypotheses, evidence traces, and broad-term caveats.
+
+5. `adalterome-hypothesis-report`
+   - Research-style report skill for AD hypothesis support.
+   - Uses `/hypothesis/overview` and `/hypothesis/support`.
+   - Separates curated hypothesis labels from original sentence evidence.
+
+6. `adalterome-compare-report`
+   - Research-style report skill for two-gene comparison.
+   - Uses `/compare/genes` plus sentence-level evidence for both genes.
+   - Keeps common patterns and gene-specific evidence separate.
+
 ## Writing Style
 
 - Keep `SKILL.md` short and procedural.
@@ -42,5 +57,8 @@ adalterome-skills/
 └── skills/
     ├── adalterome-api/
     ├── adalterome-report/
-    └── adalterome-gene-report/
+    ├── adalterome-gene-report/
+    ├── adalterome-term-report/
+    ├── adalterome-hypothesis-report/
+    └── adalterome-compare-report/
 ```
