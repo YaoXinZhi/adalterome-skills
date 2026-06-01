@@ -20,10 +20,10 @@ python scripts/query_adalterome.py hypothesis-support --hypothesis "Amyloid Hypo
 python scripts/query_adalterome.py compare --gene-a APOE --gene-b APP --output report
 ```
 
-The default API base URL is `http://127.0.0.1:8010`. Override it with:
+The default API base URL is `http://117.72.176.137/api/adalterome`. Override it with:
 
 ```bash
-python scripts/query_adalterome.py gene-events --gene MAPT --base-url http://127.0.0.1:8010
+python scripts/query_adalterome.py gene-events --gene MAPT --base-url http://117.72.176.137/api/adalterome
 ```
 
 Read [references/api_docs.md](references/api_docs.md) when you need endpoint details or response fields.

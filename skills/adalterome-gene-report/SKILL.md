@@ -33,7 +33,7 @@ Expected outputs:
 Optional API override:
 
 ```bash
-python scripts/build_gene_report.py --gene APOE --base-url http://127.0.0.1:8010 --output-dir outputs/apoe_deep
+python scripts/build_gene_report.py --gene APOE --base-url http://117.72.176.137/api/adalterome --output-dir outputs/apoe_deep
 ```
 
 ## Report Standard

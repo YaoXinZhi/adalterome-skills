@@ -17,24 +17,24 @@ These skills are designed for users who want to explore AD-related genes, phenot
 
 ## Requirements
 
-These skills assume an AD-Alterome REST API service is available.
+These skills use the public AD-Alterome REST API by default.
 
-Default local base URL:
+Default public base URL:
 
 ```text
-http://127.0.0.1:8010
+http://117.72.176.137/api/adalterome
 ```
 
 You can override it per command:
 
 ```bash
-python scripts/query_adalterome.py gene-events --gene MAPT --base-url http://127.0.0.1:8010
+python scripts/query_adalterome.py gene-events --gene MAPT --base-url http://117.72.176.137/api/adalterome
 ```
 
 or by environment variable:
 
 ```bash
-export ADALTEROME_API_BASE_URL=http://127.0.0.1:8010
+export ADALTEROME_API_BASE_URL=http://117.72.176.137/api/adalterome
 ```
 
 The scripts use only Python standard library modules.

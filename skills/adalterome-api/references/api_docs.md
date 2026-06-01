@@ -2,10 +2,10 @@
 
 ## Base URL
 
-Default local service:
+Default public service:
 
 ```text
-http://127.0.0.1:8010
+http://117.72.176.137/api/adalterome
 ```
 
 Override with `--base-url` or `ADALTEROME_API_BASE_URL`.
