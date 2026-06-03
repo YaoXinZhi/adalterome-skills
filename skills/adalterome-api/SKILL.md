@@ -9,21 +9,22 @@ Use this skill to query AD-Alterome through the REST API instead of guessing dat
 
 ## Quick Start
 
-Run the bundled script:
+Run the bundled script with `python3`:
 
 ```bash
-python scripts/query_adalterome.py schema
-python scripts/query_adalterome.py hypotheses --output summary
-python scripts/query_adalterome.py gene-events --gene MAPT --top-k 5 --output report
-python scripts/query_adalterome.py term-events --term "mitochondrial dysfunction" --top-k 5 --output report
-python scripts/query_adalterome.py hypothesis-support --hypothesis "Amyloid Hypothesis" --top-k 5 --output evidence-md
-python scripts/query_adalterome.py compare --gene-a APOE --gene-b APP --output report
+python3 scripts/query_adalterome.py schema
+python3 scripts/query_adalterome.py hypotheses --output summary
+python3 scripts/query_adalterome.py gene-events --gene MAPT --top-k 5 --output report
+python3 scripts/query_adalterome.py term-events --term "mitochondrial dysfunction" --top-k 5 --output report
+python3 scripts/query_adalterome.py hypothesis-support --hypothesis "Amyloid Hypothesis" --top-k 5 --output evidence-md
+python3 scripts/query_adalterome.py term-curation --term "mitochondrial dysfunction" --selected-limit 30 --output report
+python3 scripts/query_adalterome.py compare --gene-a APOE --gene-b APP --output report
 ```
 
 The default API base URL is `http://117.72.176.137/api/adalterome`. Override it with:
 
 ```bash
-python scripts/query_adalterome.py gene-events --gene MAPT --base-url http://117.72.176.137/api/adalterome
+python3 scripts/query_adalterome.py gene-events --gene MAPT --base-url http://117.72.176.137/api/adalterome
 ```
 
 Read [references/api_docs.md](references/api_docs.md) when you need endpoint details or response fields.
@@ -35,11 +36,13 @@ Read [references/boundary_responses.md](references/boundary_responses.md) when t
 1. Decide whether the user needs discovery, retrieval, aggregation, or comparison.
 2. Use `schema` to verify fields if the API shape is uncertain.
 3. Use `hypotheses` before hypothesis search when the exact hypothesis name is unclear.
-4. Use `gene-events`, `term-events`, or `hypothesis-support` for sentence-level evidence.
+4. Use `gene-events`, `term-events`, or `hypothesis-support` for lightweight sentence-level evidence.
 5. Use `gene-overview`, `term-overview`, or `hypothesis-overview` for aggregate statistics.
-6. Use `compare` for two-gene shared/distinct term and hypothesis summaries.
-7. Preserve `Evidence.sentence`, `Evidence.pubmed_url`, `Evidence.event`, and `EvidenceQualityScore` in user-facing answers.
-8. Do not invent PubMed links; only use `PMID` or `Evidence.pubmed_url` returned by the API.
+6. Use `gene-curation`, `term-curation`, or `hypothesis-curation` for report-grade full-pool event deduplication, long-tail sampling, and mechanism-stratified curation.
+7. Use `compare` for two-gene shared/distinct term and hypothesis summaries.
+8. Preserve `Evidence.sentence`, `Evidence.pubmed_url`, and `Evidence.event` in user-facing answers.
+9. Do not invent PubMed links; only use `PMID` or `Evidence.pubmed_url` returned by the API.
+10. Do not display or interpret `EvidenceScore` in skill-facing reports; it may remain in raw API JSON for compatibility.
 
 ## Supported Tasks
 
@@ -53,6 +56,12 @@ Read [references/boundary_responses.md](references/boundary_responses.md) when t
 - `gene-events --gene GENE`
 - `term-events --term TERM`
 - `hypothesis-support --hypothesis HYPOTHESIS`
+
+### Curate full-pool evidence for reports
+
+- `gene-curation --gene GENE --selected-limit 30`
+- `term-curation --term TERM --selected-limit 30`
+- `hypothesis-curation --hypothesis HYPOTHESIS --selected-limit 30`
 
 ### Retrieve overviews
 
@@ -70,7 +79,7 @@ Read [references/boundary_responses.md](references/boundary_responses.md) when t
 - Use `--output report` for stable user-facing answers.
 - Use `--output evidence-md` when the user specifically wants traceable evidence sentences and PubMed links.
 - Use `--output json` when exact fields are needed or another script will consume the result.
-- Use higher `--top-k` sparingly; the API already re-ranks a small candidate pool by evidence quality.
+- For deep reports, prefer the dedicated builder scripts. They use API overview endpoints for aggregate statistics and server-side curation endpoints for full-pool event deduplication, long-tail sampling, and source-traceable representative evidence. If the server does not yet expose curation endpoints, builders fall back to capped event endpoints.
 
 ## Evidence Contract
 
@@ -80,9 +89,14 @@ Event-style endpoints return a normalized evidence block:
 - `Evidence.rich_sentence_html`: highlighted sentence with AD-Alterome spans.
 - `Evidence.pubmed_url`: direct PubMed link from PMID.
 - `Evidence.article`: journal, year, MeSH, publication types, and substances when available.
-- `Evidence.biological_context`: gene, alteration, trigger, term, and ontology fields.
+- `Evidence.biological_context`: gene, alteration, trigger, term, and ontology fields. Treat `AlterationType` as the genetic alteration taxonomy; `TriggerWord` and `RegType` are event relation/regulation context, not alteration labels.
 - `Evidence.ad_interpretation`: AD hypothesis, mechanism, relevance, and explanation fields.
-- `EvidenceQualityScore`: deterministic sentence-quality score used to push generic low-information sentences down.
+- `EvidenceQualityScore`: API-side sentence-quality field; deep report curation computes its own sentence informativeness and does not rely on raw scoring fields.
+- `EvidenceScore`: raw API compatibility field. Skills intentionally hide and ignore it.
+
+## Evidence Curation Layer
+
+Deep report skills use `scripts/evidence_fetch.py` plus `scripts/evidence_curation.py` as an intermediate layer between API retrieval and final summaries. When the API server exposes `/gene/curation`, `/term/curation`, and `/hypothesis/curation`, the builders retrieve a server-side curation package computed over the complete matched query pool, not the capped event sample. The curation layer performs query-specific event deduplication, computes query-relative top and long-tail patterns for genes, gene-alteration pairs, phenotypes, and hypotheses where relevant, groups evidence into a small stable set of evidence types, and creates candidate mechanism strata for LLM-assisted expert interpretation.
 
 ## Fixed Report Format
 
@@ -111,3 +125,5 @@ The `## API Links` section must include `api_page` and `request_url`.
 - API reference: [references/api_docs.md](references/api_docs.md)
 - Output guide: [references/output_layers.md](references/output_layers.md)
 - Boundary responses: [references/boundary_responses.md](references/boundary_responses.md)
+- Evidence curation helpers: [scripts/evidence_curation.py](scripts/evidence_curation.py)
+- Evidence fetch helpers: [scripts/evidence_fetch.py](scripts/evidence_fetch.py)

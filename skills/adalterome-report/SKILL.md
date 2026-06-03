@@ -12,10 +12,10 @@ Use this skill for stable presentation and reporting. Fetch data through the sib
 Use the installed API script with `--output report`:
 
 ```bash
-python ../adalterome-api/scripts/query_adalterome.py gene-events --gene MAPT --top-k 5 --output report
-python ../adalterome-api/scripts/query_adalterome.py term-events --term "mitochondrial dysfunction" --top-k 5 --output report
-python ../adalterome-api/scripts/query_adalterome.py hypothesis-support --hypothesis "Tau Protein Hypothesis" --top-k 5 --output report
-python ../adalterome-api/scripts/query_adalterome.py compare --gene-a APOE --gene-b APP --output report
+python3 ../adalterome-api/scripts/query_adalterome.py gene-events --gene MAPT --top-k 5 --output report
+python3 ../adalterome-api/scripts/query_adalterome.py term-events --term "mitochondrial dysfunction" --top-k 5 --output report
+python3 ../adalterome-api/scripts/query_adalterome.py hypothesis-support --hypothesis "Tau Protein Hypothesis" --top-k 5 --output report
+python3 ../adalterome-api/scripts/query_adalterome.py compare --gene-a APOE --gene-b APP --output report
 ```
 
 Read [references/output_contract.md](references/output_contract.md) before changing the report section order.
@@ -54,6 +54,7 @@ When delivering a report, keep these sections:
 - Do not invent records absent from the API response.
 - Do not drop `request_url`; it is the reproducibility link.
 - Do not silently remove PMID or PubMed links.
+- Do not display or interpret `EvidenceScore`; it is a raw API compatibility field.
 - Do not turn weak sentence-level associations into strong causality.
 - Do not use this brief report skill for a deep researcher-facing gene dossier; use `adalterome-gene-report`.
 

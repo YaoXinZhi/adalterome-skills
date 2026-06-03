@@ -6,7 +6,7 @@ Report that the gene was not found in AD-Alterome. Suggest checking the gene sym
 
 ## Sparse Evidence
 
-If fewer than three high-quality evidence records are returned, deliver a short evidence note rather than a full mechanistic report.
+If fewer than three curated representative evidence records are returned, deliver a short evidence note rather than a full mechanistic report.
 
 ## Generic Sentences
 

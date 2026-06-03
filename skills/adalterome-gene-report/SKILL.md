@@ -1,6 +1,6 @@
 ---
 name: adalterome-gene-report
-description: Build deep researcher-facing AD-Alterome gene reports from one Alzheimer disease gene query. Use when the user wants a multi-section Markdown/DOCX-ready literature evidence report with AD-Alterome gene overview, high-quality sentence evidence, PubMed links, term and hypothesis interpretation, mechanism synthesis, evidence-strength caveats, original sentence traces, comparison-ready context, and follow-up research gaps.
+description: Build deep researcher-facing AD-Alterome gene reports from one Alzheimer disease gene query. Use when the user wants a multi-section Markdown/DOCX-ready literature evidence report with AD-Alterome API gene overview, curated representative evidence, top and long-tail gene-alteration/phenotype patterns, PubMed links, term and hypothesis interpretation, mechanism-stratified synthesis, original sentence traces, comparison-ready context, and follow-up research gaps.
 ---
 
 # AD-Alterome Gene Report
@@ -9,18 +9,18 @@ Use this skill when the user wants a research-style report for one AD-related ge
 
 ## Workflow
 
-1. Run the report builder script with `--gene`, `--output-dir`, and an evidence `--top-k`.
-2. Inspect `data/evidence.json` and `data/overview.json`.
+1. Run the report builder script with `--gene` and `--output-dir`; use `--selected-limit` to control displayed evidence from the server-side full-pool curation package. `--curation-limit` only controls capped event-endpoint fallback mode.
+2. Inspect `data/curation.json`, `data/evidence.json`, and `data/overview.json`.
 3. Read [references/report_contract_gene_deep.md](references/report_contract_gene_deep.md), [references/evidence_schema.md](references/evidence_schema.md), and [references/final_report_playbook.md](references/final_report_playbook.md).
 4. Expand `report.md` into a researcher-level final report if the user needs more depth.
 5. Keep exact original evidence sentences and PubMed links traceable.
-6. Calibrate claims by `EvidenceScore`, `EvidenceQualityScore`, `MechanismProvided`, `RelevantToAD`, and whether the original sentence supports causality.
+6. Do not use or display `EvidenceScore`; calibrate claims by exact sentence content, provenance, curation reasons, sentence informativeness, `MechanismProvided`, `RelevantToAD`, and whether the original sentence supports causality.
 7. If evidence is sparse or generic, use [references/boundary_responses.md](references/boundary_responses.md) instead of padding unsupported claims.
 
 ## Quick Start
 
 ```bash
-python scripts/build_gene_report.py --gene MAPT --output-dir outputs/mapt_deep --top-k 12
+python3 scripts/build_gene_report.py --gene MAPT --output-dir outputs/mapt_deep --selected-limit 30
 ```
 
 Expected outputs:
@@ -29,11 +29,12 @@ Expected outputs:
 - `data/query.json`
 - `data/overview.json`
 - `data/evidence.json`
+- `data/curation.json`
 
 Optional API override:
 
 ```bash
-python scripts/build_gene_report.py --gene APOE --base-url http://117.72.176.137/api/adalterome --output-dir outputs/apoe_deep
+python3 scripts/build_gene_report.py --gene APOE --base-url http://117.72.176.137/api/adalterome --output-dir outputs/apoe_deep
 ```
 
 ## Report Standard
@@ -41,20 +42,24 @@ python scripts/build_gene_report.py --gene APOE --base-url http://117.72.176.137
 The final report should follow this storyline:
 
 1. query scope and data provenance
-2. executive claim
-3. evidence/source map
-4. high-quality evidence table
-5. phenotype and ontology-term interpretation
-6. AD hypothesis interpretation
-7. mechanism synthesis
-8. evidence strength and limitations
-9. research gaps and follow-up priorities
+2. global evidence landscape
+3. evidence curation layer
+4. mechanism-stratified evidence map
+5. representative molecular and pathological evidence
+6. long-tail evidence signals
+7. chronological evidence trajectory
+8. original evidence traces
+9. interpretation guide and follow-up priorities
 
 ## Current Boundaries
 
 - AD-Alterome is a curated sentence-level evidence source, not a full-text causal validation system.
 - PubMed links come from PMID and do not imply full article access.
-- `EvidenceQualityScore` improves sentence selection but cannot replace expert curation.
+- Deep reports use their own sentence informativeness score for curation; API `EvidenceQualityScore` may exist in raw JSON but is not treated as proof strength.
+- `EvidenceScore` may exist in raw API JSON but is ignored by this skill.
+- `--top-k` is retained only as a deprecated alias for fallback event-endpoint sampling; do not use it to mean final report length.
+- Deep reports prefer server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence. REST event endpoints remain capped and are used only for lightweight retrieval or fallback.
+- Genetic alteration taxonomy comes from the leading `AlterationType` value. `TriggerWord` and `RegType` are regulatory/event context, not alteration labels.
 - Generic sentences may still appear when the database has limited high-information evidence.
 - External enrichment such as UniProt, NCBI Gene, GWAS Catalog, or OpenTargets should be reported separately if added.
 

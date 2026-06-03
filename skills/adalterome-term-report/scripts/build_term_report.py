@@ -6,11 +6,32 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import sys
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+
+
+SKILLS_DIR = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(SKILLS_DIR / "adalterome-api" / "scripts"))
+
+from evidence_curation import (  # noqa: E402
+    build_curation_package,
+    md,
+    render_chronology,
+    render_curation_overview,
+    render_evidence_traces,
+    render_long_tail,
+    render_selected_table,
+)
+from evidence_fetch import (  # noqa: E402
+    API_MAX_TOP_K,
+    curation_package_from_response,
+    fetch_term_curation,
+    fetch_term_events_for_curation,
+)
 
 
 DEFAULT_BASE_URL = os.environ.get("ADALTEROME_API_BASE_URL", "http://117.72.176.137/api/adalterome")
@@ -31,94 +52,98 @@ def get_json(base_url: str, path: str, params: dict[str, Any], timeout: float) -
         raise SystemExit(f"API connection error: {exc.reason}") from exc
 
 
-def rows(payload: dict[str, Any]) -> list[dict[str, Any]]:
-    records = (payload.get("data") or {}).get("results")
-    if not isinstance(records, list):
-        return []
-    seen: set[tuple[str, str]] = set()
-    unique: list[dict[str, Any]] = []
-    for row in records:
-        ev = row.get("Evidence") or {}
-        key = (str(ev.get("pmid") or row.get("PMID") or ""), str(ev.get("sentence") or row.get("Sentence") or ""))
-        if key not in seen:
-            seen.add(key)
-            unique.append(row)
-    return unique
+def render_mechanism_map(curation: dict[str, Any]) -> list[str]:
+    lines = ["## Mechanism-Stratified Evidence Map", ""]
+    strata = curation.get("mechanism_strata") or {}
+    if not strata:
+        lines.append("No mechanism strata were inferred from the selected evidence.")
+        return lines
+    lines.extend(["| Candidate mechanism stratum | Selected evidence rows | Representative genes |", "| --- | --- | --- |"])
+    for name, items in strata.items():
+        genes = []
+        for item in items:
+            value = item.get("Gene")
+            if value and value not in genes:
+                genes.append(value)
+        lines.append(f"| {md(name)} | {len(items)} | {md(', '.join(genes[:8]) or '-')} |")
+    lines.extend(
+        [
+            "",
+            "These strata organize molecular and pathological mechanisms for expert review; they are not hard ontology labels.",
+        ]
+    )
+    return lines
 
 
-def md(value: Any) -> str:
-    return ("" if value is None else str(value)).replace("|", "\\|").replace("\n", " ")
-
-
-def render(term: str, base_url: str, overview_url: str, evidence_url: str, overview: dict[str, Any], evidence: dict[str, Any]) -> str:
-    evidence_rows = rows(evidence)
+def render(term: str, base_url: str, overview_url: str, evidence_url: str, overview: dict[str, Any], curation: dict[str, Any]) -> str:
     summary = (overview.get("data") or {}).get("summary") or {}
     top_genes = (overview.get("data") or {}).get("top_genes") or []
     top_hypotheses = (overview.get("data") or {}).get("top_hypotheses") or []
     lines = [
         f"# AD-Alterome Term Report: {term}",
         "",
-        "## 1. Query Scope and Provenance",
+        "## Query Scope and Data Provenance",
         "",
         f"- Target term: `{term}`",
         f"- API base URL: `{base_url.rstrip('/')}`",
         f"- Overview request: {overview_url}",
-        f"- Evidence request: {evidence_url}",
-        f"- Returned unique evidence rows: {len(evidence_rows)}",
+        f"- Curation evidence source: {evidence_url}",
+        f"- Curation package: `data/curation.json`",
         "",
-        "## 2. Term-Centered Executive Claim",
+        "## Global Evidence Landscape",
         "",
         f"AD-Alterome links `{term}` to {summary.get('event_count', 'unknown')} event records, {summary.get('pmid_count', 'unknown')} PMID(s), {summary.get('gene_count', 'unknown')} gene(s), and {summary.get('hypothesis_count', 'unknown')} AD hypothesis field(s). Treat this as a curated literature evidence map rather than a causal conclusion.",
         "",
-        "## 3. Top Genes and Hypotheses",
-        "",
         "### Top genes",
+        "",
     ]
-    for item in top_genes[:10]:
-        lines.append(f"- {item.get('Gene')}: {item.get('freq')}")
-    lines.append("")
-    lines.append("### Top hypotheses")
-    for item in top_hypotheses[:10]:
-        lines.append(f"- {item.get('Hypothesis')}: {item.get('freq')}")
-    lines.extend(["", "## 4. High-Quality Evidence Table", "", "| # | PMID | Gene | Term | Hypothesis | Score | Quality |", "| --- | --- | --- | --- | --- | --- | --- |"])
-    for i, row in enumerate(evidence_rows, start=1):
-        ev = row.get("Evidence") or {}
-        pmid = ev.get("pmid") or row.get("PMID") or "-"
-        url = ev.get("pubmed_url") or (f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/" if pmid != "-" else "")
-        lines.append(f"| {i} | [{pmid}]({url}) | {md(row.get('Gene'))} | {md(row.get('TermName'))} | {md(row.get('Hypothesis'))} | {md(row.get('EvidenceScore'))} | {md(row.get('EvidenceQualityScore'))} |")
-    lines.extend(["", "## 5. Original Evidence Traces", ""])
-    for i, row in enumerate(evidence_rows, start=1):
-        ev = row.get("Evidence") or {}
-        article = ev.get("article") or {}
-        pmid = ev.get("pmid") or row.get("PMID") or "-"
-        sentence = ev.get("sentence") or row.get("Sentence") or "-"
-        lines.extend([
-            f"### Evidence {i}: PMID {pmid}",
+    if top_genes:
+        for item in top_genes[:10]:
+            lines.append(f"- {item.get('Gene')}: {item.get('freq')}")
+    else:
+        lines.append("- None returned.")
+    lines.extend(["", "### Top hypotheses", ""])
+    if top_hypotheses:
+        for item in top_hypotheses[:10]:
+            lines.append(f"- {item.get('Hypothesis')}: {item.get('freq')}")
+    else:
+        lines.append("- None returned.")
+    lines.extend([""])
+    lines.extend(render_curation_overview(curation))
+    lines.extend(render_mechanism_map(curation))
+    lines.extend([""])
+    lines.extend(render_selected_table(curation, "Representative Molecular and Pathological Evidence"))
+    lines.extend([""])
+    lines.extend(render_long_tail(curation))
+    lines.extend([""])
+    lines.extend(render_chronology(curation))
+    lines.extend([""])
+    lines.extend(render_evidence_traces(curation))
+    lines.extend(
+        [
             "",
-            f"- PubMed: {ev.get('pubmed_url') or '-'}",
-            f"- Gene: {row.get('Gene') or '-'}",
-            f"- Journal/Year: {article.get('journal') or row.get('Journal') or '-'} / {article.get('year') or row.get('Year') or '-'}",
-            f"- Original sentence: {sentence}",
+            "## Interpretation Guide for the User Question",
             "",
-        ])
-    lines.extend([
-        "## 6. Mechanism and Pathway Interpretation",
-        "",
-        "Group mechanisms by recurring genes, terms, Event chains, and hypothesis labels. Keep direct sentence evidence separate from curated AD-Alterome interpretation.",
-        "",
-        "## 7. Evidence Limitations",
-        "",
-        "- Broad terms may aggregate heterogeneous mechanisms.",
-        "- Record count can reflect literature density rather than biological importance.",
-        "- Generic sentences should be treated as weak evidence even when ranked highly.",
-        "",
-        "## 8. Follow-Up Research Priorities",
-        "",
-        "- Prioritize top genes supported by multiple PMIDs.",
-        "- Check whether support comes from original experiments, reviews, or database interpretation.",
-        "- Add external validation sources only in a separate enrichment section.",
-    ])
+            "- Use the global statistics to describe how broadly this term is represented across genes and hypotheses.",
+            "- Use curated representative evidence to summarize molecular mechanisms instead of relying on raw API ranking.",
+            "- Treat candidate mechanism strata as LLM-assisted organization for expert review.",
+            "- Keep broad disease association evidence separate from molecular or model-based evidence.",
+            "",
+            "## Follow-Up Research Priorities",
+            "",
+            "- Use `--selected-limit` to request a larger displayed set from the server-side full-pool curation endpoint.",
+            "- `--curation-limit` only affects fallback mode when the server does not expose `/term/curation`.",
+            "- Review `data/curation.json` to filter by `EvidenceType`, `MechanismStrata`, `IsLongTailEvidence`, year, gene, phenotype, gene-alteration pair, or alteration taxonomy.",
+            "- Validate whether selected mechanisms are supported by original experiments, reviews, or curated interpretation fields.",
+        ]
+    )
     return "\n".join(lines)
+
+
+def resolve_curation_limit(args: argparse.Namespace) -> int:
+    if args.top_k is not None:
+        return args.top_k
+    return args.curation_limit
 
 
 def main() -> int:
@@ -126,18 +151,38 @@ def main() -> int:
     parser.add_argument("--term", required=True)
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL)
-    parser.add_argument("--top-k", type=int, default=12)
+    parser.add_argument("--curation-limit", type=int, default=API_MAX_TOP_K, help=f"Fallback rows to request from the capped API event endpoint if /term/curation is unavailable. 0 or values above {API_MAX_TOP_K} use {API_MAX_TOP_K}.")
+    parser.add_argument("--top-k", type=int, default=None, help="Deprecated alias for --curation-limit. Prefer --selected-limit for display size.")
+    parser.add_argument("--selected-limit", type=int, default=30)
     parser.add_argument("--timeout", type=float, default=180)
     args = parser.parse_args()
     output_dir = Path(args.output_dir)
     data_dir = output_dir / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
     overview_url, overview = get_json(args.base_url, "/term/overview", {"term": args.term}, args.timeout)
-    evidence_url, evidence = get_json(args.base_url, "/term/events", {"term": args.term, "top_k": args.top_k}, args.timeout)
+    curation_limit = resolve_curation_limit(args)
+    evidence_url, server_curation = fetch_term_curation(
+        args.base_url,
+        args.term,
+        args.timeout,
+        selected_limit=args.selected_limit,
+    )
+    if server_curation:
+        evidence = server_curation
+        curation = curation_package_from_response(server_curation) or {}
+    else:
+        evidence_url, evidence = fetch_term_events_for_curation(
+            args.base_url,
+            args.term,
+            args.timeout,
+            curation_limit=curation_limit,
+        )
+        curation = build_curation_package(evidence, overview=overview, selected_limit=args.selected_limit, query_type="term")
     (data_dir / "query.json").write_text(json.dumps(vars(args), ensure_ascii=False, indent=2), encoding="utf-8")
     (data_dir / "overview.json").write_text(json.dumps(overview, ensure_ascii=False, indent=2), encoding="utf-8")
     (data_dir / "evidence.json").write_text(json.dumps(evidence, ensure_ascii=False, indent=2), encoding="utf-8")
-    report = render(args.term, args.base_url, overview_url, evidence_url, overview, evidence)
+    (data_dir / "curation.json").write_text(json.dumps(curation, ensure_ascii=False, indent=2), encoding="utf-8")
+    report = render(args.term, args.base_url, overview_url, evidence_url, overview, curation)
     (output_dir / "report.md").write_text(report, encoding="utf-8")
     print(output_dir / "report.md")
     return 0

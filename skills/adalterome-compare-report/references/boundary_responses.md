@@ -6,7 +6,7 @@ Report which gene is missing and avoid a symmetric comparison.
 
 ## Imbalanced Evidence
 
-If one gene has far more records, state that comparison may reflect literature-density bias.
+If one gene has far more records, state that comparison may reflect database representation imbalance.
 
 ## No Shared Terms
 

@@ -6,7 +6,7 @@ Summarize what AD-Alterome supports for the gene in one restrained paragraph. In
 
 ## Evidence Table
 
-Keep a compact evidence table with PMID, term, hypothesis, scores, and quality.
+Keep a compact curated evidence table with PMID, term, evidence type, candidate mechanism strata, and curation-layer sentence informativeness. Do not show `EvidenceScore`.
 
 ## Mechanism Synthesis
 
@@ -27,6 +27,6 @@ Avoid unsupported phrasing:
 Prioritize gaps by:
 
 1. repeated terms lacking functional validation
-2. high-score evidence with generic wording
+2. generic wording despite high sentence informativeness
 3. hypotheses supported by few PMIDs
 4. missing article metadata
