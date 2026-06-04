@@ -34,7 +34,6 @@ Expected outputs:
 7. Preserve PubMed links and original sentences for each gene.
 8. Do not use or display `EvidenceScore`.
 9. Use [references/boundary_responses.md](references/boundary_responses.md) when one gene has sparse evidence or the comparison is imbalanced.
-10. If the user wants an AD pathologist-style, coverage-aware paper-level comparison case study, route to `adalterome-case-study-expert`.
 
 ## Report Standard
 
@@ -59,7 +58,6 @@ The report should follow this storyline:
 - Each gene is curated with the gene-fixed event key: alteration taxonomy + phenotype/term + hypothesis.
 - Deep reports prefer server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence for each gene. REST event endpoints remain capped and are used only for lightweight retrieval or fallback.
 - Genetic alteration taxonomy comes from the leading `AlterationType` value. `TriggerWord` and `RegType` are regulatory/event context, not alteration labels.
-- Expert case-study interpretation lives in `adalterome-case-study-expert`; keep this compare report as the stable traceable evidence dossier.
 
 ## Resources
 

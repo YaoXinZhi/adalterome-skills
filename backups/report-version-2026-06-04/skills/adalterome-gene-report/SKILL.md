@@ -16,7 +16,6 @@ Use this skill when the user wants a research-style report for one AD-related ge
 5. Keep exact original evidence sentences and PubMed links traceable.
 6. Do not use or display `EvidenceScore`; calibrate claims by exact sentence content, provenance, curation reasons, sentence informativeness, `MechanismProvided`, `RelevantToAD`, and whether the original sentence supports causality.
 7. If evidence is sparse or generic, use [references/boundary_responses.md](references/boundary_responses.md) instead of padding unsupported claims.
-8. If the user wants the skill to act like an AD pathologist and write a paper-level scientific case study, route to `adalterome-case-study-expert`.
 
 ## Quick Start
 
@@ -63,7 +62,6 @@ The final report should follow this storyline:
 - Genetic alteration taxonomy comes from the leading `AlterationType` value. `TriggerWord` and `RegType` are regulatory/event context, not alteration labels.
 - Generic sentences may still appear when the database has limited high-information evidence.
 - External enrichment such as UniProt, NCBI Gene, GWAS Catalog, or OpenTargets should be reported separately if added.
-- Expert case-study interpretation lives in `adalterome-case-study-expert`; keep this gene report as the stable traceable evidence dossier.
 
 ## Resources
 

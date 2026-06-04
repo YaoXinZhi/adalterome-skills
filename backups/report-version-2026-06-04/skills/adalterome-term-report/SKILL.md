@@ -32,7 +32,6 @@ Expected outputs:
 7. Keep original evidence sentences and PubMed links intact.
 8. Do not use or display `EvidenceScore`.
 9. If selected evidence is sparse or generic, use [references/boundary_responses.md](references/boundary_responses.md) instead of overstating mechanisms.
-10. If the user wants AD pathologist-style interpretation, long-tail candidate judgment, or a paper-level case study, route to `adalterome-case-study-expert`.
 
 ## Report Standard
 
@@ -58,7 +57,6 @@ The report should follow this storyline:
 - Deep reports prefer server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence. REST event endpoints remain capped and are used only for lightweight retrieval or fallback.
 - Genetic alteration taxonomy comes from the leading `AlterationType` value. `TriggerWord` and `RegType` are regulatory/event context, not alteration labels.
 - If the term is broad, explicitly say the report is an evidence map rather than a narrow mechanistic conclusion.
-- Expert case-study interpretation lives in `adalterome-case-study-expert`; keep this term report as the stable traceable evidence dossier.
 
 ## Resources
 

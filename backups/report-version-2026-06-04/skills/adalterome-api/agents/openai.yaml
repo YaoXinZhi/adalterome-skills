@@ -1,0 +1,4 @@
+interface:
+  display_name: "AD-Alterome API"
+  short_description: "Query AD-Alterome evidence APIs"
+  default_prompt: "Use $adalterome-api to query AD-Alterome evidence for MAPT with PubMed links."

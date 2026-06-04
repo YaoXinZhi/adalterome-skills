@@ -1,0 +1,4 @@
+interface:
+  display_name: "AD-Alterome Gene Report"
+  short_description: "Deep AD gene evidence reports"
+  default_prompt: "Use $adalterome-gene-report to create a deep report for MAPT with evidence traces."

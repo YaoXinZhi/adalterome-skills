@@ -34,6 +34,12 @@ This repository follows the layered style of `r1seee/cucurlitbase-skills`.
    - Uses `/compare/genes` plus sentence-level evidence for both genes.
    - Keeps common patterns and gene-specific evidence separate.
 
+7. `adalterome-case-study-expert`
+   - Expert interpretation layer above the report skills.
+   - Uses AD-Alterome full-pool curation first, then applies coverage checks, comparison-balance checks, transparent expert evidence scoring, long-tail protection, and AD pathology-oriented biological trimming.
+   - Produces a two-layer output: a paper-style case-study narrative plus an audit appendix with scored evidence and exact sentence traces.
+   - Does not implement TF-IDF recommendation, external database overlap, manual gold relevance grading, or AD-LitPathoNet network parsing.
+
 ## Writing Style
 
 - Keep `SKILL.md` short and procedural.
@@ -45,8 +51,11 @@ This repository follows the layered style of `r1seee/cucurlitbase-skills`.
 
 ## Evidence Quality Strategy
 
-The AD-Alterome API is expected to return `EvidenceQualityScore`.
-Skills should prefer high-quality rows and still show the exact original sentence so users can audit whether the sentence is informative.
+Report skills compute their own `SentenceQuality` and curation reasons from the original sentence, biological context, AD interpretation fields, traceability, and query-relative diversity. They do not use or display raw `EvidenceScore`.
+
+Expert case-study mode adds a separate transparent expert score for case-study usefulness. This score is not a human gold label. It prioritizes AD specificity, molecular or pathological mechanism depth, long-tail insight, fit to the user's scientific question, PMID traceability, and common-sense filtering of generic evidence.
+
+Large genes and broad hypotheses can expose curation risk. When full-pool curation is unavailable and a report falls back to `api_sentence_sample`, the expert layer must label conclusions as exploratory and avoid absence-of-evidence claims. In two-gene comparisons, unequal curation scope or strongly different coverage ratios must downgrade strong contrastive conclusions.
 
 ## Repository Layout
 
@@ -60,5 +69,12 @@ adalterome-skills/
     ├── adalterome-gene-report/
     ├── adalterome-term-report/
     ├── adalterome-hypothesis-report/
-    └── adalterome-compare-report/
+    ├── adalterome-compare-report/
+    └── adalterome-case-study-expert/
 ```
+
+## Versioning Strategy
+
+The current report skills remain the stable report version. They are optimized for reproducible evidence packages that human experts can interpret later.
+
+The expert version lives in `adalterome-case-study-expert`. It should be selected when the user asks for case studies, AD pathology insight, biological interpretation, long-tail candidate judgment, or paper-level argumentation. This keeps report and expert behavior available side by side instead of overwriting the stable report contract.

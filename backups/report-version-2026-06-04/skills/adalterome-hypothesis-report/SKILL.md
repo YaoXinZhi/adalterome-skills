@@ -31,7 +31,6 @@ Expected outputs:
 6. Distinguish direct sentence support from AD-Alterome's curated hypothesis labels.
 7. Do not use or display `EvidenceScore`.
 8. Use [references/boundary_responses.md](references/boundary_responses.md) if evidence is sparse, generic, or ambiguous.
-9. If the user wants AD pathologist-style interpretation, long-tail candidate judgment, or a paper-level case study, route to `adalterome-case-study-expert`.
 
 ## Report Standard
 
@@ -57,7 +56,6 @@ The report should follow this storyline:
 - Hypothesis reports deduplicate by gene + alteration taxonomy + phenotype/term because the hypothesis is fixed by the query.
 - Deep reports prefer server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence. REST event endpoints remain capped and are used only for lightweight retrieval or fallback.
 - Genetic alteration taxonomy comes from the leading `AlterationType` value. `TriggerWord` and `RegType` are regulatory/event context, not alteration labels.
-- Expert case-study interpretation lives in `adalterome-case-study-expert`; keep this hypothesis report as the stable traceable evidence dossier.
 
 ## Resources
 

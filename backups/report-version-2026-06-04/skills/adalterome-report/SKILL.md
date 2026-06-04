@@ -29,7 +29,6 @@ Read [../adalterome-api/references/api_docs.md](../adalterome-api/references/api
 4. Keep PubMed links and exact original sentences in `## Evidence`.
 5. If adding interpretation, append it after the fixed report or under `## Notes`; do not rewrite the evidence.
 6. If the user wants a multi-section researcher-facing gene analysis with mechanisms, evidence strength, and gaps, route to `adalterome-gene-report`.
-7. If the user asks for a paper-level case study, AD pathology expert interpretation, biological insight, or a scientific argument, route to `adalterome-case-study-expert` instead of this fixed report skill.
 
 ## Use Cases
 

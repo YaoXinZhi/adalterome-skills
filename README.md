@@ -14,6 +14,13 @@ These skills are designed for users who want to explore AD-related genes, phenot
 | `adalterome-term-report` | Advanced | Generate deep phenotype, ontology term, or pathological-process reports with API top genes, hypotheses, server-side full-pool curation, PubMed links, top and long-tail gene/gene-alteration/phenotype patterns, and mechanism-oriented interpretation. | "phenotype report", "term report", "mitochondrial dysfunction", "neuroinflammation" |
 | `adalterome-hypothesis-report` | Advanced | Generate deep AD hypothesis support reports with top genes, top terms, server-side full-pool curation, source-traceable evidence, and support pattern synthesis. | "hypothesis report", "Amyloid Hypothesis", "Tau Protein Hypothesis", "support evidence" |
 | `adalterome-compare-report` | Advanced | Generate two-gene comparison reports with shared/distinct terms, shared/distinct hypotheses, and full-pool curation traces for each gene. | "compare genes", "APOE vs APP", "gene comparison", "shared mechanisms" |
+| `adalterome-case-study-expert` | Expert | Generate paper-level AD pathology case-study reports that interpret a user scientific question, check coverage and balance, score selected evidence for biological insight, protect long-tail candidates, and return both an expert narrative and an audit appendix. | "case study", "expert interpretation", "AD pathology insight", "paper-level report", "biological cut" |
+
+## Report vs Expert Mode
+
+Use the report skills when the user wants a pure, stable, source-traceable evidence packet for later human expert interpretation. Report mode optimizes provenance, reproducibility, fixed sections, original sentences, PubMed links, curation scope, long-tail visibility, and conservative caveats.
+
+Use `adalterome-case-study-expert` when the user wants the skill to behave more like an AD pathologist: infer the scientific question, define an evidence strategy, check coverage and comparison balance, score selected evidence for biological insight, demote generic evidence, protect low-frequency but mechanistically plausible long-tail candidates, and write a case-study argument supported by AD-Alterome traces.
 
 ## Requirements
 
@@ -62,6 +69,7 @@ cp -R skills/adalterome-gene-report "${CODEX_HOME:-$HOME/.codex}/skills/"
 cp -R skills/adalterome-term-report "${CODEX_HOME:-$HOME/.codex}/skills/"
 cp -R skills/adalterome-hypothesis-report "${CODEX_HOME:-$HOME/.codex}/skills/"
 cp -R skills/adalterome-compare-report "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R skills/adalterome-case-study-expert "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
 Restart Codex after installation so the skills can be discovered.
@@ -230,6 +238,28 @@ Expected outputs:
 - `outputs/apoe_vs_app/data/gene_a_curation.json`
 - `outputs/apoe_vs_app/data/gene_b_curation.json`
 
+## Expert Case-Study Report
+
+Use `adalterome-case-study-expert` for a paper-level case study that should argue a scientific question using AD-Alterome evidence:
+
+```text
+Use $adalterome-case-study-expert to compare APOE and APP as AD pathological mechanisms with coverage and balance checks.
+```
+
+Equivalent script:
+
+```bash
+python skills/adalterome-case-study-expert/scripts/build_case_study_expert.py --gene-a APOE --gene-b APP --question "How do APOE and APP differ in AD pathological mechanisms?" --output-dir outputs/apoe_app_case_study --candidate-limit 80 --expert-limit 20
+```
+
+Expected outputs:
+
+- `outputs/apoe_app_case_study/case_study_report.md`
+- `outputs/apoe_app_case_study/data/query.json`
+- `outputs/apoe_app_case_study/data/coverage.json`
+- `outputs/apoe_app_case_study/data/expert_evidence.json`
+- `outputs/apoe_app_case_study/data/case_study.json`
+
 ## Report Modules
 
 Deep report builders return Markdown reports with stable modules plus JSON data files for audit.
@@ -240,6 +270,7 @@ Deep report builders return Markdown reports with stable modules plus JSON data 
 | Term report | Query scope and data provenance; global evidence landscape; top genes and hypotheses; evidence curation layer; mechanism map; representative evidence; long-tail evidence signals; chronological trajectory; original evidence traces; interpretation guide; follow-up priorities. | For `mitochondrial dysfunction`, global evidence landscape shows API aggregate event, PMID, gene, and hypothesis counts; curation shows top genes, top gene-alteration pairs, and phenotype mappings from the server-side full-pool curation package. |
 | Hypothesis report | Query scope and hypothesis frame; global evidence landscape; top genes and phenotypes; evidence curation layer; mechanism map; representative support evidence; long-tail evidence signals; chronology; original evidence traces; interpretation guide; follow-up priorities. | For `Amyloid Hypothesis`, top patterns show genes, gene-alteration pairs, and phenotypes associated with the hypothesis in the server-side curation package. |
 | Compare report | Query scope and comparison frame; side-by-side overview; shared terms and hypotheses; gene-specific patterns; curation layer for each gene; mechanism maps; representative and long-tail evidence for each gene; comparative interpretation guide; follow-up priorities. | For `APOE` vs `APP`, each gene has its own top phenotypes, top gene-alteration pairs, long-tail evidence signals, and original PubMed-linked evidence traces. |
+| Expert case-study report | Interpreted scientific question; evidence strategy; coverage and balance check; AD pathologist-style synthesis; expert-included evidence; long-tail candidates; limitations; audit appendix with scored evidence and original sentence traces. | For `APOE` vs `APP`, the expert layer marks whether the comparison is balanced, scores evidence for biological insight, protects mechanistically plausible long-tail candidates, and avoids strong comparative claims when one side falls back to capped sampling. |
 
 Note: API overview endpoints provide aggregate counts and top overview lists. Full-pool curation endpoints provide report-grade deduplication, query-relative distributions, long-tail signals, mechanism strata, and representative evidence. API event endpoints provide lightweight source-traceable sentence rows and currently cap `top_k` at 50.
 
@@ -265,6 +296,7 @@ These skills preserve source traceability first:
 - Treat `AlterationType` as the genetic alteration taxonomy. `TriggerWord` and `RegType` describe event relation/regulation context and are not counted as genetic alteration labels.
 - Avoid turning sentence-level associations into causal claims without direct support.
 - Prefer high-quality evidence rows, but still expose enough provenance for manual audit.
+- In expert mode, prefer biologically insightful evidence rows, but keep the expert score transparent and separate from the original AD-Alterome record.
 
 ## Repository Design
 
