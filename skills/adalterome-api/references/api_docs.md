@@ -74,12 +74,17 @@ Deep report builders should use `/gene/curation`, `/term/curation`, and `/hypoth
 For example, `GET /term/curation?term=mitochondrial+dysfunction&selected_limit=30&source=curated` uses the curated term pool, filters alias-expanded rows back to the requested term fields, and returns:
 
 - `coverage_scope`: query type, curation source/scope, curated pool size, annotation source, and matched event count when exact raw count is available. For alias-merged term queries, `curated_query_stats_raw_event_count` is reported separately because canonical term pools can overlap or broaden the natural-language alias.
+- `global_statistics`: complete curated-query statistics from `curated_query_stats`, including raw/event-unique counts, complete-pool top genes, phenotypes, gene-alteration pairs, alteration taxonomies, hypotheses, evidence types, mechanism strata, coverage summaries, alteration interpretation, and sampling policy.
 - `deduplication_summary`: event-unique row count, query-specific deduplication key, unique PMIDs, genes, phenotypes, alteration taxonomies, gene-alteration pairs, and hypotheses.
 - `dominant_clusters`: top PMIDs, genes, phenotypes, gene-alteration pairs, alteration taxonomies, evidence types, and mechanism strata.
 - `query_relative_patterns`: top and long-tail genes, gene-alteration pairs, phenotypes, and/or hypotheses according to the query type.
 - `long_tail_definition`: frequency threshold rule, currently query-specific frequency `<= min(Q25, 10)` after event-level deduplication.
 - `selected_evidence`: diverse representative evidence rows with PubMed links, original sentence, evidence type, candidate mechanism strata, expert 1-5 score, annotation source/confidence, long-tail signals, and curation reasons.
 - `final_annotation_summary`: selected row counts by `AnnotationSource` and `AnnotationConfidence`.
+
+Use `global_statistics` for complete query-pool distributions. Use
+`dominant_clusters`, `query_relative_patterns`, and `selected_evidence` for the
+bounded representative evidence package returned to a report.
 
 The curation endpoint deliberately returns a bounded interpreted package rather than all raw rows. Raw `EvidenceScore` may still exist in compatibility event endpoints, but it is not used in curation decisions or skill-facing summaries.
 

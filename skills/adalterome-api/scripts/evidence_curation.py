@@ -905,6 +905,8 @@ def render_curation_overview(curation: dict[str, Any]) -> list[str]:
     dedupe = curation.get("deduplication_summary") or {}
     long_tail = curation.get("long_tail_definition") or {}
     scope = curation.get("coverage_scope") or {}
+    global_stats = curation.get("global_statistics") or curation.get("curated_pool_statistics") or {}
+    global_summary = global_stats.get("summary") if isinstance(global_stats.get("summary"), dict) else {}
     lines = [
         "## Evidence Curation Layer",
         "",
@@ -918,6 +920,36 @@ def render_curation_overview(curation: dict[str, Any]) -> list[str]:
         f"- Long-tail rule: {long_tail.get('method')} across dimensions {', '.join(long_tail.get('dimensions') or [])}; thresholds={long_tail.get('thresholds')}.",
         "",
     ]
+    if global_summary:
+        lines.extend(
+            [
+                "### Complete query-pool statistics",
+                "",
+                f"- Statistics source: {global_summary.get('statistics_source') or 'curated_query_stats'}.",
+                f"- Raw matched event records: {global_summary.get('raw_event_count', 'unknown')}.",
+                f"- Event-unique records before final representative sampling: {global_summary.get('event_unique_count', 'unknown')}.",
+                f"- Curated pool records available to the API: {global_summary.get('curated_pool_count', 'unknown')}.",
+                f"- High-quality event records: {global_summary.get('high_quality_event_count', 'unknown')}; long-tail event records: {global_summary.get('long_tail_event_count', 'unknown')}; broad-background records: {global_summary.get('broad_background_count', 'unknown')}.",
+                "- Selected evidence below is a representative expert-reviewed subset, not the full query distribution.",
+                "",
+            ]
+        )
+        for title, key in [
+            ("Complete-pool top genes", "top_genes"),
+            ("Complete-pool top phenotypes", "top_phenotypes"),
+            ("Complete-pool top gene-alteration pairs", "top_gene_alterations"),
+            ("Complete-pool alteration taxonomy", "top_alteration_taxonomies"),
+            ("Complete-pool top hypotheses", "top_hypotheses"),
+            ("Complete-pool evidence types", "evidence_types"),
+            ("Complete-pool mechanism strata", "mechanism_strata"),
+        ]:
+            items = global_stats.get(key) or []
+            if not items:
+                continue
+            lines.extend([f"#### {title}", ""])
+            for item in items[:8]:
+                lines.append(f"- {md(item.get('value'))}: {item.get('count')}")
+            lines.append("")
     clusters = curation.get("dominant_clusters") or {}
     for title, key in [
         ("Dominant PMIDs", "top_pmids"),
