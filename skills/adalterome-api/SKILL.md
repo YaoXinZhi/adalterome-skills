@@ -1,6 +1,6 @@
 ---
 name: adalterome-api
-description: Query the live AD-Alterome REST API for Alzheimer disease literature evidence. Use when Codex needs current data from an AD-Alterome API service to inspect schema, list AD hypotheses, retrieve gene-centered events, term/phenotype-centered events, hypothesis support evidence, gene/term/hypothesis overviews, compare two genes, return PubMed links, or expose exact original evidence sentences through the normalized Evidence payload.
+description: Query the live AD-Alterome REST API for Alzheimer disease literature evidence. Use when Codex needs current data from an AD-Alterome API service to inspect schema, list AD hypotheses, retrieve gene-centered events, phenotype/process-centered events, hypothesis support evidence, gene/phenotype/hypothesis overviews, compare two genes, return PubMed links, or expose exact original evidence sentences through the normalized Evidence payload.
 ---
 
 # AD-Alterome API
@@ -32,6 +32,10 @@ Read [references/api_docs.md](references/api_docs.md) when you need endpoint det
 Read [references/output_layers.md](references/output_layers.md) when choosing `json`, `summary`, `report`, or `evidence-md`.
 Read [references/boundary_responses.md](references/boundary_responses.md) when the API is unreachable, a target is absent, or evidence is too weak.
 
+Raw API payloads are cached locally by default. Exact repeat requests reuse the
+cache; set `ADALTEROME_REFRESH_CACHE=1` for a fresh request, `ADALTEROME_DISABLE_CACHE=1`
+to bypass caching, or `ADALTEROME_CACHE_DIR` to choose a cache directory.
+
 ## Workflow
 
 1. Decide whether the user needs discovery, retrieval, aggregation, or comparison.
@@ -40,10 +44,11 @@ Read [references/boundary_responses.md](references/boundary_responses.md) when t
 4. Use `gene-events`, `term-events`, or `hypothesis-support` for lightweight sentence-level evidence.
 5. Use `gene-overview`, `term-overview`, or `hypothesis-overview` for aggregate statistics.
 6. Use `gene-curation`, `term-curation`, or `hypothesis-curation` for report-grade full-pool event deduplication, long-tail sampling, and mechanism-stratified curation.
-7. Use `compare` for two-gene shared/distinct term and hypothesis summaries.
+7. Use `compare` for two-gene shared/distinct phenotype/process and hypothesis summaries.
 8. Preserve `Evidence.sentence`, `Evidence.pubmed_url`, and `Evidence.event` in user-facing answers.
 9. Do not invent PubMed links; only use `PMID` or `Evidence.pubmed_url` returned by the API.
 10. Do not display or interpret `EvidenceScore` in skill-facing reports; it may remain in raw API JSON for compatibility.
+11. Tell the user where raw payloads were saved when a script output includes `## Local Data Cache` or `data/cache_manifest.json`.
 
 ## Supported Tasks
 
@@ -115,12 +120,14 @@ When using `--output report`, preserve this section order:
 
 1. `## Query`
 2. `## API Links`
-3. `## Summary`
-4. `## Results`
-5. `## Evidence`
-6. `## Notes`
+3. `## Local Data Cache`
+4. `## Summary`
+5. `## Results`
+6. `## Evidence`
+7. `## Notes`
 
 The `## API Links` section must include `api_page` and `request_url`.
+The `## Local Data Cache` section must include the raw payload cache file when caching is enabled.
 
 ## Guardrails
 
@@ -138,3 +145,4 @@ The `## API Links` section must include `api_page` and `request_url`.
 - Boundary responses: [references/boundary_responses.md](references/boundary_responses.md)
 - Evidence curation helpers: [scripts/evidence_curation.py](scripts/evidence_curation.py)
 - Evidence fetch helpers: [scripts/evidence_fetch.py](scripts/evidence_fetch.py)
+- Local cache helpers: [scripts/query_cache.py](scripts/query_cache.py)

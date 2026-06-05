@@ -15,7 +15,7 @@ Use this structure:
 ## Required Standards
 
 - Include the exact hypothesis query and request URLs.
-- Include top genes and terms from `/hypothesis/overview`.
+- Include top genes and phenotype/process features from `/hypothesis/overview`.
 - Include original evidence sentences and PubMed links from the curation evidence source.
 - Do not use or display `EvidenceScore`.
 - Use the curation layer's `SentenceQuality` / sentence informativeness only as a readability aid.
@@ -28,5 +28,5 @@ Use this structure:
 ## Interpretation Rules
 
 - Do not say the hypothesis is proven.
-- Use repeated genes, terms, and PMIDs to describe support patterns.
+- Use repeated genes, phenotype/process features, and PMIDs to describe support patterns.
 - Mention combined hypothesis labels when a record links multiple hypotheses.

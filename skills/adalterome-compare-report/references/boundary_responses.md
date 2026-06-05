@@ -8,9 +8,9 @@ Report which gene is missing and avoid a symmetric comparison.
 
 If one gene has far more records, state that comparison may reflect database representation imbalance.
 
-## No Shared Terms
+## No Shared Phenotype / Process Features
 
-Say that no shared terms were returned in the API comparison and focus on distinct patterns.
+Say that no shared phenotype/process features were returned in the API comparison and focus on distinct patterns.
 
 ## Generic Evidence
 

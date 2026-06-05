@@ -1,9 +1,9 @@
 ---
 name: adalterome-term-report
-description: Build deep phenotype, ontology term, or pathological-process reports from AD-Alterome. Use when the user asks for a researcher-facing report about a phenotype such as mitochondrial dysfunction, neuroinflammation, amyloid processing, synaptic dysfunction, an HPO/GO/MeSH term, or any AD-Alterome term-centered evidence summary with API top genes, AD hypotheses, curated representative evidence, top and long-tail gene/gene-alteration/phenotype patterns, original evidence sentences, PubMed links, and follow-up interpretation.
+description: Build deep phenotype, downstream biological process, ontology term, or pathological-process reports from AD-Alterome. Use when the user asks for a researcher-facing report about a phenotype or process such as mitochondrial dysfunction, neuroinflammation, amyloid processing, synaptic dysfunction, an HPO/GO/MeSH term, or any AD-Alterome phenotype/process evidence summary with API top genes, AD hypotheses, curated representative evidence, top and long-tail gene/gene-alteration/phenotype patterns, original evidence sentences, PubMed links, and follow-up interpretation.
 ---
 
-# AD-Alterome Term Report
+# AD-Alterome Phenotype / Process Report
 
 Use this skill when the user wants a deep report for one phenotype, ontology term, or pathological process rather than a short API answer.
 
@@ -20,10 +20,11 @@ Expected outputs:
 - `data/overview.json`
 - `data/evidence.json`
 - `data/curation.json`
+- `data/cache_manifest.json`
 
 ## Workflow
 
-1. Run the report builder with `--term` and `--output-dir`; use `--selected-limit` to control displayed evidence from the server-side full-pool curation package. `--curation-limit` only controls capped event-endpoint fallback mode.
+1. Run the report builder with `--term` and `--output-dir`; `--term` is retained as the API-compatible argument for phenotype/process queries. Use `--selected-limit` to control displayed evidence from the server-side full-pool curation package. `--curation-limit` only controls capped event-endpoint fallback mode.
 2. Inspect `data/curation.json` for selected evidence, query-relative top/long-tail patterns, evidence type groups, mechanism strata, and chronology.
 3. Inspect `data/evidence.json` for returned `Evidence.sentence`, `Evidence.pubmed_url`, and original event fields.
 4. Read [references/report_contract_term_deep.md](references/report_contract_term_deep.md) before expanding or revising the report.
@@ -50,15 +51,16 @@ The report should follow this storyline:
 
 ## Guardrails
 
-- Do not imply every gene in a term report causally drives the phenotype.
+- Do not imply every gene in a phenotype/process report causally drives the queried phenotype.
 - Separate sentence-level evidence from AD-Alterome interpretation fields.
 - Use PubMed links returned by the API or generated from PMID.
 - Use `curation.json` to filter broad background evidence away from molecular or model-based evidence when needed.
-- Term reports deduplicate by gene + alteration taxonomy + hypothesis because the searched phenotype/term is fixed by the query.
+- Phenotype/process reports deduplicate by gene + alteration taxonomy + hypothesis because the searched phenotype/process feature is fixed by the query.
 - Deep reports prefer server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence. REST event endpoints remain capped and are used only for lightweight retrieval or fallback.
 - Genetic alteration taxonomy comes from the leading `AlterationType` value. `TriggerWord` and `RegType` are regulatory/event context, not alteration labels.
-- If the term is broad, explicitly say the report is an evidence map rather than a narrow mechanistic conclusion.
-- Expert case-study interpretation lives in `adalterome-case-study-expert`; keep this term report as the stable traceable evidence dossier.
+- Deep reports save task-local JSON files and `data/cache_manifest.json`; exact raw API payloads are also kept in the shared local cache for repeat requests and manual inspection.
+- If the phenotype/process feature is broad, explicitly say the report is an evidence map rather than a narrow mechanistic conclusion.
+- Expert case-study interpretation lives in `adalterome-case-study-expert`; keep this phenotype/process report as the stable traceable evidence dossier.
 
 ## Resources
 

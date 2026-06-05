@@ -10,6 +10,20 @@ http://117.72.176.137/api/adalterome
 
 Override with `--base-url` or `ADALTEROME_API_BASE_URL`.
 
+## Local Request Cache
+
+Skill scripts cache raw API JSON payloads locally by exact request URL.
+
+- Default cache directory: `~/.adalterome-skills/cache`
+- Override cache directory: `ADALTEROME_CACHE_DIR=/path/to/cache`
+- Force a fresh remote request: `ADALTEROME_REFRESH_CACHE=1`
+- Bypass caching: `ADALTEROME_DISABLE_CACHE=1`
+- Default maximum cache age: 30 days; override with `ADALTEROME_CACHE_MAX_AGE_DAYS`
+
+When caching is enabled, returned payloads include `meta._local_cache` with the
+cache file path, cache hit status, index file, and saved time. Report builders
+also write `data/cache_manifest.json` into the task output directory.
+
 ## Endpoints
 
 | Purpose | Method and Path | Parameters |

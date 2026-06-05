@@ -11,9 +11,6 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
-from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
-from urllib.request import Request, urlopen
 
 
 SKILLS_DIR = Path(__file__).resolve().parents[2]
@@ -26,8 +23,10 @@ from evidence_fetch import (  # noqa: E402
     fetch_gene_events_for_curation,
     fetch_hypothesis_support_for_curation,
     fetch_term_events_for_curation,
+    request_json,
     request_json_optional,
 )
+from query_cache import write_cache_manifest  # noqa: E402
 
 
 DEFAULT_BASE_URL = os.environ.get("ADALTEROME_API_BASE_URL", "http://117.72.176.137/api/adalterome")
@@ -150,18 +149,7 @@ EVIDENCE_TYPE_BONUS = {
 
 
 def get_json(base_url: str, path: str, params: dict[str, Any], timeout: float) -> tuple[str, dict[str, Any]]:
-    query = urlencode(params, doseq=True)
-    url = f"{base_url.rstrip('/')}{path}"
-    if query:
-        url = f"{url}?{query}"
-    request = Request(url, headers={"Accept": "application/json"})
-    try:
-        with urlopen(request, timeout=timeout) as response:
-            return url, json.loads(response.read().decode("utf-8"))
-    except HTTPError as exc:
-        raise SystemExit(f"API HTTP error {exc.code}: {exc.reason}") from exc
-    except URLError as exc:
-        raise SystemExit(f"API connection error: {exc.reason}") from exc
+    return request_json(base_url, path, params, timeout)
 
 
 def write_json(path: Path, payload: Any) -> None:
@@ -867,6 +855,7 @@ def render_report(
             "",
             "## Source Payloads",
             "",
+            "- Raw API cache manifest: `data/cache_manifest.json`",
         ]
     )
     for dataset in datasets:
@@ -908,6 +897,7 @@ def main() -> int:
     output_dir = Path(args.output_dir)
     data_dir = output_dir / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
+    compare_payload: dict[str, Any] | None = None
 
     if mode == "compare":
         title = f"{args.gene_a} vs {args.gene_b}"
@@ -1012,6 +1002,13 @@ def main() -> int:
     write_json(data_dir / "coverage.json", coverage)
     write_json(data_dir / "expert_evidence.json", expert_evidence)
     write_json(data_dir / "case_study.json", case_study)
+    cache_payloads: list[tuple[str, dict[str, Any] | None]] = []
+    if compare_payload:
+        cache_payloads.append(("gene comparison", compare_payload))
+    for dataset in datasets:
+        cache_payloads.append((f"{dataset.get('label')} overview", dataset.get("overview")))
+        cache_payloads.append((f"{dataset.get('label')} curation/evidence", dataset.get("evidence_payload")))
+    write_cache_manifest(data_dir / "cache_manifest.json", cache_payloads)
 
     report = render_report(
         mode=mode,

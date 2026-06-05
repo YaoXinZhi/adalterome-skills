@@ -4,7 +4,7 @@ Use this structure:
 
 1. Query scope and comparison frame
 2. Side-by-side overview
-3. Shared terms and hypotheses
+3. Shared phenotype/process features and hypotheses
 4. Gene-A-specific patterns
 5. Gene-B-specific patterns
 6. Evidence curation layer for gene A and gene B
@@ -15,7 +15,7 @@ Use this structure:
 ## Required Standards
 
 - Include both gene symbols and request URLs.
-- Include `/compare/genes` shared and unique terms/hypotheses.
+- Include `/compare/genes` shared and unique phenotype/process features and hypotheses.
 - Include sentence-level evidence for both genes.
 - Include `data/gene_a_curation.json` and `data/gene_b_curation.json` when using the builder script.
 - Keep evidence traces separated by gene.
@@ -27,5 +27,5 @@ Use this structure:
 ## Interpretation Rules
 
 - More records do not automatically mean greater importance.
-- Shared terms may reflect different mechanisms; verify using original sentences.
+- Shared phenotype/process features may reflect different mechanisms; verify using original sentences.
 - Distinct hypotheses should be described as AD-Alterome evidence patterns, not definitive gene functions.

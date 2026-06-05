@@ -8,12 +8,13 @@ These skills are designed for users who want to explore AD-related genes, phenot
 
 | Skill | Status | Purpose | Trigger keywords |
 | --- | --- | --- | --- |
+| `adalterome` | Recommended | Unified entrypoint that routes natural-language AD-Alterome questions to API lookup, gene report, phenotype/process report, hypothesis report, comparison report, or expert case-study mode. | "AD-Alterome", "query AD-Alterome", "write AD-Alterome report", "compare AD mechanisms" |
 | `adalterome-api` | Stable | Query AD-Alterome REST API for schema, hypotheses, gene events, term events, hypothesis support, full-pool curation packages, overviews, two-gene comparison, original evidence sentences, and PubMed links. | "query AD-Alterome", "gene events", "term events", "hypothesis support", "PubMed evidence", "PMID evidence" |
 | `adalterome-report` | Stable | Convert AD-Alterome API results into fixed-format evidence reports with stable sections, source links, original sentences, and caveats. | "fixed report", "standard report", "evidence summary", "AD-Alterome report" |
-| `adalterome-gene-report` | Advanced | Generate deep researcher-facing gene reports with API overview statistics, server-side full-pool curation, PubMed links, term/hypothesis interpretation, mechanism synthesis, top and long-tail patterns, and research priorities. | "deep gene report", "MAPT report", "APOE evidence dossier", "mechanism synthesis" |
-| `adalterome-term-report` | Advanced | Generate deep phenotype, ontology term, or pathological-process reports with API top genes, hypotheses, server-side full-pool curation, PubMed links, top and long-tail gene/gene-alteration/phenotype patterns, and mechanism-oriented interpretation. | "phenotype report", "term report", "mitochondrial dysfunction", "neuroinflammation" |
-| `adalterome-hypothesis-report` | Advanced | Generate deep AD hypothesis support reports with top genes, top terms, server-side full-pool curation, source-traceable evidence, and support pattern synthesis. | "hypothesis report", "Amyloid Hypothesis", "Tau Protein Hypothesis", "support evidence" |
-| `adalterome-compare-report` | Advanced | Generate two-gene comparison reports with shared/distinct terms, shared/distinct hypotheses, and full-pool curation traces for each gene. | "compare genes", "APOE vs APP", "gene comparison", "shared mechanisms" |
+| `adalterome-gene-report` | Advanced | Generate deep researcher-facing gene reports with API overview statistics, server-side full-pool curation, PubMed links, phenotype/process and hypothesis interpretation, mechanism synthesis, top and long-tail patterns, and research priorities. | "deep gene report", "MAPT report", "APOE evidence dossier", "mechanism synthesis" |
+| `adalterome-term-report` | Advanced | Generate deep phenotype, ontology term, or pathological-process reports with API top genes, hypotheses, server-side full-pool curation, PubMed links, top and long-tail gene/gene-alteration/phenotype patterns, and mechanism-oriented interpretation. | "phenotype report", "process report", "mitochondrial dysfunction", "neuroinflammation" |
+| `adalterome-hypothesis-report` | Advanced | Generate deep AD hypothesis support reports with top genes, top phenotype/process features, server-side full-pool curation, source-traceable evidence, and support pattern synthesis. | "hypothesis report", "Amyloid Hypothesis", "Tau Protein Hypothesis", "support evidence" |
+| `adalterome-compare-report` | Advanced | Generate two-gene comparison reports with shared/distinct phenotype/process features, shared/distinct hypotheses, and full-pool curation traces for each gene. | "compare genes", "APOE vs APP", "gene comparison", "shared mechanisms" |
 | `adalterome-case-study-expert` | Expert | Generate paper-level AD pathology case-study reports that interpret a user scientific question, check coverage and balance, score selected evidence for biological insight, protect long-tail candidates, and return both an expert narrative and an audit appendix. | "case study", "expert interpretation", "AD pathology insight", "paper-level report", "biological cut" |
 
 ## Report vs Expert Mode
@@ -65,6 +66,7 @@ Copy the skill folders into your local Codex skills directory:
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 cp -R skills/adalterome-api "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R skills/adalterome "${CODEX_HOME:-$HOME/.codex}/skills/"
 cp -R skills/adalterome-report "${CODEX_HOME:-$HOME/.codex}/skills/"
 cp -R skills/adalterome-gene-report "${CODEX_HOME:-$HOME/.codex}/skills/"
 cp -R skills/adalterome-term-report "${CODEX_HOME:-$HOME/.codex}/skills/"
@@ -74,6 +76,26 @@ cp -R skills/adalterome-case-study-expert "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
 Restart Codex after installation so the skills can be discovered.
+
+Most users can invoke `adalterome` and ask in natural language. The unified
+skill routes the request to the correct specialized skill. Advanced users can
+still call the lower-level skills directly.
+
+## Local Data Cache
+
+The scripts save raw API payloads automatically so users can inspect returned
+data and exact repeat requests do not need to hit the remote API again.
+
+- Task-local report outputs keep query JSON under the requested output directory.
+- Each deep report writes `data/cache_manifest.json`, which lists the raw API payload files used for that report.
+- The shared local cache defaults to `~/.adalterome-skills/cache`.
+- Set `ADALTEROME_CACHE_DIR` to choose another cache location.
+- Set `ADALTEROME_REFRESH_CACHE=1` to force a fresh API request.
+- Set `ADALTEROME_DISABLE_CACHE=1` to bypass caching.
+
+For follow-up analysis, inspect the previous report directory's `data/*.json`
+and `data/cache_manifest.json` first. If those files already cover the target,
+the skill can continue from local data and avoid another remote request.
 
 ## Quick API Examples
 
@@ -101,7 +123,7 @@ Equivalent script:
 python skills/adalterome-api/scripts/query_adalterome.py gene-events --gene MAPT --top-k 5 --output report
 ```
 
-### Retrieve Phenotype / Term Evidence
+### Retrieve Phenotype / Process Evidence
 
 ```text
 Use $adalterome-api to find genes and hypotheses associated with mitochondrial dysfunction.
@@ -170,8 +192,9 @@ Expected outputs:
 - `outputs/mapt_deep/data/overview.json`
 - `outputs/mapt_deep/data/evidence.json`
 - `outputs/mapt_deep/data/curation.json`
+- `outputs/mapt_deep/data/cache_manifest.json`
 
-## Deep Term / Phenotype Report
+## Deep Phenotype / Process Report
 
 Use `adalterome-term-report` for a phenotype, ontology term, or pathological process:
 
@@ -192,6 +215,7 @@ Expected outputs:
 - `outputs/mitochondrial_dysfunction/data/overview.json`
 - `outputs/mitochondrial_dysfunction/data/evidence.json`
 - `outputs/mitochondrial_dysfunction/data/curation.json`
+- `outputs/mitochondrial_dysfunction/data/cache_manifest.json`
 
 ## Deep Hypothesis Report
 
@@ -214,6 +238,7 @@ Expected outputs:
 - `outputs/amyloid_hypothesis/data/overview.json`
 - `outputs/amyloid_hypothesis/data/evidence.json`
 - `outputs/amyloid_hypothesis/data/curation.json`
+- `outputs/amyloid_hypothesis/data/cache_manifest.json`
 
 ## Two-Gene Compare Report
 
@@ -238,6 +263,7 @@ Expected outputs:
 - `outputs/apoe_vs_app/data/gene_b_evidence.json`
 - `outputs/apoe_vs_app/data/gene_a_curation.json`
 - `outputs/apoe_vs_app/data/gene_b_curation.json`
+- `outputs/apoe_vs_app/data/cache_manifest.json`
 
 ## Expert Case-Study Report
 
@@ -260,6 +286,7 @@ Expected outputs:
 - `outputs/apoe_app_case_study/data/coverage.json`
 - `outputs/apoe_app_case_study/data/expert_evidence.json`
 - `outputs/apoe_app_case_study/data/case_study.json`
+- `outputs/apoe_app_case_study/data/cache_manifest.json`
 
 ## Report Modules
 
@@ -268,9 +295,9 @@ Deep report builders return Markdown reports with stable modules plus JSON data 
 | Report | Modules returned | Example module content |
 | --- | --- | --- |
 | Gene report | Query scope and data provenance; global evidence landscape; evidence curation layer; mechanism-stratified evidence map; representative evidence; long-tail evidence signals; chronological trajectory; original evidence traces; interpretation guide; follow-up priorities. | For `MAPT`, the evidence curation layer lists server-side full-pool rows, event-unique rows, top phenotypes, top gene-alteration pairs such as `MAPT / point mutations:mutations`, and long-tail phenotype/gene-alteration patterns. |
-| Term report | Query scope and data provenance; global evidence landscape; top genes and hypotheses; evidence curation layer; mechanism map; representative evidence; long-tail evidence signals; chronological trajectory; original evidence traces; interpretation guide; follow-up priorities. | For `mitochondrial dysfunction`, global evidence landscape shows API aggregate event, PMID, gene, and hypothesis counts; curation shows top genes, top gene-alteration pairs, and phenotype mappings from the server-side full-pool curation package. |
+| Phenotype/process report | Query scope and data provenance; global evidence landscape; top genes and hypotheses; evidence curation layer; mechanism map; representative evidence; long-tail evidence signals; chronological trajectory; original evidence traces; interpretation guide; follow-up priorities. | For `mitochondrial dysfunction`, global evidence landscape shows API aggregate event, PMID, gene, and hypothesis counts; curation shows top genes, top gene-alteration pairs, and phenotype mappings from the server-side full-pool curation package. |
 | Hypothesis report | Query scope and hypothesis frame; global evidence landscape; top genes and phenotypes; evidence curation layer; mechanism map; representative support evidence; long-tail evidence signals; chronology; original evidence traces; interpretation guide; follow-up priorities. | For `Amyloid Hypothesis`, top patterns show genes, gene-alteration pairs, and phenotypes associated with the hypothesis in the server-side curation package. |
-| Compare report | Query scope and comparison frame; side-by-side overview; shared terms and hypotheses; gene-specific patterns; curation layer for each gene; mechanism maps; representative and long-tail evidence for each gene; comparative interpretation guide; follow-up priorities. | For `APOE` vs `APP`, each gene has its own top phenotypes, top gene-alteration pairs, long-tail evidence signals, and original PubMed-linked evidence traces. |
+| Compare report | Query scope and comparison frame; side-by-side overview; shared phenotype/process features and hypotheses; gene-specific patterns; curation layer for each gene; mechanism maps; representative and long-tail evidence for each gene; comparative interpretation guide; follow-up priorities. | For `APOE` vs `APP`, each gene has its own top phenotypes, top gene-alteration pairs, long-tail evidence signals, and original PubMed-linked evidence traces. |
 | Expert case-study report | Interpreted scientific question; evidence strategy; coverage and balance check; AD pathologist-style synthesis; expert-included evidence; long-tail candidates; limitations; audit appendix with scored evidence and original sentence traces. | For `APOE` vs `APP`, the expert layer marks whether the comparison is balanced, scores evidence for biological insight, protects mechanistically plausible long-tail candidates, and avoids strong comparative claims when one side falls back to capped sampling. |
 
 Note: API overview endpoints provide aggregate counts and top overview lists. Full-pool curation endpoints provide report-grade deduplication, query-relative distributions, long-tail signals, mechanism strata, and representative evidence. API event endpoints provide lightweight source-traceable sentence rows and currently cap `top_k` at 50.
@@ -301,4 +328,4 @@ These skills preserve source traceability first:
 
 ## Repository Design
 
-See [DESIGN.md](DESIGN.md) for design notes and how the three-skill structure maps to the CucurLitBase skill pattern.
+See [DESIGN.md](DESIGN.md) for design notes and how the unified entrypoint plus specialized skills map to the CucurLitBase skill pattern.

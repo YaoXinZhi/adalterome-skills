@@ -1,6 +1,6 @@
 ---
 name: adalterome-compare-report
-description: Build two-gene AD-Alterome comparison reports. Use when the user asks to compare two genes such as APOE vs APP, MAPT vs APP, or PSEN1 vs PSEN2 using AD-Alterome API overviews, shared and distinct terms, shared and distinct AD hypotheses, curated representative evidence for each gene, top and long-tail gene-alteration/phenotype patterns, PubMed links, mechanism differences, and common patterns.
+description: Build two-gene AD-Alterome comparison reports. Use when the user asks to compare two genes such as APOE vs APP, MAPT vs APP, or PSEN1 vs PSEN2 using AD-Alterome API overviews, shared and distinct phenotype/process features, shared and distinct AD hypotheses, curated representative evidence for each gene, top and long-tail gene-alteration/phenotype patterns, PubMed links, mechanism differences, and common patterns.
 ---
 
 # AD-Alterome Compare Report
@@ -22,11 +22,12 @@ Expected outputs:
 - `data/gene_b_evidence.json`
 - `data/gene_a_curation.json`
 - `data/gene_b_curation.json`
+- `data/cache_manifest.json`
 
 ## Workflow
 
 1. Run the report builder with `--gene-a`, `--gene-b`, and `--output-dir`; use `--selected-limit` to control displayed evidence from each server-side full-pool gene curation package. `--curation-limit` only controls capped event-endpoint fallback mode.
-2. Inspect `data/compare.json` for shared/distinct terms and hypotheses.
+2. Inspect `data/compare.json` for shared/distinct phenotype/process features and hypotheses.
 3. Inspect each gene curation JSON for selected evidence, query-relative top/long-tail patterns, evidence type groups, mechanism strata, and chronology.
 4. Inspect each gene evidence JSON for raw sentence-level records.
 5. Read [references/report_contract_compare.md](references/report_contract_compare.md) before expanding the report.
@@ -42,9 +43,9 @@ The report should follow this storyline:
 
 1. query scope and comparison frame
 2. side-by-side overview
-3. shared terms and shared hypotheses
-4. gene-A-specific terms and hypotheses
-5. gene-B-specific terms and hypotheses
+3. shared phenotype/process features and shared hypotheses
+4. gene-A-specific phenotype/process features and hypotheses
+5. gene-B-specific phenotype/process features and hypotheses
 6. evidence curation layer for each gene
 7. mechanism-stratified evidence map for each gene
 8. representative and long-tail evidence for each gene
@@ -58,6 +59,7 @@ The report should follow this storyline:
 - Use each gene's `curation.json` to avoid comparing one gene's broad high-frequency records against another gene's molecular long-tail records.
 - Each gene is curated with the gene-fixed event key: alteration taxonomy + phenotype/term + hypothesis.
 - Deep reports prefer server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence for each gene. REST event endpoints remain capped and are used only for lightweight retrieval or fallback.
+- Deep reports save task-local JSON files and `data/cache_manifest.json`; exact raw API payloads are also kept in the shared local cache for repeat requests and manual inspection.
 - Genetic alteration taxonomy comes from the leading `AlterationType` value. `TriggerWord` and `RegType` are regulatory/event context, not alteration labels.
 - Expert case-study interpretation lives in `adalterome-case-study-expert`; keep this compare report as the stable traceable evidence dossier.
 

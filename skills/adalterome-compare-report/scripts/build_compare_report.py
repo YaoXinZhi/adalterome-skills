@@ -9,9 +9,6 @@ import os
 import sys
 from pathlib import Path
 from typing import Any
-from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
-from urllib.request import Request, urlopen
 
 
 SKILLS_DIR = Path(__file__).resolve().parents[2]
@@ -31,25 +28,16 @@ from evidence_fetch import (  # noqa: E402
     curation_package_from_response,
     fetch_gene_curation,
     fetch_gene_events_for_curation,
+    request_json,
 )
+from query_cache import write_cache_manifest  # noqa: E402
 
 
 DEFAULT_BASE_URL = os.environ.get("ADALTEROME_API_BASE_URL", "http://117.72.176.137/api/adalterome")
 
 
 def get_json(base_url: str, path: str, params: dict[str, Any], timeout: float) -> tuple[str, dict[str, Any]]:
-    query = urlencode(params, doseq=True)
-    url = f"{base_url.rstrip('/')}{path}"
-    if query:
-        url = f"{url}?{query}"
-    request = Request(url, headers={"Accept": "application/json"})
-    try:
-        with urlopen(request, timeout=timeout) as response:
-            return url, json.loads(response.read().decode("utf-8"))
-    except HTTPError as exc:
-        raise SystemExit(f"API HTTP error {exc.code}: {exc.reason}") from exc
-    except URLError as exc:
-        raise SystemExit(f"API connection error: {exc.reason}") from exc
+    return request_json(base_url, path, params, timeout)
 
 
 def bullet_items(items: list[dict[str, Any]], name_key: str = "TermName") -> list[str]:
@@ -109,6 +97,7 @@ def render(
         f"- Gene B curation evidence source: {gene_b_url}",
         f"- Gene A curation package: `data/gene_a_curation.json`",
         f"- Gene B curation package: `data/gene_b_curation.json`",
+        f"- Raw API cache manifest: `data/cache_manifest.json`",
         "",
         "## Side-by-Side Global Evidence Landscape",
         "",
@@ -117,15 +106,15 @@ def render(
     ]
     for key in ["event_count", "pmid_count", "term_count", "hypothesis_count"]:
         lines.append(f"| {key} | {md(overview_a.get(key))} | {md(overview_b.get(key))} |")
-    lines.extend(["", "## Shared Terms and Hypotheses", "", "### Shared terms"])
+    lines.extend(["", "## Shared Phenotype/Process Features and Hypotheses", "", "### Shared phenotype/process features"])
     lines.extend(bullet_items(data.get("shared_terms") or [], "TermName"))
     lines.extend(["", "### Shared hypotheses"])
     lines.extend(bullet_items(data.get("shared_hypotheses") or [], "Hypothesis"))
-    lines.extend(["", f"## {gene_a}-Specific Patterns", "", "### Unique terms"])
+    lines.extend(["", f"## {gene_a}-Specific Patterns", "", "### Unique phenotype/process features"])
     lines.extend(bullet_items(data.get("unique_terms_a") or [], "TermName"))
     lines.extend(["", "### Unique hypotheses"])
     lines.extend(bullet_items(data.get("unique_hypotheses_a") or [], "Hypothesis"))
-    lines.extend(["", f"## {gene_b}-Specific Patterns", "", "### Unique terms"])
+    lines.extend(["", f"## {gene_b}-Specific Patterns", "", "### Unique phenotype/process features"])
     lines.extend(bullet_items(data.get("unique_terms_b") or [], "TermName"))
     lines.extend(["", "### Unique hypotheses"])
     lines.extend(bullet_items(data.get("unique_hypotheses_b") or [], "Hypothesis"))
@@ -158,7 +147,7 @@ def render(
             "",
             "- Use overview counts to describe database representation, not biological importance.",
             "- Use curated representative evidence to compare mechanisms; avoid relying on raw API ranking.",
-            "- Compare shared terms and hypotheses against original sentences from both genes.",
+            "- Compare shared phenotype/process features and hypotheses against original sentences from both genes.",
             "- Treat candidate mechanism strata as LLM-assisted organization for expert review.",
         ]
     )
@@ -238,6 +227,14 @@ def main() -> int:
     (data_dir / "gene_b_evidence.json").write_text(json.dumps(evidence_b, ensure_ascii=False, indent=2), encoding="utf-8")
     (data_dir / "gene_a_curation.json").write_text(json.dumps(curation_a, ensure_ascii=False, indent=2), encoding="utf-8")
     (data_dir / "gene_b_curation.json").write_text(json.dumps(curation_b, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_cache_manifest(
+        data_dir / "cache_manifest.json",
+        [
+            ("gene comparison", compare),
+            (f"{args.gene_a} curation/evidence", evidence_a),
+            (f"{args.gene_b} curation/evidence", evidence_b),
+        ],
+    )
     report = render(args.gene_a, args.gene_b, args.base_url, compare_url, gene_a_url, gene_b_url, compare, curation_a, curation_b)
     (output_dir / "report.md").write_text(report, encoding="utf-8")
     print(output_dir / "report.md")

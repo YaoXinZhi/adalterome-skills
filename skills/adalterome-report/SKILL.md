@@ -1,6 +1,6 @@
 ---
 name: adalterome-report
-description: Turn AD-Alterome API results into fixed-format user-facing evidence reports. Use when the user wants a stable gene report, phenotype or term report, AD hypothesis support report, two-gene comparison report, evidence summary with PubMed links, or any AD-Alterome output whose section order, query provenance, original sentence evidence, and caveats should remain consistent across turns.
+description: Turn AD-Alterome API results into fixed-format user-facing evidence reports. Use when the user wants a stable gene report, phenotype/process report, AD hypothesis support report, two-gene comparison report, evidence summary with PubMed links, or any AD-Alterome output whose section order, query provenance, original sentence evidence, and caveats should remain consistent across turns.
 ---
 
 # AD-Alterome Report
@@ -23,7 +23,7 @@ Read [../adalterome-api/references/api_docs.md](../adalterome-api/references/api
 
 ## Workflow
 
-1. Identify whether the user wants a gene, term, hypothesis, or comparison report.
+1. Identify whether the user wants a gene, phenotype/process, hypothesis, or comparison report.
 2. Use `adalterome-api` with `--output report`.
 3. Preserve the fixed section order from the script output.
 4. Keep PubMed links and exact original sentences in `## Evidence`.
@@ -34,7 +34,7 @@ Read [../adalterome-api/references/api_docs.md](../adalterome-api/references/api
 ## Use Cases
 
 - gene-centered evidence reports
-- phenotype or ontology term evidence reports
+- phenotype, biological process, or ontology term evidence reports
 - AD hypothesis support summaries
 - two-gene comparison summaries
 - standardized evidence excerpts for manuscript planning or database QA
@@ -45,15 +45,17 @@ When delivering a report, keep these sections:
 
 1. `## Query`
 2. `## API Links`
-3. `## Summary`
-4. `## Results`
-5. `## Evidence`
-6. `## Notes`
+3. `## Local Data Cache`
+4. `## Summary`
+5. `## Results`
+6. `## Evidence`
+7. `## Notes`
 
 ## Guardrails
 
 - Do not invent records absent from the API response.
 - Do not drop `request_url`; it is the reproducibility link.
+- Do not drop `## Local Data Cache`; it tells users where the raw API payload was saved or reused.
 - Do not silently remove PMID or PubMed links.
 - Do not display or interpret `EvidenceScore`; it is a raw API compatibility field.
 - Do not turn weak sentence-level associations into strong causality.

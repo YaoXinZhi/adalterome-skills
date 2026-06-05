@@ -8,9 +8,6 @@ import json
 import os
 import sys
 from typing import Any
-from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
-from urllib.request import Request, urlopen
 
 from evidence_curation import (
     md,
@@ -19,24 +16,11 @@ from evidence_curation import (
     render_long_tail,
     render_selected_table,
 )
+from evidence_fetch import request_json
+from query_cache import cache_provenance_lines
 
 
 DEFAULT_BASE_URL = os.environ.get("ADALTEROME_API_BASE_URL", "http://117.72.176.137/api/adalterome")
-
-
-def request_json(base_url: str, path: str, params: dict[str, Any], timeout: float) -> tuple[str, dict[str, Any]]:
-    query = urlencode(params, doseq=True)
-    url = f"{base_url.rstrip('/')}{path}"
-    if query:
-        url = f"{url}?{query}"
-    request = Request(url, headers={"Accept": "application/json"})
-    try:
-        with urlopen(request, timeout=timeout) as response:
-            return url, json.loads(response.read().decode("utf-8"))
-    except HTTPError as exc:
-        raise SystemExit(f"API HTTP error {exc.code}: {exc.reason}") from exc
-    except URLError as exc:
-        raise SystemExit(f"API connection error: {exc.reason}") from exc
 
 
 def endpoint_for_args(args: argparse.Namespace) -> tuple[str, dict[str, Any]]:
@@ -108,7 +92,7 @@ def evidence_lines(rows: list[dict[str, Any]], limit: int | None = None) -> list
             [
                 f"{idx}. {pubmed}",
                 f"   - Gene: {row.get('Gene') or '-'}",
-                f"   - Term: {term}",
+                f"   - Phenotype / process: {term}",
                 f"   - Hypothesis: {hyp}",
                 f"   - Journal/Year: {journal} / {year}",
                 f"   - EvidenceQualityScore: {quality}",
@@ -182,6 +166,13 @@ def render_report(payload: dict[str, Any], api_page: str, request_url: str) -> s
         f"- api_page: {api_page}",
         f"- request_url: {request_url}",
         "",
+        "## Local Data Cache",
+        "",
+        *(
+            cache_provenance_lines([("primary request", payload)])
+            or ["- Local API payload cache is disabled or unavailable for this request."]
+        ),
+        "",
         "## Summary",
         "",
         f"- returned_count: {payload.get('count')}",
@@ -193,7 +184,7 @@ def render_report(payload: dict[str, Any], api_page: str, request_url: str) -> s
         "",
     ]
     if rows:
-        lines.append("| # | Gene | Term | Hypothesis | PMID | Sentence quality |")
+        lines.append("| # | Gene | Phenotype / process | Hypothesis | PMID | Sentence quality |")
         lines.append("| --- | --- | --- | --- | --- | --- |")
         for idx, row in enumerate(rows, start=1):
             pmid = row.get("PMID") or "-"
@@ -237,7 +228,7 @@ def render_report(payload: dict[str, Any], api_page: str, request_url: str) -> s
                 [
                     f"{idx}. {pubmed}",
                     f"   - Gene: {item.get('Gene') or '-'}",
-                    f"   - Term: {item.get('TermName') or '-'}",
+                    f"   - Phenotype / process: {item.get('TermName') or '-'}",
                     f"   - Evidence type: {item.get('EvidenceType') or '-'}",
                     f"   - Expert score/source: {item.get('ExpertOverallScore') or '-'} / {item.get('AnnotationSource') or '-'} ({item.get('AnnotationConfidence') or '-'})",
                     f"   - Long-tail: {item.get('IsLongTailEvidence')}",

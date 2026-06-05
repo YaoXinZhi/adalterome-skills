@@ -12,10 +12,15 @@ Use for user-facing answers. It preserves:
 
 1. `## Query`
 2. `## API Links`
-3. `## Summary`
-4. `## Results`
-5. `## Evidence`
-6. `## Notes`
+3. `## Local Data Cache`
+4. `## Summary`
+5. `## Results`
+6. `## Evidence`
+7. `## Notes`
+
+The local data cache section reports where the raw API payload was saved or
+reused. This lets users inspect the original JSON and lets exact repeat requests
+avoid another remote API call.
 
 ## `evidence-md`
 

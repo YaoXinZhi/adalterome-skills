@@ -4,37 +4,43 @@ This repository follows the layered style of `r1seee/cucurlitbase-skills`.
 
 ## Skill Layers
 
-1. `adalterome-api`
+1. `adalterome`
+   - Unified entrypoint skill.
+   - Routes natural-language requests to API lookup, fixed report, gene report, phenotype/process report, hypothesis report, comparison report, or expert case-study mode.
+   - Ensures final answers mention report outputs and raw-data cache locations when scripts are run.
+
+2. `adalterome-api`
    - Lowest-level retrieval skill.
    - Calls the live AD-Alterome REST API.
    - Preserves exact sentence evidence, PubMed links, Event chains, and normalized Evidence blocks.
+   - Caches raw API JSON payloads locally by exact request URL for repeat use and manual inspection.
 
-2. `adalterome-report`
+3. `adalterome-report`
    - Presentation skill.
    - Converts API outputs into a fixed report contract.
    - Keeps provenance and evidence sections stable across runs.
 
-3. `adalterome-gene-report`
+4. `adalterome-gene-report`
    - Research-style report skill.
    - Builds a deep Markdown draft for one gene.
    - Supports mechanism synthesis, evidence caveats, and follow-up gap analysis.
 
-4. `adalterome-term-report`
+5. `adalterome-term-report`
    - Research-style report skill for phenotypes, ontology terms, and pathological processes.
    - Uses `/term/overview` and `/term/events`.
    - Emphasizes top genes, top hypotheses, evidence traces, and broad-term caveats.
 
-5. `adalterome-hypothesis-report`
+6. `adalterome-hypothesis-report`
    - Research-style report skill for AD hypothesis support.
    - Uses `/hypothesis/overview` and `/hypothesis/support`.
    - Separates curated hypothesis labels from original sentence evidence.
 
-6. `adalterome-compare-report`
+7. `adalterome-compare-report`
    - Research-style report skill for two-gene comparison.
    - Uses `/compare/genes` plus sentence-level evidence for both genes.
    - Keeps common patterns and gene-specific evidence separate.
 
-7. `adalterome-case-study-expert`
+8. `adalterome-case-study-expert`
    - Expert interpretation layer above the report skills.
    - Uses AD-Alterome full-pool curation first, then applies coverage checks, comparison-balance checks, transparent expert evidence scoring, long-tail protection, and AD pathology-oriented biological trimming.
    - Produces a two-layer output: a paper-style case-study narrative plus an audit appendix with scored evidence and exact sentence traces.
@@ -65,6 +71,7 @@ adalterome-skills/
 ├── DESIGN.md
 └── skills/
     ├── adalterome-api/
+    ├── adalterome/
     ├── adalterome-report/
     ├── adalterome-gene-report/
     ├── adalterome-term-report/
@@ -75,6 +82,6 @@ adalterome-skills/
 
 ## Versioning Strategy
 
-The current report skills remain the stable report version. They are optimized for reproducible evidence packages that human experts can interpret later.
+The unified `adalterome` entrypoint is the recommended user-facing route. The specialized report skills remain stable direct-entry versions optimized for reproducible evidence packages that human experts can interpret later.
 
 The expert version lives in `adalterome-case-study-expert`. It should be selected when the user asks for case studies, AD pathology insight, biological interpretation, long-tail candidate judgment, or paper-level argumentation. This keeps report and expert behavior available side by side instead of overwriting the stable report contract.

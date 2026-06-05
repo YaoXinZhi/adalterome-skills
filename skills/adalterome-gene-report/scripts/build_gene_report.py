@@ -9,9 +9,6 @@ import os
 import sys
 from pathlib import Path
 from typing import Any
-from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
-from urllib.request import Request, urlopen
 
 
 SKILLS_DIR = Path(__file__).resolve().parents[2]
@@ -31,25 +28,16 @@ from evidence_fetch import (  # noqa: E402
     curation_package_from_response,
     fetch_gene_curation,
     fetch_gene_events_for_curation,
+    request_json,
 )
+from query_cache import write_cache_manifest  # noqa: E402
 
 
 DEFAULT_BASE_URL = os.environ.get("ADALTEROME_API_BASE_URL", "http://117.72.176.137/api/adalterome")
 
 
 def get_json(base_url: str, path: str, params: dict[str, Any], timeout: float) -> tuple[str, dict[str, Any]]:
-    query = urlencode(params, doseq=True)
-    url = f"{base_url.rstrip('/')}{path}"
-    if query:
-        url = f"{url}?{query}"
-    request = Request(url, headers={"Accept": "application/json"})
-    try:
-        with urlopen(request, timeout=timeout) as response:
-            return url, json.loads(response.read().decode("utf-8"))
-    except HTTPError as exc:
-        raise SystemExit(f"API HTTP error {exc.code}: {exc.reason}") from exc
-    except URLError as exc:
-        raise SystemExit(f"API connection error: {exc.reason}") from exc
+    return request_json(base_url, path, params, timeout)
 
 
 def render_mechanism_map(curation: dict[str, Any]) -> list[str]:
@@ -96,12 +84,13 @@ def render_report(
         f"- Gene overview request: {overview_url}",
         f"- Curation evidence source: {events_url}",
         f"- Curation package: `data/curation.json`",
+        f"- Raw API cache manifest: `data/cache_manifest.json`",
         "",
         "## Global Evidence Landscape",
         "",
-        f"AD-Alterome contains {summary.get('event_count', 'unknown')} event records for `{gene}` across {summary.get('pmid_count', 'unknown')} PMID(s), {summary.get('term_count', 'unknown')} term(s), and {summary.get('hypothesis_count', 'unknown')} AD hypothesis field(s). Interpret this as curated sentence-level literature evidence rather than direct causal proof.",
+        f"AD-Alterome contains {summary.get('event_count', 'unknown')} event records for `{gene}` across {summary.get('pmid_count', 'unknown')} PMID(s), {summary.get('term_count', 'unknown')} phenotype/process feature(s), and {summary.get('hypothesis_count', 'unknown')} AD hypothesis field(s). Interpret this as curated sentence-level literature evidence rather than direct causal proof.",
         "",
-        "### Top overview terms",
+        "### Top overview phenotype/process features",
         "",
     ]
     if top_terms:
@@ -193,6 +182,7 @@ def main() -> int:
     (data_dir / "overview.json").write_text(json.dumps(overview, ensure_ascii=False, indent=2), encoding="utf-8")
     (data_dir / "evidence.json").write_text(json.dumps(events, ensure_ascii=False, indent=2), encoding="utf-8")
     (data_dir / "curation.json").write_text(json.dumps(curation, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_cache_manifest(data_dir / "cache_manifest.json", [("gene overview", overview), ("curation/evidence", events)])
     report = render_report(args.gene, args.base_url, overview_url, events_url, overview, curation)
     (output_dir / "report.md").write_text(report, encoding="utf-8")
     print(output_dir / "report.md")

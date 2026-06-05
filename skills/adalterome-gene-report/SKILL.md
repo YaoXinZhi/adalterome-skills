@@ -31,6 +31,7 @@ Expected outputs:
 - `data/overview.json`
 - `data/evidence.json`
 - `data/curation.json`
+- `data/cache_manifest.json`
 
 Optional API override:
 
@@ -60,6 +61,7 @@ The final report should follow this storyline:
 - `EvidenceScore` may exist in raw API JSON but is ignored by this skill.
 - `--top-k` is retained only as a deprecated alias for fallback event-endpoint sampling; do not use it to mean final report length.
 - Deep reports prefer server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence. REST event endpoints remain capped and are used only for lightweight retrieval or fallback.
+- Deep reports save task-local JSON files and `data/cache_manifest.json`; exact raw API payloads are also kept in the shared local cache for repeat requests and manual inspection.
 - Genetic alteration taxonomy comes from the leading `AlterationType` value. `TriggerWord` and `RegType` are regulatory/event context, not alteration labels.
 - Generic sentences may still appear when the database has limited high-information evidence.
 - External enrichment such as UniProt, NCBI Gene, GWAS Catalog, or OpenTargets should be reported separately if added.

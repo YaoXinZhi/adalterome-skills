@@ -1,12 +1,12 @@
 # Boundary Responses
 
-## Term Not Found
+## Phenotype / Process Not Found
 
-Say that no AD-Alterome records were returned for the term. Suggest checking spelling, synonyms, ontology IDs, or broader/narrower terms.
+Say that no AD-Alterome records were returned for the queried phenotype/process feature. Suggest checking spelling, synonyms, ontology IDs, or broader/narrower terms.
 
-## Broad Term
+## Broad Phenotype / Process
 
-If the term is broad, frame the output as a literature evidence map and avoid a single-mechanism conclusion.
+If the phenotype/process feature is broad, frame the output as a literature evidence map and avoid a single-mechanism conclusion.
 
 ## Sparse Evidence
 

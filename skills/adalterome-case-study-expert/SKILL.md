@@ -50,6 +50,7 @@ Expected outputs:
 - `data/case_study.json`
 - `data/expert_evidence.json`
 - `data/coverage.json`
+- `data/cache_manifest.json`
 - source payload JSON files for each target
 
 ## Workflow
@@ -70,6 +71,7 @@ Expected outputs:
 7. Keep the two-layer report structure:
    - expert narrative case study
    - audit appendix with scored evidence and original sentence traces
+8. Tell the user that task-local source payloads and `data/cache_manifest.json` preserve the raw data used for the case study.
 
 ## Expert Scoring Policy
 
@@ -99,6 +101,7 @@ Deprioritize evidence that is:
 - When curation scope is `api_sentence_sample`, explicitly report the coverage limitation.
 - In two-gene reports, do not make strong comparative conclusions if the two sides have unequal curation scope or very different coverage ratios.
 - If using outside knowledge, keep it as a small interpretive bridge and label it separately from AD-Alterome evidence.
+- Exact raw API payloads are cached in the shared local cache for repeat requests and manual inspection.
 
 ## Resources
 

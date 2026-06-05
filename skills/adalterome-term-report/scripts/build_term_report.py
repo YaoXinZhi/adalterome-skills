@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a deterministic AD-Alterome term or phenotype report."""
+"""Build a deterministic AD-Alterome phenotype/process report."""
 
 from __future__ import annotations
 
@@ -9,9 +9,6 @@ import os
 import sys
 from pathlib import Path
 from typing import Any
-from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
-from urllib.request import Request, urlopen
 
 
 SKILLS_DIR = Path(__file__).resolve().parents[2]
@@ -31,25 +28,16 @@ from evidence_fetch import (  # noqa: E402
     curation_package_from_response,
     fetch_term_curation,
     fetch_term_events_for_curation,
+    request_json,
 )
+from query_cache import write_cache_manifest  # noqa: E402
 
 
 DEFAULT_BASE_URL = os.environ.get("ADALTEROME_API_BASE_URL", "http://117.72.176.137/api/adalterome")
 
 
 def get_json(base_url: str, path: str, params: dict[str, Any], timeout: float) -> tuple[str, dict[str, Any]]:
-    query = urlencode(params, doseq=True)
-    url = f"{base_url.rstrip('/')}{path}"
-    if query:
-        url = f"{url}?{query}"
-    request = Request(url, headers={"Accept": "application/json"})
-    try:
-        with urlopen(request, timeout=timeout) as response:
-            return url, json.loads(response.read().decode("utf-8"))
-    except HTTPError as exc:
-        raise SystemExit(f"API HTTP error {exc.code}: {exc.reason}") from exc
-    except URLError as exc:
-        raise SystemExit(f"API connection error: {exc.reason}") from exc
+    return request_json(base_url, path, params, timeout)
 
 
 def render_mechanism_map(curation: dict[str, Any]) -> list[str]:
@@ -80,15 +68,16 @@ def render(term: str, base_url: str, overview_url: str, evidence_url: str, overv
     top_genes = (overview.get("data") or {}).get("top_genes") or []
     top_hypotheses = (overview.get("data") or {}).get("top_hypotheses") or []
     lines = [
-        f"# AD-Alterome Term Report: {term}",
+        f"# AD-Alterome Phenotype / Process Report: {term}",
         "",
         "## Query Scope and Data Provenance",
         "",
-        f"- Target term: `{term}`",
+        f"- Target phenotype/process: `{term}`",
         f"- API base URL: `{base_url.rstrip('/')}`",
         f"- Overview request: {overview_url}",
         f"- Curation evidence source: {evidence_url}",
         f"- Curation package: `data/curation.json`",
+        f"- Raw API cache manifest: `data/cache_manifest.json`",
         "",
         "## Global Evidence Landscape",
         "",
@@ -124,7 +113,7 @@ def render(term: str, base_url: str, overview_url: str, evidence_url: str, overv
             "",
             "## Interpretation Guide for the User Question",
             "",
-            "- Use the global statistics to describe how broadly this term is represented across genes and hypotheses.",
+            "- Use the global statistics to describe how broadly this phenotype/process feature is represented across genes and hypotheses.",
             "- Use curated representative evidence to summarize molecular mechanisms instead of relying on raw API ranking.",
             "- Treat candidate mechanism strata as LLM-assisted organization for expert review.",
             "- Keep broad disease association evidence separate from molecular or model-based evidence.",
@@ -147,7 +136,7 @@ def resolve_curation_limit(args: argparse.Namespace) -> int:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Build AD-Alterome term report.")
+    parser = argparse.ArgumentParser(description="Build AD-Alterome phenotype/process report.")
     parser.add_argument("--term", required=True)
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL)
@@ -182,6 +171,7 @@ def main() -> int:
     (data_dir / "overview.json").write_text(json.dumps(overview, ensure_ascii=False, indent=2), encoding="utf-8")
     (data_dir / "evidence.json").write_text(json.dumps(evidence, ensure_ascii=False, indent=2), encoding="utf-8")
     (data_dir / "curation.json").write_text(json.dumps(curation, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_cache_manifest(data_dir / "cache_manifest.json", [("phenotype/process overview", overview), ("curation/evidence", evidence)])
     report = render(args.term, args.base_url, overview_url, evidence_url, overview, curation)
     (output_dir / "report.md").write_text(report, encoding="utf-8")
     print(output_dir / "report.md")

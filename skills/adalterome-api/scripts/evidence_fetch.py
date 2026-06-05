@@ -2,11 +2,9 @@
 
 from __future__ import annotations
 
-import json
 from typing import Any
-from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
-from urllib.request import Request, urlopen
+
+from query_cache import fetch_json_optional_with_cache, fetch_json_with_cache, payload_cache_meta
 
 
 API_MAX_TOP_K = 50
@@ -14,18 +12,7 @@ SERVER_CURATION_MAX_SELECTED_LIMIT = 100
 
 
 def request_json(base_url: str, path: str, params: dict[str, Any], timeout: float) -> tuple[str, dict[str, Any]]:
-    query = urlencode(params, doseq=True)
-    url = f"{base_url.rstrip('/')}{path}"
-    if query:
-        url = f"{url}?{query}"
-    request = Request(url, headers={"Accept": "application/json"})
-    try:
-        with urlopen(request, timeout=timeout) as response:
-            return url, json.loads(response.read().decode("utf-8"))
-    except HTTPError as exc:
-        raise SystemExit(f"API HTTP error {exc.code}: {exc.reason}") from exc
-    except URLError as exc:
-        raise SystemExit(f"API connection error: {exc.reason}") from exc
+    return fetch_json_with_cache(base_url, path, params, timeout)
 
 
 def request_json_optional(
@@ -34,20 +21,7 @@ def request_json_optional(
     params: dict[str, Any],
     timeout: float,
 ) -> tuple[str, dict[str, Any] | None, str | None]:
-    query = urlencode(params, doseq=True)
-    url = f"{base_url.rstrip('/')}{path}"
-    if query:
-        url = f"{url}?{query}"
-    request = Request(url, headers={"Accept": "application/json"})
-    try:
-        with urlopen(request, timeout=timeout) as response:
-            return url, json.loads(response.read().decode("utf-8")), None
-    except HTTPError as exc:
-        return url, None, f"API HTTP error {exc.code}: {exc.reason}"
-    except URLError as exc:
-        return url, None, f"API connection error: {exc.reason}"
-    except Exception as exc:
-        return url, None, f"API request failed: {exc}"
+    return fetch_json_optional_with_cache(base_url, path, params, timeout)
 
 
 def api_top_k(requested_curation_limit: int) -> int:
@@ -85,6 +59,10 @@ def _remote_curation(
     scope["curation_endpoint_url"] = url
     scope.setdefault("curation_source", payload.get("meta", {}).get("curation_source", "remote_api"))
     scope.setdefault("curation_scope", payload.get("meta", {}).get("curation_scope", "server_full_query_pool"))
+    cache_meta = payload_cache_meta(payload)
+    if cache_meta:
+        scope["local_raw_payload_cache"] = cache_meta.get("cache_file")
+        scope["local_cache_hit"] = cache_meta.get("cache_hit")
     return url, payload
 
 
@@ -116,6 +94,10 @@ def _remote_events(
             ),
         }
     )
+    cache_meta = payload_cache_meta(payload)
+    if cache_meta:
+        meta["local_raw_payload_cache"] = cache_meta.get("cache_file")
+        meta["local_cache_hit"] = cache_meta.get("cache_hit")
     return url, payload
 
 
