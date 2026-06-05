@@ -17,7 +17,7 @@
 | API 版本 | `0.4.1` |
 | 公共 API | `http://117.72.176.137/api/adalterome` |
 | 云端服务 | `ad-alterome-api.service`，已重启并处于 active |
-| GitHub 提交 | `40694dd Expose complete curated query statistics in reports` |
+| API/skills 更新提交 | `40694dd Expose complete curated query statistics in reports` |
 | API 关键变更 | curation payload 新增/填充 `global_statistics`，并保留 `curated_pool_statistics` |
 | skills 关键变更 | 报告新增 `Complete query-pool statistics`，从完整查询池展示 top genes、phenotypes、gene-alterations、hypotheses、alteration taxonomy、evidence types、mechanism strata |
 | 验证 | 本地 `py_compile`、本地 8011 smoke test、云端 public smoke test、四个 case-study builder 均通过 |
