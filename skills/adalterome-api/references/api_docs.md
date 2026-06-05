@@ -20,13 +20,13 @@ Override with `--base-url` or `ADALTEROME_API_BASE_URL`.
 | Hypothesis catalog | `GET /hypotheses` | none |
 | Gene events | `GET /gene/events` | `gene`, `top_k` |
 | Gene overview | `GET /gene/overview` | `gene` |
-| Gene full-pool curation | `GET /gene/curation` | `gene`, `selected_limit` |
+| Gene curation | `GET /gene/curation` | `gene`, `selected_limit`, `source` |
 | Term events | `GET /term/events` | `term`, `top_k` |
 | Term overview | `GET /term/overview` | `term` |
-| Term full-pool curation | `GET /term/curation` | `term`, `selected_limit` |
+| Term curation | `GET /term/curation` | `term`, `selected_limit`, `source` |
 | Hypothesis support | `GET /hypothesis/support` | `hypothesis`, `top_k` |
 | Hypothesis overview | `GET /hypothesis/overview` | `hypothesis` |
-| Hypothesis full-pool curation | `GET /hypothesis/curation` | `hypothesis`, `selected_limit` |
+| Hypothesis curation | `GET /hypothesis/curation` | `hypothesis`, `selected_limit`, `source` |
 | Gene comparison | `GET /compare/genes` | `gene_a`, `gene_b` |
 
 ## General Response Shape
@@ -69,16 +69,17 @@ Ranking favors records whose sentences contain the target, gene, term, alteratio
 
 ## Full-Pool Curation Endpoints
 
-Deep report builders should use `/gene/curation`, `/term/curation`, and `/hypothesis/curation` when available. These endpoints run on the API server against the complete matched query pool before returning a compact curation package.
+Deep report builders should use `/gene/curation`, `/term/curation`, and `/hypothesis/curation` when available. These endpoints default to `source=curated`: the API reads the offline curated evidence pool built from complete query pools, then hydrates selected raw event IDs for exact sentences and PubMed links. Use `source=raw` only for compatibility or debugging; broad raw queries can be slow.
 
-For example, `GET /term/curation?term=mitochondrial+dysfunction&selected_limit=30` uses all records matched by the term query, then returns:
+For example, `GET /term/curation?term=mitochondrial+dysfunction&selected_limit=30&source=curated` uses the curated term pool, filters alias-expanded rows back to the requested term fields, and returns:
 
-- `coverage_scope`: query type, matched event count, curation pool size, and source scope.
+- `coverage_scope`: query type, curation source/scope, curated pool size, annotation source, and matched event count when exact raw count is available. For alias-merged term queries, `curated_query_stats_raw_event_count` is reported separately because canonical term pools can overlap or broaden the natural-language alias.
 - `deduplication_summary`: event-unique row count, query-specific deduplication key, unique PMIDs, genes, phenotypes, alteration taxonomies, gene-alteration pairs, and hypotheses.
 - `dominant_clusters`: top PMIDs, genes, phenotypes, gene-alteration pairs, alteration taxonomies, evidence types, and mechanism strata.
 - `query_relative_patterns`: top and long-tail genes, gene-alteration pairs, phenotypes, and/or hypotheses according to the query type.
 - `long_tail_definition`: frequency threshold rule, currently query-specific frequency `<= min(Q25, 10)` after event-level deduplication.
-- `selected_evidence`: diverse representative evidence rows with PubMed links, original sentence, evidence type, candidate mechanism strata, long-tail signals, and curation reasons.
+- `selected_evidence`: diverse representative evidence rows with PubMed links, original sentence, evidence type, candidate mechanism strata, expert 1-5 score, annotation source/confidence, long-tail signals, and curation reasons.
+- `final_annotation_summary`: selected row counts by `AnnotationSource` and `AnnotationConfidence`.
 
 The curation endpoint deliberately returns a bounded interpreted package rather than all raw rows. Raw `EvidenceScore` may still exist in compatibility event endpoints, but it is not used in curation decisions or skill-facing summaries.
 

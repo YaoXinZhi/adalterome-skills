@@ -18,6 +18,7 @@ python3 scripts/query_adalterome.py gene-events --gene MAPT --top-k 5 --output r
 python3 scripts/query_adalterome.py term-events --term "mitochondrial dysfunction" --top-k 5 --output report
 python3 scripts/query_adalterome.py hypothesis-support --hypothesis "Amyloid Hypothesis" --top-k 5 --output evidence-md
 python3 scripts/query_adalterome.py term-curation --term "mitochondrial dysfunction" --selected-limit 30 --output report
+python3 scripts/query_adalterome.py gene-curation --gene MAPT --selected-limit 30 --source raw --output report
 python3 scripts/query_adalterome.py compare --gene-a APOE --gene-b APP --output report
 ```
 
@@ -59,9 +60,9 @@ Read [references/boundary_responses.md](references/boundary_responses.md) when t
 
 ### Curate full-pool evidence for reports
 
-- `gene-curation --gene GENE --selected-limit 30`
-- `term-curation --term TERM --selected-limit 30`
-- `hypothesis-curation --hypothesis HYPOTHESIS --selected-limit 30`
+- `gene-curation --gene GENE --selected-limit 30 --source curated`
+- `term-curation --term TERM --selected-limit 30 --source curated`
+- `hypothesis-curation --hypothesis HYPOTHESIS --selected-limit 30 --source curated`
 
 ### Retrieve overviews
 
@@ -96,7 +97,17 @@ Event-style endpoints return a normalized evidence block:
 
 ## Evidence Curation Layer
 
-Deep report skills use `scripts/evidence_fetch.py` plus `scripts/evidence_curation.py` as an intermediate layer between API retrieval and final summaries. When the API server exposes `/gene/curation`, `/term/curation`, and `/hypothesis/curation`, the builders retrieve a server-side curation package computed over the complete matched query pool, not the capped event sample. The curation layer performs query-specific event deduplication, computes query-relative top and long-tail patterns for genes, gene-alteration pairs, phenotypes, and hypotheses where relevant, groups evidence into a small stable set of evidence types, and creates candidate mechanism strata for LLM-assisted expert interpretation.
+Deep report skills use `scripts/evidence_fetch.py` plus `scripts/evidence_curation.py` as an intermediate layer between API retrieval and final summaries. When the API server exposes `/gene/curation`, `/term/curation`, and `/hypothesis/curation`, the builders retrieve a server-side curation package from the offline curated pool by default (`source=curated`). The curated pool is built from the complete matched query pool, applies coverage-first sampling and high-frequency downsampling, preserves long-tail evidence, and re-ranks rows with `event_expert_annotation_final`. The curation layer performs query-specific event deduplication, computes query-relative top and long-tail patterns for genes, gene-alteration pairs, phenotypes, and hypotheses where relevant, groups evidence into a small stable set of evidence types, and creates candidate mechanism strata for expert interpretation.
+
+Curated evidence rows may include:
+
+- `ExpertOverallScore`: 1-5 final expert score from `event_expert_annotation_final`.
+- `AnnotationSource`: `llm_reviewed`, `heuristic_only`, or future human-reviewed sources.
+- `AnnotationConfidence`: LLM or heuristic confidence label.
+- `ExpertReason`: short rationale for LLM-reviewed rows.
+- `SamplingBucket`: why the row entered the curated pool, such as phenotype coverage, gene coverage, long-tail, or recent high-quality evidence.
+
+Use `--source raw` only when the user explicitly needs the older raw full-query curation behavior; large genes, broad terms, and broad hypotheses may be slow in raw mode.
 
 ## Fixed Report Format
 

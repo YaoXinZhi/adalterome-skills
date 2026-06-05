@@ -910,6 +910,7 @@ def render_curation_overview(curation: dict[str, Any]) -> list[str]:
         "",
         "- Raw API scoring fields are ignored in skill reports and curation decisions.",
         f"- Sentence-level evidence source: {scope.get('curation_source') or 'unknown'} ({scope.get('curation_scope') or 'unknown scope'}).",
+        f"- Expert annotation source: {scope.get('annotation_source') or 'not reported'}; rows marked invalid by LLM review are excluded from curated evidence by default when the API provides that flag.",
         f"- Curation pool rows: {dedupe.get('curation_pool_row_count', 0)}; event-unique rows after query-specific deduplication: {dedupe.get('event_unique_rows', 0)}.",
         f"- Overview event rows reported by the API: {scope.get('overview_event_count', 'unknown')}.",
         f"- Event deduplication key: {dedupe.get('event_deduplication_key')}.",
@@ -950,26 +951,30 @@ def render_selected_table(curation: dict[str, Any], title: str = "Curated Repres
     lines = [
         f"## {title}",
         "",
-        "| # | PMID | Gene | Phenotype | Evidence type | Mechanism strata | Sentence informativeness |",
-        "| --- | --- | --- | --- | --- | --- | --- |",
+        "| # | PMID | Gene | Phenotype | Evidence type | Mechanism strata | Expert score | Annotation source |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     selected = curation.get("selected_evidence") or []
     if not selected:
-        lines.append("| - | - | - | - | - | - | - |")
+        lines.append("| - | - | - | - | - | - | - | - |")
         return lines
     for idx, item in enumerate(selected, start=1):
         pmid_value = item.get("PMID") or "-"
         url = item.get("PubMedURL") or ""
         pmid_md = f"[{pmid_value}]({url})" if url else str(pmid_value)
         lines.append(
-            "| {idx} | {pmid} | {gene} | {term} | {etype} | {strata} | {quality} |".format(
+            "| {idx} | {pmid} | {gene} | {term} | {etype} | {strata} | {quality} | {source} |".format(
                 idx=idx,
                 pmid=pmid_md,
                 gene=md(item.get("Gene")),
                 term=md(item.get("TermName")),
                 etype=md(item.get("EvidenceType")),
                 strata=md("; ".join(item.get("MechanismStrata") or [])),
-                quality=md(item.get("SentenceQuality")),
+                quality=md(item.get("ExpertOverallScore") or item.get("SentenceQuality")),
+                source=md(
+                    f"{item.get('AnnotationSource') or '-'}"
+                    f" ({item.get('AnnotationConfidence') or '-'})"
+                ),
             )
         )
     return lines
@@ -998,6 +1003,8 @@ def render_evidence_traces(curation: dict[str, Any], title: str = "Original Evid
                 f"- Phenotype: {item.get('TermName') or '-'}",
                 f"- Hypothesis: {item.get('Hypothesis') or '-'}",
                 f"- Evidence type: {item.get('EvidenceType') or '-'}",
+                f"- Expert score/source: {item.get('ExpertOverallScore') or '-'} / {item.get('AnnotationSource') or '-'} ({item.get('AnnotationConfidence') or '-'})",
+                f"- Expert reason: {item.get('ExpertReason') or '-'}",
                 f"- Candidate mechanism strata: {'; '.join(item.get('MechanismStrata') or []) or '-'}",
                 f"- Alteration taxonomy: {item.get('AlterationTaxonomy') or '-'}",
                 f"- Gene-alteration: {item.get('GeneAlteration') or '-'}",

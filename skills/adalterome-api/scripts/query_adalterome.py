@@ -50,19 +50,19 @@ def endpoint_for_args(args: argparse.Namespace) -> tuple[str, dict[str, Any]]:
     if command == "gene-overview":
         return "/gene/overview", {"gene": args.gene}
     if command == "gene-curation":
-        return "/gene/curation", {"gene": args.gene, "selected_limit": args.selected_limit}
+        return "/gene/curation", {"gene": args.gene, "selected_limit": args.selected_limit, "source": args.source}
     if command == "term-events":
         return "/term/events", {"term": args.term, "top_k": args.top_k}
     if command == "term-overview":
         return "/term/overview", {"term": args.term}
     if command == "term-curation":
-        return "/term/curation", {"term": args.term, "selected_limit": args.selected_limit}
+        return "/term/curation", {"term": args.term, "selected_limit": args.selected_limit, "source": args.source}
     if command == "hypothesis-support":
         return "/hypothesis/support", {"hypothesis": args.hypothesis, "top_k": args.top_k}
     if command == "hypothesis-overview":
         return "/hypothesis/overview", {"hypothesis": args.hypothesis}
     if command == "hypothesis-curation":
-        return "/hypothesis/curation", {"hypothesis": args.hypothesis, "selected_limit": args.selected_limit}
+        return "/hypothesis/curation", {"hypothesis": args.hypothesis, "selected_limit": args.selected_limit, "source": args.source}
     if command == "compare":
         return "/compare/genes", {"gene_a": args.gene_a, "gene_b": args.gene_b}
     raise SystemExit(f"Unsupported command: {command}")
@@ -151,6 +151,9 @@ def render_summary(payload: dict[str, Any]) -> str:
                 "TermName": row.get("TermName"),
                 "Hypothesis": row.get("Hypothesis"),
                 "EvidenceType": row.get("EvidenceType"),
+                "ExpertOverallScore": row.get("ExpertOverallScore"),
+                "AnnotationSource": row.get("AnnotationSource"),
+                "AnnotationConfidence": row.get("AnnotationConfidence"),
                 "IsLongTailEvidence": row.get("IsLongTailEvidence"),
             }
             for row in (curation.get("selected_evidence") or [])[:5]
@@ -236,6 +239,7 @@ def render_report(payload: dict[str, Any], api_page: str, request_url: str) -> s
                     f"   - Gene: {item.get('Gene') or '-'}",
                     f"   - Term: {item.get('TermName') or '-'}",
                     f"   - Evidence type: {item.get('EvidenceType') or '-'}",
+                    f"   - Expert score/source: {item.get('ExpertOverallScore') or '-'} / {item.get('AnnotationSource') or '-'} ({item.get('AnnotationConfidence') or '-'})",
                     f"   - Long-tail: {item.get('IsLongTailEvidence')}",
                     f"   - Sentence: {item.get('Sentence') or '-'}",
                 ]
@@ -289,6 +293,7 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("gene-curation")
     p.add_argument("--gene", required=True)
     p.add_argument("--selected-limit", type=int, default=30)
+    p.add_argument("--source", choices=["curated", "raw"], default="curated")
     p = sub.add_parser("term-events")
     p.add_argument("--term", required=True)
     p.add_argument("--top-k", type=int, default=10)
@@ -297,6 +302,7 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("term-curation")
     p.add_argument("--term", required=True)
     p.add_argument("--selected-limit", type=int, default=30)
+    p.add_argument("--source", choices=["curated", "raw"], default="curated")
     p = sub.add_parser("hypothesis-support")
     p.add_argument("--hypothesis", required=True)
     p.add_argument("--top-k", type=int, default=10)
@@ -305,6 +311,7 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("hypothesis-curation")
     p.add_argument("--hypothesis", required=True)
     p.add_argument("--selected-limit", type=int, default=30)
+    p.add_argument("--source", choices=["curated", "raw"], default="curated")
     p = sub.add_parser("compare")
     p.add_argument("--gene-a", required=True)
     p.add_argument("--gene-b", required=True)

@@ -48,6 +48,7 @@ The scripts use only Python standard library modules.
 
 ## Update Reports
 
+- [2026-06-05 curated pool and final annotation update](UPDATE_REPORT_2026-06-05_CURATED_POOL_FINAL_ANNOTATION.md)
 - [2026-06-03 full-pool curation update](UPDATE_REPORT_2026-06-03_FULL_POOL_CURATION.md)
 
 ## Installation
