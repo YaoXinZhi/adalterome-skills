@@ -1,0 +1,2216 @@
+{
+  "generated_at": "2026-06-05",
+  "api_base_url": "http://117.72.176.137/api/adalterome",
+  "api_version": "0.4.1",
+  "github_commit": "40694dd Expose complete curated query statistics in reports",
+  "cases": {
+    "gene_mapt": {
+      "label": "案例一：单基因查询 MAPT",
+      "mode": "gene",
+      "target": "MAPT",
+      "natural_language_question": "MAPT evidence如何支持tau相关AD病理机制，以及新版curated pool是否能给出比人工筛选更透明的证据包？",
+      "coverage": {
+        "targets": [
+          {
+            "label": "MAPT",
+            "curation_source": "curated_pool",
+            "curation_scope": "offline_full_query_pool_prescreened",
+            "overview_event_count": null,
+            "matched_event_count": 27921,
+            "curation_pool_rows": 2687,
+            "event_unique_rows": 2687,
+            "unique_pmids": 1636,
+            "coverage_ratio": 0.0962,
+            "warnings": [
+              "low_fraction_of_matched_events_in_curation_pool"
+            ]
+          }
+        ],
+        "balance": {
+          "status": "not_applicable",
+          "notes": []
+        }
+      },
+      "case_study": {
+        "title": "MAPT",
+        "mode": "gene",
+        "scientific_question": "MAPT evidence如何支持tau相关AD病理机制，以及新版curated pool是否能给出比人工筛选更透明的证据包？",
+        "dominant_mechanism_strata": [
+          {
+            "value": "amyloid/tau axis",
+            "count": 16
+          },
+          {
+            "value": "synaptic and neuronal dysfunction axis",
+            "count": 9
+          },
+          {
+            "value": "proteostasis/autophagy axis",
+            "count": 8
+          },
+          {
+            "value": "neuroinflammation and microglia axis",
+            "count": 6
+          },
+          {
+            "value": "vascular/metabolic axis",
+            "count": 1
+          },
+          {
+            "value": "mitochondrial and oxidative stress axis",
+            "count": 1
+          }
+        ],
+        "top_genes": [
+          "MAPT"
+        ],
+        "top_terms": [
+          "Myopathies, Structural, Congenital",
+          "Skin Diseases, Vesiculobullous",
+          "Auditory Diseases, Central",
+          "Nervous System Diseases",
+          "import across plasma membrane",
+          "peptide secretion",
+          "vacuole",
+          "translation"
+        ]
+      },
+      "curations": {
+        "mapt_curation.json": {
+          "coverage_scope": {
+            "query_type": "gene",
+            "curation_source": "curated_pool",
+            "curation_scope": "offline_full_query_pool_prescreened",
+            "overview_event_count": null,
+            "matched_event_count": 27921,
+            "curation_pool_rows": 2687,
+            "coverage_ratio": 0.0962,
+            "api_limit_notice": null,
+            "curated_query_match_count": 1,
+            "curated_pool_entries": 2687,
+            "curated_filtered_pool_rows": 2687,
+            "curated_query_stats_raw_event_count": 27921,
+            "curated_query_stats_count_is_alias_merged": false,
+            "annotation_source": "event_expert_annotation_final",
+            "curation_endpoint_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=MAPT&selected_limit=80"
+          },
+          "deduplication_summary": {
+            "curation_pool_row_count": 2687,
+            "event_unique_rows": 2687,
+            "event_deduplication_key": "gene-fixed event key: alteration taxonomy + phenotype/term + hypothesis; fallback to PMID/sentence when structured fields are sparse",
+            "unique_pmids": 1636,
+            "unique_genes": 3,
+            "unique_phenotypes": 703,
+            "unique_terms": 703,
+            "unique_alteration_taxonomies": 28,
+            "unique_gene_alterations": 32,
+            "unique_alteration_signatures": 28,
+            "unique_hypotheses": 145
+          },
+          "global_summary": {
+            "query_count": 1,
+            "query_values": [
+              "MAPT [Entrez:4137]"
+            ],
+            "raw_event_count": 27921,
+            "event_unique_count": 8014,
+            "candidate_event_count": 6553,
+            "curated_pool_count": 2687,
+            "long_tail_event_count": 2234,
+            "high_quality_event_count": 6533,
+            "broad_background_count": 88,
+            "statistics_source": "curated_query_stats",
+            "note": "Counts describe the offline full matched query pool after pre-screening and query-specific event curation; selected_evidence is only a small representative subset."
+          },
+          "top_genes": [
+            {
+              "value": "MAPT [Entrez:4137]",
+              "count": 8003
+            },
+            {
+              "value": "MICROTUBULE-ASSOCIATED PROTEIN TAU [Entrez:4137]",
+              "count": 7
+            },
+            {
+              "value": "TAU [Entrez:4137]",
+              "count": 4
+            }
+          ],
+          "top_phenotypes": [
+            {
+              "value": "protein [GO:0003675]",
+              "count": 106
+            },
+            {
+              "value": "Alzheimer Disease [MESH:D000544]",
+              "count": 103
+            },
+            {
+              "value": "Neurodegeneration [HP:0002180]",
+              "count": 81
+            },
+            {
+              "value": "phosphorylation [GO:0016310]",
+              "count": 69
+            },
+            {
+              "value": "biosynthetic process [GO:0009058]",
+              "count": 65
+            },
+            {
+              "value": "Dementia [HP:0000726]",
+              "count": 64
+            },
+            {
+              "value": "Nerve Degeneration [MESH:D009410]",
+              "count": 62
+            },
+            {
+              "value": "Cognition Disorders [MESH:D003072]",
+              "count": 58
+            }
+          ],
+          "top_gene_alterations": [
+            {
+              "value": "MAPT / point mutations:mutations",
+              "count": 2439
+            },
+            {
+              "value": "MAPT / normalized variants:dna change",
+              "count": 1931
+            },
+            {
+              "value": "MAPT / structural variation:deletion",
+              "count": 516
+            },
+            {
+              "value": "MAPT / expression changes:dysregulation",
+              "count": 460
+            },
+            {
+              "value": "MAPT / epigenic changes:phosphorylation",
+              "count": 448
+            },
+            {
+              "value": "MAPT / structural variation:chromosomal variation",
+              "count": 332
+            },
+            {
+              "value": "MAPT / expression changes:underexpression",
+              "count": 266
+            },
+            {
+              "value": "MAPT / genetic manipulation:gene aggregation",
+              "count": 239
+            }
+          ],
+          "top_alteration_taxonomies": [
+            {
+              "value": "point mutations:mutations",
+              "count": 2448
+            },
+            {
+              "value": "normalized variants:dna change",
+              "count": 1932
+            },
+            {
+              "value": "structural variation:deletion",
+              "count": 517
+            },
+            {
+              "value": "expression changes:dysregulation",
+              "count": 460
+            },
+            {
+              "value": "epigenic changes:phosphorylation",
+              "count": 448
+            },
+            {
+              "value": "structural variation:chromosomal variation",
+              "count": 332
+            },
+            {
+              "value": "expression changes:underexpression",
+              "count": 266
+            },
+            {
+              "value": "genetic manipulation:gene aggregation",
+              "count": 239
+            }
+          ],
+          "top_hypotheses": [
+            {
+              "value": "Tau Protein Hypothesis",
+              "count": 2880
+            },
+            {
+              "value": "Amyloid Hypothesis,Tau Protein Hypothesis",
+              "count": 949
+            },
+            {
+              "value": "Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+              "count": 296
+            },
+            {
+              "value": "Tau Protein Hypothesis,Abnormal Autophagy Hypothesis",
+              "count": 199
+            },
+            {
+              "value": "Tau Protein Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 173
+            },
+            {
+              "value": "Tau Protein Hypothesis,Oxidative Stress Hypothesis",
+              "count": 131
+            }
+          ],
+          "mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 8014
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 3078
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 2926
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 1418
+            },
+            {
+              "value": "neuroinflammation and microglia axis",
+              "count": 1003
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 676
+            }
+          ],
+          "evidence_types": [
+            {
+              "value": "molecular_mechanism",
+              "count": 3434
+            },
+            {
+              "value": "model_or_intervention",
+              "count": 2998
+            },
+            {
+              "value": "alteration_evidence",
+              "count": 1169
+            },
+            {
+              "value": "cellular_or_pathway_process",
+              "count": 413
+            }
+          ],
+          "selected_evidence_rows": 42,
+          "final_annotation_summary": {
+            "annotation_table": "event_expert_annotation_final",
+            "selected_annotation_sources": [
+              {
+                "value": "llm_reviewed",
+                "count": 36
+              },
+              {
+                "value": "heuristic_only",
+                "count": 6
+              }
+            ],
+            "selected_annotation_confidence": [
+              {
+                "value": "high",
+                "count": 35
+              },
+              {
+                "value": "heuristic",
+                "count": 6
+              },
+              {
+                "value": "medium",
+                "count": 1
+              }
+            ],
+            "note": "Rows marked llm_reviewed_invalid are excluded from curated report evidence by default."
+          }
+        }
+      },
+      "expert_evidence_summary": {
+        "included_evidence": 16,
+        "additional_high_scoring_evidence": 16,
+        "all_scored_evidence": 52,
+        "annotation_sources_included": {
+          "llm_reviewed": 16
+        },
+        "expert_overall_scores_included": {
+          "5": 16
+        },
+        "long_tail_included": 16,
+        "included_preview": [
+          {
+            "target": "MAPT",
+            "expert_score": 105.0,
+            "gene": "MAPT",
+            "term": "Myopathies, Structural, Congenital",
+            "pmid": "26696824",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "proteostasis/autophagy axis"
+            ]
+          },
+          {
+            "target": "MAPT",
+            "expert_score": 105.0,
+            "gene": "MAPT",
+            "term": "Skin Diseases, Vesiculobullous",
+            "pmid": "33804962",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis",
+              "proteostasis/autophagy axis"
+            ]
+          },
+          {
+            "target": "MAPT",
+            "expert_score": 103.0,
+            "gene": "MAPT",
+            "term": "Auditory Diseases, Central",
+            "pmid": "36966157",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis"
+            ]
+          },
+          {
+            "target": "MAPT",
+            "expert_score": 103.0,
+            "gene": "MAPT",
+            "term": "Nervous System Diseases",
+            "pmid": "37337279",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ]
+          },
+          {
+            "target": "MAPT",
+            "expert_score": 103.0,
+            "gene": "MAPT",
+            "term": "import across plasma membrane",
+            "pmid": "37452321",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "proteostasis/autophagy axis",
+              "amyloid/tau axis"
+            ]
+          },
+          {
+            "target": "MAPT",
+            "expert_score": 103.0,
+            "gene": "MAPT",
+            "term": "peptide secretion",
+            "pmid": "35794091",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis"
+            ]
+          },
+          {
+            "target": "MAPT",
+            "expert_score": 103.0,
+            "gene": "MAPT",
+            "term": "vacuole",
+            "pmid": "37759656",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis"
+            ]
+          },
+          {
+            "target": "MAPT",
+            "expert_score": 102.0,
+            "gene": "MAPT",
+            "term": "-",
+            "pmid": "34658846",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "proteostasis/autophagy axis"
+            ]
+          }
+        ]
+      }
+    },
+    "term_mitochondrial_dysfunction": {
+      "label": "案例二：单表型/病理过程查询 mitochondrial dysfunction",
+      "mode": "term",
+      "target": "mitochondrial dysfunction",
+      "natural_language_question": "mitochondrial dysfunction作为表型/病理过程时，AD-Alterome如何推荐和解释相关基因及长尾机制证据？",
+      "coverage": {
+        "targets": [
+          {
+            "label": "mitochondrial dysfunction",
+            "curation_source": "curated_pool",
+            "curation_scope": "offline_full_query_pool_prescreened",
+            "overview_event_count": null,
+            "matched_event_count": null,
+            "curation_pool_rows": 244,
+            "event_unique_rows": 228,
+            "unique_pmids": 152,
+            "coverage_ratio": null,
+            "warnings": []
+          }
+        ],
+        "balance": {
+          "status": "not_applicable",
+          "notes": []
+        }
+      },
+      "case_study": {
+        "title": "mitochondrial dysfunction",
+        "mode": "term",
+        "scientific_question": "mitochondrial dysfunction作为表型/病理过程时，AD-Alterome如何推荐和解释相关基因及长尾机制证据？",
+        "dominant_mechanism_strata": [
+          {
+            "value": "mitochondrial and oxidative stress axis",
+            "count": 16
+          },
+          {
+            "value": "proteostasis/autophagy axis",
+            "count": 16
+          },
+          {
+            "value": "amyloid/tau axis",
+            "count": 6
+          },
+          {
+            "value": "vascular/metabolic axis",
+            "count": 6
+          },
+          {
+            "value": "synaptic and neuronal dysfunction axis",
+            "count": 5
+          },
+          {
+            "value": "neuroinflammation and microglia axis",
+            "count": 4
+          }
+        ],
+        "top_genes": [
+          "MAPT",
+          "HSPD1",
+          "NANOS2",
+          "ESR1",
+          "FRMD6",
+          "INSR",
+          "LDLR",
+          "HSPA9"
+        ],
+        "top_terms": [
+          "Mitochondrial Diseases",
+          "Mitochondrial inheritance",
+          "Abnormality of mitochondrial metabolism"
+        ]
+      },
+      "curations": {
+        "mitochondrial_dysfunction_curation.json": {
+          "coverage_scope": {
+            "query_type": "term",
+            "curation_source": "curated_pool",
+            "curation_scope": "offline_full_query_pool_prescreened",
+            "overview_event_count": null,
+            "matched_event_count": null,
+            "curation_pool_rows": 244,
+            "coverage_ratio": null,
+            "api_limit_notice": null,
+            "curated_query_match_count": 4,
+            "curated_pool_entries": 858,
+            "curated_filtered_pool_rows": 244,
+            "curated_query_stats_raw_event_count": 4159,
+            "curated_query_stats_count_is_alias_merged": true,
+            "annotation_source": "event_expert_annotation_final",
+            "curation_endpoint_url": "http://117.72.176.137/api/adalterome/term/curation?term=mitochondrial+dysfunction&selected_limit=80"
+          },
+          "deduplication_summary": {
+            "curation_pool_row_count": 244,
+            "event_unique_rows": 228,
+            "event_deduplication_key": "term-fixed event key: gene + alteration taxonomy + hypothesis; fallback to PMID/sentence when structured fields are sparse",
+            "unique_pmids": 152,
+            "unique_genes": 117,
+            "unique_phenotypes": 4,
+            "unique_terms": 4,
+            "unique_alteration_taxonomies": 19,
+            "unique_gene_alterations": 168,
+            "unique_alteration_signatures": 19,
+            "unique_hypotheses": 41
+          },
+          "global_summary": {
+            "query_count": 4,
+            "query_values": [
+              "Mitochondrial dysfunction",
+              "Mitochondrial inheritance [HP:0001427]",
+              "Abnormality of mitochondrial metabolism [HP:0003287]",
+              "mitochondrial injury [MESH:D028361]"
+            ],
+            "raw_event_count": 4159,
+            "event_unique_count": 1907,
+            "candidate_event_count": 889,
+            "curated_pool_count": 858,
+            "long_tail_event_count": 1332,
+            "high_quality_event_count": 889,
+            "broad_background_count": 0,
+            "statistics_source": "curated_query_stats",
+            "note": "Counts describe the offline full matched query pool after pre-screening and query-specific event curation; selected_evidence is only a small representative subset."
+          },
+          "top_genes": [
+            {
+              "value": "MAPT [Entrez:4137]",
+              "count": 78
+            },
+            {
+              "value": "PINK1 [Entrez:65018]",
+              "count": 40
+            },
+            {
+              "value": "APP [Entrez:351]",
+              "count": 39
+            },
+            {
+              "value": "SNCA [Entrez:6622]",
+              "count": 27
+            },
+            {
+              "value": "SIRT3 [Entrez:23410]",
+              "count": 25
+            },
+            {
+              "value": "PPIF [Entrez:10105]",
+              "count": 20
+            },
+            {
+              "value": "MFN2 [Entrez:9927]",
+              "count": 16
+            },
+            {
+              "value": "DAPK2 [Entrez:23604]",
+              "count": 16
+            },
+            {
+              "value": "SOD1 [Entrez:6647]",
+              "count": 14
+            },
+            {
+              "value": "PSEN1 [Entrez:5663]",
+              "count": 13
+            }
+          ],
+          "top_phenotypes": [
+            {
+              "value": "Mitochondrial inheritance [HP:0001427]",
+              "count": 1346
+            },
+            {
+              "value": "Mitochondrial Diseases [MESH:D028361]",
+              "count": 457
+            },
+            {
+              "value": "Abnormality of mitochondrial metabolism [HP:0003287]",
+              "count": 78
+            },
+            {
+              "value": "Mitochondrial dysfunction",
+              "count": 6
+            },
+            {
+              "value": "mitochondrial damage [MESH:D028361]",
+              "count": 5
+            },
+            {
+              "value": "disability of mitochondrial respiratory [MESH:D028361]",
+              "count": 2
+            },
+            {
+              "value": "mitochondrial stress-induced dysfunction [MESH:D028361]",
+              "count": 2
+            },
+            {
+              "value": "mitochondrial dysfunctions [MESH:D028361]",
+              "count": 1
+            },
+            {
+              "value": "mitochondrial phenotype [MESH:D028361]",
+              "count": 1
+            },
+            {
+              "value": "mitochondrial dysfuntion [MESH:D028361]",
+              "count": 1
+            }
+          ],
+          "top_gene_alterations": [
+            {
+              "value": "MAPT / point mutations:mutations",
+              "count": 17
+            },
+            {
+              "value": "APP / point mutations:mutations",
+              "count": 16
+            },
+            {
+              "value": "MAPT / normalized variants:dna change",
+              "count": 12
+            },
+            {
+              "value": "PINK1 / point mutations:mutations",
+              "count": 9
+            },
+            {
+              "value": "PSEN1 / point mutations:mutations",
+              "count": 8
+            },
+            {
+              "value": "TAS2R62P / point mutations:mutations",
+              "count": 7
+            },
+            {
+              "value": "APOE / point mutations:mutations",
+              "count": 7
+            },
+            {
+              "value": "PPIF / structural variation:deletion",
+              "count": 6
+            },
+            {
+              "value": "MAPT / structural variation:deletion",
+              "count": 6
+            },
+            {
+              "value": "SOD1 / point mutations:mutations",
+              "count": 5
+            }
+          ],
+          "top_alteration_taxonomies": [
+            {
+              "value": "point mutations:mutations",
+              "count": 685
+            },
+            {
+              "value": "structural variation:deletion",
+              "count": 271
+            },
+            {
+              "value": "expression changes:dysregulation",
+              "count": 164
+            },
+            {
+              "value": "expression changes:underexpression",
+              "count": 160
+            },
+            {
+              "value": "genetic manipulation:knockout",
+              "count": 136
+            },
+            {
+              "value": "normalized variants:dna change",
+              "count": 123
+            },
+            {
+              "value": "expression changes:overexpression",
+              "count": 68
+            },
+            {
+              "value": "epigenic changes:silencing",
+              "count": 37
+            },
+            {
+              "value": "structural variation:chromosomal variation",
+              "count": 21
+            },
+            {
+              "value": "genetic manipulation:gene aggregation",
+              "count": 15
+            }
+          ],
+          "top_hypotheses": [
+            {
+              "value": "Mitochondrial autophagy hypothesis",
+              "count": 286
+            },
+            {
+              "value": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+              "count": 182
+            },
+            {
+              "value": "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 61
+            },
+            {
+              "value": "Tau Protein Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 37
+            },
+            {
+              "value": "Abnormal Autophagy Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 30
+            },
+            {
+              "value": "Oxidative Stress Hypothesis",
+              "count": 16
+            },
+            {
+              "value": "Amyloid hypothesis,Tau protein hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+              "count": 8
+            },
+            {
+              "value": "Amyloid Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 6
+            },
+            {
+              "value": "Neuroinflammation hypothesis,Mitochondrial autophagy hypothesis",
+              "count": 2
+            },
+            {
+              "value": "Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 2
+            }
+          ],
+          "mechanism_strata": [
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 1907
+            },
+            {
+              "value": "amyloid/tau axis",
+              "count": 1373
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 903
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 466
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 261
+            },
+            {
+              "value": "neuroinflammation and microglia axis",
+              "count": 103
+            }
+          ],
+          "evidence_types": [
+            {
+              "value": "model_or_intervention",
+              "count": 693
+            },
+            {
+              "value": "cellular_or_pathway_process",
+              "count": 622
+            },
+            {
+              "value": "molecular_mechanism",
+              "count": 592
+            }
+          ],
+          "selected_evidence_rows": 12,
+          "final_annotation_summary": {
+            "annotation_table": "event_expert_annotation_final",
+            "selected_annotation_sources": [
+              {
+                "value": "heuristic_only",
+                "count": 7
+              },
+              {
+                "value": "llm_reviewed",
+                "count": 5
+              }
+            ],
+            "selected_annotation_confidence": [
+              {
+                "value": "heuristic",
+                "count": 7
+              },
+              {
+                "value": "high",
+                "count": 5
+              }
+            ],
+            "note": "Rows marked llm_reviewed_invalid are excluded from curated report evidence by default."
+          }
+        }
+      },
+      "expert_evidence_summary": {
+        "included_evidence": 16,
+        "additional_high_scoring_evidence": 5,
+        "all_scored_evidence": 21,
+        "annotation_sources_included": {
+          "heuristic_only": 11,
+          "llm_reviewed": 5
+        },
+        "expert_overall_scores_included": {
+          "5": 15,
+          "4": 1
+        },
+        "long_tail_included": 16,
+        "included_preview": [
+          {
+            "target": "mitochondrial dysfunction",
+            "expert_score": 102.0,
+            "gene": "NANOS2",
+            "term": "Mitochondrial inheritance",
+            "pmid": "35453528",
+            "annotation_source": "heuristic_only",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ]
+          },
+          {
+            "target": "mitochondrial dysfunction",
+            "expert_score": 100.0,
+            "gene": "ESR1",
+            "term": "Mitochondrial Diseases",
+            "pmid": "32690944",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "proteostasis/autophagy axis"
+            ]
+          },
+          {
+            "target": "mitochondrial dysfunction",
+            "expert_score": 100.0,
+            "gene": "FRMD6",
+            "term": "Mitochondrial Diseases",
+            "pmid": "36231104",
+            "annotation_source": "heuristic_only",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "mitochondrial and oxidative stress axis",
+              "synaptic and neuronal dysfunction axis",
+              "proteostasis/autophagy axis"
+            ]
+          },
+          {
+            "target": "mitochondrial dysfunction",
+            "expert_score": 100.0,
+            "gene": "MAPT",
+            "term": "-",
+            "pmid": "33679375",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "proteostasis/autophagy axis"
+            ]
+          },
+          {
+            "target": "mitochondrial dysfunction",
+            "expert_score": 98.0,
+            "gene": "MAPT",
+            "term": "Mitochondrial Diseases",
+            "pmid": "36639689",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ]
+          },
+          {
+            "target": "mitochondrial dysfunction",
+            "expert_score": 98.0,
+            "gene": "INSR",
+            "term": "Abnormality of mitochondrial metabolism",
+            "pmid": "37186836",
+            "annotation_source": "heuristic_only",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "mitochondrial and oxidative stress axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ]
+          },
+          {
+            "target": "mitochondrial dysfunction",
+            "expert_score": 98.0,
+            "gene": "LDLR",
+            "term": "Mitochondrial Diseases",
+            "pmid": "38056504",
+            "annotation_source": "heuristic_only",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ]
+          },
+          {
+            "target": "mitochondrial dysfunction",
+            "expert_score": 98.0,
+            "gene": "HSPA9",
+            "term": "Mitochondrial inheritance",
+            "pmid": "33676568",
+            "annotation_source": "heuristic_only",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "mitochondrial and oxidative stress axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ]
+          }
+        ]
+      }
+    },
+    "hypothesis_neuroinflammation": {
+      "label": "案例三：假说查询 Neuroinflammation Hypothesis",
+      "mode": "hypothesis",
+      "target": "Neuroinflammation Hypothesis",
+      "natural_language_question": "Neuroinflammation Hypothesis的证据池是否能重建TREM2/APOE等炎症相关AD病理线索？",
+      "coverage": {
+        "targets": [
+          {
+            "label": "Neuroinflammation Hypothesis",
+            "curation_source": "curated_pool",
+            "curation_scope": "offline_full_query_pool_prescreened",
+            "overview_event_count": null,
+            "matched_event_count": 34060,
+            "curation_pool_rows": 5225,
+            "event_unique_rows": 5225,
+            "unique_pmids": 3030,
+            "coverage_ratio": 0.1534,
+            "warnings": []
+          }
+        ],
+        "balance": {
+          "status": "not_applicable",
+          "notes": []
+        }
+      },
+      "case_study": {
+        "title": "Neuroinflammation Hypothesis",
+        "mode": "hypothesis",
+        "scientific_question": "Neuroinflammation Hypothesis的证据池是否能重建TREM2/APOE等炎症相关AD病理线索？",
+        "dominant_mechanism_strata": [
+          {
+            "value": "amyloid/tau axis",
+            "count": 15
+          },
+          {
+            "value": "neuroinflammation and microglia axis",
+            "count": 15
+          },
+          {
+            "value": "synaptic and neuronal dysfunction axis",
+            "count": 6
+          },
+          {
+            "value": "vascular/metabolic axis",
+            "count": 6
+          },
+          {
+            "value": "proteostasis/autophagy axis",
+            "count": 1
+          }
+        ],
+        "top_genes": [
+          "APOE",
+          "MAPT",
+          "CELF2",
+          "CLU",
+          "TGFBR2",
+          "GTF3C1",
+          "TYROBP",
+          "GBA1"
+        ],
+        "top_terms": [
+          "Neurodegeneration",
+          "Blood Platelet Disorders",
+          "lipid binding",
+          "low-density lipoprotein",
+          "Auditory Diseases, Central",
+          "Peripheral",
+          "Alzheimer&#39;s disease without Neurofibrillary tangles",
+          "movement and dementia disorders"
+        ]
+      },
+      "curations": {
+        "neuroinflammation_hypothesis_curation.json": {
+          "coverage_scope": {
+            "query_type": "hypothesis",
+            "curation_source": "curated_pool",
+            "curation_scope": "offline_full_query_pool_prescreened",
+            "overview_event_count": null,
+            "matched_event_count": 34060,
+            "curation_pool_rows": 5225,
+            "coverage_ratio": 0.1534,
+            "api_limit_notice": null,
+            "curated_query_match_count": 1,
+            "curated_pool_entries": 5225,
+            "curated_filtered_pool_rows": 5225,
+            "curated_query_stats_raw_event_count": 34060,
+            "curated_query_stats_count_is_alias_merged": false,
+            "annotation_source": "event_expert_annotation_final",
+            "curation_endpoint_url": "http://117.72.176.137/api/adalterome/hypothesis/curation?hypothesis=Neuroinflammation+Hypothesis&selected_limit=80"
+          },
+          "deduplication_summary": {
+            "curation_pool_row_count": 5225,
+            "event_unique_rows": 5225,
+            "event_deduplication_key": "hypothesis-fixed event key: gene + alteration taxonomy + phenotype/term; fallback to PMID/sentence when structured fields are sparse",
+            "unique_pmids": 3030,
+            "unique_genes": 1738,
+            "unique_phenotypes": 1000,
+            "unique_terms": 1000,
+            "unique_alteration_taxonomies": 27,
+            "unique_gene_alterations": 2725,
+            "unique_alteration_signatures": 27,
+            "unique_hypotheses": 129
+          },
+          "global_summary": {
+            "query_count": 1,
+            "query_values": [
+              "Neuroinflammation Hypothesis"
+            ],
+            "raw_event_count": 34060,
+            "event_unique_count": 20229,
+            "candidate_event_count": 20173,
+            "curated_pool_count": 5225,
+            "long_tail_event_count": 4382,
+            "high_quality_event_count": 20173,
+            "broad_background_count": 57,
+            "statistics_source": "curated_query_stats",
+            "note": "Counts describe the offline full matched query pool after pre-screening and query-specific event curation; selected_evidence is only a small representative subset."
+          },
+          "top_genes": [
+            {
+              "value": "TREM2 [Entrez:54209]",
+              "count": 1333
+            },
+            {
+              "value": "MAPT [Entrez:4137]",
+              "count": 757
+            },
+            {
+              "value": "APOE [Entrez:348]",
+              "count": 519
+            },
+            {
+              "value": "APP [Entrez:351]",
+              "count": 486
+            },
+            {
+              "value": "TAS2R62P [Entrez:338399]",
+              "count": 462
+            },
+            {
+              "value": "TNF [Entrez:7124]",
+              "count": 383
+            },
+            {
+              "value": "IL6 [Entrez:3569]",
+              "count": 363
+            },
+            {
+              "value": "BDNF-AS [Entrez:497258]",
+              "count": 338
+            }
+          ],
+          "top_phenotypes": [
+            {
+              "value": "Alzheimer Disease [MESH:D000544]",
+              "count": 634
+            },
+            {
+              "value": "AD",
+              "count": 428
+            },
+            {
+              "value": "expression",
+              "count": 400
+            },
+            {
+              "value": "protein [GO:0003675]",
+              "count": 381
+            },
+            {
+              "value": "inflammatory response [GO:0006954]",
+              "count": 340
+            },
+            {
+              "value": "activation [ADMO:0000042]",
+              "count": 331
+            },
+            {
+              "value": "signaling [GO:0023052]",
+              "count": 269
+            },
+            {
+              "value": "Neuroinflammation [HP:0033429]",
+              "count": 262
+            }
+          ],
+          "top_gene_alterations": [
+            {
+              "value": "TREM2 / point mutations:mutations",
+              "count": 368
+            },
+            {
+              "value": "TREM2 / normalized variants:dna change",
+              "count": 305
+            },
+            {
+              "value": "APOE / point mutations:mutations",
+              "count": 273
+            },
+            {
+              "value": "MAPT / normalized variants:dna change",
+              "count": 213
+            },
+            {
+              "value": "TREM2 / structural variation:deletion",
+              "count": 182
+            },
+            {
+              "value": "APP / point mutations:mutations",
+              "count": 180
+            },
+            {
+              "value": "MAPT / point mutations:mutations",
+              "count": 178
+            },
+            {
+              "value": "PSEN1 / point mutations:mutations",
+              "count": 176
+            }
+          ],
+          "top_alteration_taxonomies": [
+            {
+              "value": "point mutations:mutations",
+              "count": 5415
+            },
+            {
+              "value": "structural variation:deletion",
+              "count": 3089
+            },
+            {
+              "value": "expression changes:underexpression",
+              "count": 2072
+            },
+            {
+              "value": "expression changes:dysregulation",
+              "count": 1863
+            },
+            {
+              "value": "normalized variants:dna change",
+              "count": 1671
+            },
+            {
+              "value": "genetic manipulation:knockout",
+              "count": 1575
+            },
+            {
+              "value": "normalized variants:rsid normalized",
+              "count": 937
+            },
+            {
+              "value": "expression changes:overexpression",
+              "count": 821
+            }
+          ],
+          "top_hypotheses": [
+            {
+              "value": "Neuroinflammation Hypothesis",
+              "count": 7901
+            },
+            {
+              "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+              "count": 3195
+            },
+            {
+              "value": "Neuroinflammation Hypothesis,Oxidative Stress Hypothesis",
+              "count": 1316
+            },
+            {
+              "value": "Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+              "count": 1083
+            },
+            {
+              "value": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+              "count": 871
+            }
+          ],
+          "mechanism_strata": [
+            {
+              "value": "neuroinflammation and microglia axis",
+              "count": 20229
+            },
+            {
+              "value": "amyloid/tau axis",
+              "count": 10105
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 6365
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 4460
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 3100
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 3037
+            }
+          ],
+          "evidence_types": [
+            {
+              "value": "model_or_intervention",
+              "count": 8847
+            },
+            {
+              "value": "molecular_mechanism",
+              "count": 7111
+            },
+            {
+              "value": "cellular_or_pathway_process",
+              "count": 4271
+            }
+          ],
+          "selected_evidence_rows": 80,
+          "final_annotation_summary": {
+            "annotation_table": "event_expert_annotation_final",
+            "selected_annotation_sources": [
+              {
+                "value": "llm_reviewed",
+                "count": 78
+              },
+              {
+                "value": "heuristic_only",
+                "count": 2
+              }
+            ],
+            "selected_annotation_confidence": [
+              {
+                "value": "high",
+                "count": 78
+              },
+              {
+                "value": "heuristic",
+                "count": 2
+              }
+            ],
+            "note": "Rows marked llm_reviewed_invalid are excluded from curated report evidence by default."
+          }
+        }
+      },
+      "expert_evidence_summary": {
+        "included_evidence": 16,
+        "additional_high_scoring_evidence": 16,
+        "all_scored_evidence": 82,
+        "annotation_sources_included": {
+          "llm_reviewed": 16
+        },
+        "expert_overall_scores_included": {
+          "5": 16
+        },
+        "long_tail_included": 16,
+        "included_preview": [
+          {
+            "target": "Neuroinflammation Hypothesis",
+            "expert_score": 107.0,
+            "gene": "CELF2",
+            "term": "Blood Platelet Disorders",
+            "pmid": "37799732",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ]
+          },
+          {
+            "target": "Neuroinflammation Hypothesis",
+            "expert_score": 105.0,
+            "gene": "APOE",
+            "term": "lipid binding",
+            "pmid": "37108421",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis"
+            ]
+          },
+          {
+            "target": "Neuroinflammation Hypothesis",
+            "expert_score": 104.0,
+            "gene": "CLU",
+            "term": "low-density lipoprotein",
+            "pmid": "37927337",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis",
+              "vascular/metabolic axis"
+            ]
+          },
+          {
+            "target": "Neuroinflammation Hypothesis",
+            "expert_score": 103.0,
+            "gene": "MAPT",
+            "term": "Auditory Diseases, Central",
+            "pmid": "36966157",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis"
+            ]
+          },
+          {
+            "target": "Neuroinflammation Hypothesis",
+            "expert_score": 102.0,
+            "gene": "TGFBR2",
+            "term": "Neurodegeneration",
+            "pmid": "37600517",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis"
+            ]
+          },
+          {
+            "target": "Neuroinflammation Hypothesis",
+            "expert_score": 102.0,
+            "gene": "GTF3C1",
+            "term": "Peripheral",
+            "pmid": "37305557",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis"
+            ]
+          },
+          {
+            "target": "Neuroinflammation Hypothesis",
+            "expert_score": 101.0,
+            "gene": "TYROBP",
+            "term": "Alzheimer&#39;s disease without Neurofibrillary tangles",
+            "pmid": "32709045",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis"
+            ]
+          },
+          {
+            "target": "Neuroinflammation Hypothesis",
+            "expert_score": 101.0,
+            "gene": "GBA1",
+            "term": "movement and dementia disorders",
+            "pmid": "37947642",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis",
+              "vascular/metabolic axis"
+            ]
+          }
+        ]
+      }
+    },
+    "compare_apoe_app": {
+      "label": "案例四：基因比较 APOE vs APP",
+      "mode": "compare",
+      "target": "APOE vs APP",
+      "natural_language_question": "APOE和APP在AD病理机制中有哪些共享和特异的遗传改变-表型-假说模式？",
+      "coverage": {
+        "targets": [
+          {
+            "label": "APOE",
+            "curation_source": "curated_pool",
+            "curation_scope": "offline_full_query_pool_prescreened",
+            "overview_event_count": null,
+            "matched_event_count": 13322,
+            "curation_pool_rows": 1839,
+            "event_unique_rows": 1839,
+            "unique_pmids": 1159,
+            "coverage_ratio": 0.138,
+            "warnings": []
+          },
+          {
+            "label": "APP",
+            "curation_source": "curated_pool",
+            "curation_scope": "offline_full_query_pool_prescreened",
+            "overview_event_count": null,
+            "matched_event_count": 18639,
+            "curation_pool_rows": 2300,
+            "event_unique_rows": 2300,
+            "unique_pmids": 1592,
+            "coverage_ratio": 0.1234,
+            "warnings": []
+          }
+        ],
+        "balance": {
+          "status": "balanced",
+          "notes": [
+            "Targets have comparable curation scope for case-study synthesis."
+          ]
+        }
+      },
+      "case_study": {
+        "title": "APOE vs APP",
+        "mode": "compare",
+        "scientific_question": "APOE和APP在AD病理机制中有哪些共享和特异的遗传改变-表型-假说模式？",
+        "dominant_mechanism_strata": [
+          {
+            "value": "amyloid/tau axis",
+            "count": 17
+          },
+          {
+            "value": "synaptic and neuronal dysfunction axis",
+            "count": 10
+          },
+          {
+            "value": "vascular/metabolic axis",
+            "count": 10
+          },
+          {
+            "value": "proteostasis/autophagy axis",
+            "count": 7
+          },
+          {
+            "value": "neuroinflammation and microglia axis",
+            "count": 6
+          },
+          {
+            "value": "mitochondrial and oxidative stress axis",
+            "count": 3
+          }
+        ],
+        "top_genes": [
+          "APOE",
+          "APP",
+          "amyloid beta precursor protein"
+        ],
+        "top_terms": [
+          "chemical synaptic transmission",
+          "Glioma",
+          "positive regulation of mitochondrial membrane permeability",
+          "Complement Component 3 Deficiency, Autosomal Recessive",
+          "Hemorrhage",
+          "cholesterol esterification",
+          "hypersensitivity",
+          "lipid binding"
+        ]
+      },
+      "curations": {
+        "apoe_curation.json": {
+          "coverage_scope": {
+            "query_type": "gene",
+            "curation_source": "curated_pool",
+            "curation_scope": "offline_full_query_pool_prescreened",
+            "overview_event_count": null,
+            "matched_event_count": 13322,
+            "curation_pool_rows": 1839,
+            "coverage_ratio": 0.138,
+            "api_limit_notice": null,
+            "curated_query_match_count": 1,
+            "curated_pool_entries": 1839,
+            "curated_filtered_pool_rows": 1839,
+            "curated_query_stats_raw_event_count": 13322,
+            "curated_query_stats_count_is_alias_merged": false,
+            "annotation_source": "event_expert_annotation_final",
+            "curation_endpoint_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=APOE&selected_limit=80"
+          },
+          "deduplication_summary": {
+            "curation_pool_row_count": 1839,
+            "event_unique_rows": 1839,
+            "event_deduplication_key": "gene-fixed event key: alteration taxonomy + phenotype/term + hypothesis; fallback to PMID/sentence when structured fields are sparse",
+            "unique_pmids": 1159,
+            "unique_genes": 3,
+            "unique_phenotypes": 529,
+            "unique_terms": 529,
+            "unique_alteration_taxonomies": 26,
+            "unique_gene_alterations": 33,
+            "unique_alteration_signatures": 26,
+            "unique_hypotheses": 122
+          },
+          "global_summary": {
+            "query_count": 1,
+            "query_values": [
+              "APOLIPOPROTEIN E [Entrez:348]"
+            ],
+            "raw_event_count": 13322,
+            "event_unique_count": 4025,
+            "candidate_event_count": 3550,
+            "curated_pool_count": 1840,
+            "long_tail_event_count": 1509,
+            "high_quality_event_count": 3537,
+            "broad_background_count": 37,
+            "statistics_source": "curated_query_stats",
+            "note": "Counts describe the offline full matched query pool after pre-screening and query-specific event curation; selected_evidence is only a small representative subset."
+          },
+          "top_genes": [
+            {
+              "value": "APOE [Entrez:348]",
+              "count": 3989
+            },
+            {
+              "value": "APOE4 [Entrez:348]",
+              "count": 26
+            },
+            {
+              "value": "APOLIPOPROTEIN E [Entrez:348]",
+              "count": 9
+            },
+            {
+              "value": "APOLIPOPROTEIN E3 [Entrez:348]",
+              "count": 1
+            }
+          ],
+          "top_phenotypes": [
+            {
+              "value": "Alzheimer Disease [MESH:D000544]",
+              "count": 73
+            },
+            {
+              "value": "AD",
+              "count": 60
+            },
+            {
+              "value": "Onset [HP:0003674]",
+              "count": 47
+            },
+            {
+              "value": "protein [GO:0003675]",
+              "count": 46
+            },
+            {
+              "value": "expression",
+              "count": 37
+            },
+            {
+              "value": "Cognition Disorders [MESH:D003072]",
+              "count": 30
+            },
+            {
+              "value": "Dementia [HP:0000726]",
+              "count": 27
+            },
+            {
+              "value": "Late onset [HP:0003584]",
+              "count": 27
+            }
+          ],
+          "top_gene_alterations": [
+            {
+              "value": "APOE / point mutations:mutations",
+              "count": 2575
+            },
+            {
+              "value": "APOE / normalized variants:rsid normalized",
+              "count": 329
+            },
+            {
+              "value": "APOE / structural variation:deletion",
+              "count": 184
+            },
+            {
+              "value": "APOE / normalized variants:dna change",
+              "count": 168
+            },
+            {
+              "value": "APOE / genetic manipulation:knockout",
+              "count": 112
+            },
+            {
+              "value": "APOE / expression changes:dysregulation",
+              "count": 103
+            },
+            {
+              "value": "APOE / structural variation:chromosomal variation",
+              "count": 103
+            },
+            {
+              "value": "APOE / genetic manipulation:knock-in",
+              "count": 94
+            }
+          ],
+          "top_alteration_taxonomies": [
+            {
+              "value": "point mutations:mutations",
+              "count": 2595
+            },
+            {
+              "value": "normalized variants:rsid normalized",
+              "count": 331
+            },
+            {
+              "value": "structural variation:deletion",
+              "count": 184
+            },
+            {
+              "value": "normalized variants:dna change",
+              "count": 170
+            },
+            {
+              "value": "genetic manipulation:knockout",
+              "count": 112
+            },
+            {
+              "value": "expression changes:dysregulation",
+              "count": 105
+            },
+            {
+              "value": "structural variation:chromosomal variation",
+              "count": 103
+            },
+            {
+              "value": "genetic manipulation:knock-in",
+              "count": 99
+            }
+          ],
+          "top_hypotheses": [
+            {
+              "value": "Amyloid Hypothesis",
+              "count": 642
+            },
+            {
+              "value": "Amyloid Hypothesis,Vascular Hypothesis",
+              "count": 601
+            },
+            {
+              "value": "Vascular Hypothesis",
+              "count": 499
+            },
+            {
+              "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+              "count": 129
+            },
+            {
+              "value": "Amyloid Hypothesis,Tau Protein Hypothesis",
+              "count": 105
+            },
+            {
+              "value": "Neuroinflammation Hypothesis",
+              "count": 87
+            }
+          ],
+          "mechanism_strata": [
+            {
+              "value": "vascular/metabolic axis",
+              "count": 4024
+            },
+            {
+              "value": "amyloid/tau axis",
+              "count": 3161
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 835
+            },
+            {
+              "value": "neuroinflammation and microglia axis",
+              "count": 765
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 691
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 513
+            }
+          ],
+          "evidence_types": [
+            {
+              "value": "molecular_mechanism",
+              "count": 1515
+            },
+            {
+              "value": "cellular_or_pathway_process",
+              "count": 1037
+            },
+            {
+              "value": "model_or_intervention",
+              "count": 795
+            },
+            {
+              "value": "alteration_evidence",
+              "count": 678
+            }
+          ],
+          "selected_evidence_rows": 57,
+          "final_annotation_summary": {
+            "annotation_table": "event_expert_annotation_final",
+            "selected_annotation_sources": [
+              {
+                "value": "heuristic_only",
+                "count": 36
+              },
+              {
+                "value": "llm_reviewed",
+                "count": 21
+              }
+            ],
+            "selected_annotation_confidence": [
+              {
+                "value": "heuristic",
+                "count": 36
+              },
+              {
+                "value": "high",
+                "count": 20
+              },
+              {
+                "value": "medium",
+                "count": 1
+              }
+            ],
+            "note": "Rows marked llm_reviewed_invalid are excluded from curated report evidence by default."
+          }
+        },
+        "app_curation.json": {
+          "coverage_scope": {
+            "query_type": "gene",
+            "curation_source": "curated_pool",
+            "curation_scope": "offline_full_query_pool_prescreened",
+            "overview_event_count": null,
+            "matched_event_count": 18639,
+            "curation_pool_rows": 2300,
+            "coverage_ratio": 0.1234,
+            "api_limit_notice": null,
+            "curated_query_match_count": 1,
+            "curated_pool_entries": 2300,
+            "curated_filtered_pool_rows": 2300,
+            "curated_query_stats_raw_event_count": 18639,
+            "curated_query_stats_count_is_alias_merged": false,
+            "annotation_source": "event_expert_annotation_final",
+            "curation_endpoint_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=APP&selected_limit=80"
+          },
+          "deduplication_summary": {
+            "curation_pool_row_count": 2300,
+            "event_unique_rows": 2300,
+            "event_deduplication_key": "gene-fixed event key: alteration taxonomy + phenotype/term + hypothesis; fallback to PMID/sentence when structured fields are sparse",
+            "unique_pmids": 1592,
+            "unique_genes": 5,
+            "unique_phenotypes": 531,
+            "unique_terms": 531,
+            "unique_alteration_taxonomies": 29,
+            "unique_gene_alterations": 36,
+            "unique_alteration_signatures": 29,
+            "unique_hypotheses": 132
+          },
+          "global_summary": {
+            "query_count": 1,
+            "query_values": [
+              "AMYLOID-BETA PRECURSOR PROTEIN [Entrez:351]"
+            ],
+            "raw_event_count": 18639,
+            "event_unique_count": 4994,
+            "candidate_event_count": 4673,
+            "curated_pool_count": 2300,
+            "long_tail_event_count": 1794,
+            "high_quality_event_count": 4660,
+            "broad_background_count": 37,
+            "statistics_source": "curated_query_stats",
+            "note": "Counts describe the offline full matched query pool after pre-screening and query-specific event curation; selected_evidence is only a small representative subset."
+          },
+          "top_genes": [
+            {
+              "value": "APP [Entrez:351]",
+              "count": 4963
+            },
+            {
+              "value": "AMYLOID PRECURSOR PROTEIN [Entrez:351]",
+              "count": 25
+            },
+            {
+              "value": "AMYLOID-BETA PRECURSOR PROTEIN [Entrez:351]",
+              "count": 3
+            },
+            {
+              "value": "AMYLOID BETA PRECURSOR PROTEIN [Entrez:351]",
+              "count": 2
+            },
+            {
+              "value": "BETA-AMYLOID PEPTIDE [Entrez:351]",
+              "count": 1
+            }
+          ],
+          "top_phenotypes": [
+            {
+              "value": "protein [GO:0003675]",
+              "count": 121
+            },
+            {
+              "value": "Alzheimer Disease [MESH:D000544]",
+              "count": 97
+            },
+            {
+              "value": "AD",
+              "count": 55
+            },
+            {
+              "value": "Onset [HP:0003674]",
+              "count": 49
+            },
+            {
+              "value": "biosynthetic process [GO:0009058]",
+              "count": 46
+            },
+            {
+              "value": "Neurodegeneration [HP:0002180]",
+              "count": 42
+            },
+            {
+              "value": "Cognition Disorders [MESH:D003072]",
+              "count": 40
+            },
+            {
+              "value": "Nerve Degeneration [MESH:D009410]",
+              "count": 38
+            }
+          ],
+          "top_gene_alterations": [
+            {
+              "value": "APP / point mutations:mutations",
+              "count": 2268
+            },
+            {
+              "value": "APP / normalized variants:dna change",
+              "count": 643
+            },
+            {
+              "value": "APP / structural variation:deletion",
+              "count": 274
+            },
+            {
+              "value": "APP / expression changes:dysregulation",
+              "count": 240
+            },
+            {
+              "value": "APP / expression changes:underexpression",
+              "count": 234
+            },
+            {
+              "value": "APP / structural variation:chromosomal variation",
+              "count": 199
+            },
+            {
+              "value": "APP / genetic manipulation:gene aggregation",
+              "count": 149
+            },
+            {
+              "value": "APP / expression changes:overexpression",
+              "count": 116
+            }
+          ],
+          "top_alteration_taxonomies": [
+            {
+              "value": "point mutations:mutations",
+              "count": 2291
+            },
+            {
+              "value": "normalized variants:dna change",
+              "count": 643
+            },
+            {
+              "value": "structural variation:deletion",
+              "count": 274
+            },
+            {
+              "value": "expression changes:dysregulation",
+              "count": 241
+            },
+            {
+              "value": "expression changes:underexpression",
+              "count": 234
+            },
+            {
+              "value": "structural variation:chromosomal variation",
+              "count": 201
+            },
+            {
+              "value": "genetic manipulation:gene aggregation",
+              "count": 149
+            },
+            {
+              "value": "expression changes:overexpression",
+              "count": 116
+            }
+          ],
+          "top_hypotheses": [
+            {
+              "value": "Amyloid Hypothesis",
+              "count": 2315
+            },
+            {
+              "value": "Amyloid Hypothesis,Tau Protein Hypothesis",
+              "count": 408
+            },
+            {
+              "value": "Amyloid Hypothesis,Vascular Hypothesis",
+              "count": 186
+            },
+            {
+              "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+              "count": 166
+            },
+            {
+              "value": "Amyloid Hypothesis,Oxidative Stress Hypothesis",
+              "count": 106
+            },
+            {
+              "value": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+              "count": 91
+            },
+            {
+              "value": "Amyloid Hypothesis,Abnormal Autophagy Hypothesis",
+              "count": 88
+            }
+          ],
+          "mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 4994
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 1635
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 1547
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 907
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 761
+            },
+            {
+              "value": "neuroinflammation and microglia axis",
+              "count": 663
+            }
+          ],
+          "evidence_types": [
+            {
+              "value": "molecular_mechanism",
+              "count": 2263
+            },
+            {
+              "value": "model_or_intervention",
+              "count": 1733
+            },
+            {
+              "value": "alteration_evidence",
+              "count": 609
+            },
+            {
+              "value": "cellular_or_pathway_process",
+              "count": 389
+            }
+          ],
+          "selected_evidence_rows": 48,
+          "final_annotation_summary": {
+            "annotation_table": "event_expert_annotation_final",
+            "selected_annotation_sources": [
+              {
+                "value": "llm_reviewed",
+                "count": 27
+              },
+              {
+                "value": "heuristic_only",
+                "count": 21
+              }
+            ],
+            "selected_annotation_confidence": [
+              {
+                "value": "high",
+                "count": 27
+              },
+              {
+                "value": "heuristic",
+                "count": 21
+              }
+            ],
+            "note": "Rows marked llm_reviewed_invalid are excluded from curated report evidence by default."
+          }
+        }
+      },
+      "expert_evidence_summary": {
+        "included_evidence": 18,
+        "additional_high_scoring_evidence": 18,
+        "all_scored_evidence": 127,
+        "annotation_sources_included": {
+          "llm_reviewed": 12,
+          "heuristic_only": 6
+        },
+        "expert_overall_scores_included": {
+          "5": 17,
+          "4": 1
+        },
+        "long_tail_included": 18,
+        "included_preview": [
+          {
+            "target": "APP",
+            "expert_score": 102.0,
+            "gene": "APP",
+            "term": "chemical synaptic transmission",
+            "pmid": "36170028",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis"
+            ]
+          },
+          {
+            "target": "APP",
+            "expert_score": 102.0,
+            "gene": "APP",
+            "term": "Glioma",
+            "pmid": "35457077",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ]
+          },
+          {
+            "target": "APP",
+            "expert_score": 102.0,
+            "gene": "APP",
+            "term": "positive regulation of mitochondrial membrane permeability",
+            "pmid": "32486013",
+            "annotation_source": "heuristic_only",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "proteostasis/autophagy axis"
+            ]
+          },
+          {
+            "target": "APP",
+            "expert_score": 102.0,
+            "gene": "APP",
+            "term": "Complement Component 3 Deficiency, Autosomal Recessive",
+            "pmid": "31209071",
+            "annotation_source": "heuristic_only",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis"
+            ]
+          },
+          {
+            "target": "APP",
+            "expert_score": 100.0,
+            "gene": "APP",
+            "term": "Hemorrhage",
+            "pmid": "37887303",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis"
+            ]
+          },
+          {
+            "target": "APP",
+            "expert_score": 100.0,
+            "gene": "APP",
+            "term": "-",
+            "pmid": "36430913",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "proteostasis/autophagy axis"
+            ]
+          },
+          {
+            "target": "APP",
+            "expert_score": 100.0,
+            "gene": "APP",
+            "term": "cholesterol esterification",
+            "pmid": "29238218",
+            "annotation_source": "llm_reviewed",
+            "overall_score": 5,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis"
+            ]
+          },
+          {
+            "target": "APP",
+            "expert_score": 100.0,
+            "gene": "amyloid beta precursor protein",
+            "term": "-",
+            "pmid": "37642583",
+            "annotation_source": "heuristic_only",
+            "overall_score": 4,
+            "mechanism_strata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis",
+              "proteostasis/autophagy axis"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
