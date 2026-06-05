@@ -280,8 +280,32 @@ def term_signature(row: dict[str, Any]) -> str:
     return first_value(row, ["TermID", "TermName", "TermMention", "AncestorName"], "biological_context")
 
 
+def canonical_hypothesis_label(value: Any) -> str:
+    clean = clean_text(value).strip().rstrip(".;")
+    if not clean:
+        return ""
+    tokens = []
+    for token in clean.split():
+        tokens.append(token if token.isupper() else token[:1].upper() + token[1:])
+    return " ".join(tokens)
+
+
+def hypothesis_values(row: dict[str, Any]) -> list[str]:
+    value = first_value(row, ["Hypothesis", "LinkedHypothesis"], "ad_interpretation")
+    output: list[str] = []
+    seen = set()
+    for hypothesis in split_values(value):
+        clean = canonical_hypothesis_label(hypothesis)
+        key = norm(clean)
+        if not clean or key in seen:
+            continue
+        seen.add(key)
+        output.append(clean)
+    return output
+
+
 def hypothesis_signature(row: dict[str, Any]) -> str:
-    return first_value(row, ["Hypothesis", "LinkedHypothesis"], "ad_interpretation")
+    return ", ".join(sorted(hypothesis_values(row), key=norm))
 
 
 def _first_pipe_segment(value: Any) -> str:
@@ -490,6 +514,13 @@ def dimension_value(row: dict[str, Any], dimension: str) -> str:
     return ""
 
 
+def dimension_values(row: dict[str, Any], dimension: str) -> list[str]:
+    if dimension == "hypothesis":
+        return hypothesis_values(row)
+    value = dimension_value(row, dimension)
+    return [value] if value else []
+
+
 def is_broad_dimension_value(dimension: str, value: str) -> bool:
     clean = value.strip().lower()
     return (
@@ -504,9 +535,9 @@ def build_frequency_counters(rows: list[dict[str, Any]], query_type: str) -> dic
     for dimension in QUERY_LONG_TAIL_DIMENSIONS.get(query_type, QUERY_LONG_TAIL_DIMENSIONS["generic"]):
         counter: Counter[str] = Counter()
         for row in rows:
-            value = dimension_value(row, dimension)
-            if not is_broad_dimension_value(dimension, value):
-                counter[value] += 1
+            for value in dimension_values(row, dimension):
+                if not is_broad_dimension_value(dimension, value):
+                    counter[value] += 1
         counters[dimension] = counter
     return counters
 
@@ -529,14 +560,16 @@ def long_tail_signals_for_row(
 ) -> list[dict[str, Any]]:
     signals: list[dict[str, Any]] = []
     for dimension, counter in counters.items():
-        value = dimension_value(row, dimension)
         threshold = thresholds.get(dimension, 0)
-        if is_broad_dimension_value(dimension, value) or not threshold:
+        if not threshold:
             continue
-        count = counter.get(value, 0)
         max_count = max(counter.values()) if counter else 0
-        if count and count <= threshold and count < max_count:
-            signals.append({"dimension": dimension, "value": value, "frequency": count, "threshold": threshold})
+        for value in dimension_values(row, dimension):
+            if is_broad_dimension_value(dimension, value):
+                continue
+            count = counter.get(value, 0)
+            if count and count <= threshold and count < max_count:
+                signals.append({"dimension": dimension, "value": value, "frequency": count, "threshold": threshold})
     return signals
 
 
@@ -596,6 +629,13 @@ def selection_value(row: dict[str, Any], dimension: str) -> str:
     return dimension_value(row, dimension)
 
 
+def selection_values(row: dict[str, Any], dimension: str) -> list[str]:
+    if dimension == "pmid":
+        value = pmid(row)
+        return [value] if value else []
+    return dimension_values(row, dimension)
+
+
 def within_selection_quota(
     row: dict[str, Any],
     seen: dict[str, Counter[str]],
@@ -603,19 +643,19 @@ def within_selection_quota(
     quotas: dict[str, int],
 ) -> bool:
     for dimension in selection_dimensions(query_type):
-        value = selection_value(row, dimension)
-        if not value:
-            continue
-        if seen[dimension][value] >= quotas.get(dimension, 2):
-            return False
+        for value in selection_values(row, dimension):
+            if not value:
+                continue
+            if seen[dimension][value] >= quotas.get(dimension, 2):
+                return False
     return True
 
 
 def mark_selected(row: dict[str, Any], seen: dict[str, Counter[str]], query_type: str) -> None:
     for dimension in selection_dimensions(query_type):
-        value = selection_value(row, dimension)
-        if value:
-            seen[dimension][value] += 1
+        for value in selection_values(row, dimension):
+            if value:
+                seen[dimension][value] += 1
 
 
 def select_diverse_rows(
@@ -761,11 +801,11 @@ def build_curation_package(
     pmid_counts = Counter(pmid(row) for row in rows if pmid(row) != "-")
     gene_counts = Counter(gene_signature(row) for row in rows if gene_signature(row))
     phenotype_counts = Counter(clean_text(row.get("TermName")) for row in rows if clean_text(row.get("TermName")))
-    hyp_counts = Counter(
-        hypothesis_signature(row)
-        for row in rows
-        if hypothesis_signature(row) and not is_broad_dimension_value("hypothesis", hypothesis_signature(row))
-    )
+    hyp_counts: Counter[str] = Counter()
+    for row in rows:
+        for hypothesis in hypothesis_values(row):
+            if not is_broad_dimension_value("hypothesis", hypothesis):
+                hyp_counts[hypothesis] += 1
     alteration_counts = Counter(alteration_taxonomy(row) for row in rows if alteration_taxonomy(row))
     gene_alteration_counts = Counter(gene_alteration_signature(row) for row in rows if gene_alteration_signature(row))
     type_counts = Counter(classify_evidence_type(row) for row in rows)

@@ -86,6 +86,11 @@ Use `global_statistics` for complete query-pool distributions. Use
 `dominant_clusters`, `query_relative_patterns`, and `selected_evidence` for the
 bounded representative evidence package returned to a report.
 
+Hypothesis fields in the source SQLite table can contain comma-separated multiple
+hypotheses. The API and skill curation layer split those values before catalog
+listing, unique counts, top-hypothesis aggregation, long-tail hypothesis detection,
+and representative-evidence diversity quotas.
+
 The curation endpoint deliberately returns a bounded interpreted package rather than all raw rows. Raw `EvidenceScore` may still exist in compatibility event endpoints, but it is not used in curation decisions or skill-facing summaries.
 
 ## Error Boundary
