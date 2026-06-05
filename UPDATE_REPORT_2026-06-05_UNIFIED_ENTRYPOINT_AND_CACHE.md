@@ -146,3 +146,12 @@ phenotype/process
 - 如果用户希望改变 `selected_limit`、`source`、目标实体或刷新最新数据，应重新请求 API。
 - 本次没有改变远程 API contract，也没有改变 `/term/*` endpoint 和 `TermName` 字段。
 - 大型 broad query 的完整报告仍可能受远程 API 响应时间和服务端限制影响。
+
+## 文档复核补记
+
+2026-06-05 晚间对同日实验记录做了中文重写和专家对比补充，便于后续直接引用：
+
+- `experimental-records/2026-06-05-curated-global-stats-case-study/EXPERIMENT_REPORT.md`
+- `experimental-records/2026-06-05-curated-global-stats-case-study/HUMAN_EXPERT_COMPARISON_REPORT.md`
+
+这两份报告不改变 skills 行为；它们用于记录统一入口、原始数据缓存、完整查询池统计和 expert case-study 输出在四个案例中的实际表现，并明确新版 skills 与人类专家 case study 的能力边界。
