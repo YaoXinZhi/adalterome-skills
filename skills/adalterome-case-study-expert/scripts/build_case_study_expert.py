@@ -19,6 +19,7 @@ sys.path.insert(0, str(SKILLS_DIR / "adalterome-api" / "scripts"))
 from evidence_curation import build_curation_package, md  # noqa: E402
 from evidence_fetch import (  # noqa: E402
     API_MAX_TOP_K,
+    api_selected_limit,
     curation_package_from_response,
     fetch_gene_events_for_curation,
     fetch_hypothesis_support_for_curation,
@@ -26,7 +27,7 @@ from evidence_fetch import (  # noqa: E402
     request_json,
     request_json_optional,
 )
-from query_cache import write_cache_manifest  # noqa: E402
+from query_cache import payload_cache_meta, write_cache_manifest  # noqa: E402
 
 
 DEFAULT_BASE_URL = os.environ.get("ADALTEROME_API_BASE_URL", "http://117.72.176.137/api/adalterome")
@@ -370,7 +371,7 @@ def try_curation(
     url, payload, error = request_json_optional(
         base_url,
         path,
-        {**params, "selected_limit": candidate_limit},
+        {**params, "selected_limit": api_selected_limit(candidate_limit)},
         timeout,
     )
     if error:
@@ -384,6 +385,10 @@ def try_curation(
     scope["curation_endpoint_url"] = url
     scope.setdefault("curation_source", payload.get("meta", {}).get("curation_source", "remote_api"))
     scope.setdefault("curation_scope", payload.get("meta", {}).get("curation_scope", "server_full_query_pool"))
+    cache_meta = payload_cache_meta(payload)
+    if cache_meta:
+        scope["local_raw_payload_cache"] = cache_meta.get("cache_file")
+        scope["local_cache_hit"] = cache_meta.get("cache_hit")
     return url, payload, None
 
 
@@ -837,7 +842,7 @@ def render_report(
             "- Additional high-scoring evidence was not rejected; it was held back to keep the main argument concise and auditable.",
             "- AD-Alterome sentence evidence supports traceable arguments, not final causal proof.",
             "- When coverage warnings are present, use the report to generate hypotheses and prioritize manual review.",
-            "- Raw API scoring fields such as EvidenceScore are not used for expert conclusions.",
+            "- Raw API `EvidenceScore` is not used for expert conclusions.",
             "",
             "## Audit Appendix: Original Sentence Traces",
             "",

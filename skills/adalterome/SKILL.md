@@ -15,7 +15,7 @@ Choose the smallest workflow that answers the user:
 - Use `adalterome-report` for a fixed-format evidence packet from an already chosen API query.
 - Use `adalterome-gene-report` when the target is one gene, such as `MAPT`, `APOE`, `APP`, `PSEN1`, or a gene-like symbol.
 - Use `adalterome-term-report` when the target is a phenotype, downstream biological process, ontology term, pathological process, or phrase such as mitochondrial dysfunction, neuroinflammation, synaptic dysfunction, or amyloid processing. The CLI argument remains `--term` for API compatibility, but describe this to users as a phenotype/process query.
-- Use `adalterome-hypothesis-report` when the target is one AD hypothesis, such as Amyloid Hypothesis, Tau Protein Hypothesis, Neuroinflammation Hypothesis, Oxidative Stress Hypothesis, Vascular Hypothesis, or Mitochondrial Cascade Hypothesis.
+- Use `adalterome-hypothesis-report` when the target is one AD hypothesis, such as Amyloid Hypothesis, Tau Protein Hypothesis, Neuroinflammation Hypothesis, Oxidative Stress Hypothesis, Vascular Hypothesis, or Mitochondrial Autophagy Hypothesis.
 - Use `adalterome-compare-report` when the user asks to compare two genes and wants a structured evidence dossier.
 - Use `adalterome-case-study-expert` when the user asks for expert interpretation, a paper-level case study, biological insight, long-tail candidate judgment, or an AD pathologist-style argument rather than only a traceable evidence packet.
 

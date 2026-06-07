@@ -1,4 +1,4 @@
 interface:
-  display_name: "AD-Alterome Term Report"
-  short_description: "Deep phenotype evidence reports"
+  display_name: "AD-Alterome Phenotype / Process Report"
+  short_description: "Deep phenotype/process evidence reports"
   default_prompt: "Use $adalterome-term-report to create a deep AD-Alterome report for mitochondrial dysfunction."

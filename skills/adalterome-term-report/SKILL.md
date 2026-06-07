@@ -1,6 +1,6 @@
 ---
 name: adalterome-term-report
-description: Build deep phenotype, downstream biological process, ontology term, or pathological-process reports from AD-Alterome. Use when the user asks for a researcher-facing report about a phenotype or process such as mitochondrial dysfunction, neuroinflammation, amyloid processing, synaptic dysfunction, an HPO/GO/MeSH term, or any AD-Alterome phenotype/process evidence summary with API top genes, AD hypotheses, curated representative evidence, top and long-tail gene/gene-alteration/phenotype patterns, original evidence sentences, PubMed links, and follow-up interpretation.
+description: Build deep phenotype, downstream biological process, ontology term, or pathological-process reports from AD-Alterome. Use when the user asks for a researcher-facing report about a phenotype or process such as mitochondrial dysfunction, neuroinflammation, amyloid processing, synaptic dysfunction, an HPO/GO/MeSH term, or any AD-Alterome phenotype/process evidence summary with API top genes, AD hypotheses, curated representative evidence, top and long-tail gene/gene-alteration/phenotype/process patterns, original evidence sentences, PubMed links, and follow-up interpretation.
 ---
 
 # AD-Alterome Phenotype / Process Report

@@ -20,7 +20,7 @@ Use this structure:
 - Do not use or display `EvidenceScore`.
 - Use the curation layer's `SentenceQuality` / sentence informativeness only as a readability aid.
 - Hypothesis reports deduplicate events by gene + alteration taxonomy + phenotype/term because the hypothesis is fixed by the query.
-- Include query-relative top and long-tail gene, gene-alteration, and phenotype patterns from `data/curation.json`.
+- Include query-relative top and long-tail gene, gene-alteration, and phenotype/process patterns from `data/curation.json`.
 - Treat `AlterationType` as the genetic alteration taxonomy; do not count `TriggerWord` or `RegType` as alteration labels.
 - Include `data/curation.json` when using the builder script.
 - Separate primary sentence evidence from `HypothesisReason` and `ExtendedExplanation`.

@@ -950,7 +950,7 @@ def render_curation_overview(curation: dict[str, Any]) -> list[str]:
     lines = [
         "## Evidence Curation Layer",
         "",
-        "- Raw API scoring fields are ignored in skill reports and curation decisions.",
+        "- Raw API `EvidenceScore` is ignored in skill reports and curation decisions.",
         f"- Sentence-level evidence source: {scope.get('curation_source') or 'unknown'} ({scope.get('curation_scope') or 'unknown scope'}).",
         f"- Expert annotation source: {scope.get('annotation_source') or 'not reported'}; rows marked invalid by LLM review are excluded from curated evidence by default when the API provides that flag.",
         f"- Curation pool rows: {dedupe.get('curation_pool_row_count', 0)}; event-unique rows after query-specific deduplication: {dedupe.get('event_unique_rows', 0)}.",
@@ -976,7 +976,7 @@ def render_curation_overview(curation: dict[str, Any]) -> list[str]:
         )
         for title, key in [
             ("Complete-pool top genes", "top_genes"),
-            ("Complete-pool top phenotypes", "top_phenotypes"),
+            ("Complete-pool top phenotype/process features", "top_phenotypes"),
             ("Complete-pool top gene-alteration pairs", "top_gene_alterations"),
             ("Complete-pool alteration taxonomy", "top_alteration_taxonomies"),
             ("Complete-pool top hypotheses", "top_hypotheses"),
@@ -995,7 +995,7 @@ def render_curation_overview(curation: dict[str, Any]) -> list[str]:
         ("Dominant PMIDs", "top_pmids"),
         ("Top genes", "top_genes"),
         ("Top gene-alteration pairs", "top_gene_alterations"),
-        ("Top phenotypes", "top_phenotypes"),
+        ("Top phenotype/process features", "top_phenotypes"),
         ("Dominant alteration taxonomy", "top_alteration_taxonomies"),
         ("Evidence type distribution", "evidence_types"),
         ("Mechanism strata distribution", "mechanism_strata"),

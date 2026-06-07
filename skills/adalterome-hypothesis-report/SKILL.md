@@ -1,6 +1,6 @@
 ---
 name: adalterome-hypothesis-report
-description: Build deep AD hypothesis support reports from AD-Alterome. Use when the user asks for a researcher-facing report about Amyloid Hypothesis, Tau Protein Hypothesis, Neuroinflammation Hypothesis, oxidative stress, mitochondrial autophagy, vascular hypothesis, or any AD hypothesis-centered evidence summary with top genes, top phenotypes, curated representative sentences, top and long-tail gene/gene-alteration/phenotype patterns, PubMed links, and support patterns.
+description: Build deep AD hypothesis support reports from AD-Alterome. Use when the user asks for a researcher-facing report about Amyloid Hypothesis, Tau Protein Hypothesis, Neuroinflammation Hypothesis, oxidative stress, mitochondrial autophagy, vascular hypothesis, or any AD hypothesis-centered evidence summary with top genes, top phenotype/process features, curated representative sentences, top and long-tail gene/gene-alteration/phenotype/process patterns, PubMed links, and support patterns.
 ---
 
 # AD-Alterome Hypothesis Report

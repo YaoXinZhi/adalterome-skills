@@ -95,7 +95,7 @@ def evidence_lines(rows: list[dict[str, Any]], limit: int | None = None) -> list
                 f"   - Phenotype / process: {term}",
                 f"   - Hypothesis: {hyp}",
                 f"   - Journal/Year: {journal} / {year}",
-                f"   - EvidenceQualityScore: {quality}",
+                f"   - Sentence quality (EvidenceQualityScore): {quality}",
                 f"   - Sentence: {sentence}",
             ]
         )
@@ -244,7 +244,7 @@ def render_report(payload: dict[str, Any], api_page: str, request_url: str) -> s
             "",
             "- Use returned PubMed links for evidence tracing.",
             "- Treat sentence-level associations as evidence, not standalone causal proof.",
-            "- Raw API scoring fields are intentionally hidden in skill outputs; use exact sentences, provenance, diversity, and mechanism specificity for interpretation.",
+            "- Raw API `EvidenceScore` is intentionally hidden in skill outputs. `EvidenceQualityScore`, when shown, is a sentence-usefulness signal rather than proof strength.",
             "- If sentences are generic, use a deep report builder so curation can run over the broadest available evidence pool before summarizing mechanisms.",
         ]
     )

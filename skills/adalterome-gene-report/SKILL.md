@@ -1,6 +1,6 @@
 ---
 name: adalterome-gene-report
-description: Build deep researcher-facing AD-Alterome gene reports from one Alzheimer disease gene query. Use when the user wants a multi-section Markdown/DOCX-ready literature evidence report with AD-Alterome API gene overview, curated representative evidence, top and long-tail gene-alteration/phenotype patterns, PubMed links, term and hypothesis interpretation, mechanism-stratified synthesis, original sentence traces, comparison-ready context, and follow-up research gaps.
+description: Build deep researcher-facing AD-Alterome gene reports from one Alzheimer disease gene query. Use when the user wants a multi-section Markdown/DOCX-ready literature evidence report with AD-Alterome API gene overview, curated representative evidence, top and long-tail gene-alteration/phenotype/process patterns, PubMed links, phenotype/process and hypothesis interpretation, mechanism-stratified synthesis, original sentence traces, comparison-ready context, and follow-up research gaps.
 ---
 
 # AD-Alterome Gene Report

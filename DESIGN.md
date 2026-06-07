@@ -27,17 +27,17 @@ This repository follows the layered style of `r1seee/cucurlitbase-skills`.
 
 5. `adalterome-term-report`
    - Research-style report skill for phenotypes, ontology terms, and pathological processes.
-   - Uses `/term/overview` and `/term/events`.
+   - Uses `/term/overview` and `/term/curation`, with `/term/events` as capped fallback.
    - Emphasizes top genes, top hypotheses, evidence traces, and broad-term caveats.
 
 6. `adalterome-hypothesis-report`
    - Research-style report skill for AD hypothesis support.
-   - Uses `/hypothesis/overview` and `/hypothesis/support`.
+   - Uses `/hypothesis/overview` and `/hypothesis/curation`, with `/hypothesis/support` as capped fallback.
    - Separates curated hypothesis labels from original sentence evidence.
 
 7. `adalterome-compare-report`
    - Research-style report skill for two-gene comparison.
-   - Uses `/compare/genes` plus sentence-level evidence for both genes.
+   - Uses `/compare/genes` plus per-gene overview and curation packages for both genes.
    - Keeps common patterns and gene-specific evidence separate.
 
 8. `adalterome-case-study-expert`

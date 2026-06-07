@@ -1,6 +1,6 @@
 ---
 name: adalterome-compare-report
-description: Build two-gene AD-Alterome comparison reports. Use when the user asks to compare two genes such as APOE vs APP, MAPT vs APP, or PSEN1 vs PSEN2 using AD-Alterome API overviews, shared and distinct phenotype/process features, shared and distinct AD hypotheses, curated representative evidence for each gene, top and long-tail gene-alteration/phenotype patterns, PubMed links, mechanism differences, and common patterns.
+description: Build two-gene AD-Alterome comparison reports. Use when the user asks to compare two genes such as APOE vs APP, MAPT vs APP, or PSEN1 vs PSEN2 using AD-Alterome API overviews, shared and distinct phenotype/process features, shared and distinct AD hypotheses, curated representative evidence for each gene, top and long-tail gene-alteration/phenotype/process patterns, PubMed links, mechanism differences, and common patterns.
 ---
 
 # AD-Alterome Compare Report
