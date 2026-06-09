@@ -57,9 +57,9 @@ Score dimensions:
 
 ## Coverage Rules
 
-`server_full_query_pool` supports stronger coverage claims. `api_sentence_sample` is acceptable for exploratory reports but must be labeled as a fallback. Do not infer absence of evidence from a capped sample.
+`offline_full_query_pool_prescreened` or `server_full_query_pool` supports stronger coverage claims. `curation_endpoint_unavailable` means the report is partial and selected evidence should stay empty rather than being filled with capped event samples. If an old cached payload has `api_sentence_sample`, label it as exploratory legacy evidence and do not infer absence of evidence from the capped sample.
 
-For two-gene comparisons, mark the comparison as imbalanced when one side uses full-pool curation and the other uses capped sampling, or when coverage ratios differ strongly. In imbalanced mode, discuss visible evidence contrasts but avoid strong ranking claims.
+For two-gene comparisons, mark the comparison as imbalanced when one side has full-pool curation and the other has unavailable curation or legacy capped sampling, or when coverage ratios differ strongly. In imbalanced mode, discuss visible evidence contrasts but avoid strong ranking claims.
 
 ## AD-Alterome First
 

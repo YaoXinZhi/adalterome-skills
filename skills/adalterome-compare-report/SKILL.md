@@ -26,7 +26,7 @@ Expected outputs:
 
 ## Workflow
 
-1. Run the report builder with `--gene-a`, `--gene-b`, and `--output-dir`; use `--selected-limit` to control displayed evidence from each server-side full-pool gene curation package. `--curation-limit` only controls capped event-endpoint fallback mode.
+1. Run the report builder with `--gene-a`, `--gene-b`, and `--output-dir`; use `--selected-limit` to control displayed evidence from each server-side full-pool gene curation package. `--curation-limit` and `--top-k` are deprecated compatibility options and do not enable capped event fallback.
 2. Inspect `data/compare.json` for shared/distinct phenotype/process features and hypotheses.
 3. Inspect each gene curation JSON for selected evidence, query-relative top/long-tail patterns, evidence type groups, mechanism strata, and chronology.
 4. Inspect each gene evidence JSON for raw sentence-level records.
@@ -58,7 +58,7 @@ The report should follow this storyline:
 - Use sentence-level evidence to support contrastive claims.
 - Use each gene's `curation.json` to avoid comparing one gene's broad high-frequency records against another gene's molecular long-tail records.
 - Each gene is curated with the gene-fixed event key: alteration taxonomy + phenotype/term + hypothesis.
-- Deep reports prefer server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence for each gene. REST event endpoints remain capped and are used only for lightweight retrieval or fallback.
+- Deep reports use server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence for each gene. REST event endpoints remain capped legacy/debug samples and are not used as report fallback.
 - Deep reports save task-local JSON files and `data/cache_manifest.json`; exact raw API payloads are also kept in the shared local cache for repeat requests and manual inspection.
 - Genetic alteration taxonomy comes from the leading `AlterationType` value. `TriggerWord` and `RegType` are regulatory/event context, not alteration labels.
 - Expert case-study interpretation lives in `adalterome-case-study-expert`; keep this compare report as the stable traceable evidence dossier.

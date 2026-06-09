@@ -16,14 +16,12 @@ from typing import Any
 SKILLS_DIR = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(SKILLS_DIR / "adalterome-api" / "scripts"))
 
-from evidence_curation import build_curation_package, md  # noqa: E402
+from evidence_curation import md  # noqa: E402
 from evidence_fetch import (  # noqa: E402
     API_MAX_TOP_K,
     api_selected_limit,
     curation_package_from_response,
-    fetch_gene_events_for_curation,
-    fetch_hypothesis_support_for_curation,
-    fetch_term_events_for_curation,
+    curation_unavailable_response,
     request_json,
     request_json_optional,
 )
@@ -151,6 +149,24 @@ EVIDENCE_TYPE_BONUS = {
 
 def get_json(base_url: str, path: str, params: dict[str, Any], timeout: float) -> tuple[str, dict[str, Any]]:
     return request_json(base_url, path, params, timeout)
+
+
+def get_json_optional(base_url: str, path: str, params: dict[str, Any], timeout: float) -> tuple[str, dict[str, Any], str | None]:
+    url, payload, error = request_json_optional(base_url, path, params, timeout)
+    if isinstance(payload, dict):
+        return url, payload, None
+    return (
+        url,
+        {
+            "tool": "optional_overview",
+            "status": "partial",
+            "query": params,
+            "count": 0,
+            "data": {},
+            "meta": {"overview_failure_reason": error or "overview endpoint returned no payload"},
+        },
+        error or "overview endpoint returned no payload",
+    )
 
 
 def write_json(path: Path, payload: Any) -> None:
@@ -320,6 +336,8 @@ def coverage_record(label: str, curation: dict[str, Any], fallback_reason: str |
     warnings: list[str] = []
     if curation_scope == "api_sentence_sample":
         warnings.append("fallback_to_capped_api_sentence_sample")
+    if curation_scope == "curation_endpoint_unavailable":
+        warnings.append("curation_endpoint_unavailable_no_event_fallback")
     if coverage_ratio is not None and as_float(coverage_ratio) < 0.1:
         warnings.append("low_fraction_of_matched_events_in_curation_pool")
     if dedupe.get("event_unique_rows", 0) and dedupe.get("curation_pool_row_count", 0) == API_MAX_TOP_K:
@@ -353,6 +371,9 @@ def balance_status(records: list[dict[str, Any]]) -> dict[str, Any]:
     if any(record.get("curation_scope") == "api_sentence_sample" for record in records):
         status = "exploratory"
         notes.append("At least one target fell back to capped sentence sampling.")
+    if any(record.get("curation_scope") == "curation_endpoint_unavailable" for record in records):
+        status = "partial" if status == "balanced" else status
+        notes.append("At least one target lacks full-pool curation; capped event fallback was not used.")
     if len(ratios) >= 2 and max(ratios) - min(ratios) > 0.3:
         status = "imbalanced" if status == "balanced" else status
         notes.append("Coverage ratios differ substantially across targets.")
@@ -403,7 +424,6 @@ def fetch_target(
 ) -> dict[str, Any]:
     query_type = {"gene": "gene", "term": "term", "hypothesis": "hypothesis", "compare_gene": "compare_gene"}[kind]
     if kind in {"gene", "compare_gene"}:
-        overview_url, overview = get_json(base_url, "/gene/overview", {"gene": label}, timeout)
         curation_url, curation_payload, fallback_reason = try_curation(
             base_url,
             "/gene/curation",
@@ -411,25 +431,24 @@ def fetch_target(
             timeout,
             candidate_limit,
         )
+        overview_url, overview, overview_error = get_json_optional(base_url, "/gene/overview", {"gene": label}, timeout)
         if curation_payload:
             evidence_url = curation_url
             evidence_payload = curation_payload
             curation = curation_package_from_response(curation_payload) or {}
+            fallback_reason = None
         else:
-            evidence_url, evidence_payload = fetch_gene_events_for_curation(
-                base_url,
-                label,
-                timeout,
-                curation_limit=curation_limit,
-            )
-            curation = build_curation_package(
-                evidence_payload,
-                overview=overview,
-                selected_limit=candidate_limit,
+            evidence_url = curation_url
+            evidence_payload = curation_unavailable_response(
+                tool="query_gene_curation",
+                query={"gene": label, "selected_limit": api_selected_limit(candidate_limit)},
                 query_type=query_type,
+                request_url=curation_url,
+                reason=fallback_reason,
+                overview=overview,
             )
+            curation = curation_package_from_response(evidence_payload) or {}
     elif kind == "term":
-        overview_url, overview = get_json(base_url, "/term/overview", {"term": label}, timeout)
         curation_url, curation_payload, fallback_reason = try_curation(
             base_url,
             "/term/curation",
@@ -437,25 +456,24 @@ def fetch_target(
             timeout,
             candidate_limit,
         )
+        overview_url, overview, overview_error = get_json_optional(base_url, "/term/overview", {"term": label}, timeout)
         if curation_payload:
             evidence_url = curation_url
             evidence_payload = curation_payload
             curation = curation_package_from_response(curation_payload) or {}
+            fallback_reason = None
         else:
-            evidence_url, evidence_payload = fetch_term_events_for_curation(
-                base_url,
-                label,
-                timeout,
-                curation_limit=curation_limit,
-            )
-            curation = build_curation_package(
-                evidence_payload,
-                overview=overview,
-                selected_limit=candidate_limit,
+            evidence_url = curation_url
+            evidence_payload = curation_unavailable_response(
+                tool="query_term_curation",
+                query={"term": label, "selected_limit": api_selected_limit(candidate_limit)},
                 query_type=query_type,
+                request_url=curation_url,
+                reason=fallback_reason,
+                overview=overview,
             )
+            curation = curation_package_from_response(evidence_payload) or {}
     elif kind == "hypothesis":
-        overview_url, overview = get_json(base_url, "/hypothesis/overview", {"hypothesis": label}, timeout)
         curation_url, curation_payload, fallback_reason = try_curation(
             base_url,
             "/hypothesis/curation",
@@ -463,25 +481,28 @@ def fetch_target(
             timeout,
             candidate_limit,
         )
+        overview_url, overview, overview_error = get_json_optional(base_url, "/hypothesis/overview", {"hypothesis": label}, timeout)
         if curation_payload:
             evidence_url = curation_url
             evidence_payload = curation_payload
             curation = curation_package_from_response(curation_payload) or {}
+            fallback_reason = None
         else:
-            evidence_url, evidence_payload = fetch_hypothesis_support_for_curation(
-                base_url,
-                label,
-                timeout,
-                curation_limit=curation_limit,
-            )
-            curation = build_curation_package(
-                evidence_payload,
-                overview=overview,
-                selected_limit=candidate_limit,
+            evidence_url = curation_url
+            evidence_payload = curation_unavailable_response(
+                tool="query_hypothesis_curation",
+                query={"hypothesis": label, "selected_limit": api_selected_limit(candidate_limit)},
                 query_type=query_type,
+                request_url=curation_url,
+                reason=fallback_reason,
+                overview=overview,
             )
+            curation = curation_package_from_response(evidence_payload) or {}
     else:
         raise ValueError(f"Unsupported target kind: {kind}")
+    if overview_error and curation:
+        scope = curation.setdefault("coverage_scope", {})
+        scope["overview_failure_reason"] = overview_error
 
     return {
         "kind": kind,
@@ -871,7 +892,7 @@ def render_report(
 
 def build_strategy(mode: str, candidate_limit: int, expert_limit: int) -> list[str]:
     base = [
-        "Use AD-Alterome full-pool curation first; fall back to capped event samples only when the curation endpoint is unavailable.",
+        "Use AD-Alterome full-pool curation first; do not fall back to capped event samples when the curation endpoint is unavailable.",
         f"Fetch up to {candidate_limit} candidate evidence rows, then keep up to {expert_limit} expert-included rows for the main narrative.",
         "Score evidence by AD specificity, mechanism depth, long-tail insight, user-question fit, traceability, and sentence informativeness.",
         "Apply an AD pathologist-style biological cut: keep molecular/pathological evidence in the main argument and demote generic background evidence.",
@@ -893,7 +914,7 @@ def main() -> int:
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL)
     parser.add_argument("--candidate-limit", type=int, default=80, help="Candidate rows requested from the server-side curation package. API max is enforced server-side.")
     parser.add_argument("--expert-limit", type=int, default=18, help="Rows kept in the main expert narrative.")
-    parser.add_argument("--curation-limit", type=int, default=API_MAX_TOP_K, help="Fallback rows requested from capped event endpoints if full-pool curation is unavailable.")
+    parser.add_argument("--curation-limit", type=int, default=API_MAX_TOP_K, help="Deprecated no-op retained for old commands; capped event-endpoint fallback is disabled.")
     parser.add_argument("--timeout", type=float, default=240)
     args = parser.parse_args()
 

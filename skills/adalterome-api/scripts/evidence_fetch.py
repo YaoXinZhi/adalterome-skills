@@ -43,6 +43,17 @@ def _remote_curation(
     timeout: float,
     selected_limit: int,
 ) -> tuple[str, dict[str, Any] | None]:
+    url, payload, _error = _remote_curation_with_error(base_url, path, params, timeout, selected_limit)
+    return url, payload
+
+
+def _remote_curation_with_error(
+    base_url: str,
+    path: str,
+    params: dict[str, Any],
+    timeout: float,
+    selected_limit: int,
+) -> tuple[str, dict[str, Any] | None, str | None]:
     requested_selected_limit = api_selected_limit(selected_limit)
     url, payload, error = request_json_optional(
         base_url,
@@ -51,10 +62,11 @@ def _remote_curation(
         timeout,
     )
     if error or not isinstance(payload, dict):
-        return url, None
+        return url, None, error or "curation endpoint returned no payload"
     curation = (payload.get("data") or {}).get("curation")
     if payload.get("status") != "ok" or not isinstance(curation, dict):
-        return url, None
+        message = (payload.get("meta") or {}).get("message") or payload.get("status") or "curation endpoint returned no curation object"
+        return url, None, str(message)
     scope = curation.setdefault("coverage_scope", {})
     scope["curation_endpoint_url"] = url
     scope.setdefault("curation_source", payload.get("meta", {}).get("curation_source", "remote_api"))
@@ -63,7 +75,83 @@ def _remote_curation(
     if cache_meta:
         scope["local_raw_payload_cache"] = cache_meta.get("cache_file")
         scope["local_cache_hit"] = cache_meta.get("cache_hit")
-    return url, payload
+    return url, payload, None
+
+
+def curation_unavailable_response(
+    *,
+    tool: str,
+    query: dict[str, Any],
+    query_type: str,
+    request_url: str,
+    reason: str | None,
+    overview: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    overview_summary = ((overview or {}).get("data") or {}).get("summary")
+    overview_event_count = overview_summary.get("event_count") if isinstance(overview_summary, dict) else None
+    reason_text = reason or "curation endpoint returned no usable payload"
+    curation = {
+        "global_statistics": {},
+        "coverage_scope": {
+            "query_type": query_type,
+            "curation_source": "unavailable",
+            "curation_scope": "curation_endpoint_unavailable",
+            "overview_event_count": overview_event_count,
+            "matched_event_count": overview_event_count,
+            "curation_pool_rows": 0,
+            "coverage_ratio": None,
+            "curation_endpoint_url": request_url,
+            "curation_failure_reason": reason_text,
+            "event_endpoint_fallback": "disabled",
+            "api_limit_notice": (
+                "Report builders do not fall back to capped event endpoints when full-pool "
+                "curation is unavailable; selected evidence is intentionally empty."
+            ),
+        },
+        "deduplication_summary": {
+            "curation_pool_row_count": 0,
+            "event_unique_rows": 0,
+            "event_deduplication_key": "not applied because curation endpoint was unavailable",
+            "unique_pmids": 0,
+            "unique_genes": 0,
+            "unique_phenotypes": 0,
+            "unique_terms": 0,
+            "unique_alteration_taxonomies": 0,
+            "unique_gene_alterations": 0,
+            "unique_alteration_signatures": 0,
+            "unique_hypotheses": 0,
+        },
+        "dominant_clusters": {},
+        "query_relative_patterns": {},
+        "long_tail_definition": {
+            "method": "not computed because curation endpoint was unavailable",
+            "dimensions": [],
+            "thresholds": {},
+        },
+        "long_tail_signals": [],
+        "evidence_type_groups": {},
+        "mechanism_strata": {},
+        "chronological_summary": [],
+        "bias_notes": [
+            f"Curation endpoint unavailable: {reason_text}",
+            "Capped event endpoints were not used as report fallback.",
+        ],
+        "selected_evidence": [],
+    }
+    return {
+        "tool": tool,
+        "status": "partial",
+        "query": query,
+        "count": 0,
+        "data": {"results": [], "curation": curation},
+        "meta": {
+            "curation_source": "unavailable",
+            "curation_scope": "curation_endpoint_unavailable",
+            "curation_endpoint_url": request_url,
+            "curation_failure_reason": reason_text,
+            "event_endpoint_fallback": "disabled",
+        },
+    }
 
 
 def curation_package_from_response(payload: dict[str, Any]) -> dict[str, Any] | None:
@@ -131,6 +219,21 @@ def fetch_gene_curation(
     )
 
 
+def fetch_gene_curation_with_error(
+    base_url: str,
+    gene: str,
+    timeout: float,
+    selected_limit: int = 30,
+) -> tuple[str, dict[str, Any] | None, str | None]:
+    return _remote_curation_with_error(
+        base_url,
+        "/gene/curation",
+        {"gene": str(gene).strip().upper()},
+        timeout,
+        selected_limit,
+    )
+
+
 def fetch_term_events_for_curation(
     base_url: str,
     term: str,
@@ -161,6 +264,21 @@ def fetch_term_curation(
     )
 
 
+def fetch_term_curation_with_error(
+    base_url: str,
+    term: str,
+    timeout: float,
+    selected_limit: int = 30,
+) -> tuple[str, dict[str, Any] | None, str | None]:
+    return _remote_curation_with_error(
+        base_url,
+        "/term/curation",
+        {"term": str(term).strip()},
+        timeout,
+        selected_limit,
+    )
+
+
 def fetch_hypothesis_support_for_curation(
     base_url: str,
     hypothesis: str,
@@ -183,6 +301,21 @@ def fetch_hypothesis_curation(
     selected_limit: int = 30,
 ) -> tuple[str, dict[str, Any] | None]:
     return _remote_curation(
+        base_url,
+        "/hypothesis/curation",
+        {"hypothesis": str(hypothesis).strip()},
+        timeout,
+        selected_limit,
+    )
+
+
+def fetch_hypothesis_curation_with_error(
+    base_url: str,
+    hypothesis: str,
+    timeout: float,
+    selected_limit: int = 30,
+) -> tuple[str, dict[str, Any] | None, str | None]:
+    return _remote_curation_with_error(
         base_url,
         "/hypothesis/curation",
         {"hypothesis": str(hypothesis).strip()},

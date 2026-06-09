@@ -12,9 +12,9 @@ Use this skill for stable presentation and reporting. Fetch data through the sib
 Use the installed API script with `--output report`:
 
 ```bash
-python3 ../adalterome-api/scripts/query_adalterome.py gene-events --gene MAPT --top-k 5 --output report
-python3 ../adalterome-api/scripts/query_adalterome.py term-events --term "mitochondrial dysfunction" --top-k 5 --output report
-python3 ../adalterome-api/scripts/query_adalterome.py hypothesis-support --hypothesis "Tau Protein Hypothesis" --top-k 5 --output report
+python3 ../adalterome-api/scripts/query_adalterome.py gene-curation --gene MAPT --selected-limit 30 --output report
+python3 ../adalterome-api/scripts/query_adalterome.py term-curation --term "mitochondrial dysfunction" --selected-limit 30 --output report
+python3 ../adalterome-api/scripts/query_adalterome.py hypothesis-curation --hypothesis "Tau Protein Hypothesis" --selected-limit 30 --output report
 python3 ../adalterome-api/scripts/query_adalterome.py compare --gene-a APOE --gene-b APP --output report
 ```
 
@@ -24,7 +24,7 @@ Read [../adalterome-api/references/api_docs.md](../adalterome-api/references/api
 ## Workflow
 
 1. Identify whether the user wants a gene, phenotype/process, hypothesis, or comparison report.
-2. Use `adalterome-api` with `--output report`.
+2. Use `adalterome-api` curation endpoints with `--output report`; reserve event-style endpoints for explicit legacy/debug sentence samples.
 3. Preserve the fixed section order from the script output.
 4. Keep PubMed links and exact original sentences in `## Evidence`.
 5. If adding interpretation, append it after the fixed report or under `## Notes`; do not rewrite the evidence.
@@ -59,6 +59,7 @@ When delivering a report, keep these sections:
 - Do not silently remove PMID or PubMed links.
 - Do not display or interpret `EvidenceScore`; it is a raw API compatibility field.
 - Do not turn weak sentence-level associations into strong causality.
+- Do not use capped event endpoints as report fallback when curation is unavailable; report the curation failure boundary instead.
 - Do not use this brief report skill for a deep researcher-facing gene dossier; use `adalterome-gene-report`.
 
 ## Resources

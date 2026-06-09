@@ -62,7 +62,7 @@ Expected outputs:
    - `--hypothesis` for one AD hypothesis
    - `--gene-a` and `--gene-b` for a balanced two-gene comparison
 3. Run `scripts/build_case_study_expert.py` with a larger `--candidate-limit` than the final `--expert-limit`.
-4. Inspect `data/coverage.json` first. If the report fell back to `api_sentence_sample`, mark conclusions as exploratory and avoid strong negative claims.
+4. Inspect `data/coverage.json` first. If any target has `curation_scope=curation_endpoint_unavailable`, treat the case study as partial and avoid strong negative claims.
 5. Inspect `data/expert_evidence.json`:
    - `included_evidence` is the main case-study evidence.
    - `secondary_evidence` can support caveats or context.
@@ -91,14 +91,15 @@ Deprioritize evidence that is:
 - broad disease background only
 - too generic to support a mechanism
 - only a weak association without AD-pathological context
-- sampled from a low-coverage fallback when stronger conclusions would require full-pool curation
+- missing full-pool curation when stronger conclusions would require selected evidence from the curated pool
 
 ## Guardrails
 
 - Do not introduce TF-IDF recommendation, external database overlap, manual gold relevance grading, or AD-LitPathoNet network parsing inside this skill.
 - Do not display or interpret `EvidenceScore`.
 - Do not claim a mechanism is proven by sentence-level evidence alone.
-- When curation scope is `api_sentence_sample`, explicitly report the coverage limitation.
+- When curation scope is `curation_endpoint_unavailable`, explicitly report the boundary instead of filling the gap with capped event samples.
+- If an old cached payload has `api_sentence_sample`, treat it as exploratory legacy evidence only.
 - In two-gene reports, do not make strong comparative conclusions if the two sides have unequal curation scope or very different coverage ratios.
 - If using outside knowledge, keep it as a small interpretive bridge and label it separately from AD-Alterome evidence.
 - Exact raw API payloads are cached in the shared local cache for repeat requests and manual inspection.

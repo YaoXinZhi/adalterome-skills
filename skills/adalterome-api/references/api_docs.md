@@ -32,7 +32,7 @@ also write `data/cache_manifest.json` into the task output directory.
 | Health | `GET /health` | none |
 | Schema | `GET /schema` | none |
 | Hypothesis catalog | `GET /hypotheses` | none |
-| Gene events | `GET /gene/events` | `gene`, `top_k` |
+| Gene events (legacy/debug sample) | `GET /gene/events` | `gene`, `top_k` |
 | Gene overview | `GET /gene/overview` | `gene` |
 | Gene curation | `GET /gene/curation` | `gene`, `selected_limit`, `source` |
 | Term events | `GET /term/events` | `term`, `top_k` |
@@ -78,12 +78,12 @@ Important fields:
 
 ## Evidence Ranking
 
-The REST API event endpoints retrieve a limited candidate pool and re-rank by deterministic sentence quality before returning `top_k`. Public event endpoints currently cap `top_k` at 50 and are intended for lightweight sentence inspection.
+The REST API event endpoints retrieve a limited candidate pool and re-rank by deterministic sentence quality before returning `top_k`. Public event endpoints currently cap `top_k` at 50 and are intended for legacy/debug sentence inspection, not report-grade evidence selection or large-gene case studies.
 Ranking favors records whose sentences contain the target, gene, term, alteration, trigger, Event chain, AD interpretation, PMID, and suitable sentence length.
 
 ## Full-Pool Curation Endpoints
 
-Deep report builders should use `/gene/curation`, `/term/curation`, and `/hypothesis/curation` when available. These endpoints default to `source=curated`: the API reads the offline curated evidence pool built from complete query pools, then hydrates selected raw event IDs for exact sentences and PubMed links. Use `source=raw` only for compatibility or debugging; broad raw queries can be slow.
+Deep report builders should use `/gene/curation`, `/term/curation`, and `/hypothesis/curation`. These endpoints default to `source=curated`: the API reads the offline curated evidence pool built from complete query pools, then hydrates selected raw event IDs for exact sentences and PubMed links. If curation is unavailable, report builders should emit a partial report with the curation failure reason rather than falling back to capped event endpoints. Use `source=raw` only for compatibility or debugging; broad raw queries can be slow.
 
 For example, `GET /term/curation?term=mitochondrial+dysfunction&selected_limit=30&source=curated` uses the curated term pool, filters alias-expanded rows back to the requested term fields, and returns:
 

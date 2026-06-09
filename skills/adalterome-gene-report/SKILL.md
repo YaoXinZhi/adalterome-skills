@@ -9,7 +9,7 @@ Use this skill when the user wants a research-style report for one AD-related ge
 
 ## Workflow
 
-1. Run the report builder script with `--gene` and `--output-dir`; use `--selected-limit` to control displayed evidence from the server-side full-pool curation package. `--curation-limit` only controls capped event-endpoint fallback mode.
+1. Run the report builder script with `--gene` and `--output-dir`; use `--selected-limit` to control displayed evidence from the server-side full-pool curation package. `--curation-limit` and `--top-k` are deprecated compatibility options and do not enable capped event fallback.
 2. Inspect `data/curation.json`, `data/evidence.json`, and `data/overview.json`.
 3. Read [references/report_contract_gene_deep.md](references/report_contract_gene_deep.md), [references/evidence_schema.md](references/evidence_schema.md), and [references/final_report_playbook.md](references/final_report_playbook.md).
 4. Expand `report.md` into a researcher-level final report if the user needs more depth.
@@ -60,7 +60,7 @@ The final report should follow this storyline:
 - Deep reports use their own sentence informativeness score for curation; API `EvidenceQualityScore` may exist in raw JSON but is not treated as proof strength.
 - `EvidenceScore` may exist in raw API JSON but is ignored by this skill.
 - `--top-k` is retained only as a deprecated alias for fallback event-endpoint sampling; do not use it to mean final report length.
-- Deep reports prefer server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence. REST event endpoints remain capped and are used only for lightweight retrieval or fallback.
+- Deep reports use server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence. REST event endpoints remain capped legacy/debug samples and are not used as report fallback.
 - Deep reports save task-local JSON files and `data/cache_manifest.json`; exact raw API payloads are also kept in the shared local cache for repeat requests and manual inspection.
 - Genetic alteration taxonomy comes from the leading `AlterationType` value. `TriggerWord` and `RegType` are regulatory/event context, not alteration labels.
 - Generic sentences may still appear when the database has limited high-information evidence.

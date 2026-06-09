@@ -24,7 +24,7 @@ Expected outputs:
 
 ## Workflow
 
-1. Run the report builder with `--term` and `--output-dir`; `--term` is retained as the API-compatible argument for phenotype/process queries. Use `--selected-limit` to control displayed evidence from the server-side full-pool curation package. `--curation-limit` only controls capped event-endpoint fallback mode.
+1. Run the report builder with `--term` and `--output-dir`; `--term` is retained as the API-compatible argument for phenotype/process queries. Use `--selected-limit` to control displayed evidence from the server-side full-pool curation package. `--curation-limit` and `--top-k` are deprecated compatibility options and do not enable capped event fallback.
 2. Inspect `data/curation.json` for selected evidence, query-relative top/long-tail patterns, evidence type groups, mechanism strata, and chronology.
 3. Inspect `data/evidence.json` for returned `Evidence.sentence`, `Evidence.pubmed_url`, and original event fields.
 4. Read [references/report_contract_term_deep.md](references/report_contract_term_deep.md) before expanding or revising the report.
@@ -56,7 +56,7 @@ The report should follow this storyline:
 - Use PubMed links returned by the API or generated from PMID.
 - Use `curation.json` to filter broad background evidence away from molecular or model-based evidence when needed.
 - Phenotype/process reports deduplicate by gene + alteration taxonomy + hypothesis because the searched phenotype/process feature is fixed by the query.
-- Deep reports prefer server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence. REST event endpoints remain capped and are used only for lightweight retrieval or fallback.
+- Deep reports use server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence. REST event endpoints remain capped legacy/debug samples and are not used as report fallback.
 - Genetic alteration taxonomy comes from the leading `AlterationType` value. `TriggerWord` and `RegType` are regulatory/event context, not alteration labels.
 - Deep reports save task-local JSON files and `data/cache_manifest.json`; exact raw API payloads are also kept in the shared local cache for repeat requests and manual inspection.
 - If the phenotype/process feature is broad, explicitly say the report is an evidence map rather than a narrow mechanistic conclusion.

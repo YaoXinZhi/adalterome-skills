@@ -14,18 +14,22 @@ Run the bundled script with `python3`:
 ```bash
 python3 scripts/query_adalterome.py schema
 python3 scripts/query_adalterome.py hypotheses --output summary
-python3 scripts/query_adalterome.py gene-events --gene MAPT --top-k 5 --output report
-python3 scripts/query_adalterome.py term-events --term "mitochondrial dysfunction" --top-k 5 --output report
-python3 scripts/query_adalterome.py hypothesis-support --hypothesis "Amyloid Hypothesis" --top-k 5 --output evidence-md
+python3 scripts/query_adalterome.py gene-curation --gene MAPT --selected-limit 30 --source curated --output report
 python3 scripts/query_adalterome.py term-curation --term "mitochondrial dysfunction" --selected-limit 30 --output report
-python3 scripts/query_adalterome.py gene-curation --gene MAPT --selected-limit 30 --source raw --output report
+python3 scripts/query_adalterome.py hypothesis-curation --hypothesis "Amyloid Hypothesis" --selected-limit 30 --output evidence-md
 python3 scripts/query_adalterome.py compare --gene-a APOE --gene-b APP --output report
+```
+
+Legacy/debug event samples remain available for small targeted inspections:
+
+```bash
+python3 scripts/query_adalterome.py gene-events --gene MAPT --top-k 5 --output evidence-md
 ```
 
 The default API base URL is `http://117.72.176.137/api/adalterome`. Override it with:
 
 ```bash
-python3 scripts/query_adalterome.py gene-events --gene MAPT --base-url http://117.72.176.137/api/adalterome
+python3 scripts/query_adalterome.py gene-curation --gene MAPT --base-url http://117.72.176.137/api/adalterome
 ```
 
 Read [references/api_docs.md](references/api_docs.md) when you need endpoint details or response fields.
@@ -41,9 +45,9 @@ to bypass caching, or `ADALTEROME_CACHE_DIR` to choose a cache directory.
 1. Decide whether the user needs discovery, retrieval, aggregation, or comparison.
 2. Use `schema` to verify fields if the API shape is uncertain.
 3. Use `hypotheses` before hypothesis search when the exact hypothesis name is unclear.
-4. Use `gene-events`, `term-events`, or `hypothesis-support` for lightweight sentence-level evidence.
-5. Use `gene-overview`, `term-overview`, or `hypothesis-overview` for aggregate statistics.
-6. Use `gene-curation`, `term-curation`, or `hypothesis-curation` for report-grade full-pool event deduplication, long-tail sampling, and mechanism-stratified curation.
+4. Use `gene-curation`, `term-curation`, or `hypothesis-curation` for report-grade full-pool event deduplication, long-tail sampling, mechanism-stratified curation, and complete curated-query statistics.
+5. Use `gene-overview`, `term-overview`, or `hypothesis-overview` only as auxiliary aggregate summaries when needed.
+6. Use `gene-events`, `term-events`, or `hypothesis-support` only for legacy/debug small sentence samples, not for reports or large genes.
 7. Use `compare` for two-gene shared/distinct phenotype/process and hypothesis summaries.
 8. Preserve `Evidence.sentence`, `Evidence.pubmed_url`, and `Evidence.event` in user-facing answers.
 9. Do not invent PubMed links; only use `PMID` or `Evidence.pubmed_url` returned by the API.
@@ -57,7 +61,7 @@ to bypass caching, or `ADALTEROME_CACHE_DIR` to choose a cache directory.
 - `schema`
 - `hypotheses`
 
-### Retrieve evidence
+### Retrieve legacy/debug evidence samples
 
 - `gene-events --gene GENE`
 - `term-events --term TERM`
@@ -85,7 +89,7 @@ to bypass caching, or `ADALTEROME_CACHE_DIR` to choose a cache directory.
 - Use `--output report` for stable user-facing answers.
 - Use `--output evidence-md` when the user specifically wants traceable evidence sentences and PubMed links.
 - Use `--output json` when exact fields are needed or another script will consume the result.
-- For deep reports, prefer the dedicated builder scripts. They use API overview endpoints for aggregate statistics and server-side curation endpoints for full-pool event deduplication, long-tail sampling, and source-traceable representative evidence. If the server does not yet expose curation endpoints, builders fall back to capped event endpoints.
+- For deep reports, prefer the dedicated builder scripts. They use server-side curation endpoints backed by the curated SQLite pool for full-pool event deduplication, long-tail sampling, complete curated-query statistics, and source-traceable representative evidence. If a curation endpoint is unavailable, report builders return a partial report with the failure reason instead of falling back to capped event endpoints.
 
 ## Evidence Contract
 
@@ -112,7 +116,7 @@ Curated evidence rows may include:
 - `ExpertReason`: short rationale for LLM-reviewed rows.
 - `SamplingBucket`: why the row entered the curated pool, such as phenotype coverage, gene coverage, long-tail, or recent high-quality evidence.
 
-Use `--source raw` only when the user explicitly needs the older raw full-query curation behavior; large genes, broad terms, and broad hypotheses may be slow in raw mode.
+Use `--source raw` only when the user explicitly needs the older raw full-query curation behavior; large genes, broad terms, and broad hypotheses may be slow in raw mode. Keep `source=curated` as the default for skills and reports.
 
 ## Fixed Report Format
 

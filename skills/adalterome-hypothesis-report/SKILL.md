@@ -24,7 +24,7 @@ Expected outputs:
 
 ## Workflow
 
-1. Run the report builder with `--hypothesis` and `--output-dir`; use `--selected-limit` to control displayed evidence from the server-side full-pool curation package. `--curation-limit` only controls capped event-endpoint fallback mode.
+1. Run the report builder with `--hypothesis` and `--output-dir`; use `--selected-limit` to control displayed evidence from the server-side full-pool curation package. `--curation-limit` and `--top-k` are deprecated compatibility options and do not enable capped event fallback.
 2. Inspect `data/overview.json` for top genes and phenotype/process features.
 3. Inspect `data/curation.json` for selected evidence, query-relative top/long-tail patterns, evidence type groups, mechanism strata, and chronology.
 4. Inspect `data/evidence.json` for exact sentence evidence and PubMed links.
@@ -56,7 +56,7 @@ The report should follow this storyline:
 - Treat `HypothesisReason` and `ExtendedExplanation` as curated interpretation, not primary experimental text.
 - Use `curation.json` to separate broad background support from molecular, alteration, pathway, model, or clinical evidence.
 - Hypothesis reports deduplicate by gene + alteration taxonomy + phenotype/term because the hypothesis is fixed by the query.
-- Deep reports prefer server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence. REST event endpoints remain capped and are used only for lightweight retrieval or fallback.
+- Deep reports use server-side curation endpoints, which deduplicate and sample from the complete matched query pool before returning selected evidence. REST event endpoints remain capped legacy/debug samples and are not used as report fallback.
 - Deep reports save task-local JSON files and `data/cache_manifest.json`; exact raw API payloads are also kept in the shared local cache for repeat requests and manual inspection.
 - Genetic alteration taxonomy comes from the leading `AlterationType` value. `TriggerWord` and `RegType` are regulatory/event context, not alteration labels.
 - Expert case-study interpretation lives in `adalterome-case-study-expert`; keep this hypothesis report as the stable traceable evidence dossier.

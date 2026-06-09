@@ -15,7 +15,6 @@ SKILLS_DIR = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(SKILLS_DIR / "adalterome-api" / "scripts"))
 
 from evidence_curation import (  # noqa: E402
-    build_curation_package,
     md,
     render_chronology,
     render_curation_overview,
@@ -24,10 +23,9 @@ from evidence_curation import (  # noqa: E402
     render_selected_table,
 )
 from evidence_fetch import (  # noqa: E402
-    API_MAX_TOP_K,
     curation_package_from_response,
-    fetch_gene_curation,
-    fetch_gene_events_for_curation,
+    curation_unavailable_response,
+    fetch_gene_curation_with_error,
     request_json,
 )
 from query_cache import write_cache_manifest  # noqa: E402
@@ -157,18 +155,12 @@ def render(
             "## Follow-Up Priorities",
             "",
             "- Use `--selected-limit` to request a larger displayed set from each server-side full-pool gene curation endpoint.",
-            "- `--curation-limit` only affects fallback mode when the server does not expose `/gene/curation`.",
+            "- `--curation-limit` and `--top-k` are deprecated compatibility options; capped `/gene/events` fallback is disabled for reports.",
             "- Review `data/gene_a_curation.json` and `data/gene_b_curation.json` to filter by `EvidenceType`, `MechanismStrata`, `IsLongTailEvidence`, year, phenotype, gene-alteration pair, or alteration taxonomy.",
             "- Treat unequal event counts as a literature-density signal before making contrastive biological claims.",
         ]
     )
     return "\n".join(lines)
-
-
-def resolve_curation_limit(args: argparse.Namespace) -> int:
-    if args.top_k is not None:
-        return args.top_k
-    return args.curation_limit
 
 
 def main() -> int:
@@ -177,8 +169,8 @@ def main() -> int:
     parser.add_argument("--gene-b", required=True)
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL)
-    parser.add_argument("--curation-limit", type=int, default=API_MAX_TOP_K, help=f"Fallback rows to request from each capped API gene event endpoint if /gene/curation is unavailable. 0 or values above {API_MAX_TOP_K} use {API_MAX_TOP_K}.")
-    parser.add_argument("--top-k", type=int, default=None, help="Deprecated alias for --curation-limit. Prefer --selected-limit for display size.")
+    parser.add_argument("--curation-limit", type=int, default=50, help="Deprecated no-op retained for old commands; capped event-endpoint fallback is disabled.")
+    parser.add_argument("--top-k", type=int, default=None, help="Deprecated no-op retained for old commands. Prefer --selected-limit for display size.")
     parser.add_argument("--selected-limit", type=int, default=24)
     parser.add_argument("--timeout", type=float, default=180)
     args = parser.parse_args()
@@ -186,8 +178,7 @@ def main() -> int:
     data_dir = output_dir / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
     compare_url, compare = get_json(args.base_url, "/compare/genes", {"gene_a": args.gene_a, "gene_b": args.gene_b}, args.timeout)
-    curation_limit = resolve_curation_limit(args)
-    gene_a_url, server_curation_a = fetch_gene_curation(
+    gene_a_url, server_curation_a, curation_error_a = fetch_gene_curation_with_error(
         args.base_url,
         args.gene_a,
         args.timeout,
@@ -197,14 +188,15 @@ def main() -> int:
         evidence_a = server_curation_a
         curation_a = curation_package_from_response(server_curation_a) or {}
     else:
-        gene_a_url, evidence_a = fetch_gene_events_for_curation(
-            args.base_url,
-            args.gene_a,
-            args.timeout,
-            curation_limit=curation_limit,
+        evidence_a = curation_unavailable_response(
+            tool="query_gene_curation",
+            query={"gene": args.gene_a, "selected_limit": args.selected_limit},
+            query_type="compare_gene",
+            request_url=gene_a_url,
+            reason=curation_error_a,
         )
-        curation_a = build_curation_package(evidence_a, selected_limit=args.selected_limit, query_type="compare_gene")
-    gene_b_url, server_curation_b = fetch_gene_curation(
+        curation_a = curation_package_from_response(evidence_a) or {}
+    gene_b_url, server_curation_b, curation_error_b = fetch_gene_curation_with_error(
         args.base_url,
         args.gene_b,
         args.timeout,
@@ -214,13 +206,14 @@ def main() -> int:
         evidence_b = server_curation_b
         curation_b = curation_package_from_response(server_curation_b) or {}
     else:
-        gene_b_url, evidence_b = fetch_gene_events_for_curation(
-            args.base_url,
-            args.gene_b,
-            args.timeout,
-            curation_limit=curation_limit,
+        evidence_b = curation_unavailable_response(
+            tool="query_gene_curation",
+            query={"gene": args.gene_b, "selected_limit": args.selected_limit},
+            query_type="compare_gene",
+            request_url=gene_b_url,
+            reason=curation_error_b,
         )
-        curation_b = build_curation_package(evidence_b, selected_limit=args.selected_limit, query_type="compare_gene")
+        curation_b = curation_package_from_response(evidence_b) or {}
     (data_dir / "query.json").write_text(json.dumps(vars(args), ensure_ascii=False, indent=2), encoding="utf-8")
     (data_dir / "compare.json").write_text(json.dumps(compare, ensure_ascii=False, indent=2), encoding="utf-8")
     (data_dir / "gene_a_evidence.json").write_text(json.dumps(evidence_a, ensure_ascii=False, indent=2), encoding="utf-8")
