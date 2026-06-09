@@ -8,7 +8,8 @@ from query_cache import fetch_json_optional_with_cache, fetch_json_with_cache, p
 
 
 API_MAX_TOP_K = 50
-SERVER_CURATION_MAX_SELECTED_LIMIT = 100
+SERVER_CURATION_MAX_SELECTED_LIMIT = 500
+LEGACY_SERVER_CURATION_MAX_SELECTED_LIMIT = 100
 
 
 def request_json(base_url: str, path: str, params: dict[str, Any], timeout: float) -> tuple[str, dict[str, Any]]:
@@ -36,6 +37,16 @@ def api_selected_limit(requested_selected_limit: int) -> int:
     return min(requested_selected_limit, SERVER_CURATION_MAX_SELECTED_LIMIT)
 
 
+def selected_limit_attempts(requested_selected_limit: int) -> list[int]:
+    """Try the requested curation size first, then legacy-safe fallbacks."""
+    first = api_selected_limit(requested_selected_limit)
+    attempts = [first]
+    for fallback in (LEGACY_SERVER_CURATION_MAX_SELECTED_LIMIT, 30):
+        if first > fallback and fallback not in attempts:
+            attempts.append(fallback)
+    return attempts
+
+
 def _remote_curation(
     base_url: str,
     path: str,
@@ -55,12 +66,20 @@ def _remote_curation_with_error(
     selected_limit: int,
 ) -> tuple[str, dict[str, Any] | None, str | None]:
     requested_selected_limit = api_selected_limit(selected_limit)
-    url, payload, error = request_json_optional(
-        base_url,
-        path,
-        {**params, "selected_limit": requested_selected_limit},
-        timeout,
-    )
+    url = ""
+    payload: dict[str, Any] | None = None
+    error: str | None = None
+    used_selected_limit = requested_selected_limit
+    for attempted_selected_limit in selected_limit_attempts(selected_limit):
+        used_selected_limit = attempted_selected_limit
+        url, payload, error = request_json_optional(
+            base_url,
+            path,
+            {**params, "selected_limit": attempted_selected_limit},
+            timeout,
+        )
+        if not error or "HTTP error 422" not in str(error):
+            break
     if error or not isinstance(payload, dict):
         return url, None, error or "curation endpoint returned no payload"
     curation = (payload.get("data") or {}).get("curation")
@@ -69,6 +88,10 @@ def _remote_curation_with_error(
         return url, None, str(message)
     scope = curation.setdefault("coverage_scope", {})
     scope["curation_endpoint_url"] = url
+    scope["requested_selected_limit"] = requested_selected_limit
+    scope["used_selected_limit"] = used_selected_limit
+    if used_selected_limit != requested_selected_limit:
+        scope["selected_limit_retry_reason"] = "server rejected larger selected_limit; retried with a legacy-compatible limit"
     scope.setdefault("curation_source", payload.get("meta", {}).get("curation_source", "remote_api"))
     scope.setdefault("curation_scope", payload.get("meta", {}).get("curation_scope", "server_full_query_pool"))
     cache_meta = payload_cache_meta(payload)

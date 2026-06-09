@@ -20,6 +20,9 @@ Each run must write:
 - `data/query.json`: exact CLI parameters.
 - `data/coverage.json`: per-target curation scope, coverage, warnings, and comparison balance status.
 - `data/expert_evidence.json`: scored evidence with included, additional high-scoring, secondary, and deprioritized tiers.
+- `data/ad_expert_pruning.json`: full reusable AD expert pruning payload, including policy, duplicate groups, and hypothesis-count handling.
+- `data/merged_evidence.json`: duplicate-collapsed candidate evidence used for narrative selection.
+- `data/excluded_or_deprioritized_evidence.json`: evidence kept out of the main narrative after expert pruning.
 - `data/case_study.json`: compact machine-readable summary for follow-up writing.
 
 ## Report Structure
@@ -39,6 +42,7 @@ The Markdown report should keep two layers:
    - scored evidence table
    - additional high-scoring evidence not used in the main narrative
    - deprioritized evidence summary
+   - duplicate-merge summary
    - original sentence traces with PMID/PubMed links
 
 ## Expert Evidence Scores
@@ -53,7 +57,19 @@ Score dimensions:
 - direct fit to the user question
 - source traceability
 - sentence informativeness
+- `event_expert_annotation_final` score, source, confidence, and reason when available
 - common-sense penalty for generic or weakly supported evidence
+
+## AD Expert Pruning Rules
+
+The case-study skill uses a reusable second-layer pruning module after API curation:
+
+- Default case-study candidate pool target is 200 curated rows; use 300-500 only when the API can support it.
+- The final narrative normally uses 15-30 expert-included rows after duplicate merging and biological trimming.
+- Merge repeated or overlapping evidence by target, PMID, normalized sentence, and EventDedupKey before narrative selection.
+- `Not applicable to any AD hypothesis` is not counted in hypothesis statistics. It can remain mechanism evidence when the user asks for biological insight rather than a named hypothesis.
+- If the user asks for a named hypothesis, Not applicable rows may appear as context but should not be treated as support for that hypothesis.
+- Low-frequency, mechanism-rich long-tail evidence can be rescued when it is biologically specific and traceable.
 
 ## Coverage Rules
 

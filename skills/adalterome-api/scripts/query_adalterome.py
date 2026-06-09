@@ -16,7 +16,7 @@ from evidence_curation import (
     render_long_tail,
     render_selected_table,
 )
-from evidence_fetch import request_json
+from evidence_fetch import api_selected_limit, request_json, request_json_optional, selected_limit_attempts
 from query_cache import cache_provenance_lines
 
 
@@ -50,6 +50,37 @@ def endpoint_for_args(args: argparse.Namespace) -> tuple[str, dict[str, Any]]:
     if command == "compare":
         return "/compare/genes", {"gene_a": args.gene_a, "gene_b": args.gene_b}
     raise SystemExit(f"Unsupported command: {command}")
+
+
+def is_curation_command(command: str) -> bool:
+    return command in {"gene-curation", "term-curation", "hypothesis-curation"}
+
+
+def request_payload(args: argparse.Namespace, path: str, params: dict[str, Any]) -> tuple[str, dict[str, Any]]:
+    if not is_curation_command(args.command):
+        return request_json(args.base_url, path, params, args.timeout)
+
+    requested_selected_limit = api_selected_limit(int(params.get("selected_limit") or 30))
+    last_url = ""
+    last_error = ""
+    for attempted_selected_limit in selected_limit_attempts(requested_selected_limit):
+        request_params = {**params, "selected_limit": attempted_selected_limit}
+        url, payload, error = request_json_optional(args.base_url, path, request_params, args.timeout)
+        last_url = url
+        last_error = error or ""
+        if error and "HTTP error 422" in str(error):
+            continue
+        if error or not isinstance(payload, dict):
+            raise SystemExit(error or "curation endpoint returned no payload")
+        curation = (payload.get("data") or {}).get("curation")
+        if isinstance(curation, dict):
+            scope = curation.setdefault("coverage_scope", {})
+            scope["requested_selected_limit"] = requested_selected_limit
+            scope["used_selected_limit"] = attempted_selected_limit
+            if attempted_selected_limit != requested_selected_limit:
+                scope["selected_limit_retry_reason"] = "server rejected larger selected_limit; retried with a legacy-compatible limit"
+        return url, payload
+    raise SystemExit(last_error or f"curation endpoint failed for {last_url}")
 
 
 def results(payload: dict[str, Any]) -> list[dict[str, Any]]:
@@ -328,7 +359,7 @@ def normalize_argv(argv: list[str]) -> list[str]:
 def main() -> int:
     args = build_parser().parse_args(normalize_argv(sys.argv[1:]))
     path, params = endpoint_for_args(args)
-    request_url, payload = request_json(args.base_url, path, params, args.timeout)
+    request_url, payload = request_payload(args, path, params)
     api_page = f"{args.base_url.rstrip('/')}/docs"
     if args.output == "json":
         print(json.dumps(payload, ensure_ascii=False, indent=2))

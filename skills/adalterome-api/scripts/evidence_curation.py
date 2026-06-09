@@ -178,6 +178,26 @@ def evidence_nested(row: dict[str, Any], group: str, key: str) -> Any:
     return nested.get(key)
 
 
+def expert_annotation(row: dict[str, Any]) -> dict[str, Any]:
+    annotation = row.get("ExpertAnnotation")
+    return annotation if isinstance(annotation, dict) else {}
+
+
+def expert_annotation_value(row: dict[str, Any], key: str) -> Any:
+    return expert_annotation(row).get(key)
+
+
+def expert_score(row: dict[str, Any], key: str) -> int | None:
+    value = expert_annotation_value(row, key)
+    try:
+        if value in (None, "", "-"):
+            return None
+        score = int(float(str(value)))
+    except (TypeError, ValueError):
+        return None
+    return max(1, min(5, score))
+
+
 BIOLOGICAL_CONTEXT_KEYS = {
     "Gene": "gene",
     "Entrez": "entrez",
@@ -701,6 +721,11 @@ def select_diverse_rows(
             break
         add_row(row)
 
+    for row in sorted_rows:
+        if len(selected) >= limit:
+            break
+        add_row(row, ignore_quota=True)
+
     return selected[:limit]
 
 
@@ -713,6 +738,8 @@ def normalize_row(
     ev = evidence_block(row)
     article = ev.get("article") if isinstance(ev.get("article"), dict) else {}
     signals = long_tail_signals_for_row(row, counters, thresholds)
+    annotation = expert_annotation(row)
+    curated = row.get("_Curated") if isinstance(row.get("_Curated"), dict) else {}
     return {
         "Gene": row.get("Gene"),
         "PMID": pmid(row),
@@ -723,12 +750,23 @@ def normalize_row(
         "TermType": row.get("TermType"),
         "Hypothesis": row.get("Hypothesis"),
         "SentenceQuality": sentence_informativeness(row),
+        "ExpertOverallScore": expert_score(row, "overall_expert_score"),
+        "ExpertMechanismSpecificityScore": expert_score(row, "mechanism_specificity_score"),
+        "ExpertPathologyGranularityScore": expert_score(row, "pathology_granularity_score"),
+        "ExpertExperimentalDirectnessScore": expert_score(row, "experimental_directness_score"),
+        "ExpertAlterationInformativenessScore": expert_score(row, "alteration_informativeness_score"),
+        "AnnotationSource": annotation.get("annotation_source"),
+        "AnnotationConfidence": annotation.get("confidence"),
+        "ExpertReason": annotation.get("reason"),
+        "CuratedPoolRank": curated.get("rank_in_query"),
+        "SamplingBucket": curated.get("sampling_bucket"),
         "AlterationTaxonomy": alteration_taxonomy(row),
         "GeneAlteration": gene_alteration_signature(row),
         "AlterationSignature": alteration_taxonomy(row),
         "AlterationType": biological_context_value(row, "AlterationType"),
         "AlterationMention": alteration_mention(row),
         "AlterationID": biological_context_value(row, "AlterationID"),
+        "AlterationEvidenceLevel": annotation.get("alteration_evidence_level"),
         "TriggerWord": biological_context_value(row, "TriggerWord"),
         "RegType": biological_context_value(row, "RegType"),
         "MechanismProvided": row.get("MechanismProvided"),
@@ -797,6 +835,15 @@ def build_curation_package(
     thresholds = long_tail_thresholds(counters)
     selected = select_diverse_rows(rows, counters, thresholds, query_type=query_type, limit=selected_limit)
     normalized = [normalize_row(row, counters, thresholds, query_type) for row in selected]
+    requested_selected_limit = selected_limit
+    returned_selected_count = len(normalized)
+    eligible_after_filter_count = len(rows)
+    representative = normalized[: min(30, len(normalized))]
+    selection_shortfall_reason = None
+    if returned_selected_count < min(requested_selected_limit, eligible_after_filter_count):
+        selection_shortfall_reason = "selection_algorithm_returned_fewer_rows_than_available"
+    elif eligible_after_filter_count < requested_selected_limit:
+        selection_shortfall_reason = "eligible_unique_rows_below_requested_limit"
 
     pmid_counts = Counter(pmid(row) for row in rows if pmid(row) != "-")
     gene_counts = Counter(gene_signature(row) for row in rows if gene_signature(row))
@@ -887,6 +934,18 @@ def build_curation_package(
             "curation_pool_rows": raw_count,
             "coverage_ratio": coverage_ratio,
             "api_limit_notice": meta.get("limit_notice"),
+            "requested_selected_limit": requested_selected_limit,
+            "returned_selected_count": returned_selected_count,
+            "eligible_after_filter_count": eligible_after_filter_count,
+            "selection_shortfall_reason": selection_shortfall_reason,
+        },
+        "selection_trace": {
+            "requested_selected_limit": requested_selected_limit,
+            "returned_selected_count": returned_selected_count,
+            "eligible_after_filter_count": eligible_after_filter_count,
+            "representative_count": len(representative),
+            "selection_shortfall_reason": selection_shortfall_reason,
+            "candidate_evidence_semantics": "candidate_evidence is the broad curated pool returned for downstream expert pruning; representative_evidence is the compact display subset.",
         },
         "deduplication_summary": {
             "curation_pool_row_count": raw_count,
@@ -936,6 +995,8 @@ def build_curation_package(
             for period, counter in sorted(period_counts.items())
         ],
         "bias_notes": bias_notes,
+        "candidate_evidence": normalized,
+        "representative_evidence": representative,
         "selected_evidence": normalized,
     }
     return package
@@ -945,6 +1006,7 @@ def render_curation_overview(curation: dict[str, Any]) -> list[str]:
     dedupe = curation.get("deduplication_summary") or {}
     long_tail = curation.get("long_tail_definition") or {}
     scope = curation.get("coverage_scope") or {}
+    selection = curation.get("selection_trace") or {}
     global_stats = curation.get("global_statistics") or curation.get("curated_pool_statistics") or {}
     global_summary = global_stats.get("summary") if isinstance(global_stats.get("summary"), dict) else {}
     lines = [
@@ -958,6 +1020,7 @@ def render_curation_overview(curation: dict[str, Any]) -> list[str]:
         f"- Event deduplication key: {dedupe.get('event_deduplication_key')}.",
         f"- Unique PMIDs in curation pool: {dedupe.get('unique_pmids', 0)}; genes: {dedupe.get('unique_genes', 0)}; phenotypes: {dedupe.get('unique_phenotypes', dedupe.get('unique_terms', 0))}; alteration taxonomies: {dedupe.get('unique_alteration_taxonomies', 0)}; gene-alteration pairs: {dedupe.get('unique_gene_alterations', 0)}.",
         f"- Long-tail rule: {long_tail.get('method')} across dimensions {', '.join(long_tail.get('dimensions') or [])}; thresholds={long_tail.get('thresholds')}.",
+        f"- Candidate selection: requested={selection.get('requested_selected_limit', scope.get('requested_selected_limit', 'unknown'))}; returned={selection.get('returned_selected_count', scope.get('returned_selected_count', 'unknown'))}; eligible={selection.get('eligible_after_filter_count', scope.get('eligible_after_filter_count', 'unknown'))}; representative={selection.get('representative_count', 'unknown')}; shortfall={selection.get('selection_shortfall_reason') or scope.get('selection_shortfall_reason') or '-'}.",
         "",
     ]
     if global_summary:

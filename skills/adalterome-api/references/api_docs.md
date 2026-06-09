@@ -89,23 +89,25 @@ For example, `GET /term/curation?term=mitochondrial+dysfunction&selected_limit=3
 
 - `coverage_scope`: query type, curation source/scope, curated pool size, annotation source, and matched event count when exact raw count is available. For alias-merged term queries, `curated_query_stats_raw_event_count` is reported separately because canonical term pools can overlap or broaden the natural-language alias.
 - `global_statistics`: complete curated-query statistics from `curated_query_stats`, including raw/event-unique counts, complete-pool top genes, phenotypes, gene-alteration pairs, alteration taxonomies, hypotheses, evidence types, mechanism strata, coverage summaries, alteration interpretation, and sampling policy.
+- `selection_trace`: requested candidate count, returned candidate count, eligible event-unique rows, compact representative count, and any shortfall reason.
 - `deduplication_summary`: event-unique row count, query-specific deduplication key, unique PMIDs, genes, phenotypes, alteration taxonomies, gene-alteration pairs, and hypotheses.
 - `dominant_clusters`: top PMIDs, genes, phenotypes, gene-alteration pairs, alteration taxonomies, evidence types, and mechanism strata.
 - `query_relative_patterns`: top and long-tail genes, gene-alteration pairs, phenotypes, and/or hypotheses according to the query type.
 - `long_tail_definition`: frequency threshold rule, currently query-specific frequency `<= min(Q25, 10)` after event-level deduplication.
-- `selected_evidence`: diverse representative evidence rows with PubMed links, original sentence, evidence type, candidate mechanism strata, expert 1-5 score, annotation source/confidence, long-tail signals, and curation reasons.
+- `candidate_evidence`: broad curated candidate evidence rows for downstream expert pruning. Case-study mode usually requests about 200 rows when the API can support it.
+- `representative_evidence`: compact display subset, usually up to 30 rows.
+- `selected_evidence`: backward-compatible alias for the returned curated candidate rows.
 - `final_annotation_summary`: selected row counts by `AnnotationSource` and `AnnotationConfidence`.
 
 Use `global_statistics` for complete query-pool distributions. Use
-`dominant_clusters`, `query_relative_patterns`, and `selected_evidence` for the
-bounded representative evidence package returned to a report.
+`dominant_clusters`, `query_relative_patterns`, and `representative_evidence` for compact reports. Use `candidate_evidence` for AD expert pruning and paper-level case studies.
 
 Hypothesis fields in the source SQLite table can contain comma-separated multiple
 hypotheses. The API and skill curation layer split those values before catalog
 listing, unique counts, top-hypothesis aggregation, long-tail hypothesis detection,
 and representative-evidence diversity quotas.
 
-The curation endpoint deliberately returns a bounded interpreted package rather than all raw rows. Raw `EvidenceScore` may still exist in compatibility event endpoints, but it is not used in curation decisions or skill-facing summaries.
+The curation endpoint deliberately returns a bounded interpreted package rather than all raw rows. For large genes, the API should fill `candidate_evidence` toward `selected_limit` whenever enough eligible curated rows exist; otherwise `selection_trace.selection_shortfall_reason` must explain the shortfall. Raw `EvidenceScore` may still exist in compatibility event endpoints, but it is not used in curation decisions or skill-facing summaries.
 
 ## Error Boundary
 

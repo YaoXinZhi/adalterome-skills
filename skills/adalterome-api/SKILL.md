@@ -108,6 +108,15 @@ Event-style endpoints return a normalized evidence block:
 
 Deep report skills use `scripts/evidence_fetch.py` plus `scripts/evidence_curation.py` as an intermediate layer between API retrieval and final summaries. When the API server exposes `/gene/curation`, `/term/curation`, and `/hypothesis/curation`, the builders retrieve a server-side curation package from the offline curated pool by default (`source=curated`). The curated pool is built from the complete matched query pool, applies coverage-first sampling and high-frequency downsampling, preserves long-tail evidence, and re-ranks rows with `event_expert_annotation_final`. The curation layer performs query-specific event deduplication, computes query-relative top and long-tail patterns for genes, gene-alteration pairs, phenotypes, and hypotheses where relevant, groups evidence into a small stable set of evidence types, and creates candidate mechanism strata for expert interpretation.
 
+The curation package now separates broad case-study candidates from compact display evidence:
+
+- `candidate_evidence`: broad curated candidate rows for downstream AD expert pruning. Case-study mode usually targets 200 rows and can request up to 500 when the API can support it.
+- `representative_evidence`: compact display subset for report reading.
+- `selected_evidence`: backward-compatible alias for returned curated rows.
+- `selection_trace`: requested/returned candidate counts, eligible unique rows, representative count, and shortfall reason when the API cannot fill the requested limit.
+
+The shared helper `scripts/ad_expert_pruning.py` is the reusable second layer for AD pathologist-style biological trimming, duplicate merging, Not applicable hypothesis handling, and long-tail rescue before case-study narrative generation.
+
 Curated evidence rows may include:
 
 - `ExpertOverallScore`: 1-5 final expert score from `event_expert_annotation_final`.

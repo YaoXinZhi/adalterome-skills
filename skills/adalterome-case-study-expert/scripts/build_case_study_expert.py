@@ -24,8 +24,10 @@ from evidence_fetch import (  # noqa: E402
     curation_unavailable_response,
     request_json,
     request_json_optional,
+    selected_limit_attempts,
 )
 from query_cache import payload_cache_meta, write_cache_manifest  # noqa: E402
+import ad_expert_pruning as expert_pruning  # noqa: E402
 
 
 DEFAULT_BASE_URL = os.environ.get("ADALTEROME_API_BASE_URL", "http://117.72.176.137/api/adalterome")
@@ -389,12 +391,21 @@ def try_curation(
     timeout: float,
     candidate_limit: int,
 ) -> tuple[str, dict[str, Any] | None, str | None]:
-    url, payload, error = request_json_optional(
-        base_url,
-        path,
-        {**params, "selected_limit": api_selected_limit(candidate_limit)},
-        timeout,
-    )
+    requested_selected_limit = api_selected_limit(candidate_limit)
+    url = ""
+    payload: dict[str, Any] | None = None
+    error: str | None = None
+    used_selected_limit = requested_selected_limit
+    for attempted_selected_limit in selected_limit_attempts(candidate_limit):
+        used_selected_limit = attempted_selected_limit
+        url, payload, error = request_json_optional(
+            base_url,
+            path,
+            {**params, "selected_limit": attempted_selected_limit},
+            timeout,
+        )
+        if not error or "HTTP error 422" not in str(error):
+            break
     if error:
         return url, None, error
     if not isinstance(payload, dict) or payload.get("status") != "ok":
@@ -404,6 +415,10 @@ def try_curation(
         return url, None, "curation endpoint returned no curation object"
     scope = curation.setdefault("coverage_scope", {})
     scope["curation_endpoint_url"] = url
+    scope["requested_selected_limit"] = requested_selected_limit
+    scope["used_selected_limit"] = used_selected_limit
+    if used_selected_limit != requested_selected_limit:
+        scope["selected_limit_retry_reason"] = "server rejected larger selected_limit; retried with a legacy-compatible limit"
     scope.setdefault("curation_source", payload.get("meta", {}).get("curation_source", "remote_api"))
     scope.setdefault("curation_scope", payload.get("meta", {}).get("curation_scope", "server_full_query_pool"))
     cache_meta = payload_cache_meta(payload)
@@ -545,7 +560,7 @@ def collect_candidate_items(datasets: list[dict[str, Any]]) -> list[dict[str, An
     seen: set[tuple[str, str, str]] = set()
     for dataset in datasets:
         curation = dataset.get("curation") or {}
-        rows = list(curation.get("selected_evidence") or [])
+        rows = list(curation.get("candidate_evidence") or curation.get("selected_evidence") or [])
         rows.extend(curation.get("long_tail_signals") or [])
         for item in rows:
             key = (
@@ -642,12 +657,25 @@ def unique_preserve(values: list[str], limit: int = 6) -> list[str]:
 
 
 def evidence_reason_text(item: dict[str, Any]) -> str:
-    reasons = item.get("ExpertReasons") or []
-    cautions = item.get("ExpertCautions") or []
-    text = "; ".join(reasons[:3]) or "traceable AD-Alterome evidence"
-    if cautions:
-        text += f" (caution: {'; '.join(cautions[:2])})"
-    return text
+    return expert_pruning.evidence_reason_text(item)
+
+
+def render_pruning_summary(expert_evidence: dict[str, Any]) -> list[str]:
+    policy = expert_evidence.get("pruning_policy") or {}
+    hypothesis_summary = expert_evidence.get("hypothesis_count_summary") or {}
+    lines = [
+        "## AD Expert Pruning Summary",
+        "",
+        f"- Candidate rows before duplicate merge: `{expert_evidence.get('premerge_candidate_count', 0)}`.",
+        f"- Candidate rows after duplicate merge: `{expert_evidence.get('postmerge_candidate_count', 0)}`.",
+        f"- Duplicate or overlapping evidence groups merged: `{expert_evidence.get('duplicate_group_count', 0)}`.",
+        f"- Hypothesis-countable rows after merge: `{hypothesis_summary.get('countable', 0)}`; not counted for hypothesis statistics: `{hypothesis_summary.get('not_counted', 0)}`.",
+        f"- Not-applicable rule: {md(policy.get('not_applicable_rule') or '-')}",
+        f"- Duplicate rule: {md(policy.get('duplicate_rule') or '-')}",
+    ]
+    if expert_evidence.get("duplicate_groups"):
+        lines.append("- Duplicate merge details are saved in `data/merged_evidence.json` and `data/ad_expert_pruning.json`.")
+    return lines
 
 
 def render_coverage_table(coverage: dict[str, Any]) -> list[str]:
@@ -837,6 +865,8 @@ def render_report(
     lines.extend([""])
     lines.extend(render_coverage_table(coverage))
     lines.extend([""])
+    lines.extend(render_pruning_summary(expert_evidence))
+    lines.extend([""])
     lines.extend(
         render_expert_synthesis(
             mode=mode,
@@ -861,6 +891,8 @@ def render_report(
             "",
             "- This expert layer scores evidence for case-study usefulness; it is not a human gold relevance label.",
             "- Additional high-scoring evidence was not rejected; it was held back to keep the main argument concise and auditable.",
+            "- Evidence labeled `Not applicable to any AD hypothesis` may still support a mechanism-oriented case study; it is not counted as support for named-hypothesis statistics.",
+            "- Duplicate or overlapping evidence is merged before the main narrative is selected.",
             "- AD-Alterome sentence evidence supports traceable arguments, not final causal proof.",
             "- When coverage warnings are present, use the report to generate hypotheses and prioritize manual review.",
             "- Raw API `EvidenceScore` is not used for expert conclusions.",
@@ -895,6 +927,7 @@ def build_strategy(mode: str, candidate_limit: int, expert_limit: int) -> list[s
         "Use AD-Alterome full-pool curation first; do not fall back to capped event samples when the curation endpoint is unavailable.",
         f"Fetch up to {candidate_limit} candidate evidence rows, then keep up to {expert_limit} expert-included rows for the main narrative.",
         "Score evidence by AD specificity, mechanism depth, long-tail insight, user-question fit, traceability, and sentence informativeness.",
+        "Use AD expert pruning as a reusable second layer: merge duplicate evidence before narrative selection and keep Not applicable evidence out of hypothesis counts without discarding mechanism evidence.",
         "Apply an AD pathologist-style biological cut: keep molecular/pathological evidence in the main argument and demote generic background evidence.",
     ]
     if mode == "compare":
@@ -912,7 +945,7 @@ def main() -> int:
     parser.add_argument("--question", default="")
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL)
-    parser.add_argument("--candidate-limit", type=int, default=80, help="Candidate rows requested from the server-side curation package. API max is enforced server-side.")
+    parser.add_argument("--candidate-limit", type=int, default=200, help="Candidate rows requested from the server-side curation package before expert pruning. New API max is 500; legacy servers are retried at lower limits.")
     parser.add_argument("--expert-limit", type=int, default=18, help="Rows kept in the main expert narrative.")
     parser.add_argument("--curation-limit", type=int, default=API_MAX_TOP_K, help="Deprecated no-op retained for old commands; capped event-endpoint fallback is disabled.")
     parser.add_argument("--timeout", type=float, default=240)
@@ -1003,11 +1036,12 @@ def main() -> int:
     coverage = {"targets": coverage_targets, "balance": balance_status(coverage_targets)}
 
     candidates = collect_candidate_items(datasets)
-    scored = [
-        score_evidence(item, target_label=str(item.get("Target") or ""), question=question, mode=mode)
-        for item in candidates
-    ]
-    expert_evidence = select_expert_evidence(scored, mode=mode, expert_limit=args.expert_limit)
+    expert_evidence = expert_pruning.run_ad_expert_pruning(
+        candidates,
+        mode=mode,
+        question=question,
+        expert_limit=args.expert_limit,
+    )
     strategy = build_strategy(mode, args.candidate_limit, args.expert_limit)
 
     case_study = {
@@ -1027,6 +1061,9 @@ def main() -> int:
     write_json(data_dir / "query.json", vars(args))
     write_json(data_dir / "coverage.json", coverage)
     write_json(data_dir / "expert_evidence.json", expert_evidence)
+    write_json(data_dir / "ad_expert_pruning.json", expert_evidence)
+    write_json(data_dir / "merged_evidence.json", expert_evidence.get("merged_evidence") or [])
+    write_json(data_dir / "excluded_or_deprioritized_evidence.json", expert_evidence.get("excluded_or_deprioritized_evidence") or [])
     write_json(data_dir / "case_study.json", case_study)
     cache_payloads: list[tuple[str, dict[str, Any] | None]] = []
     if compare_payload:
