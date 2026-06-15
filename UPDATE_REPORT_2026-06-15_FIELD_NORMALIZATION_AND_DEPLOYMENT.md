@@ -46,6 +46,8 @@ Both SQLite files passed `PRAGMA integrity_check`.
 ## Deployment Validation
 
 The public API was restarted with the refreshed raw and curated databases.
+The API curation request limit was also aligned with the skill contract:
+`selected_limit` now accepts values up to `500` at the REST validation layer.
 
 PSEN1 curated evidence smoke test:
 
@@ -55,6 +57,10 @@ PSEN1 curated evidence smoke test:
 - Raw event count: `21835`
 - Curated pool count: `2398`
 - Query value: `PRESENILIN 1 [Entrez:5663]`
+- Large request check:
+  `/gene/curation?gene=PSEN1&selected_limit=200&source=curated`
+  returned `200` selected evidence rows, `200` candidate evidence rows,
+  `30` representative evidence rows, and `selection_shortfall_reason=None`.
 
 This confirms that large-gene report paths continue to use the curated pool
 rather than slow capped event endpoints.
