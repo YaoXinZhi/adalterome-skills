@@ -1,0 +1,3167 @@
+{
+  "tool": "curate_term_evidence",
+  "status": "ok",
+  "query": {
+    "term": "mitochondrial dysfunction",
+    "selected_limit": 5
+  },
+  "count": 5,
+  "data": {
+    "curation": {
+      "global_statistics": {
+        "summary": {
+          "event_count": 925,
+          "pmid_count": 427,
+          "gene_count": 219,
+          "hypothesis_count": 43
+        },
+        "top_genes": [
+          {
+            "Gene": "PINK1",
+            "freq": 73
+          },
+          {
+            "Gene": "SOD1",
+            "freq": 66
+          },
+          {
+            "Gene": "MAPT",
+            "freq": 65
+          },
+          {
+            "Gene": "LRRK2",
+            "freq": 51
+          },
+          {
+            "Gene": "PARK7",
+            "freq": 46
+          },
+          {
+            "Gene": "SNCA",
+            "freq": 44
+          },
+          {
+            "Gene": "APP",
+            "freq": 32
+          },
+          {
+            "Gene": "HTT",
+            "freq": 28
+          },
+          {
+            "Gene": "PRKN",
+            "freq": 27
+          },
+          {
+            "Gene": "APOE",
+            "freq": 19
+          }
+        ],
+        "top_hypotheses": [
+          {
+            "Hypothesis": "Mitochondrial autophagy hypothesis",
+            "freq": 93
+          },
+          {
+            "Hypothesis": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "freq": 61
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "freq": 41
+          },
+          {
+            "Hypothesis": "Tau Protein Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "freq": 36
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "freq": 19
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "freq": 14
+          },
+          {
+            "Hypothesis": "Neuroinflammation Hypothesis,Mitochondrial autophagy hypothesis",
+            "freq": 13
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "freq": 13
+          },
+          {
+            "Hypothesis": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "freq": 11
+          },
+          {
+            "Hypothesis": "Abnormal Autophagy Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "freq": 11
+          }
+        ]
+      },
+      "coverage_scope": {
+        "query_type": "term",
+        "curation_source": "remote_api",
+        "curation_scope": "server_full_query_pool",
+        "overview_event_count": 925,
+        "matched_event_count": 925,
+        "curation_pool_rows": 925,
+        "coverage_ratio": 1.0,
+        "api_limit_notice": null,
+        "curation_endpoint_url": "http://117.72.176.137/api/adalterome/term/curation?term=mitochondrial+dysfunction&selected_limit=5"
+      },
+      "deduplication_summary": {
+        "curation_pool_row_count": 925,
+        "event_unique_rows": 440,
+        "event_deduplication_key": "term-fixed event key: gene + alteration taxonomy + hypothesis; fallback to PMID/sentence when structured fields are sparse",
+        "unique_pmids": 305,
+        "unique_genes": 219,
+        "unique_phenotypes": 9,
+        "unique_terms": 9,
+        "unique_alteration_taxonomies": 19,
+        "unique_gene_alterations": 340,
+        "unique_alteration_signatures": 19,
+        "unique_hypotheses": 41
+      },
+      "dominant_clusters": {
+        "top_pmids": [
+          {
+            "value": "35892559",
+            "count": 7
+          },
+          {
+            "value": "37240173",
+            "count": 6
+          },
+          {
+            "value": "34177463",
+            "count": 6
+          },
+          {
+            "value": "37489441",
+            "count": 4
+          },
+          {
+            "value": "35821838",
+            "count": 4
+          }
+        ],
+        "top_genes": [
+          {
+            "value": "MAPT",
+            "count": 33
+          },
+          {
+            "value": "PINK1",
+            "count": 15
+          },
+          {
+            "value": "APP",
+            "count": 15
+          },
+          {
+            "value": "SNCA",
+            "count": 13
+          },
+          {
+            "value": "APOE",
+            "count": 12
+          }
+        ],
+        "top_phenotypes": [
+          {
+            "value": "Mitochondrial Diseases",
+            "count": 258
+          },
+          {
+            "value": "Mitochondrial inheritance",
+            "count": 123
+          },
+          {
+            "value": "Abnormality of mitochondrial metabolism",
+            "count": 49
+          },
+          {
+            "value": "Parkinson Disease, Mitochondrial",
+            "count": 2
+          },
+          {
+            "value": "mitochondrial dysfunctions",
+            "count": 2
+          }
+        ],
+        "top_terms": [
+          {
+            "value": "Mitochondrial Diseases",
+            "count": 258
+          },
+          {
+            "value": "Mitochondrial inheritance",
+            "count": 123
+          },
+          {
+            "value": "Abnormality of mitochondrial metabolism",
+            "count": 49
+          },
+          {
+            "value": "Parkinson Disease, Mitochondrial",
+            "count": 2
+          },
+          {
+            "value": "mitochondrial dysfunctions",
+            "count": 2
+          }
+        ],
+        "top_gene_alterations": [
+          {
+            "value": "APP / point mutations:mutations",
+            "count": 8
+          },
+          {
+            "value": "MAPT / normalized variants:dna change",
+            "count": 8
+          },
+          {
+            "value": "PSEN1 / point mutations:mutations",
+            "count": 7
+          },
+          {
+            "value": "MAPT / point mutations:mutations",
+            "count": 7
+          },
+          {
+            "value": "APOE / point mutations:mutations",
+            "count": 7
+          }
+        ],
+        "top_alteration_taxonomies": [
+          {
+            "value": "point mutations:mutations",
+            "count": 161
+          },
+          {
+            "value": "structural variation:deletion",
+            "count": 66
+          },
+          {
+            "value": "expression changes:underexpression",
+            "count": 38
+          },
+          {
+            "value": "expression changes:dysregulation",
+            "count": 36
+          },
+          {
+            "value": "normalized variants:dna change",
+            "count": 29
+          }
+        ],
+        "top_hypotheses": [
+          {
+            "value": "Mitochondrial autophagy hypothesis",
+            "count": 35
+          },
+          {
+            "value": "Mitochondrial Autophagy Hypothesis",
+            "count": 34
+          },
+          {
+            "value": "Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "count": 25
+          },
+          {
+            "value": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "count": 22
+          },
+          {
+            "value": "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "count": 15
+          }
+        ],
+        "evidence_types": [
+          {
+            "value": "alteration_evidence",
+            "count": 325
+          },
+          {
+            "value": "model_or_intervention",
+            "count": 115
+          }
+        ],
+        "mechanism_strata": [
+          {
+            "value": "mitochondrial and oxidative stress axis",
+            "count": 440
+          },
+          {
+            "value": "amyloid/tau axis",
+            "count": 304
+          },
+          {
+            "value": "proteostasis/autophagy axis",
+            "count": 272
+          },
+          {
+            "value": "synaptic and neuronal dysfunction axis",
+            "count": 126
+          },
+          {
+            "value": "vascular/metabolic axis",
+            "count": 63
+          }
+        ]
+      },
+      "query_relative_patterns": {
+        "gene": {
+          "label": "Gene",
+          "top": [
+            {
+              "value": "MAPT",
+              "count": 33
+            },
+            {
+              "value": "PINK1",
+              "count": 15
+            },
+            {
+              "value": "APP",
+              "count": 15
+            },
+            {
+              "value": "SNCA",
+              "count": 13
+            },
+            {
+              "value": "APOE",
+              "count": 12
+            },
+            {
+              "value": "SOD1",
+              "count": 10
+            },
+            {
+              "value": "PSEN1",
+              "count": 9
+            },
+            {
+              "value": "HTT",
+              "count": 9
+            }
+          ],
+          "long_tail": [
+            {
+              "value": "ABCA7",
+              "count": 1
+            },
+            {
+              "value": "ABCB8",
+              "count": 1
+            },
+            {
+              "value": "ABCD1",
+              "count": 1
+            },
+            {
+              "value": "ABL1",
+              "count": 1
+            },
+            {
+              "value": "AFG3L2",
+              "count": 1
+            },
+            {
+              "value": "AKT1",
+              "count": 1
+            },
+            {
+              "value": "ALKBH1",
+              "count": 1
+            },
+            {
+              "value": "alpha-synuclein",
+              "count": 1
+            }
+          ],
+          "long_tail_threshold": 1
+        },
+        "gene_alteration": {
+          "label": "Gene-alteration",
+          "top": [
+            {
+              "value": "APP / point mutations:mutations",
+              "count": 8
+            },
+            {
+              "value": "MAPT / normalized variants:dna change",
+              "count": 8
+            },
+            {
+              "value": "PSEN1 / point mutations:mutations",
+              "count": 7
+            },
+            {
+              "value": "MAPT / point mutations:mutations",
+              "count": 7
+            },
+            {
+              "value": "APOE / point mutations:mutations",
+              "count": 7
+            },
+            {
+              "value": "SNCA / point mutations:mutations",
+              "count": 5
+            },
+            {
+              "value": "HTT / point mutations:mutations",
+              "count": 5
+            },
+            {
+              "value": "MAPT / genetic manipulation:gene aggregation",
+              "count": 5
+            }
+          ],
+          "long_tail": [
+            {
+              "value": "ABCA7 / structural variation:deletion",
+              "count": 1
+            },
+            {
+              "value": "ABCB8 / point mutations:mutations",
+              "count": 1
+            },
+            {
+              "value": "ABCD1 / point mutations:mutations",
+              "count": 1
+            },
+            {
+              "value": "ABL1 / expression changes:inactivation",
+              "count": 1
+            },
+            {
+              "value": "AFG3L2 / expression changes:dysregulation",
+              "count": 1
+            },
+            {
+              "value": "AKT1 / expression changes:underexpression",
+              "count": 1
+            },
+            {
+              "value": "ALKBH1 / genetic manipulation:knockout",
+              "count": 1
+            },
+            {
+              "value": "alpha-synuclein / structural variation:chromosomal variation",
+              "count": 1
+            }
+          ],
+          "long_tail_threshold": 1
+        },
+        "phenotype": {
+          "label": "Phenotype",
+          "top": [
+            {
+              "value": "Mitochondrial Diseases",
+              "count": 258
+            },
+            {
+              "value": "Mitochondrial inheritance",
+              "count": 123
+            },
+            {
+              "value": "Abnormality of mitochondrial metabolism",
+              "count": 49
+            },
+            {
+              "value": "Mitochondrial dysfunction",
+              "count": 3
+            },
+            {
+              "value": "Parkinson Disease, Mitochondrial",
+              "count": 2
+            },
+            {
+              "value": "mitochondrial dysfunctions",
+              "count": 2
+            },
+            {
+              "value": "Hyperglycemia",
+              "count": 1
+            },
+            {
+              "value": "Progressive",
+              "count": 1
+            }
+          ],
+          "long_tail": [
+            {
+              "value": "Brain Diseases, Metabolic",
+              "count": 1
+            },
+            {
+              "value": "Hyperglycemia",
+              "count": 1
+            },
+            {
+              "value": "Progressive",
+              "count": 1
+            }
+          ],
+          "long_tail_threshold": 1
+        },
+        "hypothesis": {
+          "label": "Hypothesis",
+          "top": [
+            {
+              "value": "Mitochondrial autophagy hypothesis",
+              "count": 35
+            },
+            {
+              "value": "Mitochondrial Autophagy Hypothesis",
+              "count": 34
+            },
+            {
+              "value": "Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 25
+            },
+            {
+              "value": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+              "count": 22
+            },
+            {
+              "value": "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 15
+            },
+            {
+              "value": "Tau Protein Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 10
+            },
+            {
+              "value": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 7
+            },
+            {
+              "value": "Amyloid Hypothesis,Tau Protein Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 6
+            }
+          ],
+          "long_tail": [
+            {
+              "value": "Glutamatergic excitotoxicity hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Tau Protein Hypothesis,Amyloid Hypothesis,Oxidative Stress Hypothesis,Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Tau Protein Hypothesis,Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Tau Protein Hypothesis,Oxidative Stress Hypothesis",
+              "count": 1
+            }
+          ],
+          "long_tail_threshold": 2
+        }
+      },
+      "long_tail_definition": {
+        "method": "Query-specific frequency <= min(Q25, 10) after event-level deduplication",
+        "dimensions": [
+          "gene",
+          "gene_alteration",
+          "phenotype",
+          "hypothesis"
+        ],
+        "thresholds": {
+          "gene": 1,
+          "gene_alteration": 1,
+          "phenotype": 1,
+          "hypothesis": 2
+        }
+      },
+      "long_tail_signals": [
+        {
+          "Gene": "LDLR",
+          "PMID": "38056504",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38056504/",
+          "Journal": "Ageing Res Rev",
+          "Year": 2023,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "LDLR / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockout",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "associated",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('LDL receptor', 'Gene', '(50, 62)', ('LDL receptor', 'Gene', '16835', '-')) -- ThemeOf -- ('knockout', 'Var', '(63, 71)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('associated', 'Reg', '(91, 101)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(210, 235)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | ldlr | genetic manipulation:knockout | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis,vascular hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis",
+            "synaptic and neuronal dysfunction axis",
+            "vascular/metabolic axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "hypothesis",
+              "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+              "frequency": 1,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Cognitive and emotional behavioral impairments in LDL receptor knockout (LDLr-/-) mice are associated with neuroinflammation, blood-brain barrier dysfunction, impaired neurogenesis, brain oxidative stress, and mitochondrial dysfunction."
+        },
+        {
+          "Gene": "TOMM40",
+          "PMID": "36835494",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835494/",
+          "Journal": "Int J Mol Sci",
+          "Year": 2023,
+          "TermName": "Mitochondrial inheritance",
+          "TermType": "HPO",
+          "Hypothesis": "Neuroinflammation Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "normalized variants:dna change",
+          "GeneAlteration": "TOMM40 / normalized variants:dna change",
+          "AlterationSignature": "normalized variants:dna change",
+          "AlterationType": "Normalized Variants:DNA Change",
+          "AlterationMention": "F113L",
+          "AlterationID": "rs157581",
+          "TriggerWord": "induced",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('TOMM40', 'Gene', 'dbSNP', ('TOMM40', 'Gene', '10452', '-')) -- ThemeOf -- ('F113L', 'Var', '(66, 71)', ('F113L', 'Mutation', 'rs157581', '-')) -- CauseOf -- ('induced', 'Reg', '(91, 98)', ('induced', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(99, 124)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+          "EventDedupKey": "term | tomm40 | normalized variants:dna change | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "TOMM40 / normalized variants:dna change",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "When expressed in BV2 microglial cells, the AD-associated mutant (F113L) or (F131L) TOMM40 induced mitochondrial dysfunction and oxidative stress-induced activation of microglia and NLRP3 inflammasome."
+        },
+        {
+          "Gene": "TOMM40",
+          "PMID": "36835494",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835494/",
+          "Journal": "Int J Mol Sci",
+          "Year": 2023,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "TOMM40 / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "variation",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "role",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('TOMM40', 'Gene', '(55, 61)', ('TOMM40', 'Gene', '10452', '-')) -- ThemeOf -- ('variation', 'Var', '(62, 71)', ('variation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('role', 'Reg', '(47, 51)', ('role', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(75, 100)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | tomm40 | point mutations:mutations | neuroinflammation hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "hypothesis",
+              "value": "Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "frequency": 1,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "We further utilized cell models to examine the role of TOMM40 variation in mitochondrial dysfunction that causes microglial activation and neuroinflammation."
+        },
+        {
+          "Gene": "FRMD6",
+          "PMID": "36231104",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36231104/",
+          "Journal": "Cells",
+          "Year": 2022,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "FRMD6 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockdown",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "leads",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('FRMD6', 'Gene', '(40, 45)', ('FRMD6', 'Gene', '319710', '-')) -- ThemeOf -- ('knockdown', 'Var', '(46, 55)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('leads', 'Reg', '(56, 61)', ('leads', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(65, 90)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | frmd6 | genetic manipulation:knockout | oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "synaptic and neuronal dysfunction axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "FRMD6",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "FRMD6 / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Furthermore, we demonstrate that Willin/FRMD6 knockdown leads to mitochondrial dysfunction and fragmentation, as well as upregulation of ERK1/2 signaling, both of which are reported to be key early features of AD pathogenesis."
+        },
+        {
+          "Gene": "NEIL1",
+          "PMID": "35252966",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35252966/",
+          "Journal": "Front Aging",
+          "Year": 2022,
+          "TermName": "Mitochondrial inheritance",
+          "TermType": "HPO",
+          "Hypothesis": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "NEIL1 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "Knockout",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "results in",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('NEIL1', 'Gene', '(35, 40)', ('NEIL1', 'Gene', '72774', '-')) -- ThemeOf -- ('Knockout', 'Var', '(0, 8)', ('Knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('results in', 'Reg', '(119, 129)', ('results in', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(130, 155)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+          "EventDedupKey": "term | neil1 | genetic manipulation:knockout | oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "vascular/metabolic axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "NEIL1",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "NEIL1 / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Knockout of mitochondrial OGG1 and NEIL1, which remove 8-oxo-dG and formamidopyrimidine lesions, respectively, in mice results in mitochondrial dysfunction and a metabolic syndrome phenotype."
+        },
+        {
+          "Gene": "OGG1",
+          "PMID": "35252966",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35252966/",
+          "Journal": "Front Aging",
+          "Year": 2022,
+          "TermName": "Mitochondrial inheritance",
+          "TermType": "HPO",
+          "Hypothesis": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "OGG1 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "Knockout",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "results in",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('OGG1', 'Gene', '(26, 30)', ('OGG1', 'Gene', '18294', '-')) -- ThemeOf -- ('Knockout', 'Var', '(0, 8)', ('Knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('results in', 'Reg', '(119, 129)', ('results in', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(130, 155)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+          "EventDedupKey": "term | ogg1 | genetic manipulation:knockout | oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "vascular/metabolic axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "OGG1",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "OGG1 / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Knockout of mitochondrial OGG1 and NEIL1, which remove 8-oxo-dG and formamidopyrimidine lesions, respectively, in mice results in mitochondrial dysfunction and a metabolic syndrome phenotype."
+        },
+        {
+          "Gene": "FXN",
+          "PMID": "36727091",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36727091/",
+          "Journal": "Front Mol Neurosci. 2023 Jan 16;15:1078441. doi: 10.3389/fnmol.2022.1078441. ",
+          "Year": 2022,
+          "TermName": "Abnormality of mitochondrial metabolism",
+          "TermType": "-",
+          "Hypothesis": "Mitochondrial Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "epigenic changes:silencing",
+          "GeneAlteration": "FXN / epigenic changes:silencing",
+          "AlterationSignature": "epigenic changes:silencing",
+          "AlterationType": "epigenic changes:silencing",
+          "AlterationMention": "silencing",
+          "AlterationID": "epigenic changes:silencing",
+          "TriggerWord": "caused",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('FXN', 'Gene', '(43, 46)', ('FXN', 'Gene', '2395', '-')) -- ThemeOf -- ('silencing', 'Var', '(30, 39)', ('silencing', 'Mutation', 'epigenic changes:silencing', 'epigenic changes:silencing')) -- CauseOf -- ('caused', 'Reg', '(52, 58)', ('caused', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(59, 84)', ('mitochondrial dysfunction', 'CPA', 'HP:0003287', 'Abnormality of mitochondrial metabolism'))",
+          "EventDedupKey": "term | fxn | epigenic changes:silencing | mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "FXN / epigenic changes:silencing",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "The authors observed that the silencing of FXN gene caused mitochondrial dysfunction leading to cellular senescence and an increase in autophagy."
+        },
+        {
+          "Gene": "APOE",
+          "PMID": "33676568",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/33676568/",
+          "Journal": "Cell Biosci",
+          "Year": 2021,
+          "TermName": "Mitochondrial inheritance",
+          "TermType": "HPO",
+          "Hypothesis": "Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "epigenic changes:silencing",
+          "GeneAlteration": "APOE / epigenic changes:silencing",
+          "AlterationSignature": "epigenic changes:silencing",
+          "AlterationType": "epigenic changes:silencing",
+          "AlterationMention": "silencing",
+          "AlterationID": "epigenic changes:silencing",
+          "TriggerWord": "promoted",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('apoE4', 'Gene', '(13, 18)', ('apoE4', 'Gene', '348', '-')) -- ThemeOf -- ('silencing', 'Var', '(284, 293)', ('silencing', 'Mutation', 'epigenic changes:silencing', 'epigenic changes:silencing')) -- CauseOf -- ('promoted', 'PosReg', '(45, 53)', ('promoted', 'PosReg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(72, 97)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+          "EventDedupKey": "term | apoe | epigenic changes:silencing | oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "synaptic and neuronal dysfunction axis",
+            "vascular/metabolic axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "APOE / epigenic changes:silencing",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Furthermore, apoE4 (Delta272-299) expression promoted GRP75 expression, mitochondrial dysfunction and calcium transport into the mitochondria in neuron, which were significantly mitigated by treatment with PBA (an inhibitor of ER stress), MKT077 (a specific GRP75 inhibitor) or GRP75 silencing."
+        },
+        {
+          "Gene": "WFS1",
+          "PMID": "37181110",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37181110/",
+          "Journal": "Ther Adv Rare Dis",
+          "Year": 2021,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Mitochondrial autophagy hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "epigenic changes:silencing",
+          "GeneAlteration": "WFS1 / epigenic changes:silencing",
+          "AlterationSignature": "epigenic changes:silencing",
+          "AlterationType": "epigenic changes:silencing",
+          "AlterationMention": "Silencing",
+          "AlterationID": "epigenic changes:silencing",
+          "TriggerWord": "upregulated",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('WFS1', 'Gene', '(17, 21)', ('WFS1', 'Gene', '83725', '-')) -- ThemeOf -- ('Silencing', 'Var', '(0, 9)', ('Silencing', 'Mutation', 'epigenic changes:silencing', 'epigenic changes:silencing')) -- CauseOf -- ('upregulated', 'PosReg', '(75, 86)', ('upregulated', 'PosReg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction and degeneration', 'Disease', '(104, 146)', ('mitochondrial dysfunction and degeneration', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | wfs1 | epigenic changes:silencing | mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "WFS1",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "WFS1 / epigenic changes:silencing",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Silencing of the WFS1 gene in HEK cells with small interfering RNA (siRNA) upregulated genes related to mitochondrial dysfunction and degeneration, suggesting that loss of wolframin precipitates degeneration via mitochondrial dysfunction."
+        },
+        {
+          "Gene": "CISD2",
+          "PMID": "33062068",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/33062068/",
+          "Journal": "Behav Neurol",
+          "Year": 2020,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:deletion",
+          "GeneAlteration": "CISD2 / structural variation:deletion",
+          "AlterationSignature": "structural variation:deletion",
+          "AlterationType": "structural variation:deletion",
+          "AlterationMention": "deficiency",
+          "AlterationID": "structural variation:deletion",
+          "TriggerWord": "contributes",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('CISD2', 'Gene', '(0, 5)', ('CISD2', 'Gene', '493856', '-')) -- ThemeOf -- ('deficiency', 'Var', '(6, 16)', ('deficiency', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('contributes', 'Reg', '(67, 78)', ('contributes', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunctions', 'Disease', '(82, 108)', ('mitochondrial dysfunctions', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | cisd2 | structural variation:deletion | oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "CISD2 / structural variation:deletion",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "CISD2 deficiency enhances the expression of iNOS and RANTES, which contributes to mitochondrial dysfunctions, such as low DeltaPsi(m) levels, high ROS levels, and augmented apoptosis, which are mitigated upon curcumin treatment."
+        },
+        {
+          "Gene": "BACE1",
+          "PMID": "30144530",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/30144530/",
+          "Journal": "Pharmacol Res. 2018 Dec",
+          "Year": 2018,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Amyloid Hypothesis,Mitochondrial autophagy hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "expression changes:underexpression",
+          "GeneAlteration": "BACE1 / expression changes:underexpression",
+          "AlterationSignature": "expression changes:underexpression",
+          "AlterationType": "expression changes:underexpression",
+          "AlterationMention": "inhibition",
+          "AlterationID": "expression changes:underexpression",
+          "TriggerWord": "restored",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('BACE1', 'Gene', '(239, 244)', ('BACE1', 'Gene', '23821', '-')) -- ThemeOf -- ('inhibition', 'Var', '(18, 28)', ('inhibition', 'Mutation', 'expression changes:underexpression', 'expression changes:underexpression')) -- CauseOf -- ('restored', 'PosReg', '(48, 56)', ('restored', 'PosReg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunctions', 'Disease', '(87, 113)', ('mitochondrial dysfunctions', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | bace1 | expression changes:underexpression | amyloid hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "synaptic and neuronal dysfunction axis",
+            "vascular/metabolic axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "BACE1 / expression changes:underexpression",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "hypothesis",
+              "value": "Amyloid Hypothesis,Mitochondrial autophagy hypothesis",
+              "frequency": 2,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "In another study, inhibition of Drp1 by Mdivi-1 restored amyloid-beta (Abeta)-mediated mitochondrial dysfunctions and synaptic depression in neurons and significantly reduced lipid peroxidation, the expression of the Ab processing enzyme, BACE1, as well as Abeta deposition in the brain of AD mice."
+        },
+        {
+          "Gene": "NRF1",
+          "PMID": "30010002",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/30010002/",
+          "Journal": "Neurobiol Dis. 2018 Oct",
+          "Year": 2018,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "expression changes:inactivation",
+          "GeneAlteration": "NRF1 / expression changes:inactivation",
+          "AlterationSignature": "expression changes:inactivation",
+          "AlterationType": "expression changes:inactivation",
+          "AlterationMention": "inactivation",
+          "AlterationID": "expression changes:inactivation",
+          "TriggerWord": "leads",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('NRF1', 'Gene', '(42, 46)', ('NRF1', 'Gene', '18181', '-')) -- ThemeOf -- ('inactivation', 'Var', '(26, 38)', ('inactivation', 'Mutation', 'expression changes:inactivation', 'expression changes:inactivation')) -- CauseOf -- ('leads', 'Reg', '(101, 106)', ('leads', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(110, 135)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | nrf1 | expression changes:inactivation | oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "NRF1 / expression changes:inactivation",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "Thus, either depletion or inactivation of NRF1 will lead to an impairment in OXPHOS which ultimately leads to mitochondrial dysfunction and oxidative stress inside cells."
+        },
+        {
+          "Gene": "APOE",
+          "PMID": "28767121",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/28767121/",
+          "Journal": "Genet. Mol. Biol.",
+          "Year": 2017,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis,Vascular Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "APOE / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutation",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "bridging",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('APOE', 'Gene', '(386, 390)', ('APOE', 'Gene', '348', '-')) -- ThemeOf -- ('mutation', 'Var', '(296, 304)', ('mutation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('bridging', 'Reg', '(32, 40)', ('bridging', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(161, 186)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | apoe | point mutations:mutations | amyloid hypothesis,tau protein hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis,vascular hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "vascular/metabolic axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "hypothesis",
+              "value": "Amyloid Hypothesis,Tau Protein Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis,Vascular Hypothesis",
+              "frequency": 2,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "The common molecular mechanisms bridging the two disorders include chromosomal missegregation, overproduction of amyloid precursor protein, oxidative stress and mitochondrial dysfunction, nuclear factor of activated T cells (NFAT) and tau phosphorylation pathways, endocytic pathway abnormality, mutation in amyloid precursor protein gene (APP), presence of Apolipoprotein E epsilon 4 (APOE epsilon4) allele."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "28767121",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/28767121/",
+          "Journal": "Genet. Mol. Biol.",
+          "Year": 2017,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis,Vascular Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "APP / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutation",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "bridging",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid precursor protein', 'Gene', '(113, 138)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('mutation', 'Var', '(296, 304)', ('mutation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('bridging', 'Reg', '(32, 40)', ('bridging', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(161, 186)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | app | point mutations:mutations | amyloid hypothesis,tau protein hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis,vascular hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "vascular/metabolic axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "hypothesis",
+              "value": "Amyloid Hypothesis,Tau Protein Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis,Vascular Hypothesis",
+              "frequency": 2,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "The common molecular mechanisms bridging the two disorders include chromosomal missegregation, overproduction of amyloid precursor protein, oxidative stress and mitochondrial dysfunction, nuclear factor of activated T cells (NFAT) and tau phosphorylation pathways, endocytic pathway abnormality, mutation in amyloid precursor protein gene (APP), presence of Apolipoprotein E epsilon 4 (APOE epsilon4) allele."
+        },
+        {
+          "Gene": "WWOX",
+          "PMID": "29067327",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/29067327/",
+          "Journal": "Alzheimers Dement(N Y)",
+          "Year": 2017,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Mitochondrial autophagy hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "WWOX / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutant",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "affecting",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('WWOX', 'Gene', '(18, 22)', ('WWOX', 'Gene', '80707', '-')) -- ThemeOf -- ('mutant', 'Var', '(11, 17)', ('mutant', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('affecting', 'Reg', '(67, 76)', ('affecting', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(38, 63)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | wwox | point mutations:mutations | mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "WWOX",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "WWOX / point mutations:mutations",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "Transgenic mutant WWOX proteins cause mitochondrial dysfunction by affecting the respiratory complex in Drosophila ."
+        },
+        {
+          "Gene": "MFN2",
+          "PMID": "27535796",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/27535796/",
+          "Journal": "Sci Rep",
+          "Year": 2016,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Mitochondrial Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "MFN2 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockdown",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "results in",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('Mfn2', 'Gene', '(47, 51)', ('Mfn2', 'Gene', '9927', '-')) -- ThemeOf -- ('knockdown', 'Var', '(110, 119)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('results in', 'Reg', '(128, 138)', ('results in', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunctions', 'Disease', '(139, 165)', ('mitochondrial dysfunctions', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | mfn2 | genetic manipulation:knockout | mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "MFN2",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "MFN2 / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "In the present study, we addressed the role of Mfn2 in the hiPSCs differentiation system and report here that knockdown of Mfn2 results in mitochondrial dysfunctions and defects in neurogenesis and synapse formation."
+        },
+        {
+          "Gene": "BACE1",
+          "PMID": "21933711",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/21933711/",
+          "Journal": "Neurobiol. Dis.",
+          "Year": 2012,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Amyloid Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:deletion",
+          "GeneAlteration": "BACE1 / structural variation:deletion",
+          "AlterationSignature": "structural variation:deletion",
+          "AlterationType": "structural variation:deletion",
+          "AlterationMention": "deletion",
+          "AlterationID": "structural variation:deletion",
+          "TriggerWord": "rescued",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('BACE1', 'Gene', '(66, 71)', ('BACE1', 'Gene', '23821', '-')) -- ThemeOf -- ('deletion', 'Var', '(77, 85)', ('deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('rescued', 'PosReg', '(102, 109)', ('rescued', 'PosReg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(110, 135)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | bace1 | structural variation:deletion | amyloid hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "BACE1 / structural variation:deletion",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "Consistent with these changes in mitochondrial C99/fl-APP levels, BACE1(+/-) deletion age-dependently rescued mitochondrial dysfunction in 5XFAD mice, as assessed by cytochrome c release from mitochondria, reduced redox or complex activities and oxidative DNA damage."
+        },
+        {
+          "Gene": "PTN",
+          "PMID": "37484951",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37484951/",
+          "Journal": "Front Endocrinol (Lausanne)",
+          "Year": 2023,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:deletion",
+          "GeneAlteration": "PTN / structural variation:deletion",
+          "AlterationSignature": "structural variation:deletion",
+          "AlterationType": "structural variation:deletion",
+          "AlterationMention": "deletion",
+          "AlterationID": "structural variation:deletion",
+          "TriggerWord": "protects",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('PTN', 'Gene', '(45, 48)', ('PTN', 'Gene', '24924', '-')) -- ThemeOf -- ('deletion', 'Var', '(225, 233)', ('deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('protects', 'PosReg', '(234, 242)', ('protects', 'PosReg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(270, 295)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | ptn | structural variation:deletion | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis",
+            "vascular/metabolic axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "PTN",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "PTN / structural variation:deletion",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "hypothesis",
+              "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+              "frequency": 1,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Moreover, recent reports have evidenced that PTN is implicated in the regulation of peripheral metainflammation, metabolic homeostasis, thermogenesis, as well as insulin sensitivity in the peripheral tissues Furthermore, Ptn deletion protects against neuroinflammation, mitochondrial dysfunction, and aberrant protein aggregation in a high fat diet (HFD) induced obesity model."
+        },
+        {
+          "Gene": "CAT",
+          "PMID": "37371116",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37371116/",
+          "Journal": "Cells",
+          "Year": 2023,
+          "TermName": "Mitochondrial inheritance",
+          "TermType": "HPO",
+          "Hypothesis": "Tau Protein Hypothesis,Oxidative Stress Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "epigenic changes:phosphorylation",
+          "GeneAlteration": "CAT / epigenic changes:phosphorylation",
+          "AlterationSignature": "epigenic changes:phosphorylation",
+          "AlterationType": "epigenic changes:phosphorylation",
+          "AlterationMention": "hyperphosphorylated",
+          "AlterationID": "epigenic changes:phosphorylation",
+          "TriggerWord": "leading to",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('catalase', 'Gene', '(180, 188)', ('catalase', 'Gene', '12359', '-')) -- ThemeOf -- ('hyperphosphorylated', 'Var', '(35, 54)', ('hyperphosphorylated', 'Mutation', 'epigenic changes:phosphorylation', 'epigenic changes:phosphorylation')) -- CauseOf -- ('leading to', 'Reg', '(299, 309)', ('leading to', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(310, 335)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+          "EventDedupKey": "term | cat | epigenic changes:phosphorylation | tau protein hypothesis,oxidative stress hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "CAT",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "CAT / epigenic changes:phosphorylation",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "hypothesis",
+              "value": "Tau Protein Hypothesis,Oxidative Stress Hypothesis",
+              "frequency": 1,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Recent research also suggests that hyperphosphorylated Tau induces free radical production and lipid peroxidation and reduces antioxidant enzymes (e.g., glutathione peroxidase and catalase), causing an imbalance between the production of free radicals and endogenous antioxidant enzymes, ultimately leading to mitochondrial dysfunction in AD and other tauopathies."
+        },
+        {
+          "Gene": "APOE",
+          "PMID": "37238605",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37238605/",
+          "Journal": "Biomolecules;2023Apr24; 13 (5) . doi:10.3390/biom13050735",
+          "Year": 2023,
+          "TermName": "Abnormality of mitochondrial metabolism",
+          "TermType": "-",
+          "Hypothesis": "Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "expression changes:expression",
+          "GeneAlteration": "APOE / expression changes:expression",
+          "AlterationSignature": "expression changes:expression",
+          "AlterationType": "expression changes:expression",
+          "AlterationMention": "expression",
+          "AlterationID": "expression changes:expression",
+          "TriggerWord": "leads to",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('APOE4', 'Gene', '(0, 5)', ('APOE4', 'Gene', '348', '-')) -- ThemeOf -- ('expression', 'Var', '(6, 16)', ('expression', 'Mutation', 'expression changes:expression', 'expression changes:expression')) -- CauseOf -- ('leads to', 'Reg', '(81, 89)', ('leads to', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(90, 115)', ('mitochondrial dysfunction', 'CPA', 'HP:0003287', 'Abnormality of mitochondrial metabolism'))",
+          "EventDedupKey": "term | apoe | expression changes:expression | oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "synaptic and neuronal dysfunction axis",
+            "vascular/metabolic axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "APOE / expression changes:expression",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "APOE4 expression triggers mitochondrial oxidative stress, reduces ATP synthesis, leads to mitochondrial dysfunction, and subsequently disrupts synaptic transmission and leads to the emergence of cognitive impairment."
+        }
+      ],
+      "evidence_type_groups": {
+        "alteration_evidence": [
+          {
+            "Gene": "PTN",
+            "PMID": "37484951",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37484951/",
+            "Journal": "Front Endocrinol (Lausanne)",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "PTN / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "deletion",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "protects",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('PTN', 'Gene', '(45, 48)', ('PTN', 'Gene', '24924', '-')) -- ThemeOf -- ('deletion', 'Var', '(225, 233)', ('deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('protects', 'PosReg', '(234, 242)', ('protects', 'PosReg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(270, 295)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | ptn | structural variation:deletion | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "PTN",
+                "frequency": 1,
+                "threshold": 1
+              },
+              {
+                "dimension": "gene_alteration",
+                "value": "PTN / structural variation:deletion",
+                "frequency": 1,
+                "threshold": 1
+              },
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Moreover, recent reports have evidenced that PTN is implicated in the regulation of peripheral metainflammation, metabolic homeostasis, thermogenesis, as well as insulin sensitivity in the peripheral tissues Furthermore, Ptn deletion protects against neuroinflammation, mitochondrial dysfunction, and aberrant protein aggregation in a high fat diet (HFD) induced obesity model."
+          }
+        ],
+        "model_or_intervention": [
+          {
+            "Gene": "LDLR",
+            "PMID": "38056504",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38056504/",
+            "Journal": "Ageing Res Rev",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "LDLR / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "knockout",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "associated",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('LDL receptor', 'Gene', '(50, 62)', ('LDL receptor', 'Gene', '16835', '-')) -- ThemeOf -- ('knockout', 'Var', '(63, 71)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('associated', 'Reg', '(91, 101)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(210, 235)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | ldlr | genetic manipulation:knockout | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis,vascular hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Cognitive and emotional behavioral impairments in LDL receptor knockout (LDLr-/-) mice are associated with neuroinflammation, blood-brain barrier dysfunction, impaired neurogenesis, brain oxidative stress, and mitochondrial dysfunction."
+          },
+          {
+            "Gene": "TOMM40",
+            "PMID": "36835494",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835494/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "Mitochondrial inheritance",
+            "TermType": "HPO",
+            "Hypothesis": "Neuroinflammation Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "normalized variants:dna change",
+            "GeneAlteration": "TOMM40 / normalized variants:dna change",
+            "AlterationSignature": "normalized variants:dna change",
+            "AlterationType": "Normalized Variants:DNA Change",
+            "AlterationMention": "F113L",
+            "AlterationID": "rs157581",
+            "TriggerWord": "induced",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('TOMM40', 'Gene', 'dbSNP', ('TOMM40', 'Gene', '10452', '-')) -- ThemeOf -- ('F113L', 'Var', '(66, 71)', ('F113L', 'Mutation', 'rs157581', '-')) -- CauseOf -- ('induced', 'Reg', '(91, 98)', ('induced', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(99, 124)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+            "EventDedupKey": "term | tomm40 | normalized variants:dna change | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene_alteration",
+                "value": "TOMM40 / normalized variants:dna change",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "When expressed in BV2 microglial cells, the AD-associated mutant (F113L) or (F131L) TOMM40 induced mitochondrial dysfunction and oxidative stress-induced activation of microglia and NLRP3 inflammasome."
+          },
+          {
+            "Gene": "TOMM40",
+            "PMID": "36835494",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835494/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "TOMM40 / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "variation",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "role",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('TOMM40', 'Gene', '(55, 61)', ('TOMM40', 'Gene', '10452', '-')) -- ThemeOf -- ('variation', 'Var', '(62, 71)', ('variation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('role', 'Reg', '(47, 51)', ('role', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(75, 100)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | tomm40 | point mutations:mutations | neuroinflammation hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "We further utilized cell models to examine the role of TOMM40 variation in mitochondrial dysfunction that causes microglial activation and neuroinflammation."
+          },
+          {
+            "Gene": "NEIL1",
+            "PMID": "35252966",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35252966/",
+            "Journal": "Front Aging",
+            "Year": 2022,
+            "TermName": "Mitochondrial inheritance",
+            "TermType": "HPO",
+            "Hypothesis": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "NEIL1 / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "Knockout",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "results in",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('NEIL1', 'Gene', '(35, 40)', ('NEIL1', 'Gene', '72774', '-')) -- ThemeOf -- ('Knockout', 'Var', '(0, 8)', ('Knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('results in', 'Reg', '(119, 129)', ('results in', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(130, 155)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+            "EventDedupKey": "term | neil1 | genetic manipulation:knockout | oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "NEIL1",
+                "frequency": 1,
+                "threshold": 1
+              },
+              {
+                "dimension": "gene_alteration",
+                "value": "NEIL1 / genetic manipulation:knockout",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Knockout of mitochondrial OGG1 and NEIL1, which remove 8-oxo-dG and formamidopyrimidine lesions, respectively, in mice results in mitochondrial dysfunction and a metabolic syndrome phenotype."
+          }
+        ]
+      },
+      "mechanism_strata": {
+        "mitochondrial and oxidative stress axis": [
+          {
+            "Gene": "LDLR",
+            "PMID": "38056504",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38056504/",
+            "Journal": "Ageing Res Rev",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "LDLR / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "knockout",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "associated",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('LDL receptor', 'Gene', '(50, 62)', ('LDL receptor', 'Gene', '16835', '-')) -- ThemeOf -- ('knockout', 'Var', '(63, 71)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('associated', 'Reg', '(91, 101)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(210, 235)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | ldlr | genetic manipulation:knockout | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis,vascular hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Cognitive and emotional behavioral impairments in LDL receptor knockout (LDLr-/-) mice are associated with neuroinflammation, blood-brain barrier dysfunction, impaired neurogenesis, brain oxidative stress, and mitochondrial dysfunction."
+          },
+          {
+            "Gene": "PTN",
+            "PMID": "37484951",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37484951/",
+            "Journal": "Front Endocrinol (Lausanne)",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "PTN / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "deletion",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "protects",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('PTN', 'Gene', '(45, 48)', ('PTN', 'Gene', '24924', '-')) -- ThemeOf -- ('deletion', 'Var', '(225, 233)', ('deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('protects', 'PosReg', '(234, 242)', ('protects', 'PosReg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(270, 295)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | ptn | structural variation:deletion | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "PTN",
+                "frequency": 1,
+                "threshold": 1
+              },
+              {
+                "dimension": "gene_alteration",
+                "value": "PTN / structural variation:deletion",
+                "frequency": 1,
+                "threshold": 1
+              },
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Moreover, recent reports have evidenced that PTN is implicated in the regulation of peripheral metainflammation, metabolic homeostasis, thermogenesis, as well as insulin sensitivity in the peripheral tissues Furthermore, Ptn deletion protects against neuroinflammation, mitochondrial dysfunction, and aberrant protein aggregation in a high fat diet (HFD) induced obesity model."
+          },
+          {
+            "Gene": "TOMM40",
+            "PMID": "36835494",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835494/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "Mitochondrial inheritance",
+            "TermType": "HPO",
+            "Hypothesis": "Neuroinflammation Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "normalized variants:dna change",
+            "GeneAlteration": "TOMM40 / normalized variants:dna change",
+            "AlterationSignature": "normalized variants:dna change",
+            "AlterationType": "Normalized Variants:DNA Change",
+            "AlterationMention": "F113L",
+            "AlterationID": "rs157581",
+            "TriggerWord": "induced",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('TOMM40', 'Gene', 'dbSNP', ('TOMM40', 'Gene', '10452', '-')) -- ThemeOf -- ('F113L', 'Var', '(66, 71)', ('F113L', 'Mutation', 'rs157581', '-')) -- CauseOf -- ('induced', 'Reg', '(91, 98)', ('induced', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(99, 124)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+            "EventDedupKey": "term | tomm40 | normalized variants:dna change | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene_alteration",
+                "value": "TOMM40 / normalized variants:dna change",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "When expressed in BV2 microglial cells, the AD-associated mutant (F113L) or (F131L) TOMM40 induced mitochondrial dysfunction and oxidative stress-induced activation of microglia and NLRP3 inflammasome."
+          },
+          {
+            "Gene": "TOMM40",
+            "PMID": "36835494",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835494/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "TOMM40 / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "variation",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "role",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('TOMM40', 'Gene', '(55, 61)', ('TOMM40', 'Gene', '10452', '-')) -- ThemeOf -- ('variation', 'Var', '(62, 71)', ('variation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('role', 'Reg', '(47, 51)', ('role', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(75, 100)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | tomm40 | point mutations:mutations | neuroinflammation hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "We further utilized cell models to examine the role of TOMM40 variation in mitochondrial dysfunction that causes microglial activation and neuroinflammation."
+          },
+          {
+            "Gene": "NEIL1",
+            "PMID": "35252966",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35252966/",
+            "Journal": "Front Aging",
+            "Year": 2022,
+            "TermName": "Mitochondrial inheritance",
+            "TermType": "HPO",
+            "Hypothesis": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "NEIL1 / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "Knockout",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "results in",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('NEIL1', 'Gene', '(35, 40)', ('NEIL1', 'Gene', '72774', '-')) -- ThemeOf -- ('Knockout', 'Var', '(0, 8)', ('Knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('results in', 'Reg', '(119, 129)', ('results in', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(130, 155)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+            "EventDedupKey": "term | neil1 | genetic manipulation:knockout | oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "NEIL1",
+                "frequency": 1,
+                "threshold": 1
+              },
+              {
+                "dimension": "gene_alteration",
+                "value": "NEIL1 / genetic manipulation:knockout",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Knockout of mitochondrial OGG1 and NEIL1, which remove 8-oxo-dG and formamidopyrimidine lesions, respectively, in mice results in mitochondrial dysfunction and a metabolic syndrome phenotype."
+          }
+        ],
+        "neuroinflammation and microglia axis": [
+          {
+            "Gene": "LDLR",
+            "PMID": "38056504",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38056504/",
+            "Journal": "Ageing Res Rev",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "LDLR / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "knockout",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "associated",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('LDL receptor', 'Gene', '(50, 62)', ('LDL receptor', 'Gene', '16835', '-')) -- ThemeOf -- ('knockout', 'Var', '(63, 71)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('associated', 'Reg', '(91, 101)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(210, 235)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | ldlr | genetic manipulation:knockout | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis,vascular hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Cognitive and emotional behavioral impairments in LDL receptor knockout (LDLr-/-) mice are associated with neuroinflammation, blood-brain barrier dysfunction, impaired neurogenesis, brain oxidative stress, and mitochondrial dysfunction."
+          },
+          {
+            "Gene": "PTN",
+            "PMID": "37484951",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37484951/",
+            "Journal": "Front Endocrinol (Lausanne)",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "PTN / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "deletion",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "protects",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('PTN', 'Gene', '(45, 48)', ('PTN', 'Gene', '24924', '-')) -- ThemeOf -- ('deletion', 'Var', '(225, 233)', ('deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('protects', 'PosReg', '(234, 242)', ('protects', 'PosReg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(270, 295)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | ptn | structural variation:deletion | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "PTN",
+                "frequency": 1,
+                "threshold": 1
+              },
+              {
+                "dimension": "gene_alteration",
+                "value": "PTN / structural variation:deletion",
+                "frequency": 1,
+                "threshold": 1
+              },
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Moreover, recent reports have evidenced that PTN is implicated in the regulation of peripheral metainflammation, metabolic homeostasis, thermogenesis, as well as insulin sensitivity in the peripheral tissues Furthermore, Ptn deletion protects against neuroinflammation, mitochondrial dysfunction, and aberrant protein aggregation in a high fat diet (HFD) induced obesity model."
+          },
+          {
+            "Gene": "TOMM40",
+            "PMID": "36835494",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835494/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "Mitochondrial inheritance",
+            "TermType": "HPO",
+            "Hypothesis": "Neuroinflammation Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "normalized variants:dna change",
+            "GeneAlteration": "TOMM40 / normalized variants:dna change",
+            "AlterationSignature": "normalized variants:dna change",
+            "AlterationType": "Normalized Variants:DNA Change",
+            "AlterationMention": "F113L",
+            "AlterationID": "rs157581",
+            "TriggerWord": "induced",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('TOMM40', 'Gene', 'dbSNP', ('TOMM40', 'Gene', '10452', '-')) -- ThemeOf -- ('F113L', 'Var', '(66, 71)', ('F113L', 'Mutation', 'rs157581', '-')) -- CauseOf -- ('induced', 'Reg', '(91, 98)', ('induced', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(99, 124)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+            "EventDedupKey": "term | tomm40 | normalized variants:dna change | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene_alteration",
+                "value": "TOMM40 / normalized variants:dna change",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "When expressed in BV2 microglial cells, the AD-associated mutant (F113L) or (F131L) TOMM40 induced mitochondrial dysfunction and oxidative stress-induced activation of microglia and NLRP3 inflammasome."
+          },
+          {
+            "Gene": "TOMM40",
+            "PMID": "36835494",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835494/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "TOMM40 / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "variation",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "role",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('TOMM40', 'Gene', '(55, 61)', ('TOMM40', 'Gene', '10452', '-')) -- ThemeOf -- ('variation', 'Var', '(62, 71)', ('variation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('role', 'Reg', '(47, 51)', ('role', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(75, 100)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | tomm40 | point mutations:mutations | neuroinflammation hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "We further utilized cell models to examine the role of TOMM40 variation in mitochondrial dysfunction that causes microglial activation and neuroinflammation."
+          }
+        ],
+        "proteostasis/autophagy axis": [
+          {
+            "Gene": "LDLR",
+            "PMID": "38056504",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38056504/",
+            "Journal": "Ageing Res Rev",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "LDLR / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "knockout",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "associated",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('LDL receptor', 'Gene', '(50, 62)', ('LDL receptor', 'Gene', '16835', '-')) -- ThemeOf -- ('knockout', 'Var', '(63, 71)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('associated', 'Reg', '(91, 101)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(210, 235)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | ldlr | genetic manipulation:knockout | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis,vascular hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Cognitive and emotional behavioral impairments in LDL receptor knockout (LDLr-/-) mice are associated with neuroinflammation, blood-brain barrier dysfunction, impaired neurogenesis, brain oxidative stress, and mitochondrial dysfunction."
+          },
+          {
+            "Gene": "PTN",
+            "PMID": "37484951",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37484951/",
+            "Journal": "Front Endocrinol (Lausanne)",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "PTN / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "deletion",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "protects",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('PTN', 'Gene', '(45, 48)', ('PTN', 'Gene', '24924', '-')) -- ThemeOf -- ('deletion', 'Var', '(225, 233)', ('deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('protects', 'PosReg', '(234, 242)', ('protects', 'PosReg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(270, 295)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | ptn | structural variation:deletion | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "PTN",
+                "frequency": 1,
+                "threshold": 1
+              },
+              {
+                "dimension": "gene_alteration",
+                "value": "PTN / structural variation:deletion",
+                "frequency": 1,
+                "threshold": 1
+              },
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Moreover, recent reports have evidenced that PTN is implicated in the regulation of peripheral metainflammation, metabolic homeostasis, thermogenesis, as well as insulin sensitivity in the peripheral tissues Furthermore, Ptn deletion protects against neuroinflammation, mitochondrial dysfunction, and aberrant protein aggregation in a high fat diet (HFD) induced obesity model."
+          },
+          {
+            "Gene": "TOMM40",
+            "PMID": "36835494",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835494/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "Mitochondrial inheritance",
+            "TermType": "HPO",
+            "Hypothesis": "Neuroinflammation Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "normalized variants:dna change",
+            "GeneAlteration": "TOMM40 / normalized variants:dna change",
+            "AlterationSignature": "normalized variants:dna change",
+            "AlterationType": "Normalized Variants:DNA Change",
+            "AlterationMention": "F113L",
+            "AlterationID": "rs157581",
+            "TriggerWord": "induced",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('TOMM40', 'Gene', 'dbSNP', ('TOMM40', 'Gene', '10452', '-')) -- ThemeOf -- ('F113L', 'Var', '(66, 71)', ('F113L', 'Mutation', 'rs157581', '-')) -- CauseOf -- ('induced', 'Reg', '(91, 98)', ('induced', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(99, 124)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+            "EventDedupKey": "term | tomm40 | normalized variants:dna change | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene_alteration",
+                "value": "TOMM40 / normalized variants:dna change",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "When expressed in BV2 microglial cells, the AD-associated mutant (F113L) or (F131L) TOMM40 induced mitochondrial dysfunction and oxidative stress-induced activation of microglia and NLRP3 inflammasome."
+          },
+          {
+            "Gene": "TOMM40",
+            "PMID": "36835494",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835494/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "TOMM40 / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "variation",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "role",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('TOMM40', 'Gene', '(55, 61)', ('TOMM40', 'Gene', '10452', '-')) -- ThemeOf -- ('variation', 'Var', '(62, 71)', ('variation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('role', 'Reg', '(47, 51)', ('role', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(75, 100)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | tomm40 | point mutations:mutations | neuroinflammation hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "We further utilized cell models to examine the role of TOMM40 variation in mitochondrial dysfunction that causes microglial activation and neuroinflammation."
+          },
+          {
+            "Gene": "NEIL1",
+            "PMID": "35252966",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35252966/",
+            "Journal": "Front Aging",
+            "Year": 2022,
+            "TermName": "Mitochondrial inheritance",
+            "TermType": "HPO",
+            "Hypothesis": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "NEIL1 / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "Knockout",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "results in",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('NEIL1', 'Gene', '(35, 40)', ('NEIL1', 'Gene', '72774', '-')) -- ThemeOf -- ('Knockout', 'Var', '(0, 8)', ('Knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('results in', 'Reg', '(119, 129)', ('results in', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(130, 155)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+            "EventDedupKey": "term | neil1 | genetic manipulation:knockout | oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "NEIL1",
+                "frequency": 1,
+                "threshold": 1
+              },
+              {
+                "dimension": "gene_alteration",
+                "value": "NEIL1 / genetic manipulation:knockout",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Knockout of mitochondrial OGG1 and NEIL1, which remove 8-oxo-dG and formamidopyrimidine lesions, respectively, in mice results in mitochondrial dysfunction and a metabolic syndrome phenotype."
+          }
+        ],
+        "synaptic and neuronal dysfunction axis": [
+          {
+            "Gene": "LDLR",
+            "PMID": "38056504",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38056504/",
+            "Journal": "Ageing Res Rev",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "LDLR / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "knockout",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "associated",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('LDL receptor', 'Gene', '(50, 62)', ('LDL receptor', 'Gene', '16835', '-')) -- ThemeOf -- ('knockout', 'Var', '(63, 71)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('associated', 'Reg', '(91, 101)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(210, 235)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | ldlr | genetic manipulation:knockout | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis,vascular hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Cognitive and emotional behavioral impairments in LDL receptor knockout (LDLr-/-) mice are associated with neuroinflammation, blood-brain barrier dysfunction, impaired neurogenesis, brain oxidative stress, and mitochondrial dysfunction."
+          }
+        ],
+        "vascular/metabolic axis": [
+          {
+            "Gene": "LDLR",
+            "PMID": "38056504",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38056504/",
+            "Journal": "Ageing Res Rev",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "LDLR / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "knockout",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "associated",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('LDL receptor', 'Gene', '(50, 62)', ('LDL receptor', 'Gene', '16835', '-')) -- ThemeOf -- ('knockout', 'Var', '(63, 71)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('associated', 'Reg', '(91, 101)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(210, 235)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | ldlr | genetic manipulation:knockout | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis,vascular hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Cognitive and emotional behavioral impairments in LDL receptor knockout (LDLr-/-) mice are associated with neuroinflammation, blood-brain barrier dysfunction, impaired neurogenesis, brain oxidative stress, and mitochondrial dysfunction."
+          },
+          {
+            "Gene": "PTN",
+            "PMID": "37484951",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37484951/",
+            "Journal": "Front Endocrinol (Lausanne)",
+            "Year": 2023,
+            "TermName": "Mitochondrial Diseases",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "PTN / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "deletion",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "protects",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('PTN', 'Gene', '(45, 48)', ('PTN', 'Gene', '24924', '-')) -- ThemeOf -- ('deletion', 'Var', '(225, 233)', ('deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('protects', 'PosReg', '(234, 242)', ('protects', 'PosReg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(270, 295)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+            "EventDedupKey": "term | ptn | structural variation:deletion | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "PTN",
+                "frequency": 1,
+                "threshold": 1
+              },
+              {
+                "dimension": "gene_alteration",
+                "value": "PTN / structural variation:deletion",
+                "frequency": 1,
+                "threshold": 1
+              },
+              {
+                "dimension": "hypothesis",
+                "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+                "frequency": 1,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Moreover, recent reports have evidenced that PTN is implicated in the regulation of peripheral metainflammation, metabolic homeostasis, thermogenesis, as well as insulin sensitivity in the peripheral tissues Furthermore, Ptn deletion protects against neuroinflammation, mitochondrial dysfunction, and aberrant protein aggregation in a high fat diet (HFD) induced obesity model."
+          },
+          {
+            "Gene": "NEIL1",
+            "PMID": "35252966",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35252966/",
+            "Journal": "Front Aging",
+            "Year": 2022,
+            "TermName": "Mitochondrial inheritance",
+            "TermType": "HPO",
+            "Hypothesis": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "NEIL1 / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "Knockout",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "results in",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('NEIL1', 'Gene', '(35, 40)', ('NEIL1', 'Gene', '72774', '-')) -- ThemeOf -- ('Knockout', 'Var', '(0, 8)', ('Knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('results in', 'Reg', '(119, 129)', ('results in', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(130, 155)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+            "EventDedupKey": "term | neil1 | genetic manipulation:knockout | oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "mitochondrial and oxidative stress axis",
+              "vascular/metabolic axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "NEIL1",
+                "frequency": 1,
+                "threshold": 1
+              },
+              {
+                "dimension": "gene_alteration",
+                "value": "NEIL1 / genetic manipulation:knockout",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Knockout of mitochondrial OGG1 and NEIL1, which remove 8-oxo-dG and formamidopyrimidine lesions, respectively, in mice results in mitochondrial dysfunction and a metabolic syndrome phenotype."
+          }
+        ]
+      },
+      "chronological_summary": [
+        {
+          "period": "2010-2014",
+          "row_count": 46,
+          "dominant_mechanism_strata": [
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 46
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 33
+            },
+            {
+              "value": "amyloid/tau axis",
+              "count": 27
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 11
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 10
+            }
+          ]
+        },
+        {
+          "period": "2015-2019",
+          "row_count": 111,
+          "dominant_mechanism_strata": [
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 111
+            },
+            {
+              "value": "amyloid/tau axis",
+              "count": 79
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 78
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 33
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 18
+            }
+          ]
+        },
+        {
+          "period": "2020-2024",
+          "row_count": 230,
+          "dominant_mechanism_strata": [
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 230
+            },
+            {
+              "value": "amyloid/tau axis",
+              "count": 168
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 129
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 68
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 31
+            }
+          ]
+        },
+        {
+          "period": "before 2010",
+          "row_count": 6,
+          "dominant_mechanism_strata": [
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 6
+            },
+            {
+              "value": "amyloid/tau axis",
+              "count": 4
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 3
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 2
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "period": "missing year",
+          "row_count": 47,
+          "dominant_mechanism_strata": [
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 47
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 29
+            },
+            {
+              "value": "amyloid/tau axis",
+              "count": 26
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 12
+            },
+            {
+              "value": "neuroinflammation and microglia axis",
+              "count": 3
+            }
+          ]
+        }
+      ],
+      "bias_notes": [
+        "Curation pool source: remote_api (server_full_query_pool).",
+        "Curation used 925 curation pool row(s) and reduced them to 440 event-unique row(s).",
+        "Event deduplication key: term-fixed event key: gene + alteration taxonomy + hypothesis; fallback to PMID/sentence when structured fields are sparse.",
+        "The curation pool covers 925 of 925 event record(s) matched by the curation query (100.00%).",
+        "The most frequent PMID contributes 7 of 440 event-unique rows.",
+        "The most frequent gene is `MAPT` with 33 event-unique row(s).",
+        "The most frequent alteration taxonomy appears in 161 event-unique row(s).",
+        "Broad disease/background terms account for 0 of 440 event-unique rows.",
+        "47 event-unique row(s) lack usable year metadata."
+      ],
+      "selected_evidence": [
+        {
+          "Gene": "LDLR",
+          "PMID": "38056504",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38056504/",
+          "Journal": "Ageing Res Rev",
+          "Year": 2023,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "LDLR / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockout",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "associated",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('LDL receptor', 'Gene', '(50, 62)', ('LDL receptor', 'Gene', '16835', '-')) -- ThemeOf -- ('knockout', 'Var', '(63, 71)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('associated', 'Reg', '(91, 101)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(210, 235)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | ldlr | genetic manipulation:knockout | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis,vascular hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis",
+            "synaptic and neuronal dysfunction axis",
+            "vascular/metabolic axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "hypothesis",
+              "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis,Vascular hypothesis",
+              "frequency": 1,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Cognitive and emotional behavioral impairments in LDL receptor knockout (LDLr-/-) mice are associated with neuroinflammation, blood-brain barrier dysfunction, impaired neurogenesis, brain oxidative stress, and mitochondrial dysfunction."
+        },
+        {
+          "Gene": "PTN",
+          "PMID": "37484951",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37484951/",
+          "Journal": "Front Endocrinol (Lausanne)",
+          "Year": 2023,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:deletion",
+          "GeneAlteration": "PTN / structural variation:deletion",
+          "AlterationSignature": "structural variation:deletion",
+          "AlterationType": "structural variation:deletion",
+          "AlterationMention": "deletion",
+          "AlterationID": "structural variation:deletion",
+          "TriggerWord": "protects",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('PTN', 'Gene', '(45, 48)', ('PTN', 'Gene', '24924', '-')) -- ThemeOf -- ('deletion', 'Var', '(225, 233)', ('deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('protects', 'PosReg', '(234, 242)', ('protects', 'PosReg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(270, 295)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | ptn | structural variation:deletion | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis",
+            "vascular/metabolic axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "PTN",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "PTN / structural variation:deletion",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "hypothesis",
+              "value": "Neuroinflammation hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+              "frequency": 1,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Moreover, recent reports have evidenced that PTN is implicated in the regulation of peripheral metainflammation, metabolic homeostasis, thermogenesis, as well as insulin sensitivity in the peripheral tissues Furthermore, Ptn deletion protects against neuroinflammation, mitochondrial dysfunction, and aberrant protein aggregation in a high fat diet (HFD) induced obesity model."
+        },
+        {
+          "Gene": "TOMM40",
+          "PMID": "36835494",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835494/",
+          "Journal": "Int J Mol Sci",
+          "Year": 2023,
+          "TermName": "Mitochondrial inheritance",
+          "TermType": "HPO",
+          "Hypothesis": "Neuroinflammation Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "normalized variants:dna change",
+          "GeneAlteration": "TOMM40 / normalized variants:dna change",
+          "AlterationSignature": "normalized variants:dna change",
+          "AlterationType": "Normalized Variants:DNA Change",
+          "AlterationMention": "F113L",
+          "AlterationID": "rs157581",
+          "TriggerWord": "induced",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('TOMM40', 'Gene', 'dbSNP', ('TOMM40', 'Gene', '10452', '-')) -- ThemeOf -- ('F113L', 'Var', '(66, 71)', ('F113L', 'Mutation', 'rs157581', '-')) -- CauseOf -- ('induced', 'Reg', '(91, 98)', ('induced', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(99, 124)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+          "EventDedupKey": "term | tomm40 | normalized variants:dna change | neuroinflammation hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "TOMM40 / normalized variants:dna change",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "When expressed in BV2 microglial cells, the AD-associated mutant (F113L) or (F131L) TOMM40 induced mitochondrial dysfunction and oxidative stress-induced activation of microglia and NLRP3 inflammasome."
+        },
+        {
+          "Gene": "TOMM40",
+          "PMID": "36835494",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835494/",
+          "Journal": "Int J Mol Sci",
+          "Year": 2023,
+          "TermName": "Mitochondrial Diseases",
+          "TermType": "MeSH",
+          "Hypothesis": "Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "TOMM40 / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "variation",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "role",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('TOMM40', 'Gene', '(55, 61)', ('TOMM40', 'Gene', '10452', '-')) -- ThemeOf -- ('variation', 'Var', '(62, 71)', ('variation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('role', 'Reg', '(47, 51)', ('role', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(75, 100)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+          "EventDedupKey": "term | tomm40 | point mutations:mutations | neuroinflammation hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "hypothesis",
+              "value": "Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "frequency": 1,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "We further utilized cell models to examine the role of TOMM40 variation in mitochondrial dysfunction that causes microglial activation and neuroinflammation."
+        },
+        {
+          "Gene": "NEIL1",
+          "PMID": "35252966",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35252966/",
+          "Journal": "Front Aging",
+          "Year": 2022,
+          "TermName": "Mitochondrial inheritance",
+          "TermType": "HPO",
+          "Hypothesis": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "NEIL1 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "Knockout",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "results in",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('NEIL1', 'Gene', '(35, 40)', ('NEIL1', 'Gene', '72774', '-')) -- ThemeOf -- ('Knockout', 'Var', '(0, 8)', ('Knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('results in', 'Reg', '(119, 129)', ('results in', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(130, 155)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+          "EventDedupKey": "term | neil1 | genetic manipulation:knockout | oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "mitochondrial and oxidative stress axis",
+            "vascular/metabolic axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "NEIL1",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "NEIL1 / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Knockout of mitochondrial OGG1 and NEIL1, which remove 8-oxo-dG and formamidopyrimidine lesions, respectively, in mice results in mitochondrial dysfunction and a metabolic syndrome phenotype."
+        }
+      ]
+    }
+  },
+  "meta": {
+    "curation_scope": "server_full_query_pool",
+    "matched_event_count": 925,
+    "event_unique_rows": 440,
+    "selected_limit": 5,
+    "query_type": "term",
+    "event_deduplication_key": "term-fixed event key: gene + alteration taxonomy + hypothesis; fallback to PMID/sentence when structured fields are sparse"
+  }
+}

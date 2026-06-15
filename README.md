@@ -49,6 +49,7 @@ The scripts use only Python standard library modules.
 
 ## Update Reports
 
+- [2026-06-15 field normalization and deployment update](UPDATE_REPORT_2026-06-15_FIELD_NORMALIZATION_AND_DEPLOYMENT.md)
 - [2026-06-07 skill implementation audit and consistency fixes](UPDATE_REPORT_2026-06-07_SKILL_AUDIT.md)
 - [2026-06-05 unified entrypoint and local raw-data cache update](UPDATE_REPORT_2026-06-05_UNIFIED_ENTRYPOINT_AND_CACHE.md)
 - [2026-06-05 curated pool and final annotation update](UPDATE_REPORT_2026-06-05_CURATED_POOL_FINAL_ANNOTATION.md)

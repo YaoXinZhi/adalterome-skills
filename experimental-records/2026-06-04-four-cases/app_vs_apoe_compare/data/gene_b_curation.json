@@ -1,0 +1,2594 @@
+{
+  "global_statistics": {
+    "summary": {
+      "Gene": "APOE",
+      "event_count": 13188,
+      "pmid_count": 3086,
+      "term_count": 660,
+      "hypothesis_count": 138,
+      "avg_evidence_score": 3.0
+    },
+    "top_terms": [
+      {
+        "TermName": "Alzheimer Disease",
+        "TermType": "MeSH",
+        "freq": 1783
+      },
+      {
+        "TermName": "Onset",
+        "TermType": "HPO",
+        "freq": 627
+      },
+      {
+        "TermName": "Late onset",
+        "TermType": "HPO",
+        "freq": 455
+      },
+      {
+        "TermName": "protein",
+        "TermType": "GO",
+        "freq": 291
+      },
+      {
+        "TermName": "Dementia",
+        "TermType": "HPO",
+        "freq": 289
+      },
+      {
+        "TermName": "Sporadic",
+        "TermType": "HPO",
+        "freq": 266
+      },
+      {
+        "TermName": "Cognition Disorders",
+        "TermType": "MeSH",
+        "freq": 173
+      },
+      {
+        "TermName": "developmental process",
+        "TermType": "GO",
+        "freq": 164
+      },
+      {
+        "TermName": "Alzheimer disease",
+        "TermType": "HPO",
+        "freq": 140
+      },
+      {
+        "TermName": "Cognitive impairment",
+        "TermType": "HPO",
+        "freq": 129
+      }
+    ],
+    "top_hypotheses": [
+      {
+        "Hypothesis": "Amyloid Hypothesis",
+        "freq": 3946
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Vascular Hypothesis",
+        "freq": 2843
+      },
+      {
+        "Hypothesis": "Vascular Hypothesis",
+        "freq": 1507
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+        "freq": 384
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+        "freq": 313
+      },
+      {
+        "Hypothesis": "Neuroinflammation Hypothesis",
+        "freq": 263
+      },
+      {
+        "Hypothesis": "Neuroinflammation Hypothesis,Vascular Hypothesis",
+        "freq": 177
+      },
+      {
+        "Hypothesis": "Neuroinflammation Hypothesis,Amyloid Hypothesis",
+        "freq": 107
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+        "freq": 92
+      },
+      {
+        "Hypothesis": "Oxidative Stress Hypothesis",
+        "freq": 88
+      }
+    ]
+  },
+  "coverage_scope": {
+    "query_type": "gene",
+    "curation_source": "remote_api",
+    "curation_scope": "server_full_query_pool",
+    "overview_event_count": 13188,
+    "matched_event_count": 13188,
+    "curation_pool_rows": 13188,
+    "coverage_ratio": 1.0,
+    "api_limit_notice": null,
+    "curation_endpoint_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=APOE&selected_limit=4"
+  },
+  "deduplication_summary": {
+    "curation_pool_row_count": 13188,
+    "event_unique_rows": 4002,
+    "event_deduplication_key": "gene-fixed event key: alteration taxonomy + phenotype/term + hypothesis; fallback to PMID/sentence when structured fields are sparse",
+    "unique_pmids": 1898,
+    "unique_genes": 1,
+    "unique_phenotypes": 657,
+    "unique_terms": 657,
+    "unique_alteration_taxonomies": 26,
+    "unique_gene_alterations": 26,
+    "unique_alteration_signatures": 26,
+    "unique_hypotheses": 134
+  },
+  "dominant_clusters": {
+    "top_pmids": [
+      {
+        "value": "25737044",
+        "count": 21
+      },
+      {
+        "value": "37455931",
+        "count": 20
+      },
+      {
+        "value": "36077289",
+        "count": 15
+      },
+      {
+        "value": "37588688",
+        "count": 12
+      },
+      {
+        "value": "26969397",
+        "count": 12
+      }
+    ],
+    "top_genes": [
+      {
+        "value": "APOE",
+        "count": 4002
+      }
+    ],
+    "top_phenotypes": [
+      {
+        "value": "Alzheimer Disease",
+        "count": 81
+      },
+      {
+        "value": "Onset",
+        "count": 47
+      },
+      {
+        "value": "protein",
+        "count": 46
+      },
+      {
+        "value": "Dementia",
+        "count": 33
+      },
+      {
+        "value": "Cognition Disorders",
+        "count": 30
+      }
+    ],
+    "top_terms": [
+      {
+        "value": "Alzheimer Disease",
+        "count": 81
+      },
+      {
+        "value": "Onset",
+        "count": 47
+      },
+      {
+        "value": "protein",
+        "count": 46
+      },
+      {
+        "value": "Dementia",
+        "count": 33
+      },
+      {
+        "value": "Cognition Disorders",
+        "count": 30
+      }
+    ],
+    "top_gene_alterations": [
+      {
+        "value": "APOE / point mutations:mutations",
+        "count": 2586
+      },
+      {
+        "value": "APOE / normalized variants:rsid normalized",
+        "count": 330
+      },
+      {
+        "value": "APOE / structural variation:deletion",
+        "count": 184
+      },
+      {
+        "value": "APOE / normalized variants:dna change",
+        "count": 169
+      },
+      {
+        "value": "APOE / genetic manipulation:knockout",
+        "count": 112
+      }
+    ],
+    "top_alteration_taxonomies": [
+      {
+        "value": "point mutations:mutations",
+        "count": 2586
+      },
+      {
+        "value": "normalized variants:rsid normalized",
+        "count": 330
+      },
+      {
+        "value": "structural variation:deletion",
+        "count": 184
+      },
+      {
+        "value": "normalized variants:dna change",
+        "count": 169
+      },
+      {
+        "value": "genetic manipulation:knockout",
+        "count": 112
+      }
+    ],
+    "top_hypotheses": [
+      {
+        "value": "Amyloid Hypothesis",
+        "count": 642
+      },
+      {
+        "value": "Amyloid Hypothesis,Vascular Hypothesis",
+        "count": 477
+      },
+      {
+        "value": "Vascular Hypothesis",
+        "count": 323
+      },
+      {
+        "value": "Vascular hypothesis",
+        "count": 176
+      },
+      {
+        "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+        "count": 128
+      }
+    ],
+    "evidence_types": [
+      {
+        "value": "alteration_evidence",
+        "count": 3301
+      },
+      {
+        "value": "model_or_intervention",
+        "count": 701
+      }
+    ],
+    "mechanism_strata": [
+      {
+        "value": "vascular/metabolic axis",
+        "count": 4002
+      },
+      {
+        "value": "amyloid/tau axis",
+        "count": 3126
+      },
+      {
+        "value": "proteostasis/autophagy axis",
+        "count": 771
+      },
+      {
+        "value": "neuroinflammation and microglia axis",
+        "count": 766
+      },
+      {
+        "value": "mitochondrial and oxidative stress axis",
+        "count": 678
+      }
+    ]
+  },
+  "query_relative_patterns": {
+    "phenotype": {
+      "label": "Phenotype",
+      "top": [
+        {
+          "value": "AD",
+          "count": 62
+        },
+        {
+          "value": "expression",
+          "count": 36
+        },
+        {
+          "value": "Cognition Disorders",
+          "count": 30
+        },
+        {
+          "value": "inflammatory response",
+          "count": 25
+        },
+        {
+          "value": "Neurodegeneration",
+          "count": 24
+        },
+        {
+          "value": "metabolic process",
+          "count": 24
+        },
+        {
+          "value": "developmental process",
+          "count": 23
+        },
+        {
+          "value": "aging",
+          "count": 22
+        }
+      ],
+      "long_tail": [
+        {
+          "value": "100770679",
+          "count": 1
+        },
+        {
+          "value": "10T-BNT scores",
+          "count": 1
+        },
+        {
+          "value": "11816",
+          "count": 1
+        },
+        {
+          "value": "1191",
+          "count": 1
+        },
+        {
+          "value": "12346",
+          "count": 1
+        },
+        {
+          "value": "12774",
+          "count": 1
+        },
+        {
+          "value": "1401",
+          "count": 1
+        },
+        {
+          "value": "16019",
+          "count": 1
+        }
+      ],
+      "long_tail_threshold": 1
+    },
+    "gene_alteration": {
+      "label": "Gene-alteration",
+      "top": [
+        {
+          "value": "APOE / point mutations:mutations",
+          "count": 2586
+        },
+        {
+          "value": "APOE / normalized variants:rsid normalized",
+          "count": 330
+        },
+        {
+          "value": "APOE / structural variation:deletion",
+          "count": 184
+        },
+        {
+          "value": "APOE / normalized variants:dna change",
+          "count": 169
+        },
+        {
+          "value": "APOE / genetic manipulation:knockout",
+          "count": 112
+        },
+        {
+          "value": "APOE / expression changes:dysregulation",
+          "count": 103
+        },
+        {
+          "value": "APOE / structural variation:chromosomal variation",
+          "count": 103
+        },
+        {
+          "value": "APOE / genetic manipulation:knock-in",
+          "count": 94
+        }
+      ],
+      "long_tail": [
+        {
+          "value": "APOE / structural variation:insertion",
+          "count": 1
+        },
+        {
+          "value": "APOE / genetic manipulation:gene aggregation",
+          "count": 2
+        },
+        {
+          "value": "APOE / structural variation:rearrangements",
+          "count": 2
+        },
+        {
+          "value": "APOE / structural variation:frameshift",
+          "count": 3
+        },
+        {
+          "value": "APOE / epigenic changes:epigenetics",
+          "count": 7
+        },
+        {
+          "value": "APOE / normalized variants:cdna change",
+          "count": 9
+        },
+        {
+          "value": "APOE / copy number variation:amplification",
+          "count": 10
+        }
+      ],
+      "long_tail_threshold": 10
+    },
+    "hypothesis": {
+      "label": "Hypothesis",
+      "top": [
+        {
+          "value": "Amyloid Hypothesis",
+          "count": 642
+        },
+        {
+          "value": "Amyloid Hypothesis,Vascular Hypothesis",
+          "count": 477
+        },
+        {
+          "value": "Vascular Hypothesis",
+          "count": 323
+        },
+        {
+          "value": "Vascular hypothesis",
+          "count": 176
+        },
+        {
+          "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+          "count": 128
+        },
+        {
+          "value": "Amyloid hypothesis,Vascular hypothesis",
+          "count": 119
+        },
+        {
+          "value": "Amyloid Hypothesis,Tau Protein Hypothesis",
+          "count": 102
+        },
+        {
+          "value": "Neuroinflammation Hypothesis",
+          "count": 88
+        }
+      ],
+      "long_tail": [
+        {
+          "value": "Abnormal Autophagy Hypothesis,Vascular Hypothesis",
+          "count": 1
+        },
+        {
+          "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis.",
+          "count": 1
+        },
+        {
+          "value": "Amyloid Hypothesis,Oxidative Stress Hypothesis,Metal Ion Hypothesis",
+          "count": 1
+        },
+        {
+          "value": "Cholinergic hypothesis,Vascular hypothesis",
+          "count": 1
+        },
+        {
+          "value": "Glutamatergic excitotoxicity hypothesis,Microbiota-Gut-Brain Axis hypothesis",
+          "count": 1
+        },
+        {
+          "value": "Mitochondrial Autophagy Hypothesis,Oxidative Stress Hypothesis",
+          "count": 1
+        },
+        {
+          "value": "Mitochondrial autophagy hypothesis,Vascular hypothesis",
+          "count": 1
+        },
+        {
+          "value": "Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+          "count": 1
+        }
+      ],
+      "long_tail_threshold": 3
+    }
+  },
+  "long_tail_definition": {
+    "method": "Query-specific frequency <= min(Q25, 10) after event-level deduplication",
+    "dimensions": [
+      "phenotype",
+      "gene_alteration",
+      "hypothesis"
+    ],
+    "thresholds": {
+      "phenotype": 1,
+      "gene_alteration": 10,
+      "hypothesis": 3
+    }
+  },
+  "long_tail_signals": [
+    {
+      "Gene": "APOE",
+      "PMID": "36966157",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36966157/",
+      "Journal": "Nat Commun",
+      "Year": 2023,
+      "TermName": "Auditory Diseases, Central",
+      "TermType": "MeSH",
+      "Hypothesis": "Tau protein hypothesis,Neuroinflammation hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "genetic manipulation:knockout",
+      "GeneAlteration": "APOE / genetic manipulation:knockout",
+      "AlterationSignature": "genetic manipulation:knockout",
+      "AlterationType": "genetic manipulation:knockout",
+      "AlterationMention": "knockdown",
+      "AlterationID": "genetic manipulation:knockout",
+      "TriggerWord": "increased",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE', 'Gene', '(78, 82)', ('APOE', 'Gene', '348', '-')) -- ThemeOf -- ('knockdown', 'Var', '(83, 92)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(187, 196)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('entorhinal cortex loss', 'Disease', '(145, 167)', ('entorhinal cortex loss', 'Disease', 'MESH:D001304', '-'))",
+      "EventDedupKey": "gene | genetic manipulation:knockout | mesh:d001304 | tau protein hypothesis,neuroinflammation hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "amyloid/tau axis",
+        "neuroinflammation and microglia axis",
+        "synaptic and neuronal dysfunction axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "Auditory Diseases, Central",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "Reinforcing earlier discussion on hp-tau aggregates and neuronal phagoptosis, APOE knockdown in P301S mice significantly reduced hippocampal and entorhinal cortex loss; APOE preservation increased Iba1 + (suggesting microglia and macrophage populations) cells that were positive with CD68 + phagocytic inclusions."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "36835187",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835187/",
+      "Journal": "Int J Mol Sci",
+      "Year": 2023,
+      "TermName": "isotype switching",
+      "TermType": "GO",
+      "Hypothesis": "Neuroinflammation hypothesis,Vascular hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "genetic manipulation:knock-in",
+      "GeneAlteration": "APOE / genetic manipulation:knock-in",
+      "AlterationSignature": "genetic manipulation:knock-in",
+      "AlterationType": "genetic manipulation:knock-in",
+      "AlterationMention": "knock-in",
+      "AlterationID": "-",
+      "TriggerWord": "high",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE4', 'Gene', '(79, 84)', ('APOE4', 'Gene', '348', '-')) -- ThemeOf -- ('knock-in', 'Var', '(85, 93)', ('knock-in', 'Mutation', '-', '-')) -- CauseOf -- ('high', 'PosReg', '(171, 175)', ('high', 'PosReg', '-', '-')) -- ThemeOf -- ('class switching', 'MPA', '(218, 233)', ('class switching', 'MPA', 'GO:0045190', 'isotype switching'))",
+      "EventDedupKey": "gene | genetic manipulation:knock-in | go:0045190 | neuroinflammation hypothesis,vascular hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "neuroinflammation and microglia axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "isotype switching",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "Another study has demonstrated lower total IgG and IgA levels in the spleen of APOE4 knock-in mice compared with APOE3, but the levels of IgG2a subtype and IgM were quite high in APOE4 mice, suggesting differential Ig class switching in APOE4 mice compared with APOE3 or APOE2 mice."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "36927428",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36927428/",
+      "Journal": "Curr Neuropharmacol",
+      "Year": 2023,
+      "TermName": "Mitochondrial inheritance",
+      "TermType": "HPO",
+      "Hypothesis": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "point mutations:mutations",
+      "GeneAlteration": "APOE / point mutations:mutations",
+      "AlterationSignature": "point mutations:mutations",
+      "AlterationType": "point mutations:Mutations",
+      "AlterationMention": "mutants",
+      "AlterationID": "point mutations:Mutations",
+      "TriggerWord": "cause",
+      "RegType": "Reg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('ApoE4', 'Gene', '(127, 132)', ('ApoE4', 'Gene', '348', '-')) -- ThemeOf -- ('mutants', 'Var', '(78, 85)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('cause', 'Reg', '(170, 175)', ('cause', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(176, 201)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+      "EventDedupKey": "gene | point mutations:mutations | hp:0001427 | amyloid hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "amyloid/tau axis",
+        "mitochondrial and oxidative stress axis",
+        "vascular/metabolic axis",
+        "proteostasis/autophagy axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "hypothesis",
+          "value": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+          "frequency": 3,
+          "threshold": 3
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "Recent research in cellular, biochemical and animal models have shown that AD mutants affecting the presenilins, Ass, APP, and ApoE4 are associated with mitochondria and cause mitochondrial dysfunction and oxidative damage in AD (Fig."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "36927428",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36927428/",
+      "Journal": "Curr Neuropharmacol",
+      "Year": 2023,
+      "TermName": "mitochondrion",
+      "TermType": "GO",
+      "Hypothesis": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "point mutations:mutations",
+      "GeneAlteration": "APOE / point mutations:mutations",
+      "AlterationSignature": "point mutations:mutations",
+      "AlterationType": "point mutations:Mutations",
+      "AlterationMention": "mutants",
+      "AlterationID": "point mutations:Mutations",
+      "TriggerWord": "associated",
+      "RegType": "Reg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('ApoE4', 'Gene', '(127, 132)', ('ApoE4', 'Gene', '348', '-')) -- ThemeOf -- ('mutants', 'Var', '(78, 85)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('associated', 'Reg', '(137, 147)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondria', 'MPA', '(153, 165)', ('mitochondria', 'MPA', 'GO:0005739', 'mitochondrion'))",
+      "EventDedupKey": "gene | point mutations:mutations | go:0005739 | amyloid hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "amyloid/tau axis",
+        "mitochondrial and oxidative stress axis",
+        "vascular/metabolic axis",
+        "proteostasis/autophagy axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "hypothesis",
+          "value": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+          "frequency": 3,
+          "threshold": 3
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "Recent research in cellular, biochemical and animal models have shown that AD mutants affecting the presenilins, Ass, APP, and ApoE4 are associated with mitochondria and cause mitochondrial dysfunction and oxidative damage in AD (Fig."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "37036005",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37036005/",
+      "Journal": "JCI Insight",
+      "Year": 2023,
+      "TermName": "Crohn Disease",
+      "TermType": "MeSH",
+      "Hypothesis": "Neuroinflammation hypothesis,Vascular hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "structural variation:deletion",
+      "GeneAlteration": "APOE / structural variation:deletion",
+      "AlterationSignature": "structural variation:deletion",
+      "AlterationType": "structural variation:deletion",
+      "AlterationMention": "deletion",
+      "AlterationID": "structural variation:deletion",
+      "TriggerWord": "enhances",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE3', 'Gene', '(212, 217)', ('APOE3', 'Gene', '348', '-')) -- ThemeOf -- ('deletion', 'Var', '(51, 59)', ('deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('enhances', 'PosReg', '(100, 108)', ('enhances', 'PosReg', '-', '-')) -- ThemeOf -- ('astrogliosis in paravascular regions', 'Disease', '(109, 145)', ('astrogliosis in paravascular regions', 'Disease', 'MESH:D003424', '-'))",
+      "EventDedupKey": "gene | structural variation:deletion | mesh:d003424 | neuroinflammation hypothesis,vascular hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "neuroinflammation and microglia axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "Crohn Disease",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "In summary, our findings demonstrate that VMC-LRP1 deletion reduces cerebrovascular collagen IV and enhances astrogliosis in paravascular regions, resulting in cognitive impairment in the mice with APOE4 but not APOE3."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "37199411",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37199411/",
+      "Journal": "Aging Dis",
+      "Year": 2023,
+      "TermName": "phospholipid efflux",
+      "TermType": "GO",
+      "Hypothesis": "Amyloid Hypothesis,Vascular Hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "point mutations:mutations",
+      "GeneAlteration": "APOE / point mutations:mutations",
+      "AlterationSignature": "point mutations:mutations",
+      "AlterationType": "point mutations:Mutations",
+      "AlterationMention": "polymorphisms",
+      "AlterationID": "point mutations:Mutations",
+      "TriggerWord": "mediated",
+      "RegType": "Reg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('ApoE', 'Gene', '(132, 136)', ('ApoE', 'Gene', '348', '-')) -- ThemeOf -- ('polymorphisms', 'Var', '(137, 150)', ('polymorphisms', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('mediated', 'Reg', '(73, 81)', ('mediated', 'Reg', '-', '-')) -- ThemeOf -- ('phospholipid efflux', 'MPA', '(39, 58)', ('phospholipid efflux', 'MPA', 'GO:0033700', 'phospholipid export'))",
+      "EventDedupKey": "gene | point mutations:mutations | go:0033700 | amyloid hypothesis,vascular hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "amyloid/tau axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "phospholipid efflux",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "In the brain, cellular cholesterol and phospholipid efflux from cells is mediated by ATP-binding cassette transporter (ABCA1), with ApoE polymorphisms also showed to be associated with AD."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "36717892",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36717892/",
+      "Journal": "Transl Neurodegener",
+      "Year": 2023,
+      "TermName": "SARS-CoV-2-infected",
+      "TermType": "MeSH",
+      "Hypothesis": "Amyloid Hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "point mutations:mutations",
+      "GeneAlteration": "APOE / point mutations:mutations",
+      "AlterationSignature": "point mutations:mutations",
+      "AlterationType": "point mutations:Mutations",
+      "AlterationMention": "variants",
+      "AlterationID": "point mutations:Mutations",
+      "TriggerWord": "influence",
+      "RegType": "Reg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE', 'Gene', '(81, 85)', ('APOE', 'Gene', '348', '-')) -- ThemeOf -- ('variants', 'Var', '(86, 94)', ('variants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('influence', 'Reg', '(68, 77)', ('influence', 'Reg', '-', '-')) -- ThemeOf -- ('SARS-CoV-2-infected', 'Disease', '(134, 153)', ('SARS-CoV-2-infected', 'Disease', 'MESH:C000657245', '-'))",
+      "EventDedupKey": "gene | point mutations:mutations | mesh:c000657245 | amyloid hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "amyloid/tau axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "SARS-CoV-2-infected",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "The latest report by Ostendorf and colleagues further confirmed the influence of APOE variants on COVID-19 outcomes in an established SARS-CoV-2-infected APOE knock-in mouse model."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "37019383",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37019383/",
+      "Journal": "Mol Cell Proteomics. 2023 May;22(5):100541. doi: 10.1016/j.mcpro.2023.100541. ",
+      "Year": 2023,
+      "TermName": "cAMP-dependent protein kinase complex",
+      "TermType": "-",
+      "Hypothesis": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "expression changes:underexpression",
+      "GeneAlteration": "APOE / expression changes:underexpression",
+      "AlterationSignature": "expression changes:underexpression",
+      "AlterationType": "expression changes:underexpression",
+      "AlterationMention": "inhibition",
+      "AlterationID": "expression changes:underexpression",
+      "TriggerWord": "increased",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('apoE4', 'Gene', '(143, 148)', ('apoE4', 'Gene', '348', '-')) -- ThemeOf -- ('inhibition', 'Var', '(129, 139)', ('inhibition', 'Mutation', 'expression changes:underexpression', 'expression changes:underexpression')) -- CauseOf -- ('increased', 'PosReg', '(105, 114)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('PKA', 'MPA', '(125, 128)', ('PKA', 'MPA', 'GO:0005952', 'cAMP-dependent protein kinase complex'))",
+      "EventDedupKey": "gene | expression changes:underexpression | go:0005952 | amyloid hypothesis,neuroinflammation hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "amyloid/tau axis",
+        "neuroinflammation and microglia axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "cAMP-dependent protein kinase complex",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "For instance, hVASP interactions with microfilament motor activity proteins Myo1b, Myo1c, and Myo5a were increased following PKA inhibition in apoE4 Neuro-2a cells."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "36720919",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36720919/",
+      "Journal": "Exp Mol Med",
+      "Year": 2023,
+      "TermName": "Immune System Diseases",
+      "TermType": "MeSH",
+      "Hypothesis": "Neuroinflammation hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "structural variation:deletion",
+      "GeneAlteration": "APOE / structural variation:deletion",
+      "AlterationSignature": "structural variation:deletion",
+      "AlterationType": "structural variation:deletion",
+      "AlterationMention": "deficiency",
+      "AlterationID": "structural variation:deletion",
+      "TriggerWord": "exacerbated",
+      "RegType": "Reg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('ApoE4', 'Gene', '(92, 97)', ('ApoE4', 'Gene', '348', '-')) -- ThemeOf -- ('deficiency', 'Var', '(11, 21)', ('deficiency', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('exacerbated', 'Reg', '(22, 33)', ('exacerbated', 'Reg', '-', '-')) -- ThemeOf -- ('neuronal immune homeostasis impairment', 'Disease', '(50, 88)', ('neuronal immune homeostasis impairment', 'Disease', 'MESH:D007154', '-'))",
+      "EventDedupKey": "gene | structural variation:deletion | mesh:d007154 | neuroinflammation hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "neuroinflammation and microglia axis",
+        "synaptic and neuronal dysfunction axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "Immune System Diseases",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "TRPV1 gene deficiency exacerbated recognition and neuronal immune homeostasis impairment in ApoE4 HFD mice."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "35847516",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35847516/",
+      "Journal": "Acta Pharm Sin B",
+      "Year": 2022,
+      "TermName": "early endosome",
+      "TermType": "GO",
+      "Hypothesis": "Amyloid Hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "expression changes:underexpression",
+      "GeneAlteration": "APOE / expression changes:underexpression",
+      "AlterationSignature": "expression changes:underexpression",
+      "AlterationType": "expression changes:underexpression",
+      "AlterationMention": "inhibition",
+      "AlterationID": "expression changes:underexpression",
+      "TriggerWord": "restores",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE4', 'Gene', '(184, 189)', ('APOE4', 'Gene', '348', '-')) -- ThemeOf -- ('inhibition', 'Var', '(71, 81)', ('inhibition', 'Mutation', 'expression changes:underexpression', 'expression changes:underexpression')) -- CauseOf -- ('restores', 'PosReg', '(171, 179)', ('restores', 'PosReg', '-', '-')) -- ThemeOf -- ('early endosome', 'MPA', '(144, 158)', ('early endosome', 'MPA', 'GO:0005769', 'early endosome'))",
+      "EventDedupKey": "gene | expression changes:underexpression | go:0005769 | amyloid hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "amyloid/tau axis",
+        "synaptic and neuronal dysfunction axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "early endosome",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "In addition, a recent study has shown that pharmacological and genetic inhibition of NHE6, a primary protein involved in proton leak channel in early endosome, completely restores the APOE4-induced recycling block of APOE receptor and counteracts Abeta-induced LTP suppression in APOE-knockin mice."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "34514662",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/34514662/",
+      "Journal": "Brain Pathol",
+      "Year": 2022,
+      "TermName": "lysosomal transport",
+      "TermType": "GO",
+      "Hypothesis": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "point mutations:mutations",
+      "GeneAlteration": "APOE / point mutations:mutations",
+      "AlterationSignature": "point mutations:mutations",
+      "AlterationType": "point mutations:Mutations",
+      "AlterationMention": "variants",
+      "AlterationID": "point mutations:Mutations",
+      "TriggerWord": "linked",
+      "RegType": "Reg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE4', 'Gene', '(78, 83)', ('APOE4', 'Gene', '348', '-')) -- ThemeOf -- ('variants', 'Var', '(18, 26)', ('variants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('linked', 'Reg', '(109, 115)', ('linked', 'Reg', '-', '-')) -- ThemeOf -- ('lysosomal transport', 'MPA', '(228, 247)', ('lysosomal transport', 'MPA', 'GO:0007041', 'lysosomal transport'))",
+      "EventDedupKey": "gene | point mutations:mutations | go:0007041 | amyloid hypothesis,neuroinflammation hypothesis,abnormal autophagy hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "amyloid/tau axis",
+        "neuroinflammation and microglia axis",
+        "vascular/metabolic axis",
+        "proteostasis/autophagy axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "lysosomal transport",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "Some of these are variants in genes involved in cholesterol transport (ABCA7, APOE4, and INPP5D), others are linked to the clearance of nonnative proteins by immune cells (TREM2 and CLU), and others are related to endocytic and lysosomal transport (BIN1, CD2AP, PICALM, RIN3, SORL1, GRN, and PLD3)."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "35111364",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35111364/",
+      "Journal": "Aging Dis",
+      "Year": 2022,
+      "TermName": "inflammatory response",
+      "TermType": "GO",
+      "Hypothesis": "Neuroinflammation Hypothesis,Oxidative stress hypothesis,Vascular hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "genetic manipulation:knockout",
+      "GeneAlteration": "APOE / genetic manipulation:knockout",
+      "AlterationSignature": "genetic manipulation:knockout",
+      "AlterationType": "genetic manipulation:knockout",
+      "AlterationMention": "knock-out",
+      "AlterationID": "genetic manipulation:knockout",
+      "TriggerWord": "increased",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE', 'Gene', '(3, 7)', ('APOE', 'Gene', '11816', '-')) -- ThemeOf -- ('knock-out', 'Var', '(8, 17)', ('knock-out', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(57, 66)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('inflammation', 'MPA', '(125, 137)', ('inflammation', 'MPA', 'GO:0006954', 'inflammatory response'))",
+      "EventDedupKey": "gene | genetic manipulation:knockout | go:0006954 | neuroinflammation hypothesis,oxidative stress hypothesis,vascular hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "mitochondrial and oxidative stress axis",
+        "neuroinflammation and microglia axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "hypothesis",
+          "value": "Neuroinflammation Hypothesis,Oxidative stress hypothesis,Vascular hypothesis",
+          "frequency": 3,
+          "threshold": 3
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "In APOE knock-out mice put on a diet that included TMAO, increased plasma levels of TNF-alpha, MCP-1, and IL-1beta (implying inflammation), as well as corresponding higher and lower plasma concentration of malondialdehyde and GSH-Px/SOD activities (indicating oxidative stress) were detected."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "35115575",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35115575/",
+      "Journal": "Sci Rep",
+      "Year": 2022,
+      "TermName": "inflammatory response",
+      "TermType": "GO",
+      "Hypothesis": "Neuroinflammation hypothesis,Microbiota-Gut-Brain Axis hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "point mutations:mutations",
+      "GeneAlteration": "APOE / point mutations:mutations",
+      "AlterationSignature": "point mutations:mutations",
+      "AlterationType": "point mutations:Mutations",
+      "AlterationMention": "alleles",
+      "AlterationID": "-",
+      "TriggerWord": "greater",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE', 'Gene', '(25, 29)', ('APOE', 'Gene', '11816', '-')) -- ThemeOf -- ('alleles', 'Var', '(30, 37)', ('alleles', 'Mutation', '-', '-')) -- CauseOf -- ('greater', 'PosReg', '(122, 129)', ('greater', 'PosReg', '-', '-')) -- ThemeOf -- ('inflammatory response', 'MPA', '(130, 151)', ('inflammatory response', 'MPA', 'GO:0006954', 'inflammatory response'))",
+      "EventDedupKey": "gene | point mutations:mutations | go:0006954 | neuroinflammation hypothesis,microbiota-gut-brain axis hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "neuroinflammation and microglia axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "hypothesis",
+          "value": "Neuroinflammation hypothesis,Microbiota-Gut-Brain Axis hypothesis",
+          "frequency": 3,
+          "threshold": 3
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "The mechanism(s) whereby APOE alleles influence the gut microbiome are unclear, although APOE4 has been associated with a greater inflammatory response to lipopolysaccharide (LPS), a microbiome product common to all gram-negative bacteria, in both humans and mice."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "35115575",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35115575/",
+      "Journal": "Sci Rep",
+      "Year": 2022,
+      "TermName": "response to lipopolysaccharide",
+      "TermType": "GO",
+      "Hypothesis": "Neuroinflammation hypothesis,Microbiota-Gut-Brain Axis hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "point mutations:mutations",
+      "GeneAlteration": "APOE / point mutations:mutations",
+      "AlterationSignature": "point mutations:mutations",
+      "AlterationType": "point mutations:Mutations",
+      "AlterationMention": "alleles",
+      "AlterationID": "-",
+      "TriggerWord": "greater",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE', 'Gene', '(25, 29)', ('APOE', 'Gene', '11816', '-')) -- ThemeOf -- ('alleles', 'Var', '(30, 37)', ('alleles', 'Mutation', '-', '-')) -- CauseOf -- ('greater', 'PosReg', '(122, 129)', ('greater', 'PosReg', '-', '-')) -- ThemeOf -- ('response to lipopolysaccharide', 'MPA', '(143, 173)', ('response to lipopolysaccharide', 'MPA', 'GO:0032496', 'response to lipopolysaccharide'))",
+      "EventDedupKey": "gene | point mutations:mutations | go:0032496 | neuroinflammation hypothesis,microbiota-gut-brain axis hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "neuroinflammation and microglia axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "response to lipopolysaccharide",
+          "frequency": 1,
+          "threshold": 1
+        },
+        {
+          "dimension": "hypothesis",
+          "value": "Neuroinflammation hypothesis,Microbiota-Gut-Brain Axis hypothesis",
+          "frequency": 3,
+          "threshold": 3
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "The mechanism(s) whereby APOE alleles influence the gut microbiome are unclear, although APOE4 has been associated with a greater inflammatory response to lipopolysaccharide (LPS), a microbiome product common to all gram-negative bacteria, in both humans and mice."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "33676568",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/33676568/",
+      "Journal": "Cell Biosci",
+      "Year": 2021,
+      "TermName": "calcium ion transport",
+      "TermType": "GO",
+      "Hypothesis": "Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "epigenic changes:silencing",
+      "GeneAlteration": "APOE / epigenic changes:silencing",
+      "AlterationSignature": "epigenic changes:silencing",
+      "AlterationType": "epigenic changes:silencing",
+      "AlterationMention": "silencing",
+      "AlterationID": "epigenic changes:silencing",
+      "TriggerWord": "promoted",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('apoE4', 'Gene', '(13, 18)', ('apoE4', 'Gene', '348', '-')) -- ThemeOf -- ('silencing', 'Var', '(284, 293)', ('silencing', 'Mutation', 'epigenic changes:silencing', 'epigenic changes:silencing')) -- CauseOf -- ('promoted', 'PosReg', '(45, 53)', ('promoted', 'PosReg', '-', '-')) -- ThemeOf -- ('calcium transport into', 'CPA', '(102, 124)', ('calcium transport into', 'CPA', 'GO:0006816', 'calcium ion transport'))",
+      "EventDedupKey": "gene | epigenic changes:silencing | go:0006816 | oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "mitochondrial and oxidative stress axis",
+        "synaptic and neuronal dysfunction axis",
+        "vascular/metabolic axis",
+        "proteostasis/autophagy axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "calcium ion transport",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "Furthermore, apoE4 (Delta272-299) expression promoted GRP75 expression, mitochondrial dysfunction and calcium transport into the mitochondria in neuron, which were significantly mitigated by treatment with PBA (an inhibitor of ER stress), MKT077 (a specific GRP75 inhibitor) or GRP75 silencing."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "34876200",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/34876200/",
+      "Journal": "Mol Neurodegener",
+      "Year": 2021,
+      "TermName": "collagen",
+      "TermType": "GO",
+      "Hypothesis": "Amyloid Hypothesis,Vascular Hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "normalized variants:dna change",
+      "GeneAlteration": "APOE / normalized variants:dna change",
+      "AlterationSignature": "normalized variants:dna change",
+      "AlterationType": "Normalized Variants:DNA Change",
+      "AlterationMention": "M671L",
+      "AlterationID": "p.M671L",
+      "TriggerWord": "increased",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE4', 'Gene', '(191, 196)', ('APOE4', 'Gene', '348', '-')) -- ThemeOf -- ('M671L', 'Var', '(180, 185)', ('M671L', 'Mutation', 'p.M671L', '-')) -- CauseOf -- ('increased', 'PosReg', '(13, 22)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('collagen IV expression', 'CPA', '(23, 45)', ('collagen IV expression', 'CPA', 'GO:0005202', 'collagen'))",
+      "EventDedupKey": "gene | normalized variants:dna change | go:0005202 | amyloid hypothesis,vascular hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "amyloid/tau axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "collagen",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "For example, increased collagen IV expression is found in the BL of 3xTG (APPswe/PSEN1M146V/TauP301L) transgenic mice, decreased collagen IV level is observed in APPswe (APPK670N, M671L) and APOE4 transgenic mice, while unaltered collagen IV level is reported in PSEN1P117L mice."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "33573856",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/33573856/",
+      "Journal": "Semin Cell Dev Biol",
+      "Year": 2021,
+      "TermName": "chemical synaptic transmission",
+      "TermType": "GO",
+      "Hypothesis": "Microbiota-Gut-Brain Axis hypothesis,Neuroinflammation hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "genetic manipulation:knock-in",
+      "GeneAlteration": "APOE / genetic manipulation:knock-in",
+      "AlterationSignature": "genetic manipulation:knock-in",
+      "AlterationType": "genetic manipulation:knock-in",
+      "AlterationMention": "knock-in",
+      "AlterationID": "-",
+      "TriggerWord": "increasing",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE', 'Gene', '(56, 60)', ('APOE', 'Gene', '11816', '-')) -- ThemeOf -- ('knock-in', 'Var', '(70, 78)', ('knock-in', 'Mutation', '-', '-')) -- CauseOf -- ('increasing', 'PosReg', '(159, 169)', ('increasing', 'PosReg', '-', '-')) -- ThemeOf -- ('neurotransmission', 'MPA', '(180, 197)', ('neurotransmission', 'MPA', 'GO:0007268', 'chemical synaptic transmission'))",
+      "EventDedupKey": "gene | genetic manipulation:knock-in | go:0007268 | microbiota-gut-brain axis hypothesis,neuroinflammation hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "neuroinflammation and microglia axis",
+        "synaptic and neuronal dysfunction axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "hypothesis",
+          "value": "Microbiota-Gut-Brain Axis hypothesis,Neuroinflammation hypothesis",
+          "frequency": 3,
+          "threshold": 3
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "showed that normal memory function might be restored in APOE epsilon4 knock-in mice either by transplantation of inhibitory interneuron progenitor cells or by increasing GABAergic neurotransmission via pentobarbital administration during middle adulthood."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "33573856",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/33573856/",
+      "Journal": "Semin Cell Dev Biol",
+      "Year": 2021,
+      "TermName": "memory",
+      "TermType": "GO",
+      "Hypothesis": "Microbiota-Gut-Brain Axis hypothesis,Neuroinflammation hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "genetic manipulation:knock-in",
+      "GeneAlteration": "APOE / genetic manipulation:knock-in",
+      "AlterationSignature": "genetic manipulation:knock-in",
+      "AlterationType": "genetic manipulation:knock-in",
+      "AlterationMention": "knock-in",
+      "AlterationID": "-",
+      "TriggerWord": "restored",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE', 'Gene', '(56, 60)', ('APOE', 'Gene', '11816', '-')) -- ThemeOf -- ('knock-in', 'Var', '(70, 78)', ('knock-in', 'Mutation', '-', '-')) -- CauseOf -- ('restored', 'PosReg', '(44, 52)', ('restored', 'PosReg', '-', '-')) -- ThemeOf -- ('memory function', 'CPA', '(19, 34)', ('memory function', 'CPA', 'GO:0007613', 'memory'))",
+      "EventDedupKey": "gene | genetic manipulation:knock-in | go:0007613 | microbiota-gut-brain axis hypothesis,neuroinflammation hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "neuroinflammation and microglia axis",
+        "synaptic and neuronal dysfunction axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "hypothesis",
+          "value": "Microbiota-Gut-Brain Axis hypothesis,Neuroinflammation hypothesis",
+          "frequency": 3,
+          "threshold": 3
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "showed that normal memory function might be restored in APOE epsilon4 knock-in mice either by transplantation of inhibitory interneuron progenitor cells or by increasing GABAergic neurotransmission via pentobarbital administration during middle adulthood."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "36199750",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36199750/",
+      "Journal": "Nat Aging",
+      "Year": 2021,
+      "TermName": "Prune Belly Syndrome",
+      "TermType": "MeSH",
+      "Hypothesis": "Amyloid Hypothesis,Vascular Hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "genetic manipulation:knock-in",
+      "GeneAlteration": "APOE / genetic manipulation:knock-in",
+      "AlterationSignature": "genetic manipulation:knock-in",
+      "AlterationType": "genetic manipulation:knock-in",
+      "AlterationMention": "knock-in",
+      "AlterationID": "-",
+      "TriggerWord": "determined",
+      "RegType": "Reg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE4', 'Gene', '(100, 105)', ('APOE4', 'Gene', '348', '-')) -- ThemeOf -- ('knock-in', 'Var', '(106, 114)', ('knock-in', 'Mutation', '-', '-')) -- CauseOf -- ('determined', 'Reg', '(151, 161)', ('determined', 'Reg', '-', '-')) -- ThemeOf -- ('PBS', 'Disease', '(66, 69)', ('PBS', 'Disease', 'MESH:D011535', '-'))",
+      "EventDedupKey": "gene | genetic manipulation:knock-in | mesh:d011535 | amyloid hypothesis,vascular hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "amyloid/tau axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "Prune Belly Syndrome",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "To this end, we injected either LPS or phosphate-buffered saline (PBS) into 3-4-month-old APOE3 and APOE4 knock-in mice, euthanized them 3 h later and determined the expression levels of the above genes of interest by RT-qPCR."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "34151801",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/34151801/",
+      "Journal": "J Alzheimers Dis",
+      "Year": 2021,
+      "TermName": "Mitochondrial Diseases",
+      "TermType": "MeSH",
+      "Hypothesis": "Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis,Neuroinflammation Hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "point mutations:mutations",
+      "GeneAlteration": "APOE / point mutations:mutations",
+      "AlterationSignature": "point mutations:mutations",
+      "AlterationType": "point mutations:Mutations",
+      "AlterationMention": "mutation",
+      "AlterationID": "point mutations:Mutations",
+      "TriggerWord": "increased",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE', 'Gene', '(104, 108)', ('APOE', 'Gene', '348', '-')) -- ThemeOf -- ('mutation', 'Var', '(56, 64)', ('mutation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('increased', 'PosReg', '(126, 135)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(157, 182)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+      "EventDedupKey": "gene | point mutations:mutations | mesh:d028361 | oxidative stress hypothesis,mitochondrial autophagy hypothesis,neuroinflammation hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "mitochondrial and oxidative stress axis",
+        "neuroinflammation and microglia axis",
+        "vascular/metabolic axis",
+        "proteostasis/autophagy axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "hypothesis",
+          "value": "Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis,Neuroinflammation Hypothesis",
+          "frequency": 3,
+          "threshold": 3
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "A recent study with ALDH2 knockout mice has indicated a mutation of this protein in AD patients showing APOE e4 allele causes increased oxidative stress and mitochondrial dysfunction and neuroinflammation."
+    }
+  ],
+  "evidence_type_groups": {
+    "alteration_evidence": [
+      {
+        "Gene": "APOE",
+        "PMID": "38004343",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38004343/",
+        "Journal": "Life (Basel);2023Nov13; 13 (11) . doi:10.3390/life13112203",
+        "Year": 2023,
+        "TermName": "of amyloid beta",
+        "TermType": "MeSH",
+        "Hypothesis": "Amyloid Hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "point mutations:mutations",
+        "GeneAlteration": "APOE / point mutations:mutations",
+        "AlterationSignature": "point mutations:mutations",
+        "AlterationType": "point mutations:Mutations",
+        "AlterationMention": "mutations",
+        "AlterationID": "point mutations:Mutations",
+        "TriggerWord": "overproduction",
+        "RegType": "PosReg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('apolipoprotein E4', 'Gene', '(146, 163)', ('apolipoprotein E4', 'Gene', '348', '-')) -- ThemeOf -- ('mutations', 'Var', '(74, 83)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('overproduction', 'PosReg', '(242, 256)', ('overproduction', 'PosReg', '-', '-')) -- ThemeOf -- ('of amyloid beta', 'Disease', '(257, 272)', ('of amyloid beta', 'Disease', 'MESH:C000718787', '-'))",
+        "EventDedupKey": "gene | point mutations:mutations | mesh:c000718787 | amyloid hypothesis",
+        "EvidenceType": "alteration_evidence",
+        "MechanismStrata": [
+          "amyloid/tau axis",
+          "vascular/metabolic axis",
+          "proteostasis/autophagy axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "phenotype",
+            "value": "of amyloid beta",
+            "frequency": 1,
+            "threshold": 1
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "alteration_evidence",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "EOAD is a very uncommon condition associated with genetic factors such as mutations in susceptibility genes like amyloid precursor protein (APP), apolipoprotein E4 (ApoE4), presenilin 1 (PSEN1), and presenilin 2 (PSEN2), which can lead to an overproduction of amyloid beta."
+      }
+    ],
+    "model_or_intervention": [
+      {
+        "Gene": "APOE",
+        "PMID": "36966157",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36966157/",
+        "Journal": "Nat Commun",
+        "Year": 2023,
+        "TermName": "Auditory Diseases, Central",
+        "TermType": "MeSH",
+        "Hypothesis": "Tau protein hypothesis,Neuroinflammation hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "genetic manipulation:knockout",
+        "GeneAlteration": "APOE / genetic manipulation:knockout",
+        "AlterationSignature": "genetic manipulation:knockout",
+        "AlterationType": "genetic manipulation:knockout",
+        "AlterationMention": "knockdown",
+        "AlterationID": "genetic manipulation:knockout",
+        "TriggerWord": "increased",
+        "RegType": "PosReg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('APOE', 'Gene', '(78, 82)', ('APOE', 'Gene', '348', '-')) -- ThemeOf -- ('knockdown', 'Var', '(83, 92)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(187, 196)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('entorhinal cortex loss', 'Disease', '(145, 167)', ('entorhinal cortex loss', 'Disease', 'MESH:D001304', '-'))",
+        "EventDedupKey": "gene | genetic manipulation:knockout | mesh:d001304 | tau protein hypothesis,neuroinflammation hypothesis",
+        "EvidenceType": "model_or_intervention",
+        "MechanismStrata": [
+          "amyloid/tau axis",
+          "neuroinflammation and microglia axis",
+          "synaptic and neuronal dysfunction axis",
+          "vascular/metabolic axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "phenotype",
+            "value": "Auditory Diseases, Central",
+            "frequency": 1,
+            "threshold": 1
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "model_or_intervention",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "Reinforcing earlier discussion on hp-tau aggregates and neuronal phagoptosis, APOE knockdown in P301S mice significantly reduced hippocampal and entorhinal cortex loss; APOE preservation increased Iba1 + (suggesting microglia and macrophage populations) cells that were positive with CD68 + phagocytic inclusions."
+      },
+      {
+        "Gene": "APOE",
+        "PMID": "36835187",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835187/",
+        "Journal": "Int J Mol Sci",
+        "Year": 2023,
+        "TermName": "isotype switching",
+        "TermType": "GO",
+        "Hypothesis": "Neuroinflammation hypothesis,Vascular hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "genetic manipulation:knock-in",
+        "GeneAlteration": "APOE / genetic manipulation:knock-in",
+        "AlterationSignature": "genetic manipulation:knock-in",
+        "AlterationType": "genetic manipulation:knock-in",
+        "AlterationMention": "knock-in",
+        "AlterationID": "-",
+        "TriggerWord": "high",
+        "RegType": "PosReg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('APOE4', 'Gene', '(79, 84)', ('APOE4', 'Gene', '348', '-')) -- ThemeOf -- ('knock-in', 'Var', '(85, 93)', ('knock-in', 'Mutation', '-', '-')) -- CauseOf -- ('high', 'PosReg', '(171, 175)', ('high', 'PosReg', '-', '-')) -- ThemeOf -- ('class switching', 'MPA', '(218, 233)', ('class switching', 'MPA', 'GO:0045190', 'isotype switching'))",
+        "EventDedupKey": "gene | genetic manipulation:knock-in | go:0045190 | neuroinflammation hypothesis,vascular hypothesis",
+        "EvidenceType": "model_or_intervention",
+        "MechanismStrata": [
+          "neuroinflammation and microglia axis",
+          "vascular/metabolic axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "phenotype",
+            "value": "isotype switching",
+            "frequency": 1,
+            "threshold": 1
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "model_or_intervention",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "Another study has demonstrated lower total IgG and IgA levels in the spleen of APOE4 knock-in mice compared with APOE3, but the levels of IgG2a subtype and IgM were quite high in APOE4 mice, suggesting differential Ig class switching in APOE4 mice compared with APOE3 or APOE2 mice."
+      },
+      {
+        "Gene": "APOE",
+        "PMID": "36927428",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36927428/",
+        "Journal": "Curr Neuropharmacol",
+        "Year": 2023,
+        "TermName": "Mitochondrial inheritance",
+        "TermType": "HPO",
+        "Hypothesis": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "point mutations:mutations",
+        "GeneAlteration": "APOE / point mutations:mutations",
+        "AlterationSignature": "point mutations:mutations",
+        "AlterationType": "point mutations:Mutations",
+        "AlterationMention": "mutants",
+        "AlterationID": "point mutations:Mutations",
+        "TriggerWord": "cause",
+        "RegType": "Reg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('ApoE4', 'Gene', '(127, 132)', ('ApoE4', 'Gene', '348', '-')) -- ThemeOf -- ('mutants', 'Var', '(78, 85)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('cause', 'Reg', '(170, 175)', ('cause', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(176, 201)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+        "EventDedupKey": "gene | point mutations:mutations | hp:0001427 | amyloid hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+        "EvidenceType": "model_or_intervention",
+        "MechanismStrata": [
+          "amyloid/tau axis",
+          "mitochondrial and oxidative stress axis",
+          "vascular/metabolic axis",
+          "proteostasis/autophagy axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "hypothesis",
+            "value": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "frequency": 3,
+            "threshold": 3
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "model_or_intervention",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "Recent research in cellular, biochemical and animal models have shown that AD mutants affecting the presenilins, Ass, APP, and ApoE4 are associated with mitochondria and cause mitochondrial dysfunction and oxidative damage in AD (Fig."
+      }
+    ]
+  },
+  "mechanism_strata": {
+    "amyloid/tau axis": [
+      {
+        "Gene": "APOE",
+        "PMID": "36966157",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36966157/",
+        "Journal": "Nat Commun",
+        "Year": 2023,
+        "TermName": "Auditory Diseases, Central",
+        "TermType": "MeSH",
+        "Hypothesis": "Tau protein hypothesis,Neuroinflammation hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "genetic manipulation:knockout",
+        "GeneAlteration": "APOE / genetic manipulation:knockout",
+        "AlterationSignature": "genetic manipulation:knockout",
+        "AlterationType": "genetic manipulation:knockout",
+        "AlterationMention": "knockdown",
+        "AlterationID": "genetic manipulation:knockout",
+        "TriggerWord": "increased",
+        "RegType": "PosReg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('APOE', 'Gene', '(78, 82)', ('APOE', 'Gene', '348', '-')) -- ThemeOf -- ('knockdown', 'Var', '(83, 92)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(187, 196)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('entorhinal cortex loss', 'Disease', '(145, 167)', ('entorhinal cortex loss', 'Disease', 'MESH:D001304', '-'))",
+        "EventDedupKey": "gene | genetic manipulation:knockout | mesh:d001304 | tau protein hypothesis,neuroinflammation hypothesis",
+        "EvidenceType": "model_or_intervention",
+        "MechanismStrata": [
+          "amyloid/tau axis",
+          "neuroinflammation and microglia axis",
+          "synaptic and neuronal dysfunction axis",
+          "vascular/metabolic axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "phenotype",
+            "value": "Auditory Diseases, Central",
+            "frequency": 1,
+            "threshold": 1
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "model_or_intervention",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "Reinforcing earlier discussion on hp-tau aggregates and neuronal phagoptosis, APOE knockdown in P301S mice significantly reduced hippocampal and entorhinal cortex loss; APOE preservation increased Iba1 + (suggesting microglia and macrophage populations) cells that were positive with CD68 + phagocytic inclusions."
+      },
+      {
+        "Gene": "APOE",
+        "PMID": "38004343",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38004343/",
+        "Journal": "Life (Basel);2023Nov13; 13 (11) . doi:10.3390/life13112203",
+        "Year": 2023,
+        "TermName": "of amyloid beta",
+        "TermType": "MeSH",
+        "Hypothesis": "Amyloid Hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "point mutations:mutations",
+        "GeneAlteration": "APOE / point mutations:mutations",
+        "AlterationSignature": "point mutations:mutations",
+        "AlterationType": "point mutations:Mutations",
+        "AlterationMention": "mutations",
+        "AlterationID": "point mutations:Mutations",
+        "TriggerWord": "overproduction",
+        "RegType": "PosReg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('apolipoprotein E4', 'Gene', '(146, 163)', ('apolipoprotein E4', 'Gene', '348', '-')) -- ThemeOf -- ('mutations', 'Var', '(74, 83)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('overproduction', 'PosReg', '(242, 256)', ('overproduction', 'PosReg', '-', '-')) -- ThemeOf -- ('of amyloid beta', 'Disease', '(257, 272)', ('of amyloid beta', 'Disease', 'MESH:C000718787', '-'))",
+        "EventDedupKey": "gene | point mutations:mutations | mesh:c000718787 | amyloid hypothesis",
+        "EvidenceType": "alteration_evidence",
+        "MechanismStrata": [
+          "amyloid/tau axis",
+          "vascular/metabolic axis",
+          "proteostasis/autophagy axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "phenotype",
+            "value": "of amyloid beta",
+            "frequency": 1,
+            "threshold": 1
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "alteration_evidence",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "EOAD is a very uncommon condition associated with genetic factors such as mutations in susceptibility genes like amyloid precursor protein (APP), apolipoprotein E4 (ApoE4), presenilin 1 (PSEN1), and presenilin 2 (PSEN2), which can lead to an overproduction of amyloid beta."
+      },
+      {
+        "Gene": "APOE",
+        "PMID": "36927428",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36927428/",
+        "Journal": "Curr Neuropharmacol",
+        "Year": 2023,
+        "TermName": "Mitochondrial inheritance",
+        "TermType": "HPO",
+        "Hypothesis": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "point mutations:mutations",
+        "GeneAlteration": "APOE / point mutations:mutations",
+        "AlterationSignature": "point mutations:mutations",
+        "AlterationType": "point mutations:Mutations",
+        "AlterationMention": "mutants",
+        "AlterationID": "point mutations:Mutations",
+        "TriggerWord": "cause",
+        "RegType": "Reg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('ApoE4', 'Gene', '(127, 132)', ('ApoE4', 'Gene', '348', '-')) -- ThemeOf -- ('mutants', 'Var', '(78, 85)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('cause', 'Reg', '(170, 175)', ('cause', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(176, 201)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+        "EventDedupKey": "gene | point mutations:mutations | hp:0001427 | amyloid hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+        "EvidenceType": "model_or_intervention",
+        "MechanismStrata": [
+          "amyloid/tau axis",
+          "mitochondrial and oxidative stress axis",
+          "vascular/metabolic axis",
+          "proteostasis/autophagy axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "hypothesis",
+            "value": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "frequency": 3,
+            "threshold": 3
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "model_or_intervention",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "Recent research in cellular, biochemical and animal models have shown that AD mutants affecting the presenilins, Ass, APP, and ApoE4 are associated with mitochondria and cause mitochondrial dysfunction and oxidative damage in AD (Fig."
+      }
+    ],
+    "mitochondrial and oxidative stress axis": [
+      {
+        "Gene": "APOE",
+        "PMID": "36927428",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36927428/",
+        "Journal": "Curr Neuropharmacol",
+        "Year": 2023,
+        "TermName": "Mitochondrial inheritance",
+        "TermType": "HPO",
+        "Hypothesis": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "point mutations:mutations",
+        "GeneAlteration": "APOE / point mutations:mutations",
+        "AlterationSignature": "point mutations:mutations",
+        "AlterationType": "point mutations:Mutations",
+        "AlterationMention": "mutants",
+        "AlterationID": "point mutations:Mutations",
+        "TriggerWord": "cause",
+        "RegType": "Reg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('ApoE4', 'Gene', '(127, 132)', ('ApoE4', 'Gene', '348', '-')) -- ThemeOf -- ('mutants', 'Var', '(78, 85)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('cause', 'Reg', '(170, 175)', ('cause', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(176, 201)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+        "EventDedupKey": "gene | point mutations:mutations | hp:0001427 | amyloid hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+        "EvidenceType": "model_or_intervention",
+        "MechanismStrata": [
+          "amyloid/tau axis",
+          "mitochondrial and oxidative stress axis",
+          "vascular/metabolic axis",
+          "proteostasis/autophagy axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "hypothesis",
+            "value": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "frequency": 3,
+            "threshold": 3
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "model_or_intervention",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "Recent research in cellular, biochemical and animal models have shown that AD mutants affecting the presenilins, Ass, APP, and ApoE4 are associated with mitochondria and cause mitochondrial dysfunction and oxidative damage in AD (Fig."
+      }
+    ],
+    "neuroinflammation and microglia axis": [
+      {
+        "Gene": "APOE",
+        "PMID": "36966157",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36966157/",
+        "Journal": "Nat Commun",
+        "Year": 2023,
+        "TermName": "Auditory Diseases, Central",
+        "TermType": "MeSH",
+        "Hypothesis": "Tau protein hypothesis,Neuroinflammation hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "genetic manipulation:knockout",
+        "GeneAlteration": "APOE / genetic manipulation:knockout",
+        "AlterationSignature": "genetic manipulation:knockout",
+        "AlterationType": "genetic manipulation:knockout",
+        "AlterationMention": "knockdown",
+        "AlterationID": "genetic manipulation:knockout",
+        "TriggerWord": "increased",
+        "RegType": "PosReg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('APOE', 'Gene', '(78, 82)', ('APOE', 'Gene', '348', '-')) -- ThemeOf -- ('knockdown', 'Var', '(83, 92)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(187, 196)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('entorhinal cortex loss', 'Disease', '(145, 167)', ('entorhinal cortex loss', 'Disease', 'MESH:D001304', '-'))",
+        "EventDedupKey": "gene | genetic manipulation:knockout | mesh:d001304 | tau protein hypothesis,neuroinflammation hypothesis",
+        "EvidenceType": "model_or_intervention",
+        "MechanismStrata": [
+          "amyloid/tau axis",
+          "neuroinflammation and microglia axis",
+          "synaptic and neuronal dysfunction axis",
+          "vascular/metabolic axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "phenotype",
+            "value": "Auditory Diseases, Central",
+            "frequency": 1,
+            "threshold": 1
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "model_or_intervention",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "Reinforcing earlier discussion on hp-tau aggregates and neuronal phagoptosis, APOE knockdown in P301S mice significantly reduced hippocampal and entorhinal cortex loss; APOE preservation increased Iba1 + (suggesting microglia and macrophage populations) cells that were positive with CD68 + phagocytic inclusions."
+      },
+      {
+        "Gene": "APOE",
+        "PMID": "36835187",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835187/",
+        "Journal": "Int J Mol Sci",
+        "Year": 2023,
+        "TermName": "isotype switching",
+        "TermType": "GO",
+        "Hypothesis": "Neuroinflammation hypothesis,Vascular hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "genetic manipulation:knock-in",
+        "GeneAlteration": "APOE / genetic manipulation:knock-in",
+        "AlterationSignature": "genetic manipulation:knock-in",
+        "AlterationType": "genetic manipulation:knock-in",
+        "AlterationMention": "knock-in",
+        "AlterationID": "-",
+        "TriggerWord": "high",
+        "RegType": "PosReg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('APOE4', 'Gene', '(79, 84)', ('APOE4', 'Gene', '348', '-')) -- ThemeOf -- ('knock-in', 'Var', '(85, 93)', ('knock-in', 'Mutation', '-', '-')) -- CauseOf -- ('high', 'PosReg', '(171, 175)', ('high', 'PosReg', '-', '-')) -- ThemeOf -- ('class switching', 'MPA', '(218, 233)', ('class switching', 'MPA', 'GO:0045190', 'isotype switching'))",
+        "EventDedupKey": "gene | genetic manipulation:knock-in | go:0045190 | neuroinflammation hypothesis,vascular hypothesis",
+        "EvidenceType": "model_or_intervention",
+        "MechanismStrata": [
+          "neuroinflammation and microglia axis",
+          "vascular/metabolic axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "phenotype",
+            "value": "isotype switching",
+            "frequency": 1,
+            "threshold": 1
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "model_or_intervention",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "Another study has demonstrated lower total IgG and IgA levels in the spleen of APOE4 knock-in mice compared with APOE3, but the levels of IgG2a subtype and IgM were quite high in APOE4 mice, suggesting differential Ig class switching in APOE4 mice compared with APOE3 or APOE2 mice."
+      }
+    ],
+    "proteostasis/autophagy axis": [
+      {
+        "Gene": "APOE",
+        "PMID": "38004343",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38004343/",
+        "Journal": "Life (Basel);2023Nov13; 13 (11) . doi:10.3390/life13112203",
+        "Year": 2023,
+        "TermName": "of amyloid beta",
+        "TermType": "MeSH",
+        "Hypothesis": "Amyloid Hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "point mutations:mutations",
+        "GeneAlteration": "APOE / point mutations:mutations",
+        "AlterationSignature": "point mutations:mutations",
+        "AlterationType": "point mutations:Mutations",
+        "AlterationMention": "mutations",
+        "AlterationID": "point mutations:Mutations",
+        "TriggerWord": "overproduction",
+        "RegType": "PosReg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('apolipoprotein E4', 'Gene', '(146, 163)', ('apolipoprotein E4', 'Gene', '348', '-')) -- ThemeOf -- ('mutations', 'Var', '(74, 83)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('overproduction', 'PosReg', '(242, 256)', ('overproduction', 'PosReg', '-', '-')) -- ThemeOf -- ('of amyloid beta', 'Disease', '(257, 272)', ('of amyloid beta', 'Disease', 'MESH:C000718787', '-'))",
+        "EventDedupKey": "gene | point mutations:mutations | mesh:c000718787 | amyloid hypothesis",
+        "EvidenceType": "alteration_evidence",
+        "MechanismStrata": [
+          "amyloid/tau axis",
+          "vascular/metabolic axis",
+          "proteostasis/autophagy axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "phenotype",
+            "value": "of amyloid beta",
+            "frequency": 1,
+            "threshold": 1
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "alteration_evidence",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "EOAD is a very uncommon condition associated with genetic factors such as mutations in susceptibility genes like amyloid precursor protein (APP), apolipoprotein E4 (ApoE4), presenilin 1 (PSEN1), and presenilin 2 (PSEN2), which can lead to an overproduction of amyloid beta."
+      },
+      {
+        "Gene": "APOE",
+        "PMID": "36927428",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36927428/",
+        "Journal": "Curr Neuropharmacol",
+        "Year": 2023,
+        "TermName": "Mitochondrial inheritance",
+        "TermType": "HPO",
+        "Hypothesis": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "point mutations:mutations",
+        "GeneAlteration": "APOE / point mutations:mutations",
+        "AlterationSignature": "point mutations:mutations",
+        "AlterationType": "point mutations:Mutations",
+        "AlterationMention": "mutants",
+        "AlterationID": "point mutations:Mutations",
+        "TriggerWord": "cause",
+        "RegType": "Reg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('ApoE4', 'Gene', '(127, 132)', ('ApoE4', 'Gene', '348', '-')) -- ThemeOf -- ('mutants', 'Var', '(78, 85)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('cause', 'Reg', '(170, 175)', ('cause', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(176, 201)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+        "EventDedupKey": "gene | point mutations:mutations | hp:0001427 | amyloid hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+        "EvidenceType": "model_or_intervention",
+        "MechanismStrata": [
+          "amyloid/tau axis",
+          "mitochondrial and oxidative stress axis",
+          "vascular/metabolic axis",
+          "proteostasis/autophagy axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "hypothesis",
+            "value": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "frequency": 3,
+            "threshold": 3
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "model_or_intervention",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "Recent research in cellular, biochemical and animal models have shown that AD mutants affecting the presenilins, Ass, APP, and ApoE4 are associated with mitochondria and cause mitochondrial dysfunction and oxidative damage in AD (Fig."
+      }
+    ],
+    "synaptic and neuronal dysfunction axis": [
+      {
+        "Gene": "APOE",
+        "PMID": "36966157",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36966157/",
+        "Journal": "Nat Commun",
+        "Year": 2023,
+        "TermName": "Auditory Diseases, Central",
+        "TermType": "MeSH",
+        "Hypothesis": "Tau protein hypothesis,Neuroinflammation hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "genetic manipulation:knockout",
+        "GeneAlteration": "APOE / genetic manipulation:knockout",
+        "AlterationSignature": "genetic manipulation:knockout",
+        "AlterationType": "genetic manipulation:knockout",
+        "AlterationMention": "knockdown",
+        "AlterationID": "genetic manipulation:knockout",
+        "TriggerWord": "increased",
+        "RegType": "PosReg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('APOE', 'Gene', '(78, 82)', ('APOE', 'Gene', '348', '-')) -- ThemeOf -- ('knockdown', 'Var', '(83, 92)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(187, 196)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('entorhinal cortex loss', 'Disease', '(145, 167)', ('entorhinal cortex loss', 'Disease', 'MESH:D001304', '-'))",
+        "EventDedupKey": "gene | genetic manipulation:knockout | mesh:d001304 | tau protein hypothesis,neuroinflammation hypothesis",
+        "EvidenceType": "model_or_intervention",
+        "MechanismStrata": [
+          "amyloid/tau axis",
+          "neuroinflammation and microglia axis",
+          "synaptic and neuronal dysfunction axis",
+          "vascular/metabolic axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "phenotype",
+            "value": "Auditory Diseases, Central",
+            "frequency": 1,
+            "threshold": 1
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "model_or_intervention",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "Reinforcing earlier discussion on hp-tau aggregates and neuronal phagoptosis, APOE knockdown in P301S mice significantly reduced hippocampal and entorhinal cortex loss; APOE preservation increased Iba1 + (suggesting microglia and macrophage populations) cells that were positive with CD68 + phagocytic inclusions."
+      }
+    ],
+    "vascular/metabolic axis": [
+      {
+        "Gene": "APOE",
+        "PMID": "36966157",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36966157/",
+        "Journal": "Nat Commun",
+        "Year": 2023,
+        "TermName": "Auditory Diseases, Central",
+        "TermType": "MeSH",
+        "Hypothesis": "Tau protein hypothesis,Neuroinflammation hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "genetic manipulation:knockout",
+        "GeneAlteration": "APOE / genetic manipulation:knockout",
+        "AlterationSignature": "genetic manipulation:knockout",
+        "AlterationType": "genetic manipulation:knockout",
+        "AlterationMention": "knockdown",
+        "AlterationID": "genetic manipulation:knockout",
+        "TriggerWord": "increased",
+        "RegType": "PosReg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('APOE', 'Gene', '(78, 82)', ('APOE', 'Gene', '348', '-')) -- ThemeOf -- ('knockdown', 'Var', '(83, 92)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(187, 196)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('entorhinal cortex loss', 'Disease', '(145, 167)', ('entorhinal cortex loss', 'Disease', 'MESH:D001304', '-'))",
+        "EventDedupKey": "gene | genetic manipulation:knockout | mesh:d001304 | tau protein hypothesis,neuroinflammation hypothesis",
+        "EvidenceType": "model_or_intervention",
+        "MechanismStrata": [
+          "amyloid/tau axis",
+          "neuroinflammation and microglia axis",
+          "synaptic and neuronal dysfunction axis",
+          "vascular/metabolic axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "phenotype",
+            "value": "Auditory Diseases, Central",
+            "frequency": 1,
+            "threshold": 1
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "model_or_intervention",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "Reinforcing earlier discussion on hp-tau aggregates and neuronal phagoptosis, APOE knockdown in P301S mice significantly reduced hippocampal and entorhinal cortex loss; APOE preservation increased Iba1 + (suggesting microglia and macrophage populations) cells that were positive with CD68 + phagocytic inclusions."
+      },
+      {
+        "Gene": "APOE",
+        "PMID": "38004343",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38004343/",
+        "Journal": "Life (Basel);2023Nov13; 13 (11) . doi:10.3390/life13112203",
+        "Year": 2023,
+        "TermName": "of amyloid beta",
+        "TermType": "MeSH",
+        "Hypothesis": "Amyloid Hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "point mutations:mutations",
+        "GeneAlteration": "APOE / point mutations:mutations",
+        "AlterationSignature": "point mutations:mutations",
+        "AlterationType": "point mutations:Mutations",
+        "AlterationMention": "mutations",
+        "AlterationID": "point mutations:Mutations",
+        "TriggerWord": "overproduction",
+        "RegType": "PosReg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('apolipoprotein E4', 'Gene', '(146, 163)', ('apolipoprotein E4', 'Gene', '348', '-')) -- ThemeOf -- ('mutations', 'Var', '(74, 83)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('overproduction', 'PosReg', '(242, 256)', ('overproduction', 'PosReg', '-', '-')) -- ThemeOf -- ('of amyloid beta', 'Disease', '(257, 272)', ('of amyloid beta', 'Disease', 'MESH:C000718787', '-'))",
+        "EventDedupKey": "gene | point mutations:mutations | mesh:c000718787 | amyloid hypothesis",
+        "EvidenceType": "alteration_evidence",
+        "MechanismStrata": [
+          "amyloid/tau axis",
+          "vascular/metabolic axis",
+          "proteostasis/autophagy axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "phenotype",
+            "value": "of amyloid beta",
+            "frequency": 1,
+            "threshold": 1
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "alteration_evidence",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "EOAD is a very uncommon condition associated with genetic factors such as mutations in susceptibility genes like amyloid precursor protein (APP), apolipoprotein E4 (ApoE4), presenilin 1 (PSEN1), and presenilin 2 (PSEN2), which can lead to an overproduction of amyloid beta."
+      },
+      {
+        "Gene": "APOE",
+        "PMID": "36835187",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835187/",
+        "Journal": "Int J Mol Sci",
+        "Year": 2023,
+        "TermName": "isotype switching",
+        "TermType": "GO",
+        "Hypothesis": "Neuroinflammation hypothesis,Vascular hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "genetic manipulation:knock-in",
+        "GeneAlteration": "APOE / genetic manipulation:knock-in",
+        "AlterationSignature": "genetic manipulation:knock-in",
+        "AlterationType": "genetic manipulation:knock-in",
+        "AlterationMention": "knock-in",
+        "AlterationID": "-",
+        "TriggerWord": "high",
+        "RegType": "PosReg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('APOE4', 'Gene', '(79, 84)', ('APOE4', 'Gene', '348', '-')) -- ThemeOf -- ('knock-in', 'Var', '(85, 93)', ('knock-in', 'Mutation', '-', '-')) -- CauseOf -- ('high', 'PosReg', '(171, 175)', ('high', 'PosReg', '-', '-')) -- ThemeOf -- ('class switching', 'MPA', '(218, 233)', ('class switching', 'MPA', 'GO:0045190', 'isotype switching'))",
+        "EventDedupKey": "gene | genetic manipulation:knock-in | go:0045190 | neuroinflammation hypothesis,vascular hypothesis",
+        "EvidenceType": "model_or_intervention",
+        "MechanismStrata": [
+          "neuroinflammation and microglia axis",
+          "vascular/metabolic axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "phenotype",
+            "value": "isotype switching",
+            "frequency": 1,
+            "threshold": 1
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "model_or_intervention",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "Another study has demonstrated lower total IgG and IgA levels in the spleen of APOE4 knock-in mice compared with APOE3, but the levels of IgG2a subtype and IgM were quite high in APOE4 mice, suggesting differential Ig class switching in APOE4 mice compared with APOE3 or APOE2 mice."
+      },
+      {
+        "Gene": "APOE",
+        "PMID": "36927428",
+        "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36927428/",
+        "Journal": "Curr Neuropharmacol",
+        "Year": 2023,
+        "TermName": "Mitochondrial inheritance",
+        "TermType": "HPO",
+        "Hypothesis": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+        "SentenceQuality": 90.0,
+        "AlterationTaxonomy": "point mutations:mutations",
+        "GeneAlteration": "APOE / point mutations:mutations",
+        "AlterationSignature": "point mutations:mutations",
+        "AlterationType": "point mutations:Mutations",
+        "AlterationMention": "mutants",
+        "AlterationID": "point mutations:Mutations",
+        "TriggerWord": "cause",
+        "RegType": "Reg",
+        "MechanismProvided": "Yes",
+        "RelevantToAD": "Yes",
+        "Event": "('ApoE4', 'Gene', '(127, 132)', ('ApoE4', 'Gene', '348', '-')) -- ThemeOf -- ('mutants', 'Var', '(78, 85)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('cause', 'Reg', '(170, 175)', ('cause', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(176, 201)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+        "EventDedupKey": "gene | point mutations:mutations | hp:0001427 | amyloid hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+        "EvidenceType": "model_or_intervention",
+        "MechanismStrata": [
+          "amyloid/tau axis",
+          "mitochondrial and oxidative stress axis",
+          "vascular/metabolic axis",
+          "proteostasis/autophagy axis"
+        ],
+        "LongTailSignals": [
+          {
+            "dimension": "hypothesis",
+            "value": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+            "frequency": 3,
+            "threshold": 3
+          }
+        ],
+        "IsLongTailEvidence": true,
+        "CurationReasons": [
+          "model_or_intervention",
+          "high sentence informativeness",
+          "long-tail evidence signal",
+          "recent evidence",
+          "PMID-traceable"
+        ],
+        "Sentence": "Recent research in cellular, biochemical and animal models have shown that AD mutants affecting the presenilins, Ass, APP, and ApoE4 are associated with mitochondria and cause mitochondrial dysfunction and oxidative damage in AD (Fig."
+      }
+    ]
+  },
+  "chronological_summary": [
+    {
+      "period": "2010-2014",
+      "row_count": 588,
+      "dominant_mechanism_strata": [
+        {
+          "value": "vascular/metabolic axis",
+          "count": 588
+        },
+        {
+          "value": "amyloid/tau axis",
+          "count": 457
+        },
+        {
+          "value": "proteostasis/autophagy axis",
+          "count": 114
+        },
+        {
+          "value": "mitochondrial and oxidative stress axis",
+          "count": 102
+        },
+        {
+          "value": "neuroinflammation and microglia axis",
+          "count": 83
+        }
+      ]
+    },
+    {
+      "period": "2015-2019",
+      "row_count": 994,
+      "dominant_mechanism_strata": [
+        {
+          "value": "vascular/metabolic axis",
+          "count": 994
+        },
+        {
+          "value": "amyloid/tau axis",
+          "count": 764
+        },
+        {
+          "value": "proteostasis/autophagy axis",
+          "count": 181
+        },
+        {
+          "value": "mitochondrial and oxidative stress axis",
+          "count": 170
+        },
+        {
+          "value": "neuroinflammation and microglia axis",
+          "count": 137
+        }
+      ]
+    },
+    {
+      "period": "2020-2024",
+      "row_count": 1736,
+      "dominant_mechanism_strata": [
+        {
+          "value": "vascular/metabolic axis",
+          "count": 1736
+        },
+        {
+          "value": "amyloid/tau axis",
+          "count": 1351
+        },
+        {
+          "value": "neuroinflammation and microglia axis",
+          "count": 423
+        },
+        {
+          "value": "proteostasis/autophagy axis",
+          "count": 386
+        },
+        {
+          "value": "mitochondrial and oxidative stress axis",
+          "count": 273
+        }
+      ]
+    },
+    {
+      "period": "before 2010",
+      "row_count": 381,
+      "dominant_mechanism_strata": [
+        {
+          "value": "vascular/metabolic axis",
+          "count": 381
+        },
+        {
+          "value": "amyloid/tau axis",
+          "count": 305
+        },
+        {
+          "value": "mitochondrial and oxidative stress axis",
+          "count": 89
+        },
+        {
+          "value": "synaptic and neuronal dysfunction axis",
+          "count": 53
+        },
+        {
+          "value": "proteostasis/autophagy axis",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "period": "missing year",
+      "row_count": 303,
+      "dominant_mechanism_strata": [
+        {
+          "value": "vascular/metabolic axis",
+          "count": 303
+        },
+        {
+          "value": "amyloid/tau axis",
+          "count": 249
+        },
+        {
+          "value": "neuroinflammation and microglia axis",
+          "count": 86
+        },
+        {
+          "value": "mitochondrial and oxidative stress axis",
+          "count": 44
+        },
+        {
+          "value": "proteostasis/autophagy axis",
+          "count": 42
+        }
+      ]
+    }
+  ],
+  "bias_notes": [
+    "Curation pool source: remote_api (server_full_query_pool).",
+    "Curation used 13188 curation pool row(s) and reduced them to 4002 event-unique row(s).",
+    "Event deduplication key: gene-fixed event key: alteration taxonomy + phenotype/term + hypothesis; fallback to PMID/sentence when structured fields are sparse.",
+    "The curation pool covers 13188 of 13188 event record(s) matched by the curation query (100.00%).",
+    "The most frequent PMID contributes 21 of 4002 event-unique rows.",
+    "The most frequent phenotype is `Alzheimer Disease` with 81 event-unique row(s).",
+    "The most frequent alteration taxonomy appears in 2586 event-unique row(s).",
+    "Broad disease/background terms account for 310 of 4002 event-unique rows.",
+    "303 event-unique row(s) lack usable year metadata."
+  ],
+  "selected_evidence": [
+    {
+      "Gene": "APOE",
+      "PMID": "36966157",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36966157/",
+      "Journal": "Nat Commun",
+      "Year": 2023,
+      "TermName": "Auditory Diseases, Central",
+      "TermType": "MeSH",
+      "Hypothesis": "Tau protein hypothesis,Neuroinflammation hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "genetic manipulation:knockout",
+      "GeneAlteration": "APOE / genetic manipulation:knockout",
+      "AlterationSignature": "genetic manipulation:knockout",
+      "AlterationType": "genetic manipulation:knockout",
+      "AlterationMention": "knockdown",
+      "AlterationID": "genetic manipulation:knockout",
+      "TriggerWord": "increased",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE', 'Gene', '(78, 82)', ('APOE', 'Gene', '348', '-')) -- ThemeOf -- ('knockdown', 'Var', '(83, 92)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(187, 196)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('entorhinal cortex loss', 'Disease', '(145, 167)', ('entorhinal cortex loss', 'Disease', 'MESH:D001304', '-'))",
+      "EventDedupKey": "gene | genetic manipulation:knockout | mesh:d001304 | tau protein hypothesis,neuroinflammation hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "amyloid/tau axis",
+        "neuroinflammation and microglia axis",
+        "synaptic and neuronal dysfunction axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "Auditory Diseases, Central",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "Reinforcing earlier discussion on hp-tau aggregates and neuronal phagoptosis, APOE knockdown in P301S mice significantly reduced hippocampal and entorhinal cortex loss; APOE preservation increased Iba1 + (suggesting microglia and macrophage populations) cells that were positive with CD68 + phagocytic inclusions."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "38004343",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38004343/",
+      "Journal": "Life (Basel);2023Nov13; 13 (11) . doi:10.3390/life13112203",
+      "Year": 2023,
+      "TermName": "of amyloid beta",
+      "TermType": "MeSH",
+      "Hypothesis": "Amyloid Hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "point mutations:mutations",
+      "GeneAlteration": "APOE / point mutations:mutations",
+      "AlterationSignature": "point mutations:mutations",
+      "AlterationType": "point mutations:Mutations",
+      "AlterationMention": "mutations",
+      "AlterationID": "point mutations:Mutations",
+      "TriggerWord": "overproduction",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('apolipoprotein E4', 'Gene', '(146, 163)', ('apolipoprotein E4', 'Gene', '348', '-')) -- ThemeOf -- ('mutations', 'Var', '(74, 83)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('overproduction', 'PosReg', '(242, 256)', ('overproduction', 'PosReg', '-', '-')) -- ThemeOf -- ('of amyloid beta', 'Disease', '(257, 272)', ('of amyloid beta', 'Disease', 'MESH:C000718787', '-'))",
+      "EventDedupKey": "gene | point mutations:mutations | mesh:c000718787 | amyloid hypothesis",
+      "EvidenceType": "alteration_evidence",
+      "MechanismStrata": [
+        "amyloid/tau axis",
+        "vascular/metabolic axis",
+        "proteostasis/autophagy axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "of amyloid beta",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "alteration_evidence",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "EOAD is a very uncommon condition associated with genetic factors such as mutations in susceptibility genes like amyloid precursor protein (APP), apolipoprotein E4 (ApoE4), presenilin 1 (PSEN1), and presenilin 2 (PSEN2), which can lead to an overproduction of amyloid beta."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "36835187",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36835187/",
+      "Journal": "Int J Mol Sci",
+      "Year": 2023,
+      "TermName": "isotype switching",
+      "TermType": "GO",
+      "Hypothesis": "Neuroinflammation hypothesis,Vascular hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "genetic manipulation:knock-in",
+      "GeneAlteration": "APOE / genetic manipulation:knock-in",
+      "AlterationSignature": "genetic manipulation:knock-in",
+      "AlterationType": "genetic manipulation:knock-in",
+      "AlterationMention": "knock-in",
+      "AlterationID": "-",
+      "TriggerWord": "high",
+      "RegType": "PosReg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('APOE4', 'Gene', '(79, 84)', ('APOE4', 'Gene', '348', '-')) -- ThemeOf -- ('knock-in', 'Var', '(85, 93)', ('knock-in', 'Mutation', '-', '-')) -- CauseOf -- ('high', 'PosReg', '(171, 175)', ('high', 'PosReg', '-', '-')) -- ThemeOf -- ('class switching', 'MPA', '(218, 233)', ('class switching', 'MPA', 'GO:0045190', 'isotype switching'))",
+      "EventDedupKey": "gene | genetic manipulation:knock-in | go:0045190 | neuroinflammation hypothesis,vascular hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "neuroinflammation and microglia axis",
+        "vascular/metabolic axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "phenotype",
+          "value": "isotype switching",
+          "frequency": 1,
+          "threshold": 1
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "Another study has demonstrated lower total IgG and IgA levels in the spleen of APOE4 knock-in mice compared with APOE3, but the levels of IgG2a subtype and IgM were quite high in APOE4 mice, suggesting differential Ig class switching in APOE4 mice compared with APOE3 or APOE2 mice."
+    },
+    {
+      "Gene": "APOE",
+      "PMID": "36927428",
+      "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36927428/",
+      "Journal": "Curr Neuropharmacol",
+      "Year": 2023,
+      "TermName": "Mitochondrial inheritance",
+      "TermType": "HPO",
+      "Hypothesis": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+      "SentenceQuality": 90.0,
+      "AlterationTaxonomy": "point mutations:mutations",
+      "GeneAlteration": "APOE / point mutations:mutations",
+      "AlterationSignature": "point mutations:mutations",
+      "AlterationType": "point mutations:Mutations",
+      "AlterationMention": "mutants",
+      "AlterationID": "point mutations:Mutations",
+      "TriggerWord": "cause",
+      "RegType": "Reg",
+      "MechanismProvided": "Yes",
+      "RelevantToAD": "Yes",
+      "Event": "('ApoE4', 'Gene', '(127, 132)', ('ApoE4', 'Gene', '348', '-')) -- ThemeOf -- ('mutants', 'Var', '(78, 85)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('cause', 'Reg', '(170, 175)', ('cause', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'CPA', '(176, 201)', ('mitochondrial dysfunction', 'CPA', 'HP:0001427', 'Mitochondrial inheritance'))",
+      "EventDedupKey": "gene | point mutations:mutations | hp:0001427 | amyloid hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+      "EvidenceType": "model_or_intervention",
+      "MechanismStrata": [
+        "amyloid/tau axis",
+        "mitochondrial and oxidative stress axis",
+        "vascular/metabolic axis",
+        "proteostasis/autophagy axis"
+      ],
+      "LongTailSignals": [
+        {
+          "dimension": "hypothesis",
+          "value": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+          "frequency": 3,
+          "threshold": 3
+        }
+      ],
+      "IsLongTailEvidence": true,
+      "CurationReasons": [
+        "model_or_intervention",
+        "high sentence informativeness",
+        "long-tail evidence signal",
+        "recent evidence",
+        "PMID-traceable"
+      ],
+      "Sentence": "Recent research in cellular, biochemical and animal models have shown that AD mutants affecting the presenilins, Ass, APP, and ApoE4 are associated with mitochondria and cause mitochondrial dysfunction and oxidative damage in AD (Fig."
+    }
+  ]
+}

@@ -1,0 +1,2802 @@
+{
+  "tool": "curate_hypothesis_evidence",
+  "status": "ok",
+  "query": {
+    "hypothesis": "Tau Protein Hypothesis",
+    "selected_limit": 5
+  },
+  "count": 5,
+  "data": {
+    "curation": {
+      "global_statistics": {
+        "summary": {
+          "event_count": 38095,
+          "pmid_count": 5580,
+          "gene_count": 1410,
+          "term_count": 1024
+        },
+        "top_genes": [
+          {
+            "Gene": "MAPT",
+            "freq": 16999
+          },
+          {
+            "Gene": "APP",
+            "freq": 1736
+          },
+          {
+            "Gene": "PSEN1",
+            "freq": 1562
+          },
+          {
+            "Gene": "APOE",
+            "freq": 757
+          },
+          {
+            "Gene": "SNCA",
+            "freq": 650
+          },
+          {
+            "Gene": "TAS2R62P",
+            "freq": 574
+          },
+          {
+            "Gene": "GRN",
+            "freq": 494
+          },
+          {
+            "Gene": "TARDBP",
+            "freq": 473
+          },
+          {
+            "Gene": "TREM2",
+            "freq": 435
+          },
+          {
+            "Gene": "PSEN2",
+            "freq": 374
+          }
+        ],
+        "top_terms": [
+          {
+            "TermName": "Alzheimer Disease",
+            "TermType": "MeSH",
+            "freq": 2335
+          },
+          {
+            "TermName": "protein",
+            "TermType": "GO",
+            "freq": 1341
+          },
+          {
+            "TermName": "Dementia",
+            "TermType": "HPO",
+            "freq": 864
+          },
+          {
+            "TermName": "phosphorylation",
+            "TermType": "GO",
+            "freq": 809
+          },
+          {
+            "TermName": "Tauopathies",
+            "TermType": "MeSH",
+            "freq": 780
+          },
+          {
+            "TermName": "Neurodegeneration",
+            "TermType": "HPO",
+            "freq": 598
+          },
+          {
+            "TermName": "Frontotemporal dementia",
+            "TermType": "HPO",
+            "freq": 565
+          },
+          {
+            "TermName": "Nerve Degeneration",
+            "TermType": "MeSH",
+            "freq": 510
+          },
+          {
+            "TermName": "biosynthetic process",
+            "TermType": "GO",
+            "freq": 468
+          },
+          {
+            "TermName": "hyperphosphorylation",
+            "TermType": "GO",
+            "freq": 458
+          }
+        ]
+      },
+      "coverage_scope": {
+        "query_type": "hypothesis",
+        "curation_source": "remote_api",
+        "curation_scope": "server_full_query_pool",
+        "overview_event_count": 38095,
+        "matched_event_count": 38103,
+        "curation_pool_rows": 38103,
+        "coverage_ratio": 1.0,
+        "api_limit_notice": null,
+        "curation_endpoint_url": "http://117.72.176.137/api/adalterome/hypothesis/curation?hypothesis=Tau+Protein+Hypothesis&selected_limit=5"
+      },
+      "deduplication_summary": {
+        "curation_pool_row_count": 38103,
+        "event_unique_rows": 17537,
+        "event_deduplication_key": "hypothesis-fixed event key: gene + alteration taxonomy + phenotype/term; fallback to PMID/sentence when structured fields are sparse",
+        "unique_pmids": 4520,
+        "unique_genes": 1410,
+        "unique_phenotypes": 1039,
+        "unique_terms": 1039,
+        "unique_alteration_taxonomies": 28,
+        "unique_gene_alterations": 2731,
+        "unique_alteration_signatures": 28,
+        "unique_hypotheses": 142
+      },
+      "dominant_clusters": {
+        "top_pmids": [
+          {
+            "value": "33419465",
+            "count": 77
+          },
+          {
+            "value": "30249283",
+            "count": 54
+          },
+          {
+            "value": "32325732",
+            "count": 52
+          },
+          {
+            "value": "31405128",
+            "count": 49
+          },
+          {
+            "value": "37131250",
+            "count": 48
+          }
+        ],
+        "top_genes": [
+          {
+            "value": "MAPT",
+            "count": 4533
+          },
+          {
+            "value": "APP",
+            "count": 695
+          },
+          {
+            "value": "PSEN1",
+            "count": 573
+          },
+          {
+            "value": "SNCA",
+            "count": 321
+          },
+          {
+            "value": "TAS2R62P",
+            "count": 320
+          }
+        ],
+        "top_phenotypes": [
+          {
+            "value": "Alzheimer Disease",
+            "count": 524
+          },
+          {
+            "value": "protein",
+            "count": 378
+          },
+          {
+            "value": "phosphorylation",
+            "count": 337
+          },
+          {
+            "value": "Neurodegeneration",
+            "count": 203
+          },
+          {
+            "value": "hyperphosphorylation",
+            "count": 190
+          }
+        ],
+        "top_terms": [
+          {
+            "value": "Alzheimer Disease",
+            "count": 524
+          },
+          {
+            "value": "protein",
+            "count": 378
+          },
+          {
+            "value": "phosphorylation",
+            "count": 337
+          },
+          {
+            "value": "Neurodegeneration",
+            "count": 203
+          },
+          {
+            "value": "hyperphosphorylation",
+            "count": 190
+          }
+        ],
+        "top_gene_alterations": [
+          {
+            "value": "MAPT / point mutations:mutations",
+            "count": 1104
+          },
+          {
+            "value": "MAPT / normalized variants:dna change",
+            "count": 1074
+          },
+          {
+            "value": "MAPT / structural variation:deletion",
+            "count": 322
+          },
+          {
+            "value": "MAPT / epigenic changes:phosphorylation",
+            "count": 312
+          },
+          {
+            "value": "PSEN1 / point mutations:mutations",
+            "count": 293
+          }
+        ],
+        "top_alteration_taxonomies": [
+          {
+            "value": "point mutations:mutations",
+            "count": 5508
+          },
+          {
+            "value": "normalized variants:dna change",
+            "count": 2341
+          },
+          {
+            "value": "structural variation:deletion",
+            "count": 1615
+          },
+          {
+            "value": "expression changes:dysregulation",
+            "count": 1347
+          },
+          {
+            "value": "expression changes:underexpression",
+            "count": 1273
+          }
+        ],
+        "top_hypotheses": [
+          {
+            "value": "Tau Protein Hypothesis",
+            "count": 4378
+          },
+          {
+            "value": "Amyloid Hypothesis,Tau Protein Hypothesis",
+            "count": 3739
+          },
+          {
+            "value": "Tau protein hypothesis",
+            "count": 1856
+          },
+          {
+            "value": "Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+            "count": 1037
+          },
+          {
+            "value": "Amyloid hypothesis,Tau protein hypothesis",
+            "count": 963
+          }
+        ],
+        "evidence_types": [
+          {
+            "value": "alteration_evidence",
+            "count": 11755
+          },
+          {
+            "value": "model_or_intervention",
+            "count": 5782
+          }
+        ],
+        "mechanism_strata": [
+          {
+            "value": "amyloid/tau axis",
+            "count": 17537
+          },
+          {
+            "value": "synaptic and neuronal dysfunction axis",
+            "count": 6254
+          },
+          {
+            "value": "proteostasis/autophagy axis",
+            "count": 6133
+          },
+          {
+            "value": "neuroinflammation and microglia axis",
+            "count": 3228
+          },
+          {
+            "value": "mitochondrial and oxidative stress axis",
+            "count": 3141
+          }
+        ]
+      },
+      "query_relative_patterns": {
+        "gene": {
+          "label": "Gene",
+          "top": [
+            {
+              "value": "MAPT",
+              "count": 4533
+            },
+            {
+              "value": "APP",
+              "count": 695
+            },
+            {
+              "value": "PSEN1",
+              "count": 573
+            },
+            {
+              "value": "SNCA",
+              "count": 321
+            },
+            {
+              "value": "TAS2R62P",
+              "count": 320
+            },
+            {
+              "value": "APOE",
+              "count": 310
+            },
+            {
+              "value": "TREM2",
+              "count": 267
+            },
+            {
+              "value": "TARDBP",
+              "count": 211
+            }
+          ],
+          "long_tail": [
+            {
+              "value": "ABCC1",
+              "count": 1
+            },
+            {
+              "value": "ABCC6",
+              "count": 1
+            },
+            {
+              "value": "ABT1",
+              "count": 1
+            },
+            {
+              "value": "ACVR1",
+              "count": 1
+            },
+            {
+              "value": "ADGRB3",
+              "count": 1
+            },
+            {
+              "value": "AGER",
+              "count": 1
+            },
+            {
+              "value": "AGPS",
+              "count": 1
+            },
+            {
+              "value": "AIF1",
+              "count": 1
+            }
+          ],
+          "long_tail_threshold": 2
+        },
+        "gene_alteration": {
+          "label": "Gene-alteration",
+          "top": [
+            {
+              "value": "MAPT / point mutations:mutations",
+              "count": 1104
+            },
+            {
+              "value": "MAPT / normalized variants:dna change",
+              "count": 1074
+            },
+            {
+              "value": "MAPT / structural variation:deletion",
+              "count": 322
+            },
+            {
+              "value": "MAPT / epigenic changes:phosphorylation",
+              "count": 312
+            },
+            {
+              "value": "PSEN1 / point mutations:mutations",
+              "count": 293
+            },
+            {
+              "value": "APP / point mutations:mutations",
+              "count": 293
+            },
+            {
+              "value": "MAPT / expression changes:dysregulation",
+              "count": 275
+            },
+            {
+              "value": "PSEN1 / normalized variants:dna change",
+              "count": 196
+            }
+          ],
+          "long_tail": [
+            {
+              "value": "ABCC1 / normalized variants:rsid normalized",
+              "count": 1
+            },
+            {
+              "value": "ABCC6 / point mutations:mutations",
+              "count": 1
+            },
+            {
+              "value": "ABI3 / normalized variants:protein change",
+              "count": 1
+            },
+            {
+              "value": "ABT1 / point mutations:mutations",
+              "count": 1
+            },
+            {
+              "value": "ACAT2 / normalized variants:dna change",
+              "count": 1
+            },
+            {
+              "value": "ACAT2 / point mutations:mutations",
+              "count": 1
+            },
+            {
+              "value": "ACHE / expression changes:underexpression",
+              "count": 1
+            },
+            {
+              "value": "ACHE / point mutations:mutations",
+              "count": 1
+            }
+          ],
+          "long_tail_threshold": 1
+        },
+        "phenotype": {
+          "label": "Phenotype",
+          "top": [
+            {
+              "value": "phosphorylation",
+              "count": 337
+            },
+            {
+              "value": "AD",
+              "count": 309
+            },
+            {
+              "value": "4137",
+              "count": 292
+            },
+            {
+              "value": "Neurodegeneration",
+              "count": 203
+            },
+            {
+              "value": "hyperphosphorylation",
+              "count": 190
+            },
+            {
+              "value": "biosynthetic process",
+              "count": 174
+            },
+            {
+              "value": "Nerve Degeneration",
+              "count": 161
+            },
+            {
+              "value": "Tauopathies",
+              "count": 157
+            }
+          ],
+          "long_tail": [
+            {
+              "value": "1-phosphatidylinositol-3-kinase activity",
+              "count": 1
+            },
+            {
+              "value": "100506658",
+              "count": 1
+            },
+            {
+              "value": "101084670",
+              "count": 1
+            },
+            {
+              "value": "10376",
+              "count": 1
+            },
+            {
+              "value": "10919",
+              "count": 1
+            },
+            {
+              "value": "10922",
+              "count": 1
+            },
+            {
+              "value": "10971",
+              "count": 1
+            },
+            {
+              "value": "112935892",
+              "count": 1
+            }
+          ],
+          "long_tail_threshold": 1
+        }
+      },
+      "long_tail_definition": {
+        "method": "Query-specific frequency <= min(Q25, 10) after event-level deduplication",
+        "dimensions": [
+          "gene",
+          "gene_alteration",
+          "phenotype"
+        ],
+        "thresholds": {
+          "gene": 2,
+          "gene_alteration": 1,
+          "phenotype": 1
+        }
+      },
+      "long_tail_signals": [
+        {
+          "Gene": "UCP1",
+          "PMID": "36769062",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36769062/",
+          "Journal": "Int J Mol Sci",
+          "Year": 2023,
+          "TermName": "phosphorylation",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid hypothesis,Tau protein hypothesis,Oxidative stress hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:deletion",
+          "GeneAlteration": "UCP1 / structural variation:deletion",
+          "AlterationSignature": "structural variation:deletion",
+          "AlterationType": "structural variation:deletion",
+          "AlterationMention": "Deletion",
+          "AlterationID": "structural variation:deletion",
+          "TriggerWord": "leading to",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('UCP1', 'Gene', '(12, 16)', ('UCP1', 'Gene', '24860', '-')) -- ThemeOf -- ('Deletion', 'Var', '(0, 8)', ('Deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('leading to', 'Reg', '(363, 373)', ('leading to', 'Reg', '-', '-')) -- ThemeOf -- ('phosphorylation', 'MPA', '(378, 393)', ('phosphorylation', 'MPA', 'GO:0016310', 'phosphorylation'))",
+          "EventDedupKey": "hypothesis | ucp1 | structural variation:deletion | go:0016310",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "UCP1",
+              "frequency": 2,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Deletion of UCP1 in Tg2576 Mice Increases Body Temperature and Exacerbates Alzheimer's Disease-Related Pathologies We previously demonstrated that the Alzheimer's disease (AD)-like model mice, Tg2576, housed at a high ambient temperature of 30 C for 13 months, exhibited increased body temperature, which increased amyloid-beta (Abeta) levels and tau stability, leading to tau phosphorylation and ultimately inducing memory impairment."
+        },
+        {
+          "Gene": "UCP1",
+          "PMID": "36769062",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36769062/",
+          "Journal": "Int J Mol Sci",
+          "Year": 2023,
+          "TermName": "Memory impairment",
+          "TermType": "HPO",
+          "Hypothesis": "Amyloid hypothesis,Tau protein hypothesis,Oxidative stress hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:deletion",
+          "GeneAlteration": "UCP1 / structural variation:deletion",
+          "AlterationSignature": "structural variation:deletion",
+          "AlterationType": "structural variation:deletion",
+          "AlterationMention": "Deletion",
+          "AlterationID": "structural variation:deletion",
+          "TriggerWord": "inducing",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('UCP1', 'Gene', '(12, 16)', ('UCP1', 'Gene', '24860', '-')) -- ThemeOf -- ('Deletion', 'Var', '(0, 8)', ('Deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('inducing', 'Reg', '(409, 417)', ('inducing', 'Reg', '-', '-')) -- ThemeOf -- ('memory impairment', 'CPA', '(418, 435)', ('memory impairment', 'CPA', 'HP:0002354', 'Memory loss'))",
+          "EventDedupKey": "hypothesis | ucp1 | structural variation:deletion | hp:0002354",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "UCP1",
+              "frequency": 2,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Deletion of UCP1 in Tg2576 Mice Increases Body Temperature and Exacerbates Alzheimer's Disease-Related Pathologies We previously demonstrated that the Alzheimer's disease (AD)-like model mice, Tg2576, housed at a high ambient temperature of 30 C for 13 months, exhibited increased body temperature, which increased amyloid-beta (Abeta) levels and tau stability, leading to tau phosphorylation and ultimately inducing memory impairment."
+        },
+        {
+          "Gene": "MAG",
+          "PMID": "37927337",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37927337/",
+          "Journal": "Front Aging Neurosci",
+          "Year": 2023,
+          "TermName": "biosynthetic process",
+          "TermType": "GO",
+          "Hypothesis": "Tau Protein Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:deletion",
+          "GeneAlteration": "MAG / structural variation:deletion",
+          "AlterationSignature": "structural variation:deletion",
+          "AlterationType": "structural variation:deletion",
+          "AlterationMention": "deficient",
+          "AlterationID": "structural variation:deletion",
+          "TriggerWord": "altered",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('myelin-associated glycoprotein', 'Gene', '(357, 387)', ('myelin-associated glycoprotein', 'Gene', '17136', '-')) -- ThemeOf -- ('deficient', 'Var', '(177, 186)', ('deficient', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('altered', 'Reg', '(131, 138)', ('altered', 'Reg', '-', '-')) -- ThemeOf -- ('formation', 'MPA', '(139, 148)', ('formation', 'MPA', 'GO:0009058', 'biosynthetic process'))",
+          "EventDedupKey": "hypothesis | mag | structural variation:deletion | go:0009058",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "synaptic and neuronal dysfunction axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "MAG",
+              "frequency": 1,
+              "threshold": 2
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "MAG / structural variation:deletion",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Previous studies have demonstrated that axonal pathology preceding axonal degeneration includes impairment of axonal transport and altered formation of axonal spheroids in mice deficient in PLP (proteolipid protein) and CNP (2',3'-cyclic nucleotide 3'-phosphodiesterase), as well as reduced neurofilament phosphorylation and smaller axonal diameter in MAG (myelin-associated glycoprotein) deficient mice."
+        },
+        {
+          "Gene": "CD68",
+          "PMID": "36966157",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36966157/",
+          "Journal": "Nat Commun",
+          "Year": 2023,
+          "TermName": "Auditory Diseases, Central",
+          "TermType": "MeSH",
+          "Hypothesis": "Tau protein hypothesis,Neuroinflammation hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "CD68 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockdown",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "increased",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('CD68', 'Gene', '(284, 288)', ('CD68', 'Gene', '12514', '-')) -- ThemeOf -- ('knockdown', 'Var', '(83, 92)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(187, 196)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('entorhinal cortex loss', 'Disease', '(145, 167)', ('entorhinal cortex loss', 'Disease', 'MESH:D001304', '-'))",
+          "EventDedupKey": "hypothesis | cd68 | genetic manipulation:knockout | mesh:d001304",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "neuroinflammation and microglia axis",
+            "synaptic and neuronal dysfunction axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "CD68 / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Reinforcing earlier discussion on hp-tau aggregates and neuronal phagoptosis, APOE knockdown in P301S mice significantly reduced hippocampal and entorhinal cortex loss; APOE preservation increased Iba1 + (suggesting microglia and macrophage populations) cells that were positive with CD68 + phagocytic inclusions."
+        },
+        {
+          "Gene": "UCHL1",
+          "PMID": "37507386",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37507386/",
+          "Journal": "Cell Death Dis",
+          "Year": 2023,
+          "TermName": "biosynthetic process",
+          "TermType": "GO",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "UCHL1 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockdown",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "increased",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('UCHL1', 'Gene', '(35, 40)', ('UCHL1', 'Gene', '7345', '-')) -- ThemeOf -- ('knockdown', 'Var', '(213, 222)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(230, 239)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('formation of phosphorylated tau', 'MPA', '(240, 271)', ('formation of phosphorylated tau', 'MPA', 'GO:0009058', 'biosynthetic process'))",
+          "EventDedupKey": "hypothesis | uchl1 | genetic manipulation:knockout | go:0009058",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "UCHL1 / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "For instance, the protein level of UCHL1 is inversely associated with the generation of neurofibrillary tangles in AD brains; overexpression of UCHL1 resulted in a decreased level of phosphorylated tau, while its knockdown led to increased formation of phosphorylated tau."
+        },
+        {
+          "Gene": "ADRB1",
+          "PMID": "37014857",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37014857/",
+          "Journal": "Proc Natl Acad Sci U S A",
+          "Year": 2023,
+          "TermName": "Frontotemporal dementia",
+          "TermType": "HPO",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "normalized variants:dna change",
+          "GeneAlteration": "ADRB1 / normalized variants:dna change",
+          "AlterationSignature": "normalized variants:dna change",
+          "AlterationType": "Normalized Variants:DNA Change",
+          "AlterationMention": "A187V",
+          "AlterationID": "rs776439595",
+          "TriggerWord": "causes",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('ADRB1', 'Gene', 'dbSNP', ('ADRB1', 'Gene', '153', '-')) -- ThemeOf -- ('A187V', 'Var', '(37, 42)', ('A187V', 'Mutation', 'rs776439595', '-')) -- CauseOf -- ('causes', 'Reg', '(214, 220)', ('causes', 'Reg', '-', '-')) -- ThemeOf -- ('frontotemporal dementia', 'CPA', '(231, 254)', ('frontotemporal dementia', 'CPA', 'HP:0002145', 'Frontotemporal dementia'))",
+          "EventDedupKey": "hypothesis | adrb1 | normalized variants:dna change | hp:0002145",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "ADRB1",
+              "frequency": 2,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "To determine the effect of the Adrb1-A187V mutation on the accumulation of tau pathology, we crossed heterozygous Adrb1-A187V mice (Adrb1+/m) with PS19 tau mice expressing 1N4R human tau with a P301S mutation that causes a form of frontotemporal dementia (Adrb1+/m;PS19)."
+        },
+        {
+          "Gene": "DDR1",
+          "PMID": "37194065",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37194065/",
+          "Journal": "J Neuroinflammation;2023May16; 20 (1) 116. doi:10.1186/s12974-023-02802-0",
+          "Year": 2023,
+          "TermName": "PD",
+          "TermType": "MeSH",
+          "Hypothesis": "Abnormal autophagy hypothesis,Amyloid hypothesis,Tau protein hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "expression changes:underexpression",
+          "GeneAlteration": "DDR1 / expression changes:underexpression",
+          "AlterationSignature": "expression changes:underexpression",
+          "AlterationType": "expression changes:underexpression",
+          "AlterationMention": "inhibition",
+          "AlterationID": "expression changes:underexpression",
+          "TriggerWord": "upregulated",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('DDR1', 'Gene', '(0, 4)', ('DDR1', 'Gene', '12305', '-')) -- ThemeOf -- ('inhibition', 'Var', '(5, 15)', ('inhibition', 'Mutation', 'expression changes:underexpression', 'expression changes:underexpression')) -- CauseOf -- ('upregulated', 'PosReg', '(124, 135)', ('upregulated', 'PosReg', '-', '-')) -- ThemeOf -- ('PD', 'Disease', '(172, 174)', ('PD', 'Disease', 'MESH:D010300', '-'))",
+          "EventDedupKey": "hypothesis | ddr1 | expression changes:underexpression | mesh:d010300",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "DDR1",
+              "frequency": 2,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "DDR1 inhibition stimulates clearance of neurotoxic proteins via autophagy in animal models of neurodegeneration and DDR1 is upregulated in post-mortem Parkinson's disease (PD) and AD brains."
+        },
+        {
+          "Gene": "USP5",
+          "PMID": "37726816",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37726816/",
+          "Journal": "Cancer Cell Int",
+          "Year": 2023,
+          "TermName": "phosphorylation",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "USP5 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockdown",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "induction",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('USP5', 'Gene', '(49, 53)', ('USP5', 'Gene', '22225', '-')) -- ThemeOf -- ('knockdown', 'Var', '(36, 45)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('induction', 'PosReg', '(125, 134)', ('induction', 'PosReg', '-', '-')) -- ThemeOf -- ('phosphorylation', 'MPA', '(148, 163)', ('phosphorylation', 'MPA', 'GO:0016310', 'phosphorylation'))",
+          "EventDedupKey": "hypothesis | usp5 | genetic manipulation:knockout | go:0016310",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "USP5",
+              "frequency": 1,
+              "threshold": 2
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "USP5 / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Recently, Xue's study revealed that knockdown of USP5 expression caused downregulation of the beta-catenin protein level and induction of GSK-3beta phosphorylation on Ser9."
+        },
+        {
+          "Gene": "FLNA",
+          "PMID": "36399251",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36399251/",
+          "Journal": "Mol Neurobiol",
+          "Year": 2023,
+          "TermName": "intracellular anatomical structure",
+          "TermType": "GO",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "normalized variants:dna change",
+          "GeneAlteration": "FLNA / normalized variants:dna change",
+          "AlterationSignature": "normalized variants:dna change",
+          "AlterationType": "Normalized Variants:DNA Change",
+          "AlterationMention": "P301L",
+          "AlterationID": "p.P301L",
+          "TriggerWord": "accumulation",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('FLNA', 'Gene', '(53, 57)', ('FLNA', 'Gene', '192176', '-')) -- ThemeOf -- ('P301L', 'Var', '(134, 139)', ('P301L', 'Mutation', 'p.P301L', '-')) -- CauseOf -- ('accumulation', 'PosReg', '(87, 99)', ('accumulation', 'PosReg', '-', '-')) -- ThemeOf -- ('intracellular', 'MPA', '(73, 86)', ('intracellular', 'MPA', 'GO:0005622', 'intracellular anatomical structure'))",
+          "EventDedupKey": "hypothesis | flna | normalized variants:dna change | go:0005622",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "FLNA / normalized variants:dna change",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Our results also revealed that the overexpression of FLNA resulted in an intracellular accumulation of wild-type Tau and Tau mutants (P301L, V337M, and R406W) in N2a cells."
+        },
+        {
+          "Gene": "CUL5",
+          "PMID": "37398204",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37398204/",
+          "Journal": "bioRxiv",
+          "Year": 2023,
+          "TermName": "Obligate",
+          "TermType": "HPO",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "CUL5 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockdown",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "increases",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('CUL5', 'Gene', '(29, 33)', ('CUL5', 'Gene', '8065', '-')) -- ThemeOf -- ('knockdown', 'Var', '(102, 111)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increases', 'PosReg', '(121, 130)', ('increases', 'PosReg', '-', '-')) -- ThemeOf -- ('obligate', 'CPA', '(43, 51)', ('obligate', 'CPA', 'HP:0040280', 'Obligate (100%)'))",
+          "EventDedupKey": "hypothesis | cul5 | genetic manipulation:knockout | hp:0040280",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "CUL5",
+              "frequency": 2,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "The Cullin-RING ligase (CRL) CUL5, and its obligate E2 ligase adaptor, RNF7, were also among top hits knockdown of which increases tau oligomer levels."
+        },
+        {
+          "Gene": "RNF7",
+          "PMID": "37398204",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37398204/",
+          "Journal": "bioRxiv",
+          "Year": 2023,
+          "TermName": "Obligate",
+          "TermType": "HPO",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "RNF7 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockdown",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "increases",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('RNF7', 'Gene', '(71, 75)', ('RNF7', 'Gene', '9616', '-')) -- ThemeOf -- ('knockdown', 'Var', '(102, 111)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increases', 'PosReg', '(121, 130)', ('increases', 'PosReg', '-', '-')) -- ThemeOf -- ('obligate', 'CPA', '(43, 51)', ('obligate', 'CPA', 'HP:0040280', 'Obligate (100%)'))",
+          "EventDedupKey": "hypothesis | rnf7 | genetic manipulation:knockout | hp:0040280",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "RNF7",
+              "frequency": 2,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "The Cullin-RING ligase (CRL) CUL5, and its obligate E2 ligase adaptor, RNF7, were also among top hits knockdown of which increases tau oligomer levels."
+        },
+        {
+          "Gene": "DNAJC7",
+          "PMID": "38110916",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38110916/",
+          "Journal": "BMC Biol;2023Dec18; 21 (1) 293. doi:10.1186/s12915-023-01798-6",
+          "Year": 2023,
+          "TermName": "intracellular anatomical structure",
+          "TermType": "-",
+          "Hypothesis": "Tau protein hypothesis,Abnormal autophagy hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "DNAJC7 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockout",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "increase",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('DNAJC7', 'Gene', '(22, 28)', ('DNAJC7', 'Gene', '7266', '-')) -- ThemeOf -- ('knockout', 'Var', '(10, 18)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increase', 'PosReg', '(79, 87)', ('increase', 'PosReg', '-', '-')) -- ThemeOf -- ('intracellular tau seeding', 'MPA', '(88, 113)', ('intracellular tau seeding', 'MPA', 'GO:0005622', 'intracellular anatomical structure'))",
+          "EventDedupKey": "hypothesis | dnajc7 | genetic manipulation:knockout | go:0005622",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "DNAJC7",
+              "frequency": 1,
+              "threshold": 2
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "DNAJC7 / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Recently, knockout of DNAJC7 was found to decrease the aggregate clearance and increase intracellular tau seeding in HEK293 cells."
+        },
+        {
+          "Gene": "PHF1",
+          "PMID": "38020758",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38020758/",
+          "Journal": "Front Aging Neurosci",
+          "Year": 2023,
+          "TermName": "Mucolipidoses",
+          "TermType": "MeSH",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "PHF1 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "Knocking down",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "alleviate",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('PHF1', 'Gene', '(14, 18)', ('PHF1', 'Gene', '294287', '-')) -- ThemeOf -- ('Knocking down', 'Var', '(0, 13)', ('Knocking down', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('alleviate', 'PosReg', '(58, 67)', ('alleviate', 'PosReg', '-', '-')) -- ThemeOf -- ('cell injury', 'Disease', '(68, 79)', ('cell injury', 'Disease', 'MESH:D009081', '-'))",
+          "EventDedupKey": "hypothesis | phf1 | genetic manipulation:knockout | mesh:d009081",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "synaptic and neuronal dysfunction axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "PHF1 / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            },
+            {
+              "dimension": "phenotype",
+              "value": "Mucolipidoses",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Knocking down PHF1 could protect against neurite loss and alleviate cell injury in AD neurons."
+        },
+        {
+          "Gene": "MCU",
+          "PMID": "36239352",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36239352/",
+          "Journal": "Acta Biochim Biophys Sin (Shanghai)",
+          "Year": 2022,
+          "TermName": "memory",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis,Mitochondrial Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "MCU / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockdown",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "improves",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MCU', 'Gene', '(24, 27)', ('MCU', 'Gene', '215999', '-')) -- ThemeOf -- ('knockdown', 'Var', '(28, 37)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('improves', 'PosReg', '(61, 69)', ('improves', 'PosReg', '-', '-')) -- ThemeOf -- ('memory performance', 'CPA', '(74, 92)', ('memory performance', 'CPA', 'GO:0007613', 'memory'))",
+          "EventDedupKey": "hypothesis | mcu | genetic manipulation:knockout | go:0007613",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis",
+            "synaptic and neuronal dysfunction axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "MCU",
+              "frequency": 1,
+              "threshold": 2
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "MCU / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "These data confirm that MCU knockdown in hippocampal neurons improves the memory performance of APP/PS1/tau mice through ameliorating the synapse structure and function, relieving the inflammation response and recovering mitophagy, indicating that MCU inhibition has the potential to be developed as a novel therapy for AD."
+        },
+        {
+          "Gene": "HS3ST1",
+          "PMID": "36551220",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36551220/",
+          "Journal": "Biomolecules",
+          "Year": 2022,
+          "TermName": "binding",
+          "TermType": "GO",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "HS3ST1 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockout",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "increased",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('HS 3-O-sulfotransferase-1', 'Gene', '(147, 172)', ('HS 3-O-sulfotransferase-1', 'Gene', '9957', '-')) -- ThemeOf -- ('knockout', 'Var', '(135, 143)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(76, 85)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('binding', 'MPA', '(90, 97)', ('binding', 'MPA', 'GO:0005488', 'binding'))",
+          "EventDedupKey": "hypothesis | hs3st1 | genetic manipulation:knockout | go:0005488",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "HS3ST1 / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "In our recent study, we showed that introducing a 3-O-sulfate significantly increased the binding of an HS dodecasaccharide to tau and knockout of HS 3-O-sulfotransferase-1 (Hs3st1), which reduces about 50% 3-O-sulfation in mouse lung endothelial cells, significantly decreased tau uptake by the cells (Figure 4D)."
+        },
+        {
+          "Gene": "S100A9",
+          "PMID": "35929619",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35929619/",
+          "Journal": "Curr Alzheimer Res",
+          "Year": 2022,
+          "TermName": "Cardiac Output, Low",
+          "TermType": "MeSH",
+          "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "S100A9 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockdown",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "increased",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('S100A9', 'Gene', '(20, 26)', ('S100A9', 'Gene', '20202', '-')) -- ThemeOf -- ('knockdown', 'Var', '(7, 16)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(27, 36)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('decreased Abeta neuropathology', 'Disease', '(109, 139)', ('decreased Abeta neuropathology', 'Disease', 'MESH:D002303', '-'))",
+          "EventDedupKey": "hypothesis | s100a9 | genetic manipulation:knockout | mesh:d002303",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "neuroinflammation and microglia axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Cardiac Output, Low",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "While, knockdown of S100A9 increased spatial reference memory in the Morris water maze task and Y-maze task, decreased Abeta neuropathology and phosphorylated tau, increased expression of anti-inflammatory IL-10, and also decreased expression of inflammatory IL-6 and TNF-alpha in AD model mice."
+        },
+        {
+          "Gene": "ZBTB20",
+          "PMID": "36502636",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36502636/",
+          "Journal": "Biochem Biophys Res Commun",
+          "Year": 2022,
+          "TermName": "cell",
+          "TermType": "GO",
+          "Hypothesis": "Tau protein hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "ZBTB20 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockdown",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "increased",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('ZBTB20', 'Gene', '(18, 24)', ('ZBTB20', 'Gene', '26137', '-')) -- ThemeOf -- ('knockdown', 'Var', '(28, 37)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(161, 170)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('cell viability', 'CPA', '(171, 185)', ('cell viability', 'CPA', 'GO:0005623', 'cell'))",
+          "EventDedupKey": "hypothesis | zbtb20 | genetic manipulation:knockout | go:0005623",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "ZBTB20 / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Overexpression of ZBTB20 or knockdown of LncRNA ZBTB20-AS1 inhibited SH-SY5Y-AD cells apoptosis and suppressed GSK3beta/Tau pathway, and knockdown of ZBTB20-AS1 increased cell viability and decreased apoptosis."
+        },
+        {
+          "Gene": "CAMK2A",
+          "PMID": "34670118",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/34670118/",
+          "Journal": "Prog Neurobiol",
+          "Year": 2022,
+          "TermName": "Tauopathies",
+          "TermType": "MeSH",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "CAMK2A / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutant",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "overexpression",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('Camk2a', 'Gene', '(20, 26)', ('Camk2a', 'Gene', '815', '-')) -- ThemeOf -- ('mutant', 'Var', '(92, 98)', ('mutant', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('overexpression', 'PosReg', '(42, 56)', ('overexpression', 'PosReg', '-', '-')) -- ThemeOf -- ('familial tauopathy', 'Disease', '(62, 80)', ('familial tauopathy', 'Disease', 'MESH:D024801', '-'))",
+          "EventDedupKey": "hypothesis | camk2a | point mutations:mutations | mesh:d024801",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "CAMK2A",
+              "frequency": 2,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "rTg4510 mice have a Camk2a-driven 13-fold overexpression of a familial tauopathy-associated mutant form of human tau, tauP301L, on a mixed 129S6, FVB genetic background."
+        },
+        {
+          "Gene": "DRG2",
+          "PMID": "35852137",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35852137/",
+          "Journal": "Alzheimers Dement",
+          "Year": 2022,
+          "TermName": "microtubule",
+          "TermType": "GO",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "DRG2 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockdown",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "enhances",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('DRG2', 'Gene', '(0, 4)', ('DRG2', 'Gene', '1819', '-')) -- ThemeOf -- ('knockdown', 'Var', '(5, 14)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('enhances', 'PosReg', '(110, 118)', ('enhances', 'PosReg', '-', '-')) -- ThemeOf -- ('microtubule stability', 'MPA', '(119, 140)', ('microtubule stability', 'MPA', 'GO:0005874', 'microtubule'))",
+          "EventDedupKey": "hypothesis | drg2 | genetic manipulation:knockout | go:0005874",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "DRG2",
+              "frequency": 1,
+              "threshold": 2
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "DRG2 / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "DRG2 knockdown inhibits GSK3beta phosphorylation, which results in reduced phosphorylation of tau and further enhances microtubule stability."
+        },
+        {
+          "Gene": "KDM1A",
+          "PMID": "36587923",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36587923/",
+          "Journal": "Free Radic Biol Med",
+          "Year": 2022,
+          "TermName": "macroautophagy",
+          "TermType": "GO",
+          "Hypothesis": "Tau Protein Hypothesis,Abnormal Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "expression changes:overexpression",
+          "GeneAlteration": "KDM1A / expression changes:overexpression",
+          "AlterationSignature": "expression changes:overexpression",
+          "AlterationType": "expression changes:overexpression",
+          "AlterationMention": "Overexpression",
+          "AlterationID": "expression changes:overexpression",
+          "TriggerWord": "enhanced",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('KDM1A', 'Gene', '(18, 23)', ('KDM1A', 'Gene', '23028', '-')) -- ThemeOf -- ('Overexpression', 'Var', '(0, 14)', ('Overexpression', 'Mutation', 'expression changes:overexpression', 'expression changes:overexpression')) -- CauseOf -- ('enhanced', 'PosReg', '(24, 32)', ('enhanced', 'PosReg', '-', '-')) -- ThemeOf -- ('autophagy', 'MPA', '(33, 42)', ('autophagy', 'MPA', 'GO:0016236', 'macroautophagy'))",
+          "EventDedupKey": "hypothesis | kdm1a | expression changes:overexpression | go:0016236",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "KDM1A / expression changes:overexpression",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Overexpression of KDM1A enhanced autophagy, m6A modification and autophagic p-Tau clearance in Abeta1-42-treated cells."
+        }
+      ],
+      "evidence_type_groups": {
+        "alteration_evidence": [
+          {
+            "Gene": "MAPT",
+            "PMID": "37929088",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37929088/",
+            "Journal": "ACS Omega",
+            "Year": 2023,
+            "TermName": "Generalized",
+            "TermType": "HPO",
+            "Hypothesis": "Tau Protein Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:substitution",
+            "GeneAlteration": "MAPT / point mutations:substitution",
+            "AlterationSignature": "point mutations:substitution",
+            "AlterationType": "point mutations:substitution",
+            "AlterationMention": "substitution",
+            "AlterationID": "point mutations:substitution",
+            "TriggerWord": "effect",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(80, 84)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('substitution', 'Var', '(112, 124)', ('substitution', 'Mutation', 'point mutations:substitution', 'point mutations:substitution')) -- CauseOf -- ('effect', 'Reg', '(239, 245)', ('effect', 'Reg', '-', '-')) -- ThemeOf -- ('generalized', 'CPA', '(213, 224)', ('generalized', 'CPA', 'HP:0012837', 'Generalised'))",
+            "EventDedupKey": "hypothesis | mapt | point mutations:substitution | hp:0012837",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Generalized",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Interestingly, our study also evaluated the impact of missense mutations on the MAPT protein and found that the substitution of lysine with asparagine (K > N) in nine different transcript-level SNPs resulted in a generalized destabilizing effect on the protein's stability, function, and dynamics."
+          }
+        ],
+        "model_or_intervention": [
+          {
+            "Gene": "UCP1",
+            "PMID": "36769062",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36769062/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "phosphorylation",
+            "TermType": "GO",
+            "Hypothesis": "Amyloid hypothesis,Tau protein hypothesis,Oxidative stress hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "UCP1 / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "Deletion",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "leading to",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('UCP1', 'Gene', '(12, 16)', ('UCP1', 'Gene', '24860', '-')) -- ThemeOf -- ('Deletion', 'Var', '(0, 8)', ('Deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('leading to', 'Reg', '(363, 373)', ('leading to', 'Reg', '-', '-')) -- ThemeOf -- ('phosphorylation', 'MPA', '(378, 393)', ('phosphorylation', 'MPA', 'GO:0016310', 'phosphorylation'))",
+            "EventDedupKey": "hypothesis | ucp1 | structural variation:deletion | go:0016310",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "UCP1",
+                "frequency": 2,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Deletion of UCP1 in Tg2576 Mice Increases Body Temperature and Exacerbates Alzheimer's Disease-Related Pathologies We previously demonstrated that the Alzheimer's disease (AD)-like model mice, Tg2576, housed at a high ambient temperature of 30 C for 13 months, exhibited increased body temperature, which increased amyloid-beta (Abeta) levels and tau stability, leading to tau phosphorylation and ultimately inducing memory impairment."
+          },
+          {
+            "Gene": "UCP1",
+            "PMID": "36769062",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36769062/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "Memory impairment",
+            "TermType": "HPO",
+            "Hypothesis": "Amyloid hypothesis,Tau protein hypothesis,Oxidative stress hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "UCP1 / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "Deletion",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "inducing",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('UCP1', 'Gene', '(12, 16)', ('UCP1', 'Gene', '24860', '-')) -- ThemeOf -- ('Deletion', 'Var', '(0, 8)', ('Deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('inducing', 'Reg', '(409, 417)', ('inducing', 'Reg', '-', '-')) -- ThemeOf -- ('memory impairment', 'CPA', '(418, 435)', ('memory impairment', 'CPA', 'HP:0002354', 'Memory loss'))",
+            "EventDedupKey": "hypothesis | ucp1 | structural variation:deletion | hp:0002354",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "UCP1",
+                "frequency": 2,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Deletion of UCP1 in Tg2576 Mice Increases Body Temperature and Exacerbates Alzheimer's Disease-Related Pathologies We previously demonstrated that the Alzheimer's disease (AD)-like model mice, Tg2576, housed at a high ambient temperature of 30 C for 13 months, exhibited increased body temperature, which increased amyloid-beta (Abeta) levels and tau stability, leading to tau phosphorylation and ultimately inducing memory impairment."
+          },
+          {
+            "Gene": "MAG",
+            "PMID": "37927337",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37927337/",
+            "Journal": "Front Aging Neurosci",
+            "Year": 2023,
+            "TermName": "biosynthetic process",
+            "TermType": "GO",
+            "Hypothesis": "Tau Protein Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "MAG / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "deficient",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "altered",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('myelin-associated glycoprotein', 'Gene', '(357, 387)', ('myelin-associated glycoprotein', 'Gene', '17136', '-')) -- ThemeOf -- ('deficient', 'Var', '(177, 186)', ('deficient', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('altered', 'Reg', '(131, 138)', ('altered', 'Reg', '-', '-')) -- ThemeOf -- ('formation', 'MPA', '(139, 148)', ('formation', 'MPA', 'GO:0009058', 'biosynthetic process'))",
+            "EventDedupKey": "hypothesis | mag | structural variation:deletion | go:0009058",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "MAG",
+                "frequency": 1,
+                "threshold": 2
+              },
+              {
+                "dimension": "gene_alteration",
+                "value": "MAG / structural variation:deletion",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Previous studies have demonstrated that axonal pathology preceding axonal degeneration includes impairment of axonal transport and altered formation of axonal spheroids in mice deficient in PLP (proteolipid protein) and CNP (2',3'-cyclic nucleotide 3'-phosphodiesterase), as well as reduced neurofilament phosphorylation and smaller axonal diameter in MAG (myelin-associated glycoprotein) deficient mice."
+          },
+          {
+            "Gene": "CD68",
+            "PMID": "36966157",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36966157/",
+            "Journal": "Nat Commun",
+            "Year": 2023,
+            "TermName": "Auditory Diseases, Central",
+            "TermType": "MeSH",
+            "Hypothesis": "Tau protein hypothesis,Neuroinflammation hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "CD68 / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "knockdown",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "increased",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('CD68', 'Gene', '(284, 288)', ('CD68', 'Gene', '12514', '-')) -- ThemeOf -- ('knockdown', 'Var', '(83, 92)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(187, 196)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('entorhinal cortex loss', 'Disease', '(145, 167)', ('entorhinal cortex loss', 'Disease', 'MESH:D001304', '-'))",
+            "EventDedupKey": "hypothesis | cd68 | genetic manipulation:knockout | mesh:d001304",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene_alteration",
+                "value": "CD68 / genetic manipulation:knockout",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Reinforcing earlier discussion on hp-tau aggregates and neuronal phagoptosis, APOE knockdown in P301S mice significantly reduced hippocampal and entorhinal cortex loss; APOE preservation increased Iba1 + (suggesting microglia and macrophage populations) cells that were positive with CD68 + phagocytic inclusions."
+          }
+        ]
+      },
+      "mechanism_strata": {
+        "amyloid/tau axis": [
+          {
+            "Gene": "UCP1",
+            "PMID": "36769062",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36769062/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "phosphorylation",
+            "TermType": "GO",
+            "Hypothesis": "Amyloid hypothesis,Tau protein hypothesis,Oxidative stress hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "UCP1 / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "Deletion",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "leading to",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('UCP1', 'Gene', '(12, 16)', ('UCP1', 'Gene', '24860', '-')) -- ThemeOf -- ('Deletion', 'Var', '(0, 8)', ('Deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('leading to', 'Reg', '(363, 373)', ('leading to', 'Reg', '-', '-')) -- ThemeOf -- ('phosphorylation', 'MPA', '(378, 393)', ('phosphorylation', 'MPA', 'GO:0016310', 'phosphorylation'))",
+            "EventDedupKey": "hypothesis | ucp1 | structural variation:deletion | go:0016310",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "UCP1",
+                "frequency": 2,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Deletion of UCP1 in Tg2576 Mice Increases Body Temperature and Exacerbates Alzheimer's Disease-Related Pathologies We previously demonstrated that the Alzheimer's disease (AD)-like model mice, Tg2576, housed at a high ambient temperature of 30 C for 13 months, exhibited increased body temperature, which increased amyloid-beta (Abeta) levels and tau stability, leading to tau phosphorylation and ultimately inducing memory impairment."
+          },
+          {
+            "Gene": "MAPT",
+            "PMID": "37929088",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37929088/",
+            "Journal": "ACS Omega",
+            "Year": 2023,
+            "TermName": "Generalized",
+            "TermType": "HPO",
+            "Hypothesis": "Tau Protein Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:substitution",
+            "GeneAlteration": "MAPT / point mutations:substitution",
+            "AlterationSignature": "point mutations:substitution",
+            "AlterationType": "point mutations:substitution",
+            "AlterationMention": "substitution",
+            "AlterationID": "point mutations:substitution",
+            "TriggerWord": "effect",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(80, 84)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('substitution', 'Var', '(112, 124)', ('substitution', 'Mutation', 'point mutations:substitution', 'point mutations:substitution')) -- CauseOf -- ('effect', 'Reg', '(239, 245)', ('effect', 'Reg', '-', '-')) -- ThemeOf -- ('generalized', 'CPA', '(213, 224)', ('generalized', 'CPA', 'HP:0012837', 'Generalised'))",
+            "EventDedupKey": "hypothesis | mapt | point mutations:substitution | hp:0012837",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Generalized",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Interestingly, our study also evaluated the impact of missense mutations on the MAPT protein and found that the substitution of lysine with asparagine (K > N) in nine different transcript-level SNPs resulted in a generalized destabilizing effect on the protein's stability, function, and dynamics."
+          },
+          {
+            "Gene": "UCP1",
+            "PMID": "36769062",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36769062/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "Memory impairment",
+            "TermType": "HPO",
+            "Hypothesis": "Amyloid hypothesis,Tau protein hypothesis,Oxidative stress hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "UCP1 / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "Deletion",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "inducing",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('UCP1', 'Gene', '(12, 16)', ('UCP1', 'Gene', '24860', '-')) -- ThemeOf -- ('Deletion', 'Var', '(0, 8)', ('Deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('inducing', 'Reg', '(409, 417)', ('inducing', 'Reg', '-', '-')) -- ThemeOf -- ('memory impairment', 'CPA', '(418, 435)', ('memory impairment', 'CPA', 'HP:0002354', 'Memory loss'))",
+            "EventDedupKey": "hypothesis | ucp1 | structural variation:deletion | hp:0002354",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "UCP1",
+                "frequency": 2,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Deletion of UCP1 in Tg2576 Mice Increases Body Temperature and Exacerbates Alzheimer's Disease-Related Pathologies We previously demonstrated that the Alzheimer's disease (AD)-like model mice, Tg2576, housed at a high ambient temperature of 30 C for 13 months, exhibited increased body temperature, which increased amyloid-beta (Abeta) levels and tau stability, leading to tau phosphorylation and ultimately inducing memory impairment."
+          },
+          {
+            "Gene": "MAG",
+            "PMID": "37927337",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37927337/",
+            "Journal": "Front Aging Neurosci",
+            "Year": 2023,
+            "TermName": "biosynthetic process",
+            "TermType": "GO",
+            "Hypothesis": "Tau Protein Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "MAG / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "deficient",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "altered",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('myelin-associated glycoprotein', 'Gene', '(357, 387)', ('myelin-associated glycoprotein', 'Gene', '17136', '-')) -- ThemeOf -- ('deficient', 'Var', '(177, 186)', ('deficient', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('altered', 'Reg', '(131, 138)', ('altered', 'Reg', '-', '-')) -- ThemeOf -- ('formation', 'MPA', '(139, 148)', ('formation', 'MPA', 'GO:0009058', 'biosynthetic process'))",
+            "EventDedupKey": "hypothesis | mag | structural variation:deletion | go:0009058",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "MAG",
+                "frequency": 1,
+                "threshold": 2
+              },
+              {
+                "dimension": "gene_alteration",
+                "value": "MAG / structural variation:deletion",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Previous studies have demonstrated that axonal pathology preceding axonal degeneration includes impairment of axonal transport and altered formation of axonal spheroids in mice deficient in PLP (proteolipid protein) and CNP (2',3'-cyclic nucleotide 3'-phosphodiesterase), as well as reduced neurofilament phosphorylation and smaller axonal diameter in MAG (myelin-associated glycoprotein) deficient mice."
+          },
+          {
+            "Gene": "CD68",
+            "PMID": "36966157",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36966157/",
+            "Journal": "Nat Commun",
+            "Year": 2023,
+            "TermName": "Auditory Diseases, Central",
+            "TermType": "MeSH",
+            "Hypothesis": "Tau protein hypothesis,Neuroinflammation hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "CD68 / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "knockdown",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "increased",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('CD68', 'Gene', '(284, 288)', ('CD68', 'Gene', '12514', '-')) -- ThemeOf -- ('knockdown', 'Var', '(83, 92)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(187, 196)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('entorhinal cortex loss', 'Disease', '(145, 167)', ('entorhinal cortex loss', 'Disease', 'MESH:D001304', '-'))",
+            "EventDedupKey": "hypothesis | cd68 | genetic manipulation:knockout | mesh:d001304",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene_alteration",
+                "value": "CD68 / genetic manipulation:knockout",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Reinforcing earlier discussion on hp-tau aggregates and neuronal phagoptosis, APOE knockdown in P301S mice significantly reduced hippocampal and entorhinal cortex loss; APOE preservation increased Iba1 + (suggesting microglia and macrophage populations) cells that were positive with CD68 + phagocytic inclusions."
+          }
+        ],
+        "mitochondrial and oxidative stress axis": [
+          {
+            "Gene": "UCP1",
+            "PMID": "36769062",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36769062/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "phosphorylation",
+            "TermType": "GO",
+            "Hypothesis": "Amyloid hypothesis,Tau protein hypothesis,Oxidative stress hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "UCP1 / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "Deletion",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "leading to",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('UCP1', 'Gene', '(12, 16)', ('UCP1', 'Gene', '24860', '-')) -- ThemeOf -- ('Deletion', 'Var', '(0, 8)', ('Deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('leading to', 'Reg', '(363, 373)', ('leading to', 'Reg', '-', '-')) -- ThemeOf -- ('phosphorylation', 'MPA', '(378, 393)', ('phosphorylation', 'MPA', 'GO:0016310', 'phosphorylation'))",
+            "EventDedupKey": "hypothesis | ucp1 | structural variation:deletion | go:0016310",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "UCP1",
+                "frequency": 2,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Deletion of UCP1 in Tg2576 Mice Increases Body Temperature and Exacerbates Alzheimer's Disease-Related Pathologies We previously demonstrated that the Alzheimer's disease (AD)-like model mice, Tg2576, housed at a high ambient temperature of 30 C for 13 months, exhibited increased body temperature, which increased amyloid-beta (Abeta) levels and tau stability, leading to tau phosphorylation and ultimately inducing memory impairment."
+          },
+          {
+            "Gene": "UCP1",
+            "PMID": "36769062",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36769062/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "Memory impairment",
+            "TermType": "HPO",
+            "Hypothesis": "Amyloid hypothesis,Tau protein hypothesis,Oxidative stress hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "UCP1 / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "Deletion",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "inducing",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('UCP1', 'Gene', '(12, 16)', ('UCP1', 'Gene', '24860', '-')) -- ThemeOf -- ('Deletion', 'Var', '(0, 8)', ('Deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('inducing', 'Reg', '(409, 417)', ('inducing', 'Reg', '-', '-')) -- ThemeOf -- ('memory impairment', 'CPA', '(418, 435)', ('memory impairment', 'CPA', 'HP:0002354', 'Memory loss'))",
+            "EventDedupKey": "hypothesis | ucp1 | structural variation:deletion | hp:0002354",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "UCP1",
+                "frequency": 2,
+                "threshold": 2
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Deletion of UCP1 in Tg2576 Mice Increases Body Temperature and Exacerbates Alzheimer's Disease-Related Pathologies We previously demonstrated that the Alzheimer's disease (AD)-like model mice, Tg2576, housed at a high ambient temperature of 30 C for 13 months, exhibited increased body temperature, which increased amyloid-beta (Abeta) levels and tau stability, leading to tau phosphorylation and ultimately inducing memory impairment."
+          }
+        ],
+        "neuroinflammation and microglia axis": [
+          {
+            "Gene": "CD68",
+            "PMID": "36966157",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36966157/",
+            "Journal": "Nat Commun",
+            "Year": 2023,
+            "TermName": "Auditory Diseases, Central",
+            "TermType": "MeSH",
+            "Hypothesis": "Tau protein hypothesis,Neuroinflammation hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "CD68 / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "knockdown",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "increased",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('CD68', 'Gene', '(284, 288)', ('CD68', 'Gene', '12514', '-')) -- ThemeOf -- ('knockdown', 'Var', '(83, 92)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(187, 196)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('entorhinal cortex loss', 'Disease', '(145, 167)', ('entorhinal cortex loss', 'Disease', 'MESH:D001304', '-'))",
+            "EventDedupKey": "hypothesis | cd68 | genetic manipulation:knockout | mesh:d001304",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene_alteration",
+                "value": "CD68 / genetic manipulation:knockout",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Reinforcing earlier discussion on hp-tau aggregates and neuronal phagoptosis, APOE knockdown in P301S mice significantly reduced hippocampal and entorhinal cortex loss; APOE preservation increased Iba1 + (suggesting microglia and macrophage populations) cells that were positive with CD68 + phagocytic inclusions."
+          }
+        ],
+        "proteostasis/autophagy axis": [
+          {
+            "Gene": "MAPT",
+            "PMID": "37929088",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37929088/",
+            "Journal": "ACS Omega",
+            "Year": 2023,
+            "TermName": "Generalized",
+            "TermType": "HPO",
+            "Hypothesis": "Tau Protein Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:substitution",
+            "GeneAlteration": "MAPT / point mutations:substitution",
+            "AlterationSignature": "point mutations:substitution",
+            "AlterationType": "point mutations:substitution",
+            "AlterationMention": "substitution",
+            "AlterationID": "point mutations:substitution",
+            "TriggerWord": "effect",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(80, 84)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('substitution', 'Var', '(112, 124)', ('substitution', 'Mutation', 'point mutations:substitution', 'point mutations:substitution')) -- CauseOf -- ('effect', 'Reg', '(239, 245)', ('effect', 'Reg', '-', '-')) -- ThemeOf -- ('generalized', 'CPA', '(213, 224)', ('generalized', 'CPA', 'HP:0012837', 'Generalised'))",
+            "EventDedupKey": "hypothesis | mapt | point mutations:substitution | hp:0012837",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Generalized",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Interestingly, our study also evaluated the impact of missense mutations on the MAPT protein and found that the substitution of lysine with asparagine (K > N) in nine different transcript-level SNPs resulted in a generalized destabilizing effect on the protein's stability, function, and dynamics."
+          }
+        ],
+        "synaptic and neuronal dysfunction axis": [
+          {
+            "Gene": "MAPT",
+            "PMID": "37929088",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37929088/",
+            "Journal": "ACS Omega",
+            "Year": 2023,
+            "TermName": "Generalized",
+            "TermType": "HPO",
+            "Hypothesis": "Tau Protein Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:substitution",
+            "GeneAlteration": "MAPT / point mutations:substitution",
+            "AlterationSignature": "point mutations:substitution",
+            "AlterationType": "point mutations:substitution",
+            "AlterationMention": "substitution",
+            "AlterationID": "point mutations:substitution",
+            "TriggerWord": "effect",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(80, 84)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('substitution', 'Var', '(112, 124)', ('substitution', 'Mutation', 'point mutations:substitution', 'point mutations:substitution')) -- CauseOf -- ('effect', 'Reg', '(239, 245)', ('effect', 'Reg', '-', '-')) -- ThemeOf -- ('generalized', 'CPA', '(213, 224)', ('generalized', 'CPA', 'HP:0012837', 'Generalised'))",
+            "EventDedupKey": "hypothesis | mapt | point mutations:substitution | hp:0012837",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Generalized",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Interestingly, our study also evaluated the impact of missense mutations on the MAPT protein and found that the substitution of lysine with asparagine (K > N) in nine different transcript-level SNPs resulted in a generalized destabilizing effect on the protein's stability, function, and dynamics."
+          },
+          {
+            "Gene": "MAG",
+            "PMID": "37927337",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37927337/",
+            "Journal": "Front Aging Neurosci",
+            "Year": 2023,
+            "TermName": "biosynthetic process",
+            "TermType": "GO",
+            "Hypothesis": "Tau Protein Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "MAG / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "deficient",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "altered",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('myelin-associated glycoprotein', 'Gene', '(357, 387)', ('myelin-associated glycoprotein', 'Gene', '17136', '-')) -- ThemeOf -- ('deficient', 'Var', '(177, 186)', ('deficient', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('altered', 'Reg', '(131, 138)', ('altered', 'Reg', '-', '-')) -- ThemeOf -- ('formation', 'MPA', '(139, 148)', ('formation', 'MPA', 'GO:0009058', 'biosynthetic process'))",
+            "EventDedupKey": "hypothesis | mag | structural variation:deletion | go:0009058",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "MAG",
+                "frequency": 1,
+                "threshold": 2
+              },
+              {
+                "dimension": "gene_alteration",
+                "value": "MAG / structural variation:deletion",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Previous studies have demonstrated that axonal pathology preceding axonal degeneration includes impairment of axonal transport and altered formation of axonal spheroids in mice deficient in PLP (proteolipid protein) and CNP (2',3'-cyclic nucleotide 3'-phosphodiesterase), as well as reduced neurofilament phosphorylation and smaller axonal diameter in MAG (myelin-associated glycoprotein) deficient mice."
+          },
+          {
+            "Gene": "CD68",
+            "PMID": "36966157",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36966157/",
+            "Journal": "Nat Commun",
+            "Year": 2023,
+            "TermName": "Auditory Diseases, Central",
+            "TermType": "MeSH",
+            "Hypothesis": "Tau protein hypothesis,Neuroinflammation hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "CD68 / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "knockdown",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "increased",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('CD68', 'Gene', '(284, 288)', ('CD68', 'Gene', '12514', '-')) -- ThemeOf -- ('knockdown', 'Var', '(83, 92)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(187, 196)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('entorhinal cortex loss', 'Disease', '(145, 167)', ('entorhinal cortex loss', 'Disease', 'MESH:D001304', '-'))",
+            "EventDedupKey": "hypothesis | cd68 | genetic manipulation:knockout | mesh:d001304",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene_alteration",
+                "value": "CD68 / genetic manipulation:knockout",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Reinforcing earlier discussion on hp-tau aggregates and neuronal phagoptosis, APOE knockdown in P301S mice significantly reduced hippocampal and entorhinal cortex loss; APOE preservation increased Iba1 + (suggesting microglia and macrophage populations) cells that were positive with CD68 + phagocytic inclusions."
+          }
+        ],
+        "vascular/metabolic axis": [
+          {
+            "Gene": "MAG",
+            "PMID": "37927337",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37927337/",
+            "Journal": "Front Aging Neurosci",
+            "Year": 2023,
+            "TermName": "biosynthetic process",
+            "TermType": "GO",
+            "Hypothesis": "Tau Protein Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:deletion",
+            "GeneAlteration": "MAG / structural variation:deletion",
+            "AlterationSignature": "structural variation:deletion",
+            "AlterationType": "structural variation:deletion",
+            "AlterationMention": "deficient",
+            "AlterationID": "structural variation:deletion",
+            "TriggerWord": "altered",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('myelin-associated glycoprotein', 'Gene', '(357, 387)', ('myelin-associated glycoprotein', 'Gene', '17136', '-')) -- ThemeOf -- ('deficient', 'Var', '(177, 186)', ('deficient', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('altered', 'Reg', '(131, 138)', ('altered', 'Reg', '-', '-')) -- ThemeOf -- ('formation', 'MPA', '(139, 148)', ('formation', 'MPA', 'GO:0009058', 'biosynthetic process'))",
+            "EventDedupKey": "hypothesis | mag | structural variation:deletion | go:0009058",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene",
+                "value": "MAG",
+                "frequency": 1,
+                "threshold": 2
+              },
+              {
+                "dimension": "gene_alteration",
+                "value": "MAG / structural variation:deletion",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Previous studies have demonstrated that axonal pathology preceding axonal degeneration includes impairment of axonal transport and altered formation of axonal spheroids in mice deficient in PLP (proteolipid protein) and CNP (2',3'-cyclic nucleotide 3'-phosphodiesterase), as well as reduced neurofilament phosphorylation and smaller axonal diameter in MAG (myelin-associated glycoprotein) deficient mice."
+          },
+          {
+            "Gene": "CD68",
+            "PMID": "36966157",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36966157/",
+            "Journal": "Nat Commun",
+            "Year": 2023,
+            "TermName": "Auditory Diseases, Central",
+            "TermType": "MeSH",
+            "Hypothesis": "Tau protein hypothesis,Neuroinflammation hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "CD68 / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "knockdown",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "increased",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('CD68', 'Gene', '(284, 288)', ('CD68', 'Gene', '12514', '-')) -- ThemeOf -- ('knockdown', 'Var', '(83, 92)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(187, 196)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('entorhinal cortex loss', 'Disease', '(145, 167)', ('entorhinal cortex loss', 'Disease', 'MESH:D001304', '-'))",
+            "EventDedupKey": "hypothesis | cd68 | genetic manipulation:knockout | mesh:d001304",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis",
+              "vascular/metabolic axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "gene_alteration",
+                "value": "CD68 / genetic manipulation:knockout",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Reinforcing earlier discussion on hp-tau aggregates and neuronal phagoptosis, APOE knockdown in P301S mice significantly reduced hippocampal and entorhinal cortex loss; APOE preservation increased Iba1 + (suggesting microglia and macrophage populations) cells that were positive with CD68 + phagocytic inclusions."
+          }
+        ]
+      },
+      "chronological_summary": [
+        {
+          "period": "2010-2014",
+          "row_count": 2098,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 2098
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 795
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 610
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 378
+            },
+            {
+              "value": "neuroinflammation and microglia axis",
+              "count": 224
+            }
+          ]
+        },
+        {
+          "period": "2015-2019",
+          "row_count": 4697,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 4697
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 1617
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 1529
+            },
+            {
+              "value": "neuroinflammation and microglia axis",
+              "count": 916
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 867
+            }
+          ]
+        },
+        {
+          "period": "2020-2024",
+          "row_count": 8605,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 8605
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 3370
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 3123
+            },
+            {
+              "value": "neuroinflammation and microglia axis",
+              "count": 1753
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 1560
+            }
+          ]
+        },
+        {
+          "period": "before 2010",
+          "row_count": 795,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 795
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 266
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 239
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 137
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 102
+            }
+          ]
+        },
+        {
+          "period": "missing year",
+          "row_count": 1342,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 1342
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 453
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 385
+            },
+            {
+              "value": "neuroinflammation and microglia axis",
+              "count": 268
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 199
+            }
+          ]
+        }
+      ],
+      "bias_notes": [
+        "Curation pool source: remote_api (server_full_query_pool).",
+        "Curation used 38103 curation pool row(s) and reduced them to 17537 event-unique row(s).",
+        "Event deduplication key: hypothesis-fixed event key: gene + alteration taxonomy + phenotype/term; fallback to PMID/sentence when structured fields are sparse.",
+        "The curation pool covers 38103 of 38103 event record(s) matched by the curation query (100.00%).",
+        "Overview event_count is 38095; curation matched_event_count is 38103 because support retrieval may use a broader matching predicate than the overview endpoint.",
+        "The most frequent PMID contributes 77 of 17537 event-unique rows.",
+        "The most frequent phenotype is `Alzheimer Disease` with 524 event-unique row(s).",
+        "The most frequent alteration taxonomy appears in 5508 event-unique row(s).",
+        "Broad disease/background terms account for 1675 of 17537 event-unique rows.",
+        "1342 event-unique row(s) lack usable year metadata."
+      ],
+      "selected_evidence": [
+        {
+          "Gene": "UCP1",
+          "PMID": "36769062",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36769062/",
+          "Journal": "Int J Mol Sci",
+          "Year": 2023,
+          "TermName": "phosphorylation",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid hypothesis,Tau protein hypothesis,Oxidative stress hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:deletion",
+          "GeneAlteration": "UCP1 / structural variation:deletion",
+          "AlterationSignature": "structural variation:deletion",
+          "AlterationType": "structural variation:deletion",
+          "AlterationMention": "Deletion",
+          "AlterationID": "structural variation:deletion",
+          "TriggerWord": "leading to",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('UCP1', 'Gene', '(12, 16)', ('UCP1', 'Gene', '24860', '-')) -- ThemeOf -- ('Deletion', 'Var', '(0, 8)', ('Deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('leading to', 'Reg', '(363, 373)', ('leading to', 'Reg', '-', '-')) -- ThemeOf -- ('phosphorylation', 'MPA', '(378, 393)', ('phosphorylation', 'MPA', 'GO:0016310', 'phosphorylation'))",
+          "EventDedupKey": "hypothesis | ucp1 | structural variation:deletion | go:0016310",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "UCP1",
+              "frequency": 2,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Deletion of UCP1 in Tg2576 Mice Increases Body Temperature and Exacerbates Alzheimer's Disease-Related Pathologies We previously demonstrated that the Alzheimer's disease (AD)-like model mice, Tg2576, housed at a high ambient temperature of 30 C for 13 months, exhibited increased body temperature, which increased amyloid-beta (Abeta) levels and tau stability, leading to tau phosphorylation and ultimately inducing memory impairment."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "37929088",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37929088/",
+          "Journal": "ACS Omega",
+          "Year": 2023,
+          "TermName": "Generalized",
+          "TermType": "HPO",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:substitution",
+          "GeneAlteration": "MAPT / point mutations:substitution",
+          "AlterationSignature": "point mutations:substitution",
+          "AlterationType": "point mutations:substitution",
+          "AlterationMention": "substitution",
+          "AlterationID": "point mutations:substitution",
+          "TriggerWord": "effect",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(80, 84)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('substitution', 'Var', '(112, 124)', ('substitution', 'Mutation', 'point mutations:substitution', 'point mutations:substitution')) -- CauseOf -- ('effect', 'Reg', '(239, 245)', ('effect', 'Reg', '-', '-')) -- ThemeOf -- ('generalized', 'CPA', '(213, 224)', ('generalized', 'CPA', 'HP:0012837', 'Generalised'))",
+          "EventDedupKey": "hypothesis | mapt | point mutations:substitution | hp:0012837",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "synaptic and neuronal dysfunction axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Generalized",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Interestingly, our study also evaluated the impact of missense mutations on the MAPT protein and found that the substitution of lysine with asparagine (K > N) in nine different transcript-level SNPs resulted in a generalized destabilizing effect on the protein's stability, function, and dynamics."
+        },
+        {
+          "Gene": "UCP1",
+          "PMID": "36769062",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36769062/",
+          "Journal": "Int J Mol Sci",
+          "Year": 2023,
+          "TermName": "Memory impairment",
+          "TermType": "HPO",
+          "Hypothesis": "Amyloid hypothesis,Tau protein hypothesis,Oxidative stress hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:deletion",
+          "GeneAlteration": "UCP1 / structural variation:deletion",
+          "AlterationSignature": "structural variation:deletion",
+          "AlterationType": "structural variation:deletion",
+          "AlterationMention": "Deletion",
+          "AlterationID": "structural variation:deletion",
+          "TriggerWord": "inducing",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('UCP1', 'Gene', '(12, 16)', ('UCP1', 'Gene', '24860', '-')) -- ThemeOf -- ('Deletion', 'Var', '(0, 8)', ('Deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('inducing', 'Reg', '(409, 417)', ('inducing', 'Reg', '-', '-')) -- ThemeOf -- ('memory impairment', 'CPA', '(418, 435)', ('memory impairment', 'CPA', 'HP:0002354', 'Memory loss'))",
+          "EventDedupKey": "hypothesis | ucp1 | structural variation:deletion | hp:0002354",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "UCP1",
+              "frequency": 2,
+              "threshold": 2
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Deletion of UCP1 in Tg2576 Mice Increases Body Temperature and Exacerbates Alzheimer's Disease-Related Pathologies We previously demonstrated that the Alzheimer's disease (AD)-like model mice, Tg2576, housed at a high ambient temperature of 30 C for 13 months, exhibited increased body temperature, which increased amyloid-beta (Abeta) levels and tau stability, leading to tau phosphorylation and ultimately inducing memory impairment."
+        },
+        {
+          "Gene": "MAG",
+          "PMID": "37927337",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37927337/",
+          "Journal": "Front Aging Neurosci",
+          "Year": 2023,
+          "TermName": "biosynthetic process",
+          "TermType": "GO",
+          "Hypothesis": "Tau Protein Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:deletion",
+          "GeneAlteration": "MAG / structural variation:deletion",
+          "AlterationSignature": "structural variation:deletion",
+          "AlterationType": "structural variation:deletion",
+          "AlterationMention": "deficient",
+          "AlterationID": "structural variation:deletion",
+          "TriggerWord": "altered",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('myelin-associated glycoprotein', 'Gene', '(357, 387)', ('myelin-associated glycoprotein', 'Gene', '17136', '-')) -- ThemeOf -- ('deficient', 'Var', '(177, 186)', ('deficient', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('altered', 'Reg', '(131, 138)', ('altered', 'Reg', '-', '-')) -- ThemeOf -- ('formation', 'MPA', '(139, 148)', ('formation', 'MPA', 'GO:0009058', 'biosynthetic process'))",
+          "EventDedupKey": "hypothesis | mag | structural variation:deletion | go:0009058",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "synaptic and neuronal dysfunction axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene",
+              "value": "MAG",
+              "frequency": 1,
+              "threshold": 2
+            },
+            {
+              "dimension": "gene_alteration",
+              "value": "MAG / structural variation:deletion",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Previous studies have demonstrated that axonal pathology preceding axonal degeneration includes impairment of axonal transport and altered formation of axonal spheroids in mice deficient in PLP (proteolipid protein) and CNP (2',3'-cyclic nucleotide 3'-phosphodiesterase), as well as reduced neurofilament phosphorylation and smaller axonal diameter in MAG (myelin-associated glycoprotein) deficient mice."
+        },
+        {
+          "Gene": "CD68",
+          "PMID": "36966157",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36966157/",
+          "Journal": "Nat Commun",
+          "Year": 2023,
+          "TermName": "Auditory Diseases, Central",
+          "TermType": "MeSH",
+          "Hypothesis": "Tau protein hypothesis,Neuroinflammation hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "CD68 / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockdown",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "increased",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('CD68', 'Gene', '(284, 288)', ('CD68', 'Gene', '12514', '-')) -- ThemeOf -- ('knockdown', 'Var', '(83, 92)', ('knockdown', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(187, 196)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('entorhinal cortex loss', 'Disease', '(145, 167)', ('entorhinal cortex loss', 'Disease', 'MESH:D001304', '-'))",
+          "EventDedupKey": "hypothesis | cd68 | genetic manipulation:knockout | mesh:d001304",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "neuroinflammation and microglia axis",
+            "synaptic and neuronal dysfunction axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "gene_alteration",
+              "value": "CD68 / genetic manipulation:knockout",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Reinforcing earlier discussion on hp-tau aggregates and neuronal phagoptosis, APOE knockdown in P301S mice significantly reduced hippocampal and entorhinal cortex loss; APOE preservation increased Iba1 + (suggesting microglia and macrophage populations) cells that were positive with CD68 + phagocytic inclusions."
+        }
+      ]
+    }
+  },
+  "meta": {
+    "curation_scope": "server_full_query_pool",
+    "matched_event_count": 38103,
+    "event_unique_rows": 17537,
+    "selected_limit": 5,
+    "query_type": "hypothesis",
+    "event_deduplication_key": "hypothesis-fixed event key: gene + alteration taxonomy + phenotype/term; fallback to PMID/sentence when structured fields are sparse"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "tool": "compare_genes",
+  "status": "ok",
+  "query": {
+    "gene_a": "APP",
+    "gene_b": "APOE"
+  },
+  "count": 1,
+  "data": {
+    "gene_a_overview": {
+      "Gene": "APP",
+      "event_count": 18277,
+      "pmid_count": 4724,
+      "term_count": 621,
+      "hypothesis_count": 150,
+      "avg_evidence_score": 3.0
+    },
+    "gene_b_overview": {
+      "Gene": "APOE",
+      "event_count": 13188,
+      "pmid_count": 3086,
+      "term_count": 660,
+      "hypothesis_count": 138,
+      "avg_evidence_score": 3.0
+    },
+    "shared_terms": [
+      {
+        "TermName": "Alzheimer Disease",
+        "freq_a": 2459,
+        "freq_b": 1783
+      },
+      {
+        "TermName": "protein",
+        "freq_a": 2030,
+        "freq_b": 291
+      },
+      {
+        "TermName": "Onset",
+        "freq_a": 959,
+        "freq_b": 627
+      },
+      {
+        "TermName": "Dementia",
+        "freq_a": 162,
+        "freq_b": 289
+      },
+      {
+        "TermName": "Sporadic",
+        "freq_a": 173,
+        "freq_b": 266
+      },
+      {
+        "TermName": "Alzheimer disease",
+        "freq_a": 176,
+        "freq_b": 140
+      }
+    ],
+    "unique_terms_a": [
+      {
+        "TermName": "All",
+        "freq": 262
+      },
+      {
+        "TermName": "biosynthetic process",
+        "freq": 253
+      },
+      {
+        "TermName": "chromosome",
+        "freq": 183
+      },
+      {
+        "TermName": "cleavage",
+        "freq": 144
+      }
+    ],
+    "unique_terms_b": [
+      {
+        "TermName": "Late onset",
+        "freq": 455
+      },
+      {
+        "TermName": "Cognition Disorders",
+        "freq": 173
+      },
+      {
+        "TermName": "developmental process",
+        "freq": 164
+      },
+      {
+        "TermName": "Cognitive impairment",
+        "freq": 129
+      }
+    ],
+    "shared_hypotheses": [
+      {
+        "Hypothesis": "Amyloid Hypothesis",
+        "freq_a": 13553,
+        "freq_b": 3946
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Vascular Hypothesis",
+        "freq_a": 423,
+        "freq_b": 2843
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+        "freq_a": 1185,
+        "freq_b": 313
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+        "freq_a": 345,
+        "freq_b": 384
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+        "freq_a": 167,
+        "freq_b": 92
+      }
+    ],
+    "unique_hypotheses_a": [
+      {
+        "Hypothesis": "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis",
+        "freq": 235
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Oxidative Stress Hypothesis",
+        "freq": 208
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Abnormal Autophagy Hypothesis",
+        "freq": 166
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Metal Ion Hypothesis",
+        "freq": 113
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+        "freq": 101
+      }
+    ],
+    "unique_hypotheses_b": [
+      {
+        "Hypothesis": "Vascular Hypothesis",
+        "freq": 1507
+      },
+      {
+        "Hypothesis": "Neuroinflammation Hypothesis",
+        "freq": 263
+      },
+      {
+        "Hypothesis": "Neuroinflammation Hypothesis,Vascular Hypothesis",
+        "freq": 177
+      },
+      {
+        "Hypothesis": "Neuroinflammation Hypothesis,Amyloid Hypothesis",
+        "freq": 107
+      },
+      {
+        "Hypothesis": "Oxidative Stress Hypothesis",
+        "freq": 88
+      }
+    ]
+  },
+  "meta": {}
+}

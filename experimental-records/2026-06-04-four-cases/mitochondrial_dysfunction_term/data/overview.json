@@ -1,0 +1,104 @@
+{
+  "tool": "get_term_overview",
+  "status": "ok",
+  "query": {
+    "term": "mitochondrial dysfunction"
+  },
+  "count": 1,
+  "data": {
+    "summary": {
+      "event_count": 925,
+      "pmid_count": 427,
+      "gene_count": 219,
+      "hypothesis_count": 43
+    },
+    "top_genes": [
+      {
+        "Gene": "PINK1",
+        "freq": 73
+      },
+      {
+        "Gene": "SOD1",
+        "freq": 66
+      },
+      {
+        "Gene": "MAPT",
+        "freq": 65
+      },
+      {
+        "Gene": "LRRK2",
+        "freq": 51
+      },
+      {
+        "Gene": "PARK7",
+        "freq": 46
+      },
+      {
+        "Gene": "SNCA",
+        "freq": 44
+      },
+      {
+        "Gene": "APP",
+        "freq": 32
+      },
+      {
+        "Gene": "HTT",
+        "freq": 28
+      },
+      {
+        "Gene": "PRKN",
+        "freq": 27
+      },
+      {
+        "Gene": "APOE",
+        "freq": 19
+      }
+    ],
+    "top_hypotheses": [
+      {
+        "Hypothesis": "Mitochondrial autophagy hypothesis",
+        "freq": 93
+      },
+      {
+        "Hypothesis": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+        "freq": 61
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis",
+        "freq": 41
+      },
+      {
+        "Hypothesis": "Tau Protein Hypothesis,Mitochondrial Autophagy Hypothesis",
+        "freq": 36
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Mitochondrial Autophagy Hypothesis",
+        "freq": 19
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+        "freq": 14
+      },
+      {
+        "Hypothesis": "Neuroinflammation Hypothesis,Mitochondrial autophagy hypothesis",
+        "freq": 13
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+        "freq": 13
+      },
+      {
+        "Hypothesis": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+        "freq": 11
+      },
+      {
+        "Hypothesis": "Abnormal Autophagy Hypothesis,Mitochondrial Autophagy Hypothesis",
+        "freq": 11
+      }
+    ]
+  },
+  "meta": {
+    "raw_top_genes_count": 100,
+    "raw_top_hypotheses_count": 43
+  }
+}

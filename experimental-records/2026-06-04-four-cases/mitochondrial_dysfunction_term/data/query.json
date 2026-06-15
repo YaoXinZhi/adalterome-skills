@@ -1,0 +1,9 @@
+{
+  "term": "mitochondrial dysfunction",
+  "output_dir": "experimental-records/2026-06-04-four-cases/mitochondrial_dysfunction_term",
+  "base_url": "http://117.72.176.137/api/adalterome",
+  "curation_limit": 50,
+  "top_k": null,
+  "selected_limit": 5,
+  "timeout": 180.0
+}

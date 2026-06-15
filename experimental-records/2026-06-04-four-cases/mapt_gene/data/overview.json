@@ -1,0 +1,116 @@
+{
+  "tool": "get_gene_overview",
+  "status": "ok",
+  "query": {
+    "gene": "MAPT"
+  },
+  "count": 1,
+  "data": {
+    "summary": {
+      "Gene": "MAPT",
+      "event_count": 27822,
+      "pmid_count": 4480,
+      "term_count": 914,
+      "hypothesis_count": 166,
+      "avg_evidence_score": 3.0
+    },
+    "top_terms": [
+      {
+        "TermName": "Dementia",
+        "TermType": "HPO",
+        "freq": 1498
+      },
+      {
+        "TermName": "Frontotemporal dementia",
+        "TermType": "HPO",
+        "freq": 1382
+      },
+      {
+        "TermName": "protein",
+        "TermType": "GO",
+        "freq": 1235
+      },
+      {
+        "TermName": "chromosome",
+        "TermType": "GO",
+        "freq": 1021
+      },
+      {
+        "TermName": "Alzheimer Disease",
+        "TermType": "MeSH",
+        "freq": 966
+      },
+      {
+        "TermName": "Parkinsonism",
+        "TermType": "HPO",
+        "freq": 830
+      },
+      {
+        "TermName": "Tauopathies",
+        "TermType": "MeSH",
+        "freq": 746
+      },
+      {
+        "TermName": "Pallidopontonigral Degeneration",
+        "TermType": "MeSH",
+        "freq": 486
+      },
+      {
+        "TermName": "Neurodegeneration",
+        "TermType": "HPO",
+        "freq": 415
+      },
+      {
+        "TermName": "Neurodegenerative Diseases",
+        "TermType": "MeSH",
+        "freq": 330
+      }
+    ],
+    "top_hypotheses": [
+      {
+        "Hypothesis": "Tau Protein Hypothesis",
+        "freq": 10796
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+        "freq": 2610
+      },
+      {
+        "Hypothesis": "Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+        "freq": 775
+      },
+      {
+        "Hypothesis": "Tau Protein Hypothesis,Abnormal Autophagy Hypothesis",
+        "freq": 402
+      },
+      {
+        "Hypothesis": "Tau Protein Hypothesis,Mitochondrial Autophagy Hypothesis",
+        "freq": 351
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+        "freq": 271
+      },
+      {
+        "Hypothesis": "Tau Protein Hypothesis,Vascular Hypothesis",
+        "freq": 198
+      },
+      {
+        "Hypothesis": "Tau Protein Hypothesis,Oxidative Stress Hypothesis",
+        "freq": 196
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis",
+        "freq": 189
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Mitochondrial Autophagy Hypothesis",
+        "freq": 157
+      }
+    ]
+  },
+  "meta": {
+    "raw_top_terms_count": 100,
+    "raw_top_hypotheses_count": 100
+  }
+}

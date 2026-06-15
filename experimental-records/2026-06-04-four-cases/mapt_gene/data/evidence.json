@@ -1,0 +1,2586 @@
+{
+  "tool": "curate_gene_evidence",
+  "status": "ok",
+  "query": {
+    "gene": "MAPT",
+    "selected_limit": 5
+  },
+  "count": 5,
+  "data": {
+    "curation": {
+      "global_statistics": {
+        "summary": {
+          "Gene": "MAPT",
+          "event_count": 27822,
+          "pmid_count": 4480,
+          "term_count": 914,
+          "hypothesis_count": 166,
+          "avg_evidence_score": 3.0
+        },
+        "top_terms": [
+          {
+            "TermName": "Dementia",
+            "TermType": "HPO",
+            "freq": 1498
+          },
+          {
+            "TermName": "Frontotemporal dementia",
+            "TermType": "HPO",
+            "freq": 1382
+          },
+          {
+            "TermName": "protein",
+            "TermType": "GO",
+            "freq": 1235
+          },
+          {
+            "TermName": "chromosome",
+            "TermType": "GO",
+            "freq": 1021
+          },
+          {
+            "TermName": "Alzheimer Disease",
+            "TermType": "MeSH",
+            "freq": 966
+          },
+          {
+            "TermName": "Parkinsonism",
+            "TermType": "HPO",
+            "freq": 830
+          },
+          {
+            "TermName": "Tauopathies",
+            "TermType": "MeSH",
+            "freq": 746
+          },
+          {
+            "TermName": "Pallidopontonigral Degeneration",
+            "TermType": "MeSH",
+            "freq": 486
+          },
+          {
+            "TermName": "Neurodegeneration",
+            "TermType": "HPO",
+            "freq": 415
+          },
+          {
+            "TermName": "Neurodegenerative Diseases",
+            "TermType": "MeSH",
+            "freq": 330
+          }
+        ],
+        "top_hypotheses": [
+          {
+            "Hypothesis": "Tau Protein Hypothesis",
+            "freq": 10796
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+            "freq": 2610
+          },
+          {
+            "Hypothesis": "Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+            "freq": 775
+          },
+          {
+            "Hypothesis": "Tau Protein Hypothesis,Abnormal Autophagy Hypothesis",
+            "freq": 402
+          },
+          {
+            "Hypothesis": "Tau Protein Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "freq": 351
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+            "freq": 271
+          },
+          {
+            "Hypothesis": "Tau Protein Hypothesis,Vascular Hypothesis",
+            "freq": 198
+          },
+          {
+            "Hypothesis": "Tau Protein Hypothesis,Oxidative Stress Hypothesis",
+            "freq": 196
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis",
+            "freq": 189
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "freq": 157
+          }
+        ]
+      },
+      "coverage_scope": {
+        "query_type": "gene",
+        "curation_source": "remote_api",
+        "curation_scope": "server_full_query_pool",
+        "overview_event_count": 27822,
+        "matched_event_count": 27822,
+        "curation_pool_rows": 27822,
+        "coverage_ratio": 1.0,
+        "api_limit_notice": null,
+        "curation_endpoint_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=MAPT&selected_limit=5"
+      },
+      "deduplication_summary": {
+        "curation_pool_row_count": 27822,
+        "event_unique_rows": 8010,
+        "event_deduplication_key": "gene-fixed event key: alteration taxonomy + phenotype/term + hypothesis; fallback to PMID/sentence when structured fields are sparse",
+        "unique_pmids": 3042,
+        "unique_genes": 1,
+        "unique_phenotypes": 897,
+        "unique_terms": 897,
+        "unique_alteration_taxonomies": 28,
+        "unique_gene_alterations": 28,
+        "unique_alteration_signatures": 28,
+        "unique_hypotheses": 164
+      },
+      "dominant_clusters": {
+        "top_pmids": [
+          {
+            "value": "33255694",
+            "count": 24
+          },
+          {
+            "value": "26198711",
+            "count": 23
+          },
+          {
+            "value": "31907603",
+            "count": 22
+          },
+          {
+            "value": "34314701",
+            "count": 22
+          },
+          {
+            "value": "36845551",
+            "count": 19
+          }
+        ],
+        "top_genes": [
+          {
+            "value": "MAPT",
+            "count": 8010
+          }
+        ],
+        "top_phenotypes": [
+          {
+            "value": "Alzheimer Disease",
+            "count": 109
+          },
+          {
+            "value": "protein",
+            "count": 106
+          },
+          {
+            "value": "Neurodegeneration",
+            "count": 81
+          },
+          {
+            "value": "Dementia",
+            "count": 77
+          },
+          {
+            "value": "phosphorylation",
+            "count": 69
+          }
+        ],
+        "top_terms": [
+          {
+            "value": "Alzheimer Disease",
+            "count": 109
+          },
+          {
+            "value": "protein",
+            "count": 106
+          },
+          {
+            "value": "Neurodegeneration",
+            "count": 81
+          },
+          {
+            "value": "Dementia",
+            "count": 77
+          },
+          {
+            "value": "phosphorylation",
+            "count": 69
+          }
+        ],
+        "top_gene_alterations": [
+          {
+            "value": "MAPT / point mutations:mutations",
+            "count": 2445
+          },
+          {
+            "value": "MAPT / normalized variants:dna change",
+            "count": 1932
+          },
+          {
+            "value": "MAPT / structural variation:deletion",
+            "count": 516
+          },
+          {
+            "value": "MAPT / expression changes:dysregulation",
+            "count": 460
+          },
+          {
+            "value": "MAPT / epigenic changes:phosphorylation",
+            "count": 448
+          }
+        ],
+        "top_alteration_taxonomies": [
+          {
+            "value": "point mutations:mutations",
+            "count": 2445
+          },
+          {
+            "value": "normalized variants:dna change",
+            "count": 1932
+          },
+          {
+            "value": "structural variation:deletion",
+            "count": 516
+          },
+          {
+            "value": "expression changes:dysregulation",
+            "count": 460
+          },
+          {
+            "value": "epigenic changes:phosphorylation",
+            "count": 448
+          }
+        ],
+        "top_hypotheses": [
+          {
+            "value": "Tau Protein Hypothesis",
+            "count": 2048
+          },
+          {
+            "value": "Tau protein hypothesis",
+            "count": 831
+          },
+          {
+            "value": "Amyloid Hypothesis,Tau Protein Hypothesis",
+            "count": 797
+          },
+          {
+            "value": "Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+            "count": 298
+          },
+          {
+            "value": "Tau Protein Hypothesis,Abnormal Autophagy Hypothesis",
+            "count": 202
+          }
+        ],
+        "evidence_types": [
+          {
+            "value": "alteration_evidence",
+            "count": 5409
+          },
+          {
+            "value": "model_or_intervention",
+            "count": 2601
+          }
+        ],
+        "mechanism_strata": [
+          {
+            "value": "amyloid/tau axis",
+            "count": 8010
+          },
+          {
+            "value": "proteostasis/autophagy axis",
+            "count": 2996
+          },
+          {
+            "value": "synaptic and neuronal dysfunction axis",
+            "count": 2909
+          },
+          {
+            "value": "mitochondrial and oxidative stress axis",
+            "count": 1395
+          },
+          {
+            "value": "neuroinflammation and microglia axis",
+            "count": 995
+          }
+        ]
+      },
+      "query_relative_patterns": {
+        "phenotype": {
+          "label": "Phenotype",
+          "top": [
+            {
+              "value": "Neurodegeneration",
+              "count": 81
+            },
+            {
+              "value": "phosphorylation",
+              "count": 69
+            },
+            {
+              "value": "biosynthetic process",
+              "count": 65
+            },
+            {
+              "value": "Nerve Degeneration",
+              "count": 61
+            },
+            {
+              "value": "AD",
+              "count": 58
+            },
+            {
+              "value": "Cognition Disorders",
+              "count": 57
+            },
+            {
+              "value": "Tauopathies",
+              "count": 56
+            },
+            {
+              "value": "hyperphosphorylation",
+              "count": 56
+            }
+          ],
+          "long_tail": [
+            {
+              "value": "101084670",
+              "count": 1
+            },
+            {
+              "value": "10919",
+              "count": 1
+            },
+            {
+              "value": "10922",
+              "count": 1
+            },
+            {
+              "value": "11315",
+              "count": 1
+            },
+            {
+              "value": "11596",
+              "count": 1
+            },
+            {
+              "value": "117",
+              "count": 1
+            },
+            {
+              "value": "12349",
+              "count": 1
+            },
+            {
+              "value": "12569",
+              "count": 1
+            }
+          ],
+          "long_tail_threshold": 1
+        },
+        "gene_alteration": {
+          "label": "Gene-alteration",
+          "top": [
+            {
+              "value": "MAPT / point mutations:mutations",
+              "count": 2445
+            },
+            {
+              "value": "MAPT / normalized variants:dna change",
+              "count": 1932
+            },
+            {
+              "value": "MAPT / structural variation:deletion",
+              "count": 516
+            },
+            {
+              "value": "MAPT / expression changes:dysregulation",
+              "count": 460
+            },
+            {
+              "value": "MAPT / epigenic changes:phosphorylation",
+              "count": 448
+            },
+            {
+              "value": "MAPT / structural variation:chromosomal variation",
+              "count": 332
+            },
+            {
+              "value": "MAPT / expression changes:underexpression",
+              "count": 266
+            },
+            {
+              "value": "MAPT / genetic manipulation:gene aggregation",
+              "count": 239
+            }
+          ],
+          "long_tail": [
+            {
+              "value": "MAPT / structural variation:frameshift",
+              "count": 2
+            }
+          ],
+          "long_tail_threshold": 10
+        },
+        "hypothesis": {
+          "label": "Hypothesis",
+          "top": [
+            {
+              "value": "Tau Protein Hypothesis",
+              "count": 2048
+            },
+            {
+              "value": "Tau protein hypothesis",
+              "count": 831
+            },
+            {
+              "value": "Amyloid Hypothesis,Tau Protein Hypothesis",
+              "count": 797
+            },
+            {
+              "value": "Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+              "count": 298
+            },
+            {
+              "value": "Tau Protein Hypothesis,Abnormal Autophagy Hypothesis",
+              "count": 202
+            },
+            {
+              "value": "Tau Protein Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 172
+            },
+            {
+              "value": "Amyloid hypothesis,Tau protein hypothesis",
+              "count": 152
+            },
+            {
+              "value": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+              "count": 131
+            }
+          ],
+          "long_tail": [
+            {
+              "value": "Abnormal autophagy hypothesis,Amyloid hypothesis,Tau protein hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Abnormal autophagy hypothesis,Mitochondrial autophagy hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Amyloid Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Amyloid hypothesis,Neuroinflammation hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Amyloid hypothesis,Oxidative stress hypothesis,Vascular hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Cholinergic Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Cholinergic Hypothesis,Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Microbiota-Gut-Brain Axis hypothesis,Tau Protein Hypothesis",
+              "count": 1
+            }
+          ],
+          "long_tail_threshold": 2
+        }
+      },
+      "long_tail_definition": {
+        "method": "Query-specific frequency <= min(Q25, 10) after event-level deduplication",
+        "dimensions": [
+          "phenotype",
+          "gene_alteration",
+          "hypothesis"
+        ],
+        "thresholds": {
+          "phenotype": 1,
+          "gene_alteration": 10,
+          "hypothesis": 2
+        }
+      },
+      "long_tail_signals": [
+        {
+          "Gene": "MAPT",
+          "PMID": "32049030",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/32049030/",
+          "Journal": "Cell Rep. 2020 Feb 11",
+          "Year": 2020,
+          "TermName": "Ichthyosis follicularis atrichia photophobia syndrome",
+          "TermType": "MeSH",
+          "Hypothesis": "Neuroinflammation Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "normalized variants:dna change",
+          "GeneAlteration": "MAPT / normalized variants:dna change",
+          "AlterationSignature": "normalized variants:dna change",
+          "AlterationType": "Normalized Variants:DNA Change",
+          "AlterationMention": "P301L",
+          "AlterationID": "rs63751273",
+          "TriggerWord": "upregulation",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', 'dbSNP', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('P301L', 'Var', '(274, 279)', ('P301L', 'Mutation', 'rs63751273', '-')) -- CauseOf -- ('upregulation', 'PosReg', '(221, 233)', ('upregulation', 'PosReg', '-', '-')) -- ThemeOf -- ('paralleling the astrogliosis', 'Disease', '(322, 350)', ('paralleling the astrogliosis', 'Disease', 'MESH:C536085', '-'))",
+          "EventDedupKey": "gene | normalized variants:dna change | mesh:c536085 | neuroinflammation hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis",
+            "synaptic and neuronal dysfunction axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Ichthyosis follicularis atrichia photophobia syndrome",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "We found that Gfap was dramatically upregulated across age groups (Figure 3A; likelihood ratio test [LRT] statistic = 106.321, FDR = 1.28E-18), similar to results from another study reporting age-dependent (12-18 months) upregulation of hippocampal Gfap in tau (CaMKII-MAPT P301L) and amyloid (APP/PSEN1) mouse models and paralleling the astrogliosis observed in human AD brain."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "28769871",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/28769871/",
+          "Journal": "Front Neurol",
+          "Year": 2017,
+          "TermName": "protein metabolic process",
+          "TermType": "GO",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "MAPT / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockout",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "resulted in",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(249, 253)', ('MAPT', 'Gene', '17762', '-')) -- ThemeOf -- ('knockout', 'Var', '(43, 51)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('resulted in', 'Reg', '(134, 145)', ('resulted in', 'Reg', '-', '-')) -- ThemeOf -- ('protein metabolism', 'MPA', '(159, 177)', ('protein metabolism', 'MPA', 'GO:0019538', 'protein metabolic process'))",
+          "EventDedupKey": "gene | genetic manipulation:knockout | go:0019538 | tau protein hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "protein metabolic process",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "Recent studies have shown that conditional knockout of the Dicer gene in the mouse brain created an extensive miRNA deficiency, which resulted in abnormal Tau protein metabolism in mice with AD-like Tau hyperphosphorylation and aberrant splicing of MAPT."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "37727721",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37727721/",
+          "Journal": "World J Clin Cases",
+          "Year": 2023,
+          "TermName": "catalytic activity",
+          "TermType": "GO",
+          "Hypothesis": "Tau Protein Hypothesis,Neuroinflammation Hypothesis,Oxidative Stress Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutations",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "Increased",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(140, 144)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutations', 'Var', '(110, 119)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('Increased', 'PosReg', '(46, 55)', ('Increased', 'PosReg', '-', '-')) -- ThemeOf -- ('enzyme activity', 'MPA', '(56, 71)', ('enzyme activity', 'MPA', 'GO:0003824', 'catalytic activity'))",
+          "EventDedupKey": "gene | point mutations:mutations | go:0003824 | tau protein hypothesis,neuroinflammation hypothesis,oxidative stress hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "catalytic activity",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "This occurs through the following mechanisms: Increased enzyme activity of Cdk5 or GSK-3beta, decreased PPA2, mutations associated with the MAPT gene, increased neuroinflammatory response, enhanced influx of intracellular Ca2+, and impairment of oxidative phosphorylation."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "37092231",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37092231/",
+          "Journal": "J Huntingtons Dis;2023; 12 (1) 1. doi:10.3233/JHD-230569",
+          "Year": 2023,
+          "TermName": "progressive supranuclear palsy",
+          "TermType": "MeSH",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:chromosomal variation",
+          "GeneAlteration": "MAPT / structural variation:chromosomal variation",
+          "AlterationSignature": "structural variation:chromosomal variation",
+          "AlterationType": "structural variation:chromosomal variation",
+          "AlterationMention": "haplotype",
+          "AlterationID": "-",
+          "TriggerWord": "associated",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(28, 32)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('haplotype', 'Var', '(33, 42)', ('haplotype', 'Mutation', '-', '-')) -- CauseOf -- ('associated', 'Reg', '(131, 141)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('progressive supranuclear palsy', 'Disease', '(147, 177)', ('progressive supranuclear palsy', 'Disease', 'MESH:D013494', '-'))",
+          "EventDedupKey": "gene | structural variation:chromosomal variation | mesh:d013494 | tau protein hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "progressive supranuclear palsy",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Studies have shown that the MAPT haplotype can influence the development of neurodegenerative disorders: the H1 haplotype has been associated with progressive supranuclear palsy, corticobasal degeneration, and Alzheimer's disease (AD)."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "36622561",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36622561/",
+          "Journal": "Mol Neurobiol. 2023 Apr;60(4):2174-2185. doi: 10.1007/s12035-022-03190-x. Epub ",
+          "Year": 2023,
+          "TermName": "tau hyperphosphorylation",
+          "TermType": "MeSH",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutations",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "result from",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(185, 189)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutations', 'Var', '(132, 141)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('result from', 'Reg', '(68, 79)', ('result from', 'Reg', '-', '-')) -- ThemeOf -- ('tau hyperphosphorylation', 'Disease', '(80, 104)', ('tau hyperphosphorylation', 'Disease', 'MESH:C536599', '-'))",
+          "EventDedupKey": "gene | point mutations:mutations | mesh:c536599 | tau protein hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "tau hyperphosphorylation",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Tauopathies are traditionally defined as a group of conditions that result from tau hyperphosphorylation, abnormal tau splicing, or mutations in the microtubule-associated protein tau (MAPT) gene."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "35985329",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35985329/",
+          "Journal": "Stem Cell Reports",
+          "Year": 2022,
+          "TermName": "fatty acid biosynthetic process",
+          "TermType": "GO",
+          "Hypothesis": "Tau Protein Hypothesis,Vascular Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutant",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "enriched",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(83, 87)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutant', 'Var', '(88, 94)', ('mutant', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('enriched', 'PosReg', '(46, 54)', ('enriched', 'PosReg', '-', '-')) -- ThemeOf -- ('fatty acid synthesis', 'MPA', '(20, 40)', ('fatty acid synthesis', 'MPA', 'GO:0006633', 'fatty acid biosynthetic process'))",
+          "EventDedupKey": "gene | point mutations:mutations | go:0006633 | tau protein hypothesis,vascular hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "fatty acid biosynthetic process",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "GO terms related to fatty acid synthesis were enriched in the genes upregulated in MAPT mutant astrocytes (Figure 3B), including the fatty acid synthase gene FASN (Figure S4F), modulating neurodegeneration-related toxicities."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "35985329",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35985329/",
+          "Journal": "Stem Cell Reports",
+          "Year": 2022,
+          "TermName": "Ventricular Dysfunction",
+          "TermType": "MeSH",
+          "Hypothesis": "Tau Protein Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "normalized variants:dna change",
+          "GeneAlteration": "MAPT / normalized variants:dna change",
+          "AlterationSignature": "normalized variants:dna change",
+          "AlterationType": "Normalized Variants:DNA Change",
+          "AlterationMention": "V337M",
+          "AlterationID": "rs63750570",
+          "TriggerWord": "increased",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', 'dbSNP', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('V337M', 'Var', '(19, 24)', ('V337M', 'Mutation', 'rs63750570', '-')) -- CauseOf -- ('increased', 'PosReg', '(61, 70)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('glutamatergic dysfunction', 'Disease', '(92, 117)', ('glutamatergic dysfunction', 'Disease', 'MESH:D018754', '-'))",
+          "EventDedupKey": "gene | normalized variants:dna change | mesh:d018754 | tau protein hypothesis,glutamatergic excitotoxicity hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "synaptic and neuronal dysfunction axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Ventricular Dysfunction",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "hCOs with the MAPT V337M mutation have been reported to have increased tau phosphorylation, glutamatergic dysfunction, and glutamatergic neuron loss."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "33494262",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/33494262/",
+          "Journal": "Int J Mol Sci",
+          "Year": 2021,
+          "TermName": "Occasional",
+          "TermType": "HPO",
+          "Hypothesis": "Tau protein hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "normalized variants:protein change",
+          "GeneAlteration": "MAPT / normalized variants:protein change",
+          "AlterationSignature": "normalized variants:protein change",
+          "AlterationType": "Normalized Variants:Protein Change",
+          "AlterationMention": "p.Q124E",
+          "AlterationID": "rs1444650997",
+          "TriggerWord": "involved",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', 'dbSNP', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('p.Q124E', 'Var', '(62, 69)', ('p.Q124E', 'Mutation', 'rs1444650997', '-')) -- CauseOf -- ('involved', 'Reg', '(36, 44)', ('involved', 'Reg', '-', '-')) -- ThemeOf -- ('occasional', 'CPA', '(90, 100)', ('occasional', 'CPA', 'HP:0040283', 'Occasional (29-5%)'))",
+          "EventDedupKey": "gene | normalized variants:protein change | hp:0040283 | tau protein hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Occasional",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "One LRRK2 p.G2019S case, which also involved the MAPT variant p.Q124E, was described with occasional TDP-43 inclusions, nigral degeneration without Lewy bodies, and Alzheimer-type tau pathology."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "32184751",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/32184751/",
+          "Journal": "Front Neurol. 2020 Feb 28",
+          "Year": 2020,
+          "TermName": "acetylcholinesterase activity",
+          "TermType": "GO",
+          "Hypothesis": "Cholinergic Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutation",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "elevated",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(124, 128)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutation', 'Var', '(129, 137)', ('mutation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('elevated', 'PosReg', '(19, 27)', ('elevated', 'PosReg', '-', '-')) -- ThemeOf -- ('acetylcholinesterase activity', 'MPA', '(173, 202)', ('acetylcholinesterase activity', 'MPA', 'GO:0003990', 'acetylcholinesterase activity'))",
+          "EventDedupKey": "gene | point mutations:mutations | go:0003990 | cholinergic hypothesis,tau protein hypothesis,neuroinflammation hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "neuroinflammation and microglia axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "acetylcholinesterase activity",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Glial activity was elevated in the frontal cortex, the posterior cingulate cortex, and the occipital cortex of asymptomatic MAPT mutation carriers on [11C] DAA1106 PET, and acetylcholinesterase activity was reduced in the temporo-parietal cortex using [11C] N-methylpiperidin-4-yl acetate PET in three asymptomatic MAPT mutation carriers."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "31585367",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/31585367/",
+          "Journal": "Neurobiol Aging. 2019 Nov",
+          "Year": 2019,
+          "TermName": "Basal Laminar Drusen",
+          "TermType": "MeSH",
+          "Hypothesis": "Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutation",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "related",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(251, 255)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutation', 'Var', '(256, 264)', ('mutation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('related', 'Reg', '(95, 102)', ('related', 'Reg', '-', '-')) -- ThemeOf -- ('laminar spongiosis', 'Disease', '(124, 142)', ('laminar spongiosis', 'Disease', 'MESH:C563034', '-'))",
+          "EventDedupKey": "gene | point mutations:mutations | mesh:c563034 | tau protein hypothesis,neuroinflammation hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "neuroinflammation and microglia axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Basal Laminar Drusen",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "Elevation of MD in the asymptomatic stage and accelerating during the symptomatic stage may be related to the astrogliosis, laminar spongiosis and micro-vacuolization that would lead to an increase in free water in the extracellular space observed in MAPT mutation carriers during early stages of pathologic involvement."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "30590647",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/30590647/",
+          "Journal": "Hum Mol Genet. 2019 May 1",
+          "Year": 2019,
+          "TermName": "retrograde axonal transport",
+          "TermType": "GO",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "normalized variants:dna change",
+          "GeneAlteration": "MAPT / normalized variants:dna change",
+          "AlterationSignature": "normalized variants:dna change",
+          "AlterationType": "Normalized Variants:DNA Change",
+          "AlterationMention": "A152T",
+          "AlterationID": "rs143624519",
+          "TriggerWord": "alters",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', 'dbSNP', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('A152T', 'Var', '(36, 41)', ('A152T', 'Mutation', 'rs143624519', '-')) -- CauseOf -- ('alters', 'Reg', '(42, 48)', ('alters', 'Reg', '-', '-')) -- ThemeOf -- ('retrograde axonal transport', 'MPA', '(88, 115)', ('retrograde axonal transport', 'MPA', 'GO:0008090', 'retrograde axon cargo transport'))",
+          "EventDedupKey": "gene | normalized variants:dna change | go:0008090 | tau protein hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "synaptic and neuronal dysfunction axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "retrograde axonal transport",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "Tau/MAPT disease-associated variant A152T alters tau function and toxicity via impaired retrograde axonal transport."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "27242557",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/27242557/",
+          "Journal": "Front Psychiatry",
+          "Year": 2016,
+          "TermName": "cortical Lewy body",
+          "TermType": "GO",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "variant",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "higher",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(137, 141)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('variant', 'Var', '(145, 152)', ('variant', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('higher', 'PosReg', '(173, 179)', ('higher', 'PosReg', '-', '-')) -- ThemeOf -- ('cortical Lewy body counts', 'CPA', '(180, 205)', ('cortical Lewy body counts', 'CPA', 'GO:0097415', 'cortical Lewy body'))",
+          "EventDedupKey": "gene | point mutations:mutations | go:0097415 | tau protein hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "cortical Lewy body",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "Furthermore, in a large postmortem series of cases with Alzheimer's disease (AD), Lewy body disease or vascular pathology (n = 762), the MAPT H1 variant was associated with higher cortical Lewy body counts and reduced Alzheimer's type changes."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "26139368",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/26139368/",
+          "Journal": "Neuron",
+          "Year": 2015,
+          "TermName": "U1 snRNP",
+          "TermType": "GO",
+          "Hypothesis": "Tau protein hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutations",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "alters",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(64, 68)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutations', 'Var', '(15, 24)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('alters', 'Reg', '(180, 186)', ('alters', 'Reg', '-', '-')) -- ThemeOf -- ('U1 snRNP', 'MPA', '(208, 216)', ('U1 snRNP', 'MPA', 'GO:0005685', 'snRNP U1'))",
+          "EventDedupKey": "gene | point mutations:mutations | go:0005685 | tau protein hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "U1 snRNP",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "An example are mutations in microtubule-associated protein tau (MAPT aka tau) pre-mRNA that destabilize the hairpin structure at the exon 10 - intron 10 junction (Figure 7), which alters its interaction with U1 snRNP and causes deregulation of alternative pre-mRNA splicing."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "23727082",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/23727082/",
+          "Journal": "Alzheimers Dement",
+          "Year": 2014,
+          "TermName": "Clinical course",
+          "TermType": "HPO",
+          "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:rearrangements",
+          "GeneAlteration": "MAPT / structural variation:rearrangements",
+          "AlterationSignature": "structural variation:rearrangements",
+          "AlterationType": "structural variation:rearrangements",
+          "AlterationMention": "repeat expansions",
+          "AlterationID": "-",
+          "TriggerWord": "contribute",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(24, 28)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('repeat expansions', 'Var', '(59, 76)', ('repeat expansions', 'Mutation', '-', '-')) -- CauseOf -- ('contribute', 'Reg', '(101, 111)', ('contribute', 'Reg', '-', '-')) -- ThemeOf -- ('clinical course', 'CPA', '(154, 169)', ('clinical course', 'CPA', 'HP:0031797', 'Clinical course'))",
+          "EventDedupKey": "gene | structural variation:rearrangements | hp:0031797 | amyloid hypothesis,tau protein hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "vascular/metabolic axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Clinical course",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "APOE-epsilon genotypes, MAPT H1/H2 haplotypes, and C9ORF72 repeat expansions have each been shown to contribute to AD risk, phenotypic expression, and/or clinical course of EOD and thus were also examined."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "38994964",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38994964/",
+          "Journal": "-",
+          "Year": null,
+          "TermName": "myelin sheath",
+          "TermType": "-",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 86.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutant",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "affecting",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(63, 67)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutant', 'Var', '(47, 53)', ('mutant', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('affecting', 'Reg', '(186, 195)', ('affecting', 'Reg', '-', '-')) -- ThemeOf -- ('myelin sheath', 'MPA', '(209, 222)', ('myelin sheath', 'MPA', 'GO:0043209', 'myelin sheath'))",
+          "EventDedupKey": "gene | point mutations:mutations | go:0043209 | tau protein hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "synaptic and neuronal dysfunction axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "myelin sheath",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "Multiple animal models of tauopathy expressing mutant forms of MAPT recapitulate oligodendroglial tau inclusions with potential to cause degeneration/malfunction of oligodendrocytes and affecting the neuronal myelin sheath."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "26697132",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/26697132/",
+          "Journal": "Oxid Med Cell Longev",
+          "Year": 2016,
+          "TermName": "gamma-secretase complex",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+          "SentenceQuality": 85.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutations",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "involved",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(97, 101)', ('MAPT', 'Gene', '17762', '-')) -- ThemeOf -- ('mutations', 'Var', '(31, 40)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('involved', 'Reg', '(56, 64)', ('involved', 'Reg', '-', '-')) -- ThemeOf -- ('gamma-secretase complex', 'MPA', '(165, 188)', ('gamma-secretase complex', 'MPA', 'GO:0070765', 'gamma-secretase complex'))",
+          "EventDedupKey": "gene | point mutations:mutations | go:0070765 | amyloid hypothesis,tau protein hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "gamma-secretase complex",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "The 3x Tg-AD mouse model bears mutations in three genes involved in familial AD: APP; PSEN1; and MAPT, encoding amyloid precursor protein; presenilin-1 (part of the gamma-secretase complex); and tau."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "38930877",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38930877/",
+          "Journal": "-",
+          "Year": null,
+          "TermName": "corticobasal ganglionic degeneration",
+          "TermType": "MeSH",
+          "Hypothesis": "Tau protein hypothesis",
+          "SentenceQuality": 86.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutations",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "associated",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(186, 190)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutations', 'Var', '(169, 178)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('associated', 'Reg', '(49, 59)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('corticobasal ganglionic degeneration', 'Disease', '(127, 163)', ('corticobasal ganglionic degeneration', 'Disease', 'MESH:D000088282', '-'))",
+          "EventDedupKey": "gene | point mutations:mutations | mesh:d000088282 | tau protein hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "corticobasal ganglionic degeneration",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "The abnormal aggregation of tau protein has been associated with a variety of neurodegenerative diseases, such as AD, FTD, and corticobasal ganglionic degeneration, and mutations in the MAPT gene are thought to be an important cause; thus, the MAPT gene has significance for the study of neurodegenerative diseases."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "37131250",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37131250/",
+          "Journal": "-",
+          "Year": null,
+          "TermName": "protein self-association",
+          "TermType": "-",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 86.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "Mutations",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "increasing",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(34, 38)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('Mutations', 'Var', '(0, 9)', ('Mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('increasing', 'PosReg', '(158, 168)', ('increasing', 'PosReg', '-', '-')) -- ThemeOf -- ('protein self-association', 'MPA', '(181, 205)', ('protein self-association', 'MPA', 'GO:0043621', 'protein self-association'))",
+          "EventDedupKey": "gene | point mutations:mutations | go:0043621 | tau protein hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "protein self-association",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "Mutations in the SNCA, TARDBP and MAPT genes that alter specific amino acids also increase the risk for neurodegenerative disease and are thought to do so by increasing the rate of protein self-association."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "37730840",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37730840/",
+          "Journal": "-",
+          "Year": null,
+          "TermName": "impaired neuronal function",
+          "TermType": "MeSH",
+          "Hypothesis": "Tau Protein Hypothesis,Mitochondrial Autophagy Hypothesis,Abnormal Autophagy Hypothesis",
+          "SentenceQuality": 86.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutations",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "accumulation",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(0, 4)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutations', 'Var', '(5, 14)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('accumulation', 'PosReg', '(32, 44)', ('accumulation', 'PosReg', '-', '-')) -- ThemeOf -- ('impaired neuronal function', 'Disease', '(46, 72)', ('impaired neuronal function', 'Disease', 'MESH:D003072', '-'))",
+          "EventDedupKey": "gene | point mutations:mutations | mesh:d003072 | tau protein hypothesis,mitochondrial autophagy hypothesis,abnormal autophagy hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "synaptic and neuronal dysfunction axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "impaired neuronal function",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "MAPT mutations also lead to tau accumulation, impaired neuronal function, cell death, mitochondrial stress, autophagic and lysosomal dysregulation, and nuclear-cytosolic transport defects."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "39757022",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/39757022/",
+          "Journal": "-",
+          "Year": null,
+          "TermName": "synaptic injury",
+          "TermType": "MeSH",
+          "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis,Oxidative Stress Hypothesis",
+          "SentenceQuality": 86.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutant",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "induce",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('tau', 'Gene', '(62, 65)', ('tau', 'Gene', '4137', '-')) -- ThemeOf -- ('mutant', 'Var', '(30, 36)', ('mutant', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('induce', 'Reg', '(66, 72)', ('induce', 'Reg', '-', '-')) -- ThemeOf -- ('synaptic injury', 'Disease', '(110, 125)', ('synaptic injury', 'Disease', 'MESH:D012183', '-'))",
+          "EventDedupKey": "gene | point mutations:mutations | mesh:d012183 | amyloid hypothesis,tau protein hypothesis,neuroinflammation hypothesis,oxidative stress hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis",
+            "synaptic and neuronal dysfunction axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "synaptic injury",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "However, aggregated Abeta and mutant hyperphosphorylated MAPT/tau induce oxidative stress, neuroinflammation, synaptic injury, and neuronal apoptosis (Figure 1)."
+        }
+      ],
+      "evidence_type_groups": {
+        "alteration_evidence": [
+          {
+            "Gene": "MAPT",
+            "PMID": "37727721",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37727721/",
+            "Journal": "World J Clin Cases",
+            "Year": 2023,
+            "TermName": "catalytic activity",
+            "TermType": "GO",
+            "Hypothesis": "Tau Protein Hypothesis,Neuroinflammation Hypothesis,Oxidative Stress Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "MAPT / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "mutations",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "Increased",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(140, 144)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutations', 'Var', '(110, 119)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('Increased', 'PosReg', '(46, 55)', ('Increased', 'PosReg', '-', '-')) -- ThemeOf -- ('enzyme activity', 'MPA', '(56, 71)', ('enzyme activity', 'MPA', 'GO:0003824', 'catalytic activity'))",
+            "EventDedupKey": "gene | point mutations:mutations | go:0003824 | tau protein hypothesis,neuroinflammation hypothesis,oxidative stress hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "catalytic activity",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "This occurs through the following mechanisms: Increased enzyme activity of Cdk5 or GSK-3beta, decreased PPA2, mutations associated with the MAPT gene, increased neuroinflammatory response, enhanced influx of intracellular Ca2+, and impairment of oxidative phosphorylation."
+          },
+          {
+            "Gene": "MAPT",
+            "PMID": "37092231",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37092231/",
+            "Journal": "J Huntingtons Dis;2023; 12 (1) 1. doi:10.3233/JHD-230569",
+            "Year": 2023,
+            "TermName": "progressive supranuclear palsy",
+            "TermType": "MeSH",
+            "Hypothesis": "Tau Protein Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:chromosomal variation",
+            "GeneAlteration": "MAPT / structural variation:chromosomal variation",
+            "AlterationSignature": "structural variation:chromosomal variation",
+            "AlterationType": "structural variation:chromosomal variation",
+            "AlterationMention": "haplotype",
+            "AlterationID": "-",
+            "TriggerWord": "associated",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(28, 32)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('haplotype', 'Var', '(33, 42)', ('haplotype', 'Mutation', '-', '-')) -- CauseOf -- ('associated', 'Reg', '(131, 141)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('progressive supranuclear palsy', 'Disease', '(147, 177)', ('progressive supranuclear palsy', 'Disease', 'MESH:D013494', '-'))",
+            "EventDedupKey": "gene | structural variation:chromosomal variation | mesh:d013494 | tau protein hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "progressive supranuclear palsy",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Studies have shown that the MAPT haplotype can influence the development of neurodegenerative disorders: the H1 haplotype has been associated with progressive supranuclear palsy, corticobasal degeneration, and Alzheimer's disease (AD)."
+          },
+          {
+            "Gene": "MAPT",
+            "PMID": "36622561",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36622561/",
+            "Journal": "Mol Neurobiol. 2023 Apr;60(4):2174-2185. doi: 10.1007/s12035-022-03190-x. Epub ",
+            "Year": 2023,
+            "TermName": "tau hyperphosphorylation",
+            "TermType": "MeSH",
+            "Hypothesis": "Tau Protein Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "MAPT / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "mutations",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "result from",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(185, 189)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutations', 'Var', '(132, 141)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('result from', 'Reg', '(68, 79)', ('result from', 'Reg', '-', '-')) -- ThemeOf -- ('tau hyperphosphorylation', 'Disease', '(80, 104)', ('tau hyperphosphorylation', 'Disease', 'MESH:C536599', '-'))",
+            "EventDedupKey": "gene | point mutations:mutations | mesh:c536599 | tau protein hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "tau hyperphosphorylation",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Tauopathies are traditionally defined as a group of conditions that result from tau hyperphosphorylation, abnormal tau splicing, or mutations in the microtubule-associated protein tau (MAPT) gene."
+          }
+        ],
+        "model_or_intervention": [
+          {
+            "Gene": "MAPT",
+            "PMID": "32049030",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/32049030/",
+            "Journal": "Cell Rep. 2020 Feb 11",
+            "Year": 2020,
+            "TermName": "Ichthyosis follicularis atrichia photophobia syndrome",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "normalized variants:dna change",
+            "GeneAlteration": "MAPT / normalized variants:dna change",
+            "AlterationSignature": "normalized variants:dna change",
+            "AlterationType": "Normalized Variants:DNA Change",
+            "AlterationMention": "P301L",
+            "AlterationID": "rs63751273",
+            "TriggerWord": "upregulation",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', 'dbSNP', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('P301L', 'Var', '(274, 279)', ('P301L', 'Mutation', 'rs63751273', '-')) -- CauseOf -- ('upregulation', 'PosReg', '(221, 233)', ('upregulation', 'PosReg', '-', '-')) -- ThemeOf -- ('paralleling the astrogliosis', 'Disease', '(322, 350)', ('paralleling the astrogliosis', 'Disease', 'MESH:C536085', '-'))",
+            "EventDedupKey": "gene | normalized variants:dna change | mesh:c536085 | neuroinflammation hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Ichthyosis follicularis atrichia photophobia syndrome",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "We found that Gfap was dramatically upregulated across age groups (Figure 3A; likelihood ratio test [LRT] statistic = 106.321, FDR = 1.28E-18), similar to results from another study reporting age-dependent (12-18 months) upregulation of hippocampal Gfap in tau (CaMKII-MAPT P301L) and amyloid (APP/PSEN1) mouse models and paralleling the astrogliosis observed in human AD brain."
+          },
+          {
+            "Gene": "MAPT",
+            "PMID": "28769871",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/28769871/",
+            "Journal": "Front Neurol",
+            "Year": 2017,
+            "TermName": "protein metabolic process",
+            "TermType": "GO",
+            "Hypothesis": "Tau Protein Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "MAPT / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "knockout",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "resulted in",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(249, 253)', ('MAPT', 'Gene', '17762', '-')) -- ThemeOf -- ('knockout', 'Var', '(43, 51)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('resulted in', 'Reg', '(134, 145)', ('resulted in', 'Reg', '-', '-')) -- ThemeOf -- ('protein metabolism', 'MPA', '(159, 177)', ('protein metabolism', 'MPA', 'GO:0019538', 'protein metabolic process'))",
+            "EventDedupKey": "gene | genetic manipulation:knockout | go:0019538 | tau protein hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "vascular/metabolic axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "protein metabolic process",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "PMID-traceable"
+            ],
+            "Sentence": "Recent studies have shown that conditional knockout of the Dicer gene in the mouse brain created an extensive miRNA deficiency, which resulted in abnormal Tau protein metabolism in mice with AD-like Tau hyperphosphorylation and aberrant splicing of MAPT."
+          }
+        ]
+      },
+      "mechanism_strata": {
+        "amyloid/tau axis": [
+          {
+            "Gene": "MAPT",
+            "PMID": "32049030",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/32049030/",
+            "Journal": "Cell Rep. 2020 Feb 11",
+            "Year": 2020,
+            "TermName": "Ichthyosis follicularis atrichia photophobia syndrome",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "normalized variants:dna change",
+            "GeneAlteration": "MAPT / normalized variants:dna change",
+            "AlterationSignature": "normalized variants:dna change",
+            "AlterationType": "Normalized Variants:DNA Change",
+            "AlterationMention": "P301L",
+            "AlterationID": "rs63751273",
+            "TriggerWord": "upregulation",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', 'dbSNP', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('P301L', 'Var', '(274, 279)', ('P301L', 'Mutation', 'rs63751273', '-')) -- CauseOf -- ('upregulation', 'PosReg', '(221, 233)', ('upregulation', 'PosReg', '-', '-')) -- ThemeOf -- ('paralleling the astrogliosis', 'Disease', '(322, 350)', ('paralleling the astrogliosis', 'Disease', 'MESH:C536085', '-'))",
+            "EventDedupKey": "gene | normalized variants:dna change | mesh:c536085 | neuroinflammation hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Ichthyosis follicularis atrichia photophobia syndrome",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "We found that Gfap was dramatically upregulated across age groups (Figure 3A; likelihood ratio test [LRT] statistic = 106.321, FDR = 1.28E-18), similar to results from another study reporting age-dependent (12-18 months) upregulation of hippocampal Gfap in tau (CaMKII-MAPT P301L) and amyloid (APP/PSEN1) mouse models and paralleling the astrogliosis observed in human AD brain."
+          },
+          {
+            "Gene": "MAPT",
+            "PMID": "37727721",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37727721/",
+            "Journal": "World J Clin Cases",
+            "Year": 2023,
+            "TermName": "catalytic activity",
+            "TermType": "GO",
+            "Hypothesis": "Tau Protein Hypothesis,Neuroinflammation Hypothesis,Oxidative Stress Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "MAPT / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "mutations",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "Increased",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(140, 144)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutations', 'Var', '(110, 119)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('Increased', 'PosReg', '(46, 55)', ('Increased', 'PosReg', '-', '-')) -- ThemeOf -- ('enzyme activity', 'MPA', '(56, 71)', ('enzyme activity', 'MPA', 'GO:0003824', 'catalytic activity'))",
+            "EventDedupKey": "gene | point mutations:mutations | go:0003824 | tau protein hypothesis,neuroinflammation hypothesis,oxidative stress hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "catalytic activity",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "This occurs through the following mechanisms: Increased enzyme activity of Cdk5 or GSK-3beta, decreased PPA2, mutations associated with the MAPT gene, increased neuroinflammatory response, enhanced influx of intracellular Ca2+, and impairment of oxidative phosphorylation."
+          },
+          {
+            "Gene": "MAPT",
+            "PMID": "28769871",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/28769871/",
+            "Journal": "Front Neurol",
+            "Year": 2017,
+            "TermName": "protein metabolic process",
+            "TermType": "GO",
+            "Hypothesis": "Tau Protein Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "MAPT / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "knockout",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "resulted in",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(249, 253)', ('MAPT', 'Gene', '17762', '-')) -- ThemeOf -- ('knockout', 'Var', '(43, 51)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('resulted in', 'Reg', '(134, 145)', ('resulted in', 'Reg', '-', '-')) -- ThemeOf -- ('protein metabolism', 'MPA', '(159, 177)', ('protein metabolism', 'MPA', 'GO:0019538', 'protein metabolic process'))",
+            "EventDedupKey": "gene | genetic manipulation:knockout | go:0019538 | tau protein hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "vascular/metabolic axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "protein metabolic process",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "PMID-traceable"
+            ],
+            "Sentence": "Recent studies have shown that conditional knockout of the Dicer gene in the mouse brain created an extensive miRNA deficiency, which resulted in abnormal Tau protein metabolism in mice with AD-like Tau hyperphosphorylation and aberrant splicing of MAPT."
+          },
+          {
+            "Gene": "MAPT",
+            "PMID": "37092231",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37092231/",
+            "Journal": "J Huntingtons Dis;2023; 12 (1) 1. doi:10.3233/JHD-230569",
+            "Year": 2023,
+            "TermName": "progressive supranuclear palsy",
+            "TermType": "MeSH",
+            "Hypothesis": "Tau Protein Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:chromosomal variation",
+            "GeneAlteration": "MAPT / structural variation:chromosomal variation",
+            "AlterationSignature": "structural variation:chromosomal variation",
+            "AlterationType": "structural variation:chromosomal variation",
+            "AlterationMention": "haplotype",
+            "AlterationID": "-",
+            "TriggerWord": "associated",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(28, 32)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('haplotype', 'Var', '(33, 42)', ('haplotype', 'Mutation', '-', '-')) -- CauseOf -- ('associated', 'Reg', '(131, 141)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('progressive supranuclear palsy', 'Disease', '(147, 177)', ('progressive supranuclear palsy', 'Disease', 'MESH:D013494', '-'))",
+            "EventDedupKey": "gene | structural variation:chromosomal variation | mesh:d013494 | tau protein hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "progressive supranuclear palsy",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Studies have shown that the MAPT haplotype can influence the development of neurodegenerative disorders: the H1 haplotype has been associated with progressive supranuclear palsy, corticobasal degeneration, and Alzheimer's disease (AD)."
+          },
+          {
+            "Gene": "MAPT",
+            "PMID": "36622561",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36622561/",
+            "Journal": "Mol Neurobiol. 2023 Apr;60(4):2174-2185. doi: 10.1007/s12035-022-03190-x. Epub ",
+            "Year": 2023,
+            "TermName": "tau hyperphosphorylation",
+            "TermType": "MeSH",
+            "Hypothesis": "Tau Protein Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "MAPT / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "mutations",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "result from",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(185, 189)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutations', 'Var', '(132, 141)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('result from', 'Reg', '(68, 79)', ('result from', 'Reg', '-', '-')) -- ThemeOf -- ('tau hyperphosphorylation', 'Disease', '(80, 104)', ('tau hyperphosphorylation', 'Disease', 'MESH:C536599', '-'))",
+            "EventDedupKey": "gene | point mutations:mutations | mesh:c536599 | tau protein hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "tau hyperphosphorylation",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Tauopathies are traditionally defined as a group of conditions that result from tau hyperphosphorylation, abnormal tau splicing, or mutations in the microtubule-associated protein tau (MAPT) gene."
+          }
+        ],
+        "mitochondrial and oxidative stress axis": [
+          {
+            "Gene": "MAPT",
+            "PMID": "32049030",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/32049030/",
+            "Journal": "Cell Rep. 2020 Feb 11",
+            "Year": 2020,
+            "TermName": "Ichthyosis follicularis atrichia photophobia syndrome",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "normalized variants:dna change",
+            "GeneAlteration": "MAPT / normalized variants:dna change",
+            "AlterationSignature": "normalized variants:dna change",
+            "AlterationType": "Normalized Variants:DNA Change",
+            "AlterationMention": "P301L",
+            "AlterationID": "rs63751273",
+            "TriggerWord": "upregulation",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', 'dbSNP', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('P301L', 'Var', '(274, 279)', ('P301L', 'Mutation', 'rs63751273', '-')) -- CauseOf -- ('upregulation', 'PosReg', '(221, 233)', ('upregulation', 'PosReg', '-', '-')) -- ThemeOf -- ('paralleling the astrogliosis', 'Disease', '(322, 350)', ('paralleling the astrogliosis', 'Disease', 'MESH:C536085', '-'))",
+            "EventDedupKey": "gene | normalized variants:dna change | mesh:c536085 | neuroinflammation hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Ichthyosis follicularis atrichia photophobia syndrome",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "We found that Gfap was dramatically upregulated across age groups (Figure 3A; likelihood ratio test [LRT] statistic = 106.321, FDR = 1.28E-18), similar to results from another study reporting age-dependent (12-18 months) upregulation of hippocampal Gfap in tau (CaMKII-MAPT P301L) and amyloid (APP/PSEN1) mouse models and paralleling the astrogliosis observed in human AD brain."
+          },
+          {
+            "Gene": "MAPT",
+            "PMID": "37727721",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37727721/",
+            "Journal": "World J Clin Cases",
+            "Year": 2023,
+            "TermName": "catalytic activity",
+            "TermType": "GO",
+            "Hypothesis": "Tau Protein Hypothesis,Neuroinflammation Hypothesis,Oxidative Stress Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "MAPT / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "mutations",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "Increased",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(140, 144)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutations', 'Var', '(110, 119)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('Increased', 'PosReg', '(46, 55)', ('Increased', 'PosReg', '-', '-')) -- ThemeOf -- ('enzyme activity', 'MPA', '(56, 71)', ('enzyme activity', 'MPA', 'GO:0003824', 'catalytic activity'))",
+            "EventDedupKey": "gene | point mutations:mutations | go:0003824 | tau protein hypothesis,neuroinflammation hypothesis,oxidative stress hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "catalytic activity",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "This occurs through the following mechanisms: Increased enzyme activity of Cdk5 or GSK-3beta, decreased PPA2, mutations associated with the MAPT gene, increased neuroinflammatory response, enhanced influx of intracellular Ca2+, and impairment of oxidative phosphorylation."
+          }
+        ],
+        "neuroinflammation and microglia axis": [
+          {
+            "Gene": "MAPT",
+            "PMID": "32049030",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/32049030/",
+            "Journal": "Cell Rep. 2020 Feb 11",
+            "Year": 2020,
+            "TermName": "Ichthyosis follicularis atrichia photophobia syndrome",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "normalized variants:dna change",
+            "GeneAlteration": "MAPT / normalized variants:dna change",
+            "AlterationSignature": "normalized variants:dna change",
+            "AlterationType": "Normalized Variants:DNA Change",
+            "AlterationMention": "P301L",
+            "AlterationID": "rs63751273",
+            "TriggerWord": "upregulation",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', 'dbSNP', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('P301L', 'Var', '(274, 279)', ('P301L', 'Mutation', 'rs63751273', '-')) -- CauseOf -- ('upregulation', 'PosReg', '(221, 233)', ('upregulation', 'PosReg', '-', '-')) -- ThemeOf -- ('paralleling the astrogliosis', 'Disease', '(322, 350)', ('paralleling the astrogliosis', 'Disease', 'MESH:C536085', '-'))",
+            "EventDedupKey": "gene | normalized variants:dna change | mesh:c536085 | neuroinflammation hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Ichthyosis follicularis atrichia photophobia syndrome",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "We found that Gfap was dramatically upregulated across age groups (Figure 3A; likelihood ratio test [LRT] statistic = 106.321, FDR = 1.28E-18), similar to results from another study reporting age-dependent (12-18 months) upregulation of hippocampal Gfap in tau (CaMKII-MAPT P301L) and amyloid (APP/PSEN1) mouse models and paralleling the astrogliosis observed in human AD brain."
+          },
+          {
+            "Gene": "MAPT",
+            "PMID": "37727721",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37727721/",
+            "Journal": "World J Clin Cases",
+            "Year": 2023,
+            "TermName": "catalytic activity",
+            "TermType": "GO",
+            "Hypothesis": "Tau Protein Hypothesis,Neuroinflammation Hypothesis,Oxidative Stress Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "MAPT / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "mutations",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "Increased",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(140, 144)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutations', 'Var', '(110, 119)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('Increased', 'PosReg', '(46, 55)', ('Increased', 'PosReg', '-', '-')) -- ThemeOf -- ('enzyme activity', 'MPA', '(56, 71)', ('enzyme activity', 'MPA', 'GO:0003824', 'catalytic activity'))",
+            "EventDedupKey": "gene | point mutations:mutations | go:0003824 | tau protein hypothesis,neuroinflammation hypothesis,oxidative stress hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "catalytic activity",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "This occurs through the following mechanisms: Increased enzyme activity of Cdk5 or GSK-3beta, decreased PPA2, mutations associated with the MAPT gene, increased neuroinflammatory response, enhanced influx of intracellular Ca2+, and impairment of oxidative phosphorylation."
+          }
+        ],
+        "proteostasis/autophagy axis": [
+          {
+            "Gene": "MAPT",
+            "PMID": "37092231",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37092231/",
+            "Journal": "J Huntingtons Dis;2023; 12 (1) 1. doi:10.3233/JHD-230569",
+            "Year": 2023,
+            "TermName": "progressive supranuclear palsy",
+            "TermType": "MeSH",
+            "Hypothesis": "Tau Protein Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "structural variation:chromosomal variation",
+            "GeneAlteration": "MAPT / structural variation:chromosomal variation",
+            "AlterationSignature": "structural variation:chromosomal variation",
+            "AlterationType": "structural variation:chromosomal variation",
+            "AlterationMention": "haplotype",
+            "AlterationID": "-",
+            "TriggerWord": "associated",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(28, 32)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('haplotype', 'Var', '(33, 42)', ('haplotype', 'Mutation', '-', '-')) -- CauseOf -- ('associated', 'Reg', '(131, 141)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('progressive supranuclear palsy', 'Disease', '(147, 177)', ('progressive supranuclear palsy', 'Disease', 'MESH:D013494', '-'))",
+            "EventDedupKey": "gene | structural variation:chromosomal variation | mesh:d013494 | tau protein hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "progressive supranuclear palsy",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "Studies have shown that the MAPT haplotype can influence the development of neurodegenerative disorders: the H1 haplotype has been associated with progressive supranuclear palsy, corticobasal degeneration, and Alzheimer's disease (AD)."
+          }
+        ],
+        "synaptic and neuronal dysfunction axis": [
+          {
+            "Gene": "MAPT",
+            "PMID": "32049030",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/32049030/",
+            "Journal": "Cell Rep. 2020 Feb 11",
+            "Year": 2020,
+            "TermName": "Ichthyosis follicularis atrichia photophobia syndrome",
+            "TermType": "MeSH",
+            "Hypothesis": "Neuroinflammation Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "normalized variants:dna change",
+            "GeneAlteration": "MAPT / normalized variants:dna change",
+            "AlterationSignature": "normalized variants:dna change",
+            "AlterationType": "Normalized Variants:DNA Change",
+            "AlterationMention": "P301L",
+            "AlterationID": "rs63751273",
+            "TriggerWord": "upregulation",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', 'dbSNP', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('P301L', 'Var', '(274, 279)', ('P301L', 'Mutation', 'rs63751273', '-')) -- CauseOf -- ('upregulation', 'PosReg', '(221, 233)', ('upregulation', 'PosReg', '-', '-')) -- ThemeOf -- ('paralleling the astrogliosis', 'Disease', '(322, 350)', ('paralleling the astrogliosis', 'Disease', 'MESH:C536085', '-'))",
+            "EventDedupKey": "gene | normalized variants:dna change | mesh:c536085 | neuroinflammation hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "synaptic and neuronal dysfunction axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Ichthyosis follicularis atrichia photophobia syndrome",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "We found that Gfap was dramatically upregulated across age groups (Figure 3A; likelihood ratio test [LRT] statistic = 106.321, FDR = 1.28E-18), similar to results from another study reporting age-dependent (12-18 months) upregulation of hippocampal Gfap in tau (CaMKII-MAPT P301L) and amyloid (APP/PSEN1) mouse models and paralleling the astrogliosis observed in human AD brain."
+          }
+        ],
+        "vascular/metabolic axis": [
+          {
+            "Gene": "MAPT",
+            "PMID": "28769871",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/28769871/",
+            "Journal": "Front Neurol",
+            "Year": 2017,
+            "TermName": "protein metabolic process",
+            "TermType": "GO",
+            "Hypothesis": "Tau Protein Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knockout",
+            "GeneAlteration": "MAPT / genetic manipulation:knockout",
+            "AlterationSignature": "genetic manipulation:knockout",
+            "AlterationType": "genetic manipulation:knockout",
+            "AlterationMention": "knockout",
+            "AlterationID": "genetic manipulation:knockout",
+            "TriggerWord": "resulted in",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('MAPT', 'Gene', '(249, 253)', ('MAPT', 'Gene', '17762', '-')) -- ThemeOf -- ('knockout', 'Var', '(43, 51)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('resulted in', 'Reg', '(134, 145)', ('resulted in', 'Reg', '-', '-')) -- ThemeOf -- ('protein metabolism', 'MPA', '(159, 177)', ('protein metabolism', 'MPA', 'GO:0019538', 'protein metabolic process'))",
+            "EventDedupKey": "gene | genetic manipulation:knockout | go:0019538 | tau protein hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "vascular/metabolic axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "protein metabolic process",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "PMID-traceable"
+            ],
+            "Sentence": "Recent studies have shown that conditional knockout of the Dicer gene in the mouse brain created an extensive miRNA deficiency, which resulted in abnormal Tau protein metabolism in mice with AD-like Tau hyperphosphorylation and aberrant splicing of MAPT."
+          }
+        ]
+      },
+      "chronological_summary": [
+        {
+          "period": "2010-2014",
+          "row_count": 872,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 872
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 271
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 268
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 142
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 44
+            }
+          ]
+        },
+        {
+          "period": "2015-2019",
+          "row_count": 2110,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 2110
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 744
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 657
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 362
+            },
+            {
+              "value": "neuroinflammation and microglia axis",
+              "count": 240
+            }
+          ]
+        },
+        {
+          "period": "2020-2024",
+          "row_count": 4221,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 4221
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 1793
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 1601
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 778
+            },
+            {
+              "value": "neuroinflammation and microglia axis",
+              "count": 659
+            }
+          ]
+        },
+        {
+          "period": "before 2010",
+          "row_count": 361,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 361
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 140
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 107
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 37
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 22
+            }
+          ]
+        },
+        {
+          "period": "missing year",
+          "row_count": 446,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 446
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 186
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 138
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 76
+            },
+            {
+              "value": "neuroinflammation and microglia axis",
+              "count": 51
+            }
+          ]
+        }
+      ],
+      "bias_notes": [
+        "Curation pool source: remote_api (server_full_query_pool).",
+        "Curation used 27822 curation pool row(s) and reduced them to 8010 event-unique row(s).",
+        "Event deduplication key: gene-fixed event key: alteration taxonomy + phenotype/term + hypothesis; fallback to PMID/sentence when structured fields are sparse.",
+        "The curation pool covers 27822 of 27822 event record(s) matched by the curation query (100.00%).",
+        "The most frequent PMID contributes 24 of 8010 event-unique rows.",
+        "The most frequent phenotype is `Alzheimer Disease` with 109 event-unique row(s).",
+        "The most frequent alteration taxonomy appears in 2445 event-unique row(s).",
+        "Broad disease/background terms account for 504 of 8010 event-unique rows.",
+        "446 event-unique row(s) lack usable year metadata."
+      ],
+      "selected_evidence": [
+        {
+          "Gene": "MAPT",
+          "PMID": "32049030",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/32049030/",
+          "Journal": "Cell Rep. 2020 Feb 11",
+          "Year": 2020,
+          "TermName": "Ichthyosis follicularis atrichia photophobia syndrome",
+          "TermType": "MeSH",
+          "Hypothesis": "Neuroinflammation Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "normalized variants:dna change",
+          "GeneAlteration": "MAPT / normalized variants:dna change",
+          "AlterationSignature": "normalized variants:dna change",
+          "AlterationType": "Normalized Variants:DNA Change",
+          "AlterationMention": "P301L",
+          "AlterationID": "rs63751273",
+          "TriggerWord": "upregulation",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', 'dbSNP', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('P301L', 'Var', '(274, 279)', ('P301L', 'Mutation', 'rs63751273', '-')) -- CauseOf -- ('upregulation', 'PosReg', '(221, 233)', ('upregulation', 'PosReg', '-', '-')) -- ThemeOf -- ('paralleling the astrogliosis', 'Disease', '(322, 350)', ('paralleling the astrogliosis', 'Disease', 'MESH:C536085', '-'))",
+          "EventDedupKey": "gene | normalized variants:dna change | mesh:c536085 | neuroinflammation hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis",
+            "synaptic and neuronal dysfunction axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Ichthyosis follicularis atrichia photophobia syndrome",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "We found that Gfap was dramatically upregulated across age groups (Figure 3A; likelihood ratio test [LRT] statistic = 106.321, FDR = 1.28E-18), similar to results from another study reporting age-dependent (12-18 months) upregulation of hippocampal Gfap in tau (CaMKII-MAPT P301L) and amyloid (APP/PSEN1) mouse models and paralleling the astrogliosis observed in human AD brain."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "37727721",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37727721/",
+          "Journal": "World J Clin Cases",
+          "Year": 2023,
+          "TermName": "catalytic activity",
+          "TermType": "GO",
+          "Hypothesis": "Tau Protein Hypothesis,Neuroinflammation Hypothesis,Oxidative Stress Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutations",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "Increased",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(140, 144)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutations', 'Var', '(110, 119)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('Increased', 'PosReg', '(46, 55)', ('Increased', 'PosReg', '-', '-')) -- ThemeOf -- ('enzyme activity', 'MPA', '(56, 71)', ('enzyme activity', 'MPA', 'GO:0003824', 'catalytic activity'))",
+          "EventDedupKey": "gene | point mutations:mutations | go:0003824 | tau protein hypothesis,neuroinflammation hypothesis,oxidative stress hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "catalytic activity",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "This occurs through the following mechanisms: Increased enzyme activity of Cdk5 or GSK-3beta, decreased PPA2, mutations associated with the MAPT gene, increased neuroinflammatory response, enhanced influx of intracellular Ca2+, and impairment of oxidative phosphorylation."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "28769871",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/28769871/",
+          "Journal": "Front Neurol",
+          "Year": 2017,
+          "TermName": "protein metabolic process",
+          "TermType": "GO",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "MAPT / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockout",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "resulted in",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(249, 253)', ('MAPT', 'Gene', '17762', '-')) -- ThemeOf -- ('knockout', 'Var', '(43, 51)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('resulted in', 'Reg', '(134, 145)', ('resulted in', 'Reg', '-', '-')) -- ThemeOf -- ('protein metabolism', 'MPA', '(159, 177)', ('protein metabolism', 'MPA', 'GO:0019538', 'protein metabolic process'))",
+          "EventDedupKey": "gene | genetic manipulation:knockout | go:0019538 | tau protein hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "protein metabolic process",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "Recent studies have shown that conditional knockout of the Dicer gene in the mouse brain created an extensive miRNA deficiency, which resulted in abnormal Tau protein metabolism in mice with AD-like Tau hyperphosphorylation and aberrant splicing of MAPT."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "37092231",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37092231/",
+          "Journal": "J Huntingtons Dis;2023; 12 (1) 1. doi:10.3233/JHD-230569",
+          "Year": 2023,
+          "TermName": "progressive supranuclear palsy",
+          "TermType": "MeSH",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:chromosomal variation",
+          "GeneAlteration": "MAPT / structural variation:chromosomal variation",
+          "AlterationSignature": "structural variation:chromosomal variation",
+          "AlterationType": "structural variation:chromosomal variation",
+          "AlterationMention": "haplotype",
+          "AlterationID": "-",
+          "TriggerWord": "associated",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(28, 32)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('haplotype', 'Var', '(33, 42)', ('haplotype', 'Mutation', '-', '-')) -- CauseOf -- ('associated', 'Reg', '(131, 141)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('progressive supranuclear palsy', 'Disease', '(147, 177)', ('progressive supranuclear palsy', 'Disease', 'MESH:D013494', '-'))",
+          "EventDedupKey": "gene | structural variation:chromosomal variation | mesh:d013494 | tau protein hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "progressive supranuclear palsy",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Studies have shown that the MAPT haplotype can influence the development of neurodegenerative disorders: the H1 haplotype has been associated with progressive supranuclear palsy, corticobasal degeneration, and Alzheimer's disease (AD)."
+        },
+        {
+          "Gene": "MAPT",
+          "PMID": "36622561",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36622561/",
+          "Journal": "Mol Neurobiol. 2023 Apr;60(4):2174-2185. doi: 10.1007/s12035-022-03190-x. Epub ",
+          "Year": 2023,
+          "TermName": "tau hyperphosphorylation",
+          "TermType": "MeSH",
+          "Hypothesis": "Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "MAPT / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutations",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "result from",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('MAPT', 'Gene', '(185, 189)', ('MAPT', 'Gene', '4137', '-')) -- ThemeOf -- ('mutations', 'Var', '(132, 141)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('result from', 'Reg', '(68, 79)', ('result from', 'Reg', '-', '-')) -- ThemeOf -- ('tau hyperphosphorylation', 'Disease', '(80, 104)', ('tau hyperphosphorylation', 'Disease', 'MESH:C536599', '-'))",
+          "EventDedupKey": "gene | point mutations:mutations | mesh:c536599 | tau protein hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "tau hyperphosphorylation",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Tauopathies are traditionally defined as a group of conditions that result from tau hyperphosphorylation, abnormal tau splicing, or mutations in the microtubule-associated protein tau (MAPT) gene."
+        }
+      ]
+    }
+  },
+  "meta": {
+    "curation_scope": "server_full_query_pool",
+    "matched_event_count": 27822,
+    "event_unique_rows": 8010,
+    "selected_limit": 5,
+    "query_type": "gene",
+    "event_deduplication_key": "gene-fixed event key: alteration taxonomy + phenotype/term + hypothesis; fallback to PMID/sentence when structured fields are sparse"
+  }
+}

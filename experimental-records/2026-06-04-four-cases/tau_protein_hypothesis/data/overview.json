@@ -1,0 +1,114 @@
+{
+  "tool": "get_hypothesis_overview",
+  "status": "ok",
+  "query": {
+    "hypothesis": "Tau Protein Hypothesis"
+  },
+  "count": 1,
+  "data": {
+    "summary": {
+      "event_count": 38095,
+      "pmid_count": 5580,
+      "gene_count": 1410,
+      "term_count": 1024
+    },
+    "top_genes": [
+      {
+        "Gene": "MAPT",
+        "freq": 16999
+      },
+      {
+        "Gene": "APP",
+        "freq": 1736
+      },
+      {
+        "Gene": "PSEN1",
+        "freq": 1562
+      },
+      {
+        "Gene": "APOE",
+        "freq": 757
+      },
+      {
+        "Gene": "SNCA",
+        "freq": 650
+      },
+      {
+        "Gene": "TAS2R62P",
+        "freq": 574
+      },
+      {
+        "Gene": "GRN",
+        "freq": 494
+      },
+      {
+        "Gene": "TARDBP",
+        "freq": 473
+      },
+      {
+        "Gene": "TREM2",
+        "freq": 435
+      },
+      {
+        "Gene": "PSEN2",
+        "freq": 374
+      }
+    ],
+    "top_terms": [
+      {
+        "TermName": "Alzheimer Disease",
+        "TermType": "MeSH",
+        "freq": 2335
+      },
+      {
+        "TermName": "protein",
+        "TermType": "GO",
+        "freq": 1341
+      },
+      {
+        "TermName": "Dementia",
+        "TermType": "HPO",
+        "freq": 864
+      },
+      {
+        "TermName": "phosphorylation",
+        "TermType": "GO",
+        "freq": 809
+      },
+      {
+        "TermName": "Tauopathies",
+        "TermType": "MeSH",
+        "freq": 780
+      },
+      {
+        "TermName": "Neurodegeneration",
+        "TermType": "HPO",
+        "freq": 598
+      },
+      {
+        "TermName": "Frontotemporal dementia",
+        "TermType": "HPO",
+        "freq": 565
+      },
+      {
+        "TermName": "Nerve Degeneration",
+        "TermType": "MeSH",
+        "freq": 510
+      },
+      {
+        "TermName": "biosynthetic process",
+        "TermType": "GO",
+        "freq": 468
+      },
+      {
+        "TermName": "hyperphosphorylation",
+        "TermType": "GO",
+        "freq": 458
+      }
+    ]
+  },
+  "meta": {
+    "raw_top_genes_count": 100,
+    "raw_top_terms_count": 100
+  }
+}

@@ -1,0 +1,2379 @@
+{
+  "tool": "curate_gene_evidence",
+  "status": "ok",
+  "query": {
+    "gene": "APP",
+    "selected_limit": 4
+  },
+  "count": 4,
+  "data": {
+    "curation": {
+      "global_statistics": {
+        "summary": {
+          "Gene": "APP",
+          "event_count": 18277,
+          "pmid_count": 4724,
+          "term_count": 621,
+          "hypothesis_count": 150,
+          "avg_evidence_score": 3.0
+        },
+        "top_terms": [
+          {
+            "TermName": "Alzheimer Disease",
+            "TermType": "MeSH",
+            "freq": 2459
+          },
+          {
+            "TermName": "protein",
+            "TermType": "GO",
+            "freq": 2030
+          },
+          {
+            "TermName": "Onset",
+            "TermType": "HPO",
+            "freq": 959
+          },
+          {
+            "TermName": "All",
+            "TermType": "HPO",
+            "freq": 262
+          },
+          {
+            "TermName": "biosynthetic process",
+            "TermType": "GO",
+            "freq": 253
+          },
+          {
+            "TermName": "chromosome",
+            "TermType": "GO",
+            "freq": 183
+          },
+          {
+            "TermName": "Alzheimer disease",
+            "TermType": "HPO",
+            "freq": 176
+          },
+          {
+            "TermName": "Sporadic",
+            "TermType": "HPO",
+            "freq": 173
+          },
+          {
+            "TermName": "Dementia",
+            "TermType": "HPO",
+            "freq": 162
+          },
+          {
+            "TermName": "cleavage",
+            "TermType": "ADMO",
+            "freq": 144
+          }
+        ],
+        "top_hypotheses": [
+          {
+            "Hypothesis": "Amyloid Hypothesis",
+            "freq": 13553
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+            "freq": 1185
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Vascular Hypothesis",
+            "freq": 423
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+            "freq": 345
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis",
+            "freq": 235
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Oxidative Stress Hypothesis",
+            "freq": 208
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+            "freq": 167
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Abnormal Autophagy Hypothesis",
+            "freq": 166
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Metal Ion Hypothesis",
+            "freq": 113
+          },
+          {
+            "Hypothesis": "Amyloid Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+            "freq": 101
+          }
+        ]
+      },
+      "coverage_scope": {
+        "query_type": "gene",
+        "curation_source": "remote_api",
+        "curation_scope": "server_full_query_pool",
+        "overview_event_count": 18277,
+        "matched_event_count": 18277,
+        "curation_pool_rows": 18277,
+        "coverage_ratio": 1.0,
+        "api_limit_notice": null,
+        "curation_endpoint_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=APP&selected_limit=4"
+      },
+      "deduplication_summary": {
+        "curation_pool_row_count": 18277,
+        "event_unique_rows": 4985,
+        "event_deduplication_key": "gene-fixed event key: alteration taxonomy + phenotype/term + hypothesis; fallback to PMID/sentence when structured fields are sparse",
+        "unique_pmids": 2419,
+        "unique_genes": 1,
+        "unique_phenotypes": 625,
+        "unique_terms": 625,
+        "unique_alteration_taxonomies": 29,
+        "unique_gene_alterations": 29,
+        "unique_alteration_signatures": 29,
+        "unique_hypotheses": 146
+      },
+      "dominant_clusters": {
+        "top_pmids": [
+          {
+            "value": "26452528",
+            "count": 19
+          },
+          {
+            "value": "26198711",
+            "count": 17
+          },
+          {
+            "value": "34366346",
+            "count": 16
+          },
+          {
+            "value": "35623389",
+            "count": 16
+          },
+          {
+            "value": "32033020",
+            "count": 16
+          }
+        ],
+        "top_genes": [
+          {
+            "value": "APP",
+            "count": 4985
+          }
+        ],
+        "top_phenotypes": [
+          {
+            "value": "protein",
+            "count": 121
+          },
+          {
+            "value": "Alzheimer Disease",
+            "count": 107
+          },
+          {
+            "value": "Onset",
+            "count": 49
+          },
+          {
+            "value": "biosynthetic process",
+            "count": 46
+          },
+          {
+            "value": "Neurodegeneration",
+            "count": 42
+          }
+        ],
+        "top_terms": [
+          {
+            "value": "protein",
+            "count": 121
+          },
+          {
+            "value": "Alzheimer Disease",
+            "count": 107
+          },
+          {
+            "value": "Onset",
+            "count": 49
+          },
+          {
+            "value": "biosynthetic process",
+            "count": 46
+          },
+          {
+            "value": "Neurodegeneration",
+            "count": 42
+          }
+        ],
+        "top_gene_alterations": [
+          {
+            "value": "APP / point mutations:mutations",
+            "count": 2288
+          },
+          {
+            "value": "APP / normalized variants:dna change",
+            "count": 643
+          },
+          {
+            "value": "APP / structural variation:deletion",
+            "count": 274
+          },
+          {
+            "value": "APP / expression changes:dysregulation",
+            "count": 241
+          },
+          {
+            "value": "APP / expression changes:underexpression",
+            "count": 234
+          }
+        ],
+        "top_alteration_taxonomies": [
+          {
+            "value": "point mutations:mutations",
+            "count": 2288
+          },
+          {
+            "value": "normalized variants:dna change",
+            "count": 643
+          },
+          {
+            "value": "structural variation:deletion",
+            "count": 274
+          },
+          {
+            "value": "expression changes:dysregulation",
+            "count": 241
+          },
+          {
+            "value": "expression changes:underexpression",
+            "count": 234
+          }
+        ],
+        "top_hypotheses": [
+          {
+            "value": "Amyloid Hypothesis",
+            "count": 1976
+          },
+          {
+            "value": "Amyloid Hypothesis,Tau Protein Hypothesis",
+            "count": 407
+          },
+          {
+            "value": "Amyloid hypothesis",
+            "count": 333
+          },
+          {
+            "value": "Amyloid Hypothesis,Vascular Hypothesis",
+            "count": 189
+          },
+          {
+            "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+            "count": 169
+          }
+        ],
+        "evidence_types": [
+          {
+            "value": "alteration_evidence",
+            "count": 3500
+          },
+          {
+            "value": "model_or_intervention",
+            "count": 1485
+          }
+        ],
+        "mechanism_strata": [
+          {
+            "value": "amyloid/tau axis",
+            "count": 4985
+          },
+          {
+            "value": "proteostasis/autophagy axis",
+            "count": 1593
+          },
+          {
+            "value": "synaptic and neuronal dysfunction axis",
+            "count": 1534
+          },
+          {
+            "value": "mitochondrial and oxidative stress axis",
+            "count": 905
+          },
+          {
+            "value": "vascular/metabolic axis",
+            "count": 747
+          }
+        ]
+      },
+      "query_relative_patterns": {
+        "phenotype": {
+          "label": "Phenotype",
+          "top": [
+            {
+              "value": "AD",
+              "count": 57
+            },
+            {
+              "value": "biosynthetic process",
+              "count": 46
+            },
+            {
+              "value": "Neurodegeneration",
+              "count": 42
+            },
+            {
+              "value": "Cognition Disorders",
+              "count": 40
+            },
+            {
+              "value": "Nerve Degeneration",
+              "count": 38
+            },
+            {
+              "value": "expression",
+              "count": 36
+            },
+            {
+              "value": "memory",
+              "count": 34
+            },
+            {
+              "value": "cell",
+              "count": 30
+            }
+          ],
+          "long_tail": [
+            {
+              "value": "102",
+              "count": 1
+            },
+            {
+              "value": "1020",
+              "count": 1
+            },
+            {
+              "value": "112935892",
+              "count": 1
+            },
+            {
+              "value": "12368",
+              "count": 1
+            },
+            {
+              "value": "14961",
+              "count": 1
+            },
+            {
+              "value": "16002",
+              "count": 1
+            },
+            {
+              "value": "16846",
+              "count": 1
+            },
+            {
+              "value": "1728",
+              "count": 1
+            }
+          ],
+          "long_tail_threshold": 1
+        },
+        "gene_alteration": {
+          "label": "Gene-alteration",
+          "top": [
+            {
+              "value": "APP / point mutations:mutations",
+              "count": 2288
+            },
+            {
+              "value": "APP / normalized variants:dna change",
+              "count": 643
+            },
+            {
+              "value": "APP / structural variation:deletion",
+              "count": 274
+            },
+            {
+              "value": "APP / expression changes:dysregulation",
+              "count": 241
+            },
+            {
+              "value": "APP / expression changes:underexpression",
+              "count": 234
+            },
+            {
+              "value": "APP / structural variation:chromosomal variation",
+              "count": 199
+            },
+            {
+              "value": "APP / genetic manipulation:gene aggregation",
+              "count": 149
+            },
+            {
+              "value": "APP / expression changes:overexpression",
+              "count": 116
+            }
+          ],
+          "long_tail": [
+            {
+              "value": "APP / copy number variation:fusion",
+              "count": 1
+            },
+            {
+              "value": "APP / epigenic changes:acetylation",
+              "count": 1
+            },
+            {
+              "value": "APP / structural variation:frameshift",
+              "count": 1
+            },
+            {
+              "value": "APP / structural variation:rearrangements",
+              "count": 4
+            }
+          ],
+          "long_tail_threshold": 10
+        },
+        "hypothesis": {
+          "label": "Hypothesis",
+          "top": [
+            {
+              "value": "Amyloid Hypothesis",
+              "count": 1976
+            },
+            {
+              "value": "Amyloid Hypothesis,Tau Protein Hypothesis",
+              "count": 407
+            },
+            {
+              "value": "Amyloid hypothesis",
+              "count": 333
+            },
+            {
+              "value": "Amyloid Hypothesis,Vascular Hypothesis",
+              "count": 189
+            },
+            {
+              "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+              "count": 169
+            },
+            {
+              "value": "Amyloid Hypothesis,Oxidative Stress Hypothesis",
+              "count": 106
+            },
+            {
+              "value": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+              "count": 91
+            },
+            {
+              "value": "Amyloid Hypothesis,Abnormal Autophagy Hypothesis",
+              "count": 85
+            }
+          ],
+          "long_tail": [
+            {
+              "value": "Amyloid Hypothesis,Neuroinflammation hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Amyloid Hypothesis,Neuroinflammation hypothesis,Vascular hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Amyloid hypothesis,Oxidative stress hypothesis,Vascular hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Amyloid hypothesis,Tau protein hypothesis,Mitochondrial autophagy hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Amyloid hypothesis,Tau protein hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Cholinergic Hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Cholinergic Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+              "count": 1
+            },
+            {
+              "value": "Cholinergic Hypothesis,Neuroinflammation Hypothesis",
+              "count": 1
+            }
+          ],
+          "long_tail_threshold": 3
+        }
+      },
+      "long_tail_definition": {
+        "method": "Query-specific frequency <= min(Q25, 10) after event-level deduplication",
+        "dimensions": [
+          "phenotype",
+          "gene_alteration",
+          "hypothesis"
+        ],
+        "thresholds": {
+          "phenotype": 1,
+          "gene_alteration": 10,
+          "hypothesis": 3
+        }
+      },
+      "long_tail_signals": [
+        {
+          "Gene": "APP",
+          "PMID": "37513800",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37513800/",
+          "Journal": "Pathogens",
+          "Year": 2023,
+          "TermName": "Roseolovirus Infections",
+          "TermType": "MeSH",
+          "Hypothesis": "Amyloid Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "APP / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutants",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "link",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid precursor protein', 'Gene', '(202, 227)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('mutants', 'Var', '(181, 188)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('link', 'Reg', '(27, 31)', ('link', 'Reg', '-', '-')) -- ThemeOf -- ('roseolovirus infection', 'Disease', '(40, 62)', ('roseolovirus infection', 'Disease', 'MESH:D019349', '-'))",
+          "EventDedupKey": "gene | point mutations:mutations | mesh:d019349 | amyloid hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Roseolovirus Infections",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "To investigate a potential link between roseolovirus infection and Alzheimer's disease, Bigley and colleagues used MRV to infect a transgenic mouse model in which overexpression of mutants of the human amyloid precursor protein (APP) and presenilin-1 leads to plaque formation."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "37840813",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37840813/",
+          "Journal": "Front Aging",
+          "Year": 2023,
+          "TermName": "autophagy",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "expression changes:dysregulation",
+          "GeneAlteration": "APP / expression changes:dysregulation",
+          "AlterationSignature": "expression changes:dysregulation",
+          "AlterationType": "expression changes:dysregulation",
+          "AlterationMention": "lacking",
+          "AlterationID": "expression changes:dysregulation",
+          "TriggerWord": "accumulation",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid precursor protein', 'Gene', '(13, 38)', ('amyloid precursor protein', 'Gene', '11820', '-')) -- ThemeOf -- ('lacking', 'Var', '(67, 74)', ('lacking', 'Mutation', 'expression changes:dysregulation', 'expression changes:dysregulation')) -- CauseOf -- ('accumulation', 'PosReg', '(122, 134)', ('accumulation', 'PosReg', '-', '-')) -- ThemeOf -- ('autophagy dysfunction-dependent', 'CPA', '(90, 121)', ('autophagy dysfunction-dependent', 'CPA', 'GO:0006914', 'autophagy'))",
+          "EventDedupKey": "gene | expression changes:dysregulation | go:0006914 | amyloid hypothesis,neuroinflammation hypothesis,abnormal autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "hypothesis",
+              "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+              "frequency": 2,
+              "threshold": 3
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "For example, amyloid precursor protein/presenilin 1 (APP/PS1) mice lacking NRF2 exhibited autophagy dysfunction-dependent accumulation of insoluble Abeta aggregates, resulting in an increased pro-inflammatory phenotype."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "37895105",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37895105/",
+          "Journal": "Int J Mol Sci",
+          "Year": 2023,
+          "TermName": "Ischemic Attack, Transient",
+          "TermType": "MeSH",
+          "Hypothesis": "Amyloid Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knock-in",
+          "GeneAlteration": "APP / genetic manipulation:knock-in",
+          "AlterationSignature": "genetic manipulation:knock-in",
+          "AlterationType": "genetic manipulation:knock-in",
+          "AlterationMention": "knock-in",
+          "AlterationID": "-",
+          "TriggerWord": "protect",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid precursor protein', 'Gene', '(84, 109)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('knock-in', 'Var', '(116, 124)', ('knock-in', 'Mutation', '-', '-')) -- CauseOf -- ('protect', 'Reg', '(153, 160)', ('protect', 'Reg', '-', '-')) -- ThemeOf -- ('ischemic brain damage', 'Disease', '(174, 195)', ('ischemic brain damage', 'Disease', 'MESH:D002546', '-'))",
+          "EventDedupKey": "gene | genetic manipulation:knock-in | mesh:d002546 | amyloid hypothesis,glutamatergic excitotoxicity hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "synaptic and neuronal dysfunction axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Ischemic Attack, Transient",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "TRPC6 overexpression has been shown to rescue mushroom spine loss in presenilin and amyloid precursor protein (APP) knock-in mouse models of AD and also protect neurons from ischemic brain damage."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "38017562",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38017562/",
+          "Journal": "Mol Neurodegener;2023Nov29; 18 (1) 89. doi:10.1186/s13024-023-00674-9",
+          "Year": 2023,
+          "TermName": "behavioral deficits",
+          "TermType": "MeSH",
+          "Hypothesis": "Neuroinflammation Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:ablation",
+          "GeneAlteration": "APP / genetic manipulation:ablation",
+          "AlterationSignature": "genetic manipulation:ablation",
+          "AlterationType": "genetic manipulation:ablation",
+          "AlterationMention": "Ablation",
+          "AlterationID": "genetic manipulation:ablation",
+          "TriggerWord": "rescued",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('APP', 'Gene', '(30, 33)', ('APP', 'Gene', '351', '-')) -- ThemeOf -- ('Ablation', 'Var', '(0, 8)', ('Ablation', 'Mutation', 'genetic manipulation:ablation', 'genetic manipulation:ablation')) -- CauseOf -- ('rescued', 'PosReg', '(43, 50)', ('rescued', 'PosReg', '-', '-')) -- ThemeOf -- ('behavioral deficits', 'Disease', '(70, 89)', ('behavioral deficits', 'Disease', 'MESH:D019958', '-'))",
+          "EventDedupKey": "gene | genetic manipulation:ablation | mesh:d019958 | neuroinflammation hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "neuroinflammation and microglia axis",
+            "synaptic and neuronal dysfunction axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "behavioral deficits",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Ablation of Nlrp3 or Casp1 in APP/PS1 mice rescued spatial memory and behavioral deficits, LTP suppression and spine loss observed in these mice."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "36281858",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36281858/",
+          "Journal": "Curr Alzheimer Res",
+          "Year": 2022,
+          "TermName": "myelin sheath",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "normalized variants:dna change",
+          "GeneAlteration": "APP / normalized variants:dna change",
+          "AlterationSignature": "normalized variants:dna change",
+          "AlterationType": "Normalized Variants:DNA Change",
+          "AlterationMention": "K670N",
+          "AlterationID": "rs371425292",
+          "TriggerWord": "increases",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('APP', 'Gene', 'dbSNP', ('APP', 'Gene', '351', '-')) -- ThemeOf -- ('K670N', 'Var', '(277, 282)', ('K670N', 'Mutation', 'rs371425292', '-')) -- CauseOf -- ('increases', 'PosReg', '(20, 29)', ('increases', 'PosReg', '-', '-')) -- ThemeOf -- ('myelin sheath', 'MPA', '(89, 102)', ('myelin sheath', 'MPA', 'GO:0043209', 'myelin sheath'))",
+          "EventDedupKey": "gene | normalized variants:dna change | go:0043209 | amyloid hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "myelin sheath",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "found that abnormal increases in the number of myelinated axons and the thickness of the myelin sheath, and the decrease in myelin basic protein (MBP) expression in 1-month-old 5XFAD mice (co-expressing human APP and presenilin 1 with five familial AD mutations, including APP K670N/M671L + I716V + V717I and PS1 M146L + L286V) was related to spatial memory impairment."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "34206322",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/34206322/",
+          "Journal": "Int J Mol Sci",
+          "Year": 2021,
+          "TermName": "Cushing Syndrome",
+          "TermType": "MeSH",
+          "Hypothesis": "Amyloid Hypothesis,Vascular Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "APP / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutant",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "caused",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid precursor protein', 'Gene', '(258, 283)', ('amyloid precursor protein', 'Gene', '11820', '-')) -- ThemeOf -- ('mutant', 'Var', '(241, 247)', ('mutant', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('caused', 'Reg', '(29, 35)', ('caused', 'Reg', '-', '-')) -- ThemeOf -- ('hypercortisolism', 'Disease', '(76, 92)', ('hypercortisolism', 'Disease', 'MESH:D003480', '-'))",
+          "EventDedupKey": "gene | point mutations:mutations | mesh:d003480 | amyloid hypothesis,vascular hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Cushing Syndrome",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "As insulin resistance can be caused by high-stress hormone levels and since hypercortisolism appears to be an important risk factor of AD, we aimed to investigate the systemic insulin functionality and circulating stress hormone levels in a mutant humanized amyloid precursor protein (APP) overexpressing (hAPP23+/-) AD mouse model."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "34880748",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/34880748/",
+          "Journal": "Front Pharmacol",
+          "Year": 2021,
+          "TermName": "protein import",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "APP / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutation",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "altered",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid precursor protein', 'Gene', '(54, 79)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('mutation', 'Var', '(112, 120)', ('mutation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('altered', 'Reg', '(171, 178)', ('altered', 'Reg', '-', '-')) -- ThemeOf -- ('protein import', 'MPA', '(283, 297)', ('protein import', 'MPA', 'GO:0017038', 'protein import'))",
+          "EventDedupKey": "gene | point mutations:mutations | go:0017038 | amyloid hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "protein import",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Another study showed that overexpression of the human amyloid precursor protein (APP) with the familial Swedish mutation (APPswe) in a mouse neuroblastoma cell line (N2A) altered the structure and function of mitochondria-associated membranes, mitochondrial dynamics, biogenesis and protein import as well as the stress response."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "34867159",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/34867159/",
+          "Journal": "Front Neurosci",
+          "Year": 2021,
+          "TermName": "GTPase activity",
+          "TermType": "GO",
+          "Hypothesis": "Mitochondrial Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "APP / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutant",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "increased",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid precursor protein', 'Gene', '(77, 102)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('mutant', 'Var', '(70, 76)', ('mutant', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('increased', 'PosReg', '(239, 248)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('GTPase activity', 'MPA', '(211, 226)', ('GTPase activity', 'MPA', 'GO:0003924', 'GTPase activity'))",
+          "EventDedupKey": "gene | point mutations:mutations | go:0003924 | mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "synaptic and neuronal dysfunction axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "GTPase activity",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Multiple independent studies have found that in AD patient brains and mutant amyloid precursor protein (APP)-expressing AD animal models, the expression of the mitochondrial fission-related protein Fis1 and the GTPase activity of DRP1 are increased."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "35052511",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35052511/",
+          "Journal": "Antioxidants (Basel)",
+          "Year": 2021,
+          "TermName": "Neurofibrillary tangles",
+          "TermType": "HPO",
+          "Hypothesis": "Amyloid hypothesis,Tau protein hypothesis,Oxidative stress hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "normalized variants:dna change",
+          "GeneAlteration": "APP / normalized variants:dna change",
+          "AlterationSignature": "normalized variants:dna change",
+          "AlterationType": "Normalized Variants:DNA Change",
+          "AlterationMention": "P301L",
+          "AlterationID": "p.P301L",
+          "TriggerWord": "lead to",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid beta', 'Gene', '(135, 147)', ('amyloid beta', 'Gene', '351', '-')) -- ThemeOf -- ('P301L', 'Var', '(102, 107)', ('P301L', 'Mutation', 'p.P301L', '-')) -- CauseOf -- ('lead to', 'Reg', '(127, 134)', ('lead to', 'Reg', '-', '-')) -- ThemeOf -- ('neurofibrillary tangles', 'CPA', '(160, 183)', ('neurofibrillary tangles', 'CPA', 'HP:0002185', 'Neurofibrillary tangles composed of disordered microtubules in neurons'))",
+          "EventDedupKey": "gene | normalized variants:dna change | hp:0002185 | amyloid hypothesis,tau protein hypothesis,oxidative stress hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "synaptic and neuronal dysfunction axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "hypothesis",
+              "value": "Amyloid hypothesis,Tau protein hypothesis,Oxidative stress hypothesis",
+              "frequency": 2,
+              "threshold": 3
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "In the hippocampal neurons of triple transgenic mice containing presenilin 1 (M146V), APPSwe and tau (P301L) transgenes, which lead to amyloid beta plaques and neurofibrillary tangles, NQO1 expression is lower than in age-matched controls."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "32356173",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/32356173/",
+          "Journal": "Mol Neurobiol",
+          "Year": 2020,
+          "TermName": "ceramide metabolic process",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "normalized variants:dna change",
+          "GeneAlteration": "APP / normalized variants:dna change",
+          "AlterationSignature": "normalized variants:dna change",
+          "AlterationType": "Normalized Variants:DNA Change",
+          "AlterationMention": "V717I",
+          "AlterationID": "rs63750264",
+          "TriggerWord": "changes",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('APP', 'Gene', 'dbSNP', ('APP', 'Gene', '351', '-')) -- ThemeOf -- ('V717I', 'Var', '(154, 159)', ('V717I', 'Mutation', 'rs63750264', '-')) -- CauseOf -- ('changes', 'Reg', '(169, 176)', ('changes', 'Reg', '-', '-')) -- ThemeOf -- ('ceramide metabolism', 'MPA', '(230, 249)', ('ceramide metabolism', 'MPA', 'GO:0006672', 'ceramide metabolic process'))",
+          "EventDedupKey": "gene | normalized variants:dna change | go:0006672 | amyloid hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "ceramide metabolic process",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "The aim of the study was to analyze the effect of the administration of the potentially neuroprotective, clinically available drug FTY720 on the AbetaPP (V717I)-induced changes in the expression of genes coding enzymes engaged in ceramide metabolism in the hippocampus of 3-, 6-, and 12-month old mice."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "32486013",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/32486013/",
+          "Journal": "Int J Mol Sci",
+          "Year": 2020,
+          "TermName": "positive regulation of mitochondrial membrane permeability",
+          "TermType": "GO",
+          "Hypothesis": "Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "expression changes:inactivation",
+          "GeneAlteration": "APP / expression changes:inactivation",
+          "AlterationSignature": "expression changes:inactivation",
+          "AlterationType": "expression changes:inactivation",
+          "AlterationMention": "Blocking",
+          "AlterationID": "expression changes:inactivation",
+          "TriggerWord": "enhances",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid precursor protein', 'Gene', '(154, 179)', ('amyloid precursor protein', 'Gene', '11820', '-')) -- ThemeOf -- ('Blocking', 'Var', '(0, 8)', ('Blocking', 'Mutation', 'expression changes:inactivation', 'expression changes:inactivation')) -- CauseOf -- ('enhances', 'PosReg', '(83, 91)', ('enhances', 'PosReg', '-', '-')) -- ThemeOf -- ('mitochondrial permeability transition', 'MPA', '(39, 76)', ('mitochondrial permeability transition', 'MPA', 'GO:0035794', 'positive regulation of mitochondrial membrane permeability'))",
+          "EventDedupKey": "gene | expression changes:inactivation | go:0035794 | oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "positive regulation of mitochondrial membrane permeability",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "Blocking cyclophilin D, a component of mitochondrial permeability transition pore, enhances cognitive functions as well as diminishes oxidative stress in amyloid precursor protein (APP) transgenic mice."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "32356173",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/32356173/",
+          "Journal": "Mol Neurobiol",
+          "Year": 2020,
+          "TermName": "sphingolipid metabolic process",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "normalized variants:dna change",
+          "GeneAlteration": "APP / normalized variants:dna change",
+          "AlterationSignature": "normalized variants:dna change",
+          "AlterationType": "Normalized Variants:DNA Change",
+          "AlterationMention": "V717I",
+          "AlterationID": "rs63750264",
+          "TriggerWord": "influence",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('APP', 'Gene', 'dbSNP', ('APP', 'Gene', '351', '-')) -- ThemeOf -- ('V717I', 'Var', '(37, 42)', ('V717I', 'Mutation', 'rs63750264', '-')) -- CauseOf -- ('influence', 'Reg', '(16, 25)', ('influence', 'Reg', '-', '-')) -- ThemeOf -- ('sphingolipid metabolism', 'MPA', '(98, 121)', ('sphingolipid metabolism', 'MPA', 'GO:0006665', 'sphingolipid metabolic process'))",
+          "EventDedupKey": "gene | normalized variants:dna change | go:0006665 | amyloid hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "sphingolipid metabolic process",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "We analyzed the influence of mutant (V717I) amyloid beta precursor protein (AbetaPP) transgene on sphingolipid metabolism enzymes in mouse hippocampus."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "31569571",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/31569571/",
+          "Journal": "Brain Sci. 2019 Sep 29",
+          "Year": 2019,
+          "TermName": "Hypertelorism with esophageal abnormality and hypospadias",
+          "TermType": "MeSH",
+          "Hypothesis": "Amyloid Hypothesis,Vascular Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "APP / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knockout",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "increased",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('Abeta', 'Gene', '(392, 397)', ('Abeta', 'Gene', '351', '-')) -- ThemeOf -- ('knockout', 'Var', '(196, 204)', ('knockout', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(292, 301)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('impaired BBB TJ', 'Disease', '(322, 337)', ('impaired BBB TJ', 'Disease', 'MESH:C538387', '-'))",
+          "EventDedupKey": "gene | genetic manipulation:knockout | mesh:c538387 | amyloid hypothesis,vascular hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Hypertelorism with esophageal abnormality and hypospadias",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "This same \"guardian angel\" analogy may also be applied to the EC of capillary NVU as a functional and structural unit in the brain, since platelet-derived growth factor beta receptor (PDGFR-beta) knockout models in Pcs have demonstrated the abnormal formation of the NVU in adult models with increased permeability due to impaired BBB TJ/AJ development and function and impaired clearance of Abeta."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "30778297",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/30778297/",
+          "Journal": "Front Pharmacol. 2019 Feb 4",
+          "Year": 2019,
+          "TermName": "Encephalitis",
+          "TermType": "MeSH",
+          "Hypothesis": "Oxidative stress hypothesis,Amyloid hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:deletion",
+          "GeneAlteration": "APP / structural variation:deletion",
+          "AlterationSignature": "structural variation:deletion",
+          "AlterationType": "structural variation:deletion",
+          "AlterationMention": "deficiency",
+          "AlterationID": "structural variation:deletion",
+          "TriggerWord": "increasing",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid precursor protein', 'Gene', '(220, 245)', ('amyloid precursor protein', 'Gene', '11820', '-')) -- ThemeOf -- ('deficiency', 'Var', '(63, 73)', ('deficiency', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('increasing', 'PosReg', '(88, 98)', ('increasing', 'PosReg', '-', '-')) -- ThemeOf -- ('brain inflammation', 'Disease', '(111, 129)', ('brain inflammation', 'Disease', 'MESH:D004660', '-'))",
+          "EventDedupKey": "gene | structural variation:deletion | mesh:d004660 | oxidative stress hypothesis,amyloid hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "synaptic and neuronal dysfunction axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Encephalitis",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "fed Nrf2 knockout mice a HFD (60% fat) for 5 months, with Nrf2 deficiency significantly increasing HFD-induced brain inflammation, oxidative stress, synaptic disruption and BBB permeability, as well as raising levels of amyloid precursor protein (APP) gene expression, the proteolysis of which produces Abeta."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "31744008",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/31744008/",
+          "Journal": "J Alzheimers Dis. 2019",
+          "Year": 2019,
+          "TermName": "cytochrome-c oxidase activity",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid hypothesis,Oxidative stress hypothesis,Mitochondrial autophagy hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knockout",
+          "GeneAlteration": "APP / genetic manipulation:knockout",
+          "AlterationSignature": "genetic manipulation:knockout",
+          "AlterationType": "genetic manipulation:knockout",
+          "AlterationMention": "knock-out",
+          "AlterationID": "genetic manipulation:knockout",
+          "TriggerWord": "increased",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid-beta', 'Gene', '(93, 105)', ('amyloid-beta', 'Gene', '351', '-')) -- ThemeOf -- ('knock-out', 'Var', '(36, 45)', ('knock-out', 'Mutation', 'genetic manipulation:knockout', 'genetic manipulation:knockout')) -- CauseOf -- ('increased', 'PosReg', '(197, 206)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('cytochrome c oxidase activity', 'MPA', '(268, 297)', ('cytochrome c oxidase activity', 'MPA', 'GO:0004129', 'cytochrome-c oxidase activity'))",
+          "EventDedupKey": "gene | genetic manipulation:knockout | go:0004129 | amyloid hypothesis,oxidative stress hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "cytochrome-c oxidase activity",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "In line with this observation, upon knock-out of methionine sulfoxide reductase A in a human amyloid-beta protein precursor (AbetaPP) mouse model, levels of soluble methionine sulfoxide Abeta were increased and associated with defects in mitochondrial respiration and cytochrome c oxidase activity."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "29100987",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/29100987/",
+          "Journal": "Neurobiol. Dis.",
+          "Year": 2018,
+          "TermName": "Forebrain Defects",
+          "TermType": "MeSH",
+          "Hypothesis": "Glutamatergic Excitotoxicity Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:ablation",
+          "GeneAlteration": "APP / genetic manipulation:ablation",
+          "AlterationSignature": "genetic manipulation:ablation",
+          "AlterationType": "genetic manipulation:ablation",
+          "AlterationMention": "Ablation",
+          "AlterationID": "genetic manipulation:ablation",
+          "TriggerWord": "enhance",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('hAPP', 'Gene', '(99, 103)', ('hAPP', 'Gene', '351', '-')) -- ThemeOf -- ('Ablation', 'Var', '(0, 8)', ('Ablation', 'Mutation', 'genetic manipulation:ablation', 'genetic manipulation:ablation')) -- CauseOf -- ('enhance', 'PosReg', '(58, 65)', ('enhance', 'PosReg', '-', '-')) -- ThemeOf -- ('forebrain neurons', 'Disease', '(32, 49)', ('forebrain neurons', 'Disease', 'MESH:C566067', '-'))",
+          "EventDedupKey": "gene | genetic manipulation:ablation | mesh:c566067 | glutamatergic excitotoxicity hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "synaptic and neuronal dysfunction axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Forebrain Defects",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "Ablation of A2ARs in excitatory forebrain neurons did not enhance reference memory in mice without hAPP expression, but reduced learning and memory deficits in a model of chronic stress."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "28360125",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/28360125/",
+          "Journal": "Dis Model Mech",
+          "Year": 2017,
+          "TermName": "cytoskeleton",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "expression changes:dysregulation",
+          "GeneAlteration": "APP / expression changes:dysregulation",
+          "AlterationSignature": "expression changes:dysregulation",
+          "AlterationType": "expression changes:dysregulation",
+          "AlterationMention": "aberrant",
+          "AlterationID": "expression changes:dysregulation",
+          "TriggerWord": "leading to",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid precursor protein', 'Gene', '(37, 62)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('aberrant', 'Var', '(14, 22)', ('aberrant', 'Mutation', 'expression changes:dysregulation', 'expression changes:dysregulation')) -- CauseOf -- ('leading to', 'Reg', '(274, 284)', ('leading to', 'Reg', '-', '-')) -- ThemeOf -- ('cytoskeleton', 'MPA', '(312, 324)', ('cytoskeleton', 'MPA', 'GO:0005856', 'cytoskeleton'))",
+          "EventDedupKey": "gene | expression changes:dysregulation | go:0005856 | amyloid hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "synaptic and neuronal dysfunction axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "cytoskeleton",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "Additionally, aberrant processing of amyloid precursor protein (APP) by beta-secretase (BACE1) - generating cytotoxic APP intracellular domain (AICD) and Abeta1-40 or Abeta1-42 fragments - has been shown to have consequential effects on neuronal and glial cells, ultimately leading to degeneration of the entire cytoskeleton network, including microfilaments, intermediate filaments and microtubules."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "28025715",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/28025715/",
+          "Journal": "Acta Neuropathol.",
+          "Year": 2017,
+          "TermName": "cell body",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "normalized variants:dna change",
+          "GeneAlteration": "APP / normalized variants:dna change",
+          "AlterationSignature": "normalized variants:dna change",
+          "AlterationType": "Normalized Variants:DNA Change",
+          "AlterationMention": "V717I",
+          "AlterationID": "rs63750264",
+          "TriggerWord": "resulted in",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('APP', 'Gene', 'dbSNP', ('APP', 'Gene', '351', '-')) -- ThemeOf -- ('V717I', 'Var', '(114, 119)', ('V717I', 'Mutation', 'rs63750264', '-')) -- CauseOf -- ('resulted in', 'Reg', '(159, 170)', ('resulted in', 'Reg', '-', '-')) -- ThemeOf -- ('cell soma', 'MPA', '(295, 304)', ('cell soma', 'MPA', 'GO:0044297', 'cell body'))",
+          "EventDedupKey": "gene | normalized variants:dna change | go:0044297 | amyloid hypothesis,tau protein hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "cell body",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "It was recently shown that development of a 3D culture of human neural stem cells transfected with APPK670N/M671L/V717I and PS1DeltaE9 in Matrigel scaffolding resulted in the extracellular aggregation of Abeta into plaques and the intracellular aggregation of tau in dystrophic neurites and the cell soma."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "28973985",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/28973985/",
+          "Journal": "Antioxidants(Basel)",
+          "Year": 2017,
+          "TermName": "one-carbon metabolic process",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid Hypothesis,Oxidative Stress Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:deletion",
+          "GeneAlteration": "APP / structural variation:deletion",
+          "AlterationSignature": "structural variation:deletion",
+          "AlterationType": "structural variation:deletion",
+          "AlterationMention": "deficiency",
+          "AlterationID": "structural variation:deletion",
+          "TriggerWord": "alterations induced",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('Amyloid Precursor Protein', 'Gene', '(156, 181)', ('Amyloid Precursor Protein', 'Gene', '351', '-')) -- ThemeOf -- ('deficiency', 'Var', '(100, 110)', ('deficiency', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('alterations induced', 'Reg', '(45, 64)', ('alterations induced', 'Reg', '-', '-')) -- ThemeOf -- ('one-carbon metabolism', 'MPA', '(23, 44)', ('one-carbon metabolism', 'MPA', 'GO:0006730', 'one-carbon metabolic process'))",
+          "EventDedupKey": "gene | structural variation:deletion | go:0006730 | amyloid hypothesis,oxidative stress hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "vascular/metabolic axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "one-carbon metabolic process",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "We extensively studied one-carbon metabolism alterations induced by B vitamin (folate, B12, and B6) deficiency in TgCRND8 mice overexpressing mutated human Amyloid Precursor Protein (APP) transgene and showing early Abeta plaque deposition."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "28085665",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/28085665/",
+          "Journal": "Elife",
+          "Year": 2017,
+          "TermName": "transport",
+          "TermType": "GO",
+          "Hypothesis": "Abnormal Autophagy Hypothesis,Mitochondrial Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "structural variation:deletion",
+          "GeneAlteration": "APP / structural variation:deletion",
+          "AlterationSignature": "structural variation:deletion",
+          "AlterationType": "structural variation:deletion",
+          "AlterationMention": "deletion",
+          "AlterationID": "structural variation:deletion",
+          "TriggerWord": "enhancing",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('hAPP', 'Gene', '(115, 119)', ('hAPP', 'Gene', '351', '-')) -- ThemeOf -- ('deletion', 'Var', '(14, 22)', ('deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('enhancing', 'PosReg', '(188, 197)', ('enhancing', 'PosReg', '-', '-')) -- ThemeOf -- ('transport', 'MPA', '(212, 221)', ('transport', 'MPA', 'GO:0006810', 'transport'))",
+          "EventDedupKey": "gene | structural variation:deletion | go:0006810 | abnormal autophagy hypothesis,mitochondrial autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "synaptic and neuronal dysfunction axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "hypothesis",
+              "value": "Abnormal Autophagy Hypothesis,Mitochondrial Autophagy Hypothesis",
+              "frequency": 3,
+              "threshold": 3
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "PMID-traceable"
+          ],
+          "Sentence": "Consistently, deletion of Snapin in mice causes AD-like axonal autophagic stress, whereas overexpressing Snapin in hAPP neurons reduces autophagic accumulation at presynaptic terminals by enhancing AV retrograde transport."
+        }
+      ],
+      "evidence_type_groups": {
+        "alteration_evidence": [
+          {
+            "Gene": "APP",
+            "PMID": "36687366",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36687366/",
+            "Journal": "Neuronal Signal",
+            "Year": 2023,
+            "TermName": "Polydactyly, Postaxial",
+            "TermType": "MeSH",
+            "Hypothesis": "Amyloid Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "APP / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "mutations",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "affect",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('amyloid precursor protein', 'Gene', '(83, 108)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('mutations', 'Var', '(23, 32)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('affect', 'Reg', '(44, 50)', ('affect', 'Reg', '-', '-')) -- ThemeOf -- ('PS', 'Disease', '(218, 220)', ('PS', 'Disease', 'MESH:C562429', '-'))",
+            "EventDedupKey": "gene | point mutations:mutations | mesh:c562429 | amyloid hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Polydactyly, Postaxial",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "All of the responsible mutations identified affect either the genes coding for the amyloid precursor protein (APP) from which Abeta is formed via a multistep processing pathway, or the genes coding for the presenilin (PS) 1 and 2 proteins that function within this processing pathway as part of an enzyme complex responsible for cleaving Abeta from its immediate precursor."
+          }
+        ],
+        "model_or_intervention": [
+          {
+            "Gene": "APP",
+            "PMID": "37513800",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37513800/",
+            "Journal": "Pathogens",
+            "Year": 2023,
+            "TermName": "Roseolovirus Infections",
+            "TermType": "MeSH",
+            "Hypothesis": "Amyloid Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "APP / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "mutants",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "link",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('amyloid precursor protein', 'Gene', '(202, 227)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('mutants', 'Var', '(181, 188)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('link', 'Reg', '(27, 31)', ('link', 'Reg', '-', '-')) -- ThemeOf -- ('roseolovirus infection', 'Disease', '(40, 62)', ('roseolovirus infection', 'Disease', 'MESH:D019349', '-'))",
+            "EventDedupKey": "gene | point mutations:mutations | mesh:d019349 | amyloid hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Roseolovirus Infections",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "To investigate a potential link between roseolovirus infection and Alzheimer's disease, Bigley and colleagues used MRV to infect a transgenic mouse model in which overexpression of mutants of the human amyloid precursor protein (APP) and presenilin-1 leads to plaque formation."
+          },
+          {
+            "Gene": "APP",
+            "PMID": "37840813",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37840813/",
+            "Journal": "Front Aging",
+            "Year": 2023,
+            "TermName": "autophagy",
+            "TermType": "GO",
+            "Hypothesis": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "expression changes:dysregulation",
+            "GeneAlteration": "APP / expression changes:dysregulation",
+            "AlterationSignature": "expression changes:dysregulation",
+            "AlterationType": "expression changes:dysregulation",
+            "AlterationMention": "lacking",
+            "AlterationID": "expression changes:dysregulation",
+            "TriggerWord": "accumulation",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('amyloid precursor protein', 'Gene', '(13, 38)', ('amyloid precursor protein', 'Gene', '11820', '-')) -- ThemeOf -- ('lacking', 'Var', '(67, 74)', ('lacking', 'Mutation', 'expression changes:dysregulation', 'expression changes:dysregulation')) -- CauseOf -- ('accumulation', 'PosReg', '(122, 134)', ('accumulation', 'PosReg', '-', '-')) -- ThemeOf -- ('autophagy dysfunction-dependent', 'CPA', '(90, 121)', ('autophagy dysfunction-dependent', 'CPA', 'GO:0006914', 'autophagy'))",
+            "EventDedupKey": "gene | expression changes:dysregulation | go:0006914 | amyloid hypothesis,neuroinflammation hypothesis,abnormal autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+                "frequency": 2,
+                "threshold": 3
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "For example, amyloid precursor protein/presenilin 1 (APP/PS1) mice lacking NRF2 exhibited autophagy dysfunction-dependent accumulation of insoluble Abeta aggregates, resulting in an increased pro-inflammatory phenotype."
+          },
+          {
+            "Gene": "APP",
+            "PMID": "37895105",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37895105/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "Ischemic Attack, Transient",
+            "TermType": "MeSH",
+            "Hypothesis": "Amyloid Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knock-in",
+            "GeneAlteration": "APP / genetic manipulation:knock-in",
+            "AlterationSignature": "genetic manipulation:knock-in",
+            "AlterationType": "genetic manipulation:knock-in",
+            "AlterationMention": "knock-in",
+            "AlterationID": "-",
+            "TriggerWord": "protect",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('amyloid precursor protein', 'Gene', '(84, 109)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('knock-in', 'Var', '(116, 124)', ('knock-in', 'Mutation', '-', '-')) -- CauseOf -- ('protect', 'Reg', '(153, 160)', ('protect', 'Reg', '-', '-')) -- ThemeOf -- ('ischemic brain damage', 'Disease', '(174, 195)', ('ischemic brain damage', 'Disease', 'MESH:D002546', '-'))",
+            "EventDedupKey": "gene | genetic manipulation:knock-in | mesh:d002546 | amyloid hypothesis,glutamatergic excitotoxicity hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Ischemic Attack, Transient",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "TRPC6 overexpression has been shown to rescue mushroom spine loss in presenilin and amyloid precursor protein (APP) knock-in mouse models of AD and also protect neurons from ischemic brain damage."
+          }
+        ]
+      },
+      "mechanism_strata": {
+        "amyloid/tau axis": [
+          {
+            "Gene": "APP",
+            "PMID": "37513800",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37513800/",
+            "Journal": "Pathogens",
+            "Year": 2023,
+            "TermName": "Roseolovirus Infections",
+            "TermType": "MeSH",
+            "Hypothesis": "Amyloid Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "APP / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "mutants",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "link",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('amyloid precursor protein', 'Gene', '(202, 227)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('mutants', 'Var', '(181, 188)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('link', 'Reg', '(27, 31)', ('link', 'Reg', '-', '-')) -- ThemeOf -- ('roseolovirus infection', 'Disease', '(40, 62)', ('roseolovirus infection', 'Disease', 'MESH:D019349', '-'))",
+            "EventDedupKey": "gene | point mutations:mutations | mesh:d019349 | amyloid hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Roseolovirus Infections",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "To investigate a potential link between roseolovirus infection and Alzheimer's disease, Bigley and colleagues used MRV to infect a transgenic mouse model in which overexpression of mutants of the human amyloid precursor protein (APP) and presenilin-1 leads to plaque formation."
+          },
+          {
+            "Gene": "APP",
+            "PMID": "36687366",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36687366/",
+            "Journal": "Neuronal Signal",
+            "Year": 2023,
+            "TermName": "Polydactyly, Postaxial",
+            "TermType": "MeSH",
+            "Hypothesis": "Amyloid Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "APP / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "mutations",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "affect",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('amyloid precursor protein', 'Gene', '(83, 108)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('mutations', 'Var', '(23, 32)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('affect', 'Reg', '(44, 50)', ('affect', 'Reg', '-', '-')) -- ThemeOf -- ('PS', 'Disease', '(218, 220)', ('PS', 'Disease', 'MESH:C562429', '-'))",
+            "EventDedupKey": "gene | point mutations:mutations | mesh:c562429 | amyloid hypothesis",
+            "EvidenceType": "alteration_evidence",
+            "MechanismStrata": [
+              "amyloid/tau axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Polydactyly, Postaxial",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "alteration_evidence",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "All of the responsible mutations identified affect either the genes coding for the amyloid precursor protein (APP) from which Abeta is formed via a multistep processing pathway, or the genes coding for the presenilin (PS) 1 and 2 proteins that function within this processing pathway as part of an enzyme complex responsible for cleaving Abeta from its immediate precursor."
+          },
+          {
+            "Gene": "APP",
+            "PMID": "37840813",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37840813/",
+            "Journal": "Front Aging",
+            "Year": 2023,
+            "TermName": "autophagy",
+            "TermType": "GO",
+            "Hypothesis": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "expression changes:dysregulation",
+            "GeneAlteration": "APP / expression changes:dysregulation",
+            "AlterationSignature": "expression changes:dysregulation",
+            "AlterationType": "expression changes:dysregulation",
+            "AlterationMention": "lacking",
+            "AlterationID": "expression changes:dysregulation",
+            "TriggerWord": "accumulation",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('amyloid precursor protein', 'Gene', '(13, 38)', ('amyloid precursor protein', 'Gene', '11820', '-')) -- ThemeOf -- ('lacking', 'Var', '(67, 74)', ('lacking', 'Mutation', 'expression changes:dysregulation', 'expression changes:dysregulation')) -- CauseOf -- ('accumulation', 'PosReg', '(122, 134)', ('accumulation', 'PosReg', '-', '-')) -- ThemeOf -- ('autophagy dysfunction-dependent', 'CPA', '(90, 121)', ('autophagy dysfunction-dependent', 'CPA', 'GO:0006914', 'autophagy'))",
+            "EventDedupKey": "gene | expression changes:dysregulation | go:0006914 | amyloid hypothesis,neuroinflammation hypothesis,abnormal autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+                "frequency": 2,
+                "threshold": 3
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "For example, amyloid precursor protein/presenilin 1 (APP/PS1) mice lacking NRF2 exhibited autophagy dysfunction-dependent accumulation of insoluble Abeta aggregates, resulting in an increased pro-inflammatory phenotype."
+          },
+          {
+            "Gene": "APP",
+            "PMID": "37895105",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37895105/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "Ischemic Attack, Transient",
+            "TermType": "MeSH",
+            "Hypothesis": "Amyloid Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knock-in",
+            "GeneAlteration": "APP / genetic manipulation:knock-in",
+            "AlterationSignature": "genetic manipulation:knock-in",
+            "AlterationType": "genetic manipulation:knock-in",
+            "AlterationMention": "knock-in",
+            "AlterationID": "-",
+            "TriggerWord": "protect",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('amyloid precursor protein', 'Gene', '(84, 109)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('knock-in', 'Var', '(116, 124)', ('knock-in', 'Mutation', '-', '-')) -- CauseOf -- ('protect', 'Reg', '(153, 160)', ('protect', 'Reg', '-', '-')) -- ThemeOf -- ('ischemic brain damage', 'Disease', '(174, 195)', ('ischemic brain damage', 'Disease', 'MESH:D002546', '-'))",
+            "EventDedupKey": "gene | genetic manipulation:knock-in | mesh:d002546 | amyloid hypothesis,glutamatergic excitotoxicity hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Ischemic Attack, Transient",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "TRPC6 overexpression has been shown to rescue mushroom spine loss in presenilin and amyloid precursor protein (APP) knock-in mouse models of AD and also protect neurons from ischemic brain damage."
+          }
+        ],
+        "mitochondrial and oxidative stress axis": [
+          {
+            "Gene": "APP",
+            "PMID": "37513800",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37513800/",
+            "Journal": "Pathogens",
+            "Year": 2023,
+            "TermName": "Roseolovirus Infections",
+            "TermType": "MeSH",
+            "Hypothesis": "Amyloid Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "point mutations:mutations",
+            "GeneAlteration": "APP / point mutations:mutations",
+            "AlterationSignature": "point mutations:mutations",
+            "AlterationType": "point mutations:Mutations",
+            "AlterationMention": "mutants",
+            "AlterationID": "point mutations:Mutations",
+            "TriggerWord": "link",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('amyloid precursor protein', 'Gene', '(202, 227)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('mutants', 'Var', '(181, 188)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('link', 'Reg', '(27, 31)', ('link', 'Reg', '-', '-')) -- ThemeOf -- ('roseolovirus infection', 'Disease', '(40, 62)', ('roseolovirus infection', 'Disease', 'MESH:D019349', '-'))",
+            "EventDedupKey": "gene | point mutations:mutations | mesh:d019349 | amyloid hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Roseolovirus Infections",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "To investigate a potential link between roseolovirus infection and Alzheimer's disease, Bigley and colleagues used MRV to infect a transgenic mouse model in which overexpression of mutants of the human amyloid precursor protein (APP) and presenilin-1 leads to plaque formation."
+          },
+          {
+            "Gene": "APP",
+            "PMID": "37840813",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37840813/",
+            "Journal": "Front Aging",
+            "Year": 2023,
+            "TermName": "autophagy",
+            "TermType": "GO",
+            "Hypothesis": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "expression changes:dysregulation",
+            "GeneAlteration": "APP / expression changes:dysregulation",
+            "AlterationSignature": "expression changes:dysregulation",
+            "AlterationType": "expression changes:dysregulation",
+            "AlterationMention": "lacking",
+            "AlterationID": "expression changes:dysregulation",
+            "TriggerWord": "accumulation",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('amyloid precursor protein', 'Gene', '(13, 38)', ('amyloid precursor protein', 'Gene', '11820', '-')) -- ThemeOf -- ('lacking', 'Var', '(67, 74)', ('lacking', 'Mutation', 'expression changes:dysregulation', 'expression changes:dysregulation')) -- CauseOf -- ('accumulation', 'PosReg', '(122, 134)', ('accumulation', 'PosReg', '-', '-')) -- ThemeOf -- ('autophagy dysfunction-dependent', 'CPA', '(90, 121)', ('autophagy dysfunction-dependent', 'CPA', 'GO:0006914', 'autophagy'))",
+            "EventDedupKey": "gene | expression changes:dysregulation | go:0006914 | amyloid hypothesis,neuroinflammation hypothesis,abnormal autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+                "frequency": 2,
+                "threshold": 3
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "For example, amyloid precursor protein/presenilin 1 (APP/PS1) mice lacking NRF2 exhibited autophagy dysfunction-dependent accumulation of insoluble Abeta aggregates, resulting in an increased pro-inflammatory phenotype."
+          }
+        ],
+        "neuroinflammation and microglia axis": [
+          {
+            "Gene": "APP",
+            "PMID": "37840813",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37840813/",
+            "Journal": "Front Aging",
+            "Year": 2023,
+            "TermName": "autophagy",
+            "TermType": "GO",
+            "Hypothesis": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "expression changes:dysregulation",
+            "GeneAlteration": "APP / expression changes:dysregulation",
+            "AlterationSignature": "expression changes:dysregulation",
+            "AlterationType": "expression changes:dysregulation",
+            "AlterationMention": "lacking",
+            "AlterationID": "expression changes:dysregulation",
+            "TriggerWord": "accumulation",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('amyloid precursor protein', 'Gene', '(13, 38)', ('amyloid precursor protein', 'Gene', '11820', '-')) -- ThemeOf -- ('lacking', 'Var', '(67, 74)', ('lacking', 'Mutation', 'expression changes:dysregulation', 'expression changes:dysregulation')) -- CauseOf -- ('accumulation', 'PosReg', '(122, 134)', ('accumulation', 'PosReg', '-', '-')) -- ThemeOf -- ('autophagy dysfunction-dependent', 'CPA', '(90, 121)', ('autophagy dysfunction-dependent', 'CPA', 'GO:0006914', 'autophagy'))",
+            "EventDedupKey": "gene | expression changes:dysregulation | go:0006914 | amyloid hypothesis,neuroinflammation hypothesis,abnormal autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+                "frequency": 2,
+                "threshold": 3
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "For example, amyloid precursor protein/presenilin 1 (APP/PS1) mice lacking NRF2 exhibited autophagy dysfunction-dependent accumulation of insoluble Abeta aggregates, resulting in an increased pro-inflammatory phenotype."
+          }
+        ],
+        "proteostasis/autophagy axis": [
+          {
+            "Gene": "APP",
+            "PMID": "37840813",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37840813/",
+            "Journal": "Front Aging",
+            "Year": 2023,
+            "TermName": "autophagy",
+            "TermType": "GO",
+            "Hypothesis": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "expression changes:dysregulation",
+            "GeneAlteration": "APP / expression changes:dysregulation",
+            "AlterationSignature": "expression changes:dysregulation",
+            "AlterationType": "expression changes:dysregulation",
+            "AlterationMention": "lacking",
+            "AlterationID": "expression changes:dysregulation",
+            "TriggerWord": "accumulation",
+            "RegType": "PosReg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('amyloid precursor protein', 'Gene', '(13, 38)', ('amyloid precursor protein', 'Gene', '11820', '-')) -- ThemeOf -- ('lacking', 'Var', '(67, 74)', ('lacking', 'Mutation', 'expression changes:dysregulation', 'expression changes:dysregulation')) -- CauseOf -- ('accumulation', 'PosReg', '(122, 134)', ('accumulation', 'PosReg', '-', '-')) -- ThemeOf -- ('autophagy dysfunction-dependent', 'CPA', '(90, 121)', ('autophagy dysfunction-dependent', 'CPA', 'GO:0006914', 'autophagy'))",
+            "EventDedupKey": "gene | expression changes:dysregulation | go:0006914 | amyloid hypothesis,neuroinflammation hypothesis,abnormal autophagy hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "mitochondrial and oxidative stress axis",
+              "neuroinflammation and microglia axis",
+              "proteostasis/autophagy axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "hypothesis",
+                "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+                "frequency": 2,
+                "threshold": 3
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "For example, amyloid precursor protein/presenilin 1 (APP/PS1) mice lacking NRF2 exhibited autophagy dysfunction-dependent accumulation of insoluble Abeta aggregates, resulting in an increased pro-inflammatory phenotype."
+          }
+        ],
+        "synaptic and neuronal dysfunction axis": [
+          {
+            "Gene": "APP",
+            "PMID": "37895105",
+            "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37895105/",
+            "Journal": "Int J Mol Sci",
+            "Year": 2023,
+            "TermName": "Ischemic Attack, Transient",
+            "TermType": "MeSH",
+            "Hypothesis": "Amyloid Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+            "SentenceQuality": 90.0,
+            "AlterationTaxonomy": "genetic manipulation:knock-in",
+            "GeneAlteration": "APP / genetic manipulation:knock-in",
+            "AlterationSignature": "genetic manipulation:knock-in",
+            "AlterationType": "genetic manipulation:knock-in",
+            "AlterationMention": "knock-in",
+            "AlterationID": "-",
+            "TriggerWord": "protect",
+            "RegType": "Reg",
+            "MechanismProvided": "Yes",
+            "RelevantToAD": "Yes",
+            "Event": "('amyloid precursor protein', 'Gene', '(84, 109)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('knock-in', 'Var', '(116, 124)', ('knock-in', 'Mutation', '-', '-')) -- CauseOf -- ('protect', 'Reg', '(153, 160)', ('protect', 'Reg', '-', '-')) -- ThemeOf -- ('ischemic brain damage', 'Disease', '(174, 195)', ('ischemic brain damage', 'Disease', 'MESH:D002546', '-'))",
+            "EventDedupKey": "gene | genetic manipulation:knock-in | mesh:d002546 | amyloid hypothesis,glutamatergic excitotoxicity hypothesis",
+            "EvidenceType": "model_or_intervention",
+            "MechanismStrata": [
+              "amyloid/tau axis",
+              "synaptic and neuronal dysfunction axis"
+            ],
+            "LongTailSignals": [
+              {
+                "dimension": "phenotype",
+                "value": "Ischemic Attack, Transient",
+                "frequency": 1,
+                "threshold": 1
+              }
+            ],
+            "IsLongTailEvidence": true,
+            "CurationReasons": [
+              "model_or_intervention",
+              "high sentence informativeness",
+              "long-tail evidence signal",
+              "recent evidence",
+              "PMID-traceable"
+            ],
+            "Sentence": "TRPC6 overexpression has been shown to rescue mushroom spine loss in presenilin and amyloid precursor protein (APP) knock-in mouse models of AD and also protect neurons from ischemic brain damage."
+          }
+        ]
+      },
+      "chronological_summary": [
+        {
+          "period": "2010-2014",
+          "row_count": 863,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 863
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 282
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 271
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 177
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 149
+            }
+          ]
+        },
+        {
+          "period": "2015-2019",
+          "row_count": 1182,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 1182
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 400
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 369
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 231
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 147
+            }
+          ]
+        },
+        {
+          "period": "2020-2024",
+          "row_count": 2024,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 2024
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 717
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 667
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 358
+            },
+            {
+              "value": "neuroinflammation and microglia axis",
+              "count": 353
+            }
+          ]
+        },
+        {
+          "period": "before 2010",
+          "row_count": 531,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 531
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 124
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 121
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 87
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 80
+            }
+          ]
+        },
+        {
+          "period": "missing year",
+          "row_count": 385,
+          "dominant_mechanism_strata": [
+            {
+              "value": "amyloid/tau axis",
+              "count": 385
+            },
+            {
+              "value": "synaptic and neuronal dysfunction axis",
+              "count": 92
+            },
+            {
+              "value": "proteostasis/autophagy axis",
+              "count": 84
+            },
+            {
+              "value": "vascular/metabolic axis",
+              "count": 76
+            },
+            {
+              "value": "mitochondrial and oxidative stress axis",
+              "count": 52
+            }
+          ]
+        }
+      ],
+      "bias_notes": [
+        "Curation pool source: remote_api (server_full_query_pool).",
+        "Curation used 18277 curation pool row(s) and reduced them to 4985 event-unique row(s).",
+        "Event deduplication key: gene-fixed event key: alteration taxonomy + phenotype/term + hypothesis; fallback to PMID/sentence when structured fields are sparse.",
+        "The curation pool covers 18277 of 18277 event record(s) matched by the curation query (100.00%).",
+        "The most frequent PMID contributes 19 of 4985 event-unique rows.",
+        "The most frequent phenotype is `protein` with 121 event-unique row(s).",
+        "The most frequent alteration taxonomy appears in 2288 event-unique row(s).",
+        "Broad disease/background terms account for 428 of 4985 event-unique rows.",
+        "385 event-unique row(s) lack usable year metadata."
+      ],
+      "selected_evidence": [
+        {
+          "Gene": "APP",
+          "PMID": "37513800",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37513800/",
+          "Journal": "Pathogens",
+          "Year": 2023,
+          "TermName": "Roseolovirus Infections",
+          "TermType": "MeSH",
+          "Hypothesis": "Amyloid Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "APP / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutants",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "link",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid precursor protein', 'Gene', '(202, 227)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('mutants', 'Var', '(181, 188)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('link', 'Reg', '(27, 31)', ('link', 'Reg', '-', '-')) -- ThemeOf -- ('roseolovirus infection', 'Disease', '(40, 62)', ('roseolovirus infection', 'Disease', 'MESH:D019349', '-'))",
+          "EventDedupKey": "gene | point mutations:mutations | mesh:d019349 | amyloid hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Roseolovirus Infections",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "To investigate a potential link between roseolovirus infection and Alzheimer's disease, Bigley and colleagues used MRV to infect a transgenic mouse model in which overexpression of mutants of the human amyloid precursor protein (APP) and presenilin-1 leads to plaque formation."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "36687366",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36687366/",
+          "Journal": "Neuronal Signal",
+          "Year": 2023,
+          "TermName": "Polydactyly, Postaxial",
+          "TermType": "MeSH",
+          "Hypothesis": "Amyloid Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "point mutations:mutations",
+          "GeneAlteration": "APP / point mutations:mutations",
+          "AlterationSignature": "point mutations:mutations",
+          "AlterationType": "point mutations:Mutations",
+          "AlterationMention": "mutations",
+          "AlterationID": "point mutations:Mutations",
+          "TriggerWord": "affect",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid precursor protein', 'Gene', '(83, 108)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('mutations', 'Var', '(23, 32)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('affect', 'Reg', '(44, 50)', ('affect', 'Reg', '-', '-')) -- ThemeOf -- ('PS', 'Disease', '(218, 220)', ('PS', 'Disease', 'MESH:C562429', '-'))",
+          "EventDedupKey": "gene | point mutations:mutations | mesh:c562429 | amyloid hypothesis",
+          "EvidenceType": "alteration_evidence",
+          "MechanismStrata": [
+            "amyloid/tau axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Polydactyly, Postaxial",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "alteration_evidence",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "All of the responsible mutations identified affect either the genes coding for the amyloid precursor protein (APP) from which Abeta is formed via a multistep processing pathway, or the genes coding for the presenilin (PS) 1 and 2 proteins that function within this processing pathway as part of an enzyme complex responsible for cleaving Abeta from its immediate precursor."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "37840813",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37840813/",
+          "Journal": "Front Aging",
+          "Year": 2023,
+          "TermName": "autophagy",
+          "TermType": "GO",
+          "Hypothesis": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "expression changes:dysregulation",
+          "GeneAlteration": "APP / expression changes:dysregulation",
+          "AlterationSignature": "expression changes:dysregulation",
+          "AlterationType": "expression changes:dysregulation",
+          "AlterationMention": "lacking",
+          "AlterationID": "expression changes:dysregulation",
+          "TriggerWord": "accumulation",
+          "RegType": "PosReg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid precursor protein', 'Gene', '(13, 38)', ('amyloid precursor protein', 'Gene', '11820', '-')) -- ThemeOf -- ('lacking', 'Var', '(67, 74)', ('lacking', 'Mutation', 'expression changes:dysregulation', 'expression changes:dysregulation')) -- CauseOf -- ('accumulation', 'PosReg', '(122, 134)', ('accumulation', 'PosReg', '-', '-')) -- ThemeOf -- ('autophagy dysfunction-dependent', 'CPA', '(90, 121)', ('autophagy dysfunction-dependent', 'CPA', 'GO:0006914', 'autophagy'))",
+          "EventDedupKey": "gene | expression changes:dysregulation | go:0006914 | amyloid hypothesis,neuroinflammation hypothesis,abnormal autophagy hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "mitochondrial and oxidative stress axis",
+            "neuroinflammation and microglia axis",
+            "proteostasis/autophagy axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "hypothesis",
+              "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis,Abnormal Autophagy Hypothesis",
+              "frequency": 2,
+              "threshold": 3
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "For example, amyloid precursor protein/presenilin 1 (APP/PS1) mice lacking NRF2 exhibited autophagy dysfunction-dependent accumulation of insoluble Abeta aggregates, resulting in an increased pro-inflammatory phenotype."
+        },
+        {
+          "Gene": "APP",
+          "PMID": "37895105",
+          "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37895105/",
+          "Journal": "Int J Mol Sci",
+          "Year": 2023,
+          "TermName": "Ischemic Attack, Transient",
+          "TermType": "MeSH",
+          "Hypothesis": "Amyloid Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+          "SentenceQuality": 90.0,
+          "AlterationTaxonomy": "genetic manipulation:knock-in",
+          "GeneAlteration": "APP / genetic manipulation:knock-in",
+          "AlterationSignature": "genetic manipulation:knock-in",
+          "AlterationType": "genetic manipulation:knock-in",
+          "AlterationMention": "knock-in",
+          "AlterationID": "-",
+          "TriggerWord": "protect",
+          "RegType": "Reg",
+          "MechanismProvided": "Yes",
+          "RelevantToAD": "Yes",
+          "Event": "('amyloid precursor protein', 'Gene', '(84, 109)', ('amyloid precursor protein', 'Gene', '351', '-')) -- ThemeOf -- ('knock-in', 'Var', '(116, 124)', ('knock-in', 'Mutation', '-', '-')) -- CauseOf -- ('protect', 'Reg', '(153, 160)', ('protect', 'Reg', '-', '-')) -- ThemeOf -- ('ischemic brain damage', 'Disease', '(174, 195)', ('ischemic brain damage', 'Disease', 'MESH:D002546', '-'))",
+          "EventDedupKey": "gene | genetic manipulation:knock-in | mesh:d002546 | amyloid hypothesis,glutamatergic excitotoxicity hypothesis",
+          "EvidenceType": "model_or_intervention",
+          "MechanismStrata": [
+            "amyloid/tau axis",
+            "synaptic and neuronal dysfunction axis"
+          ],
+          "LongTailSignals": [
+            {
+              "dimension": "phenotype",
+              "value": "Ischemic Attack, Transient",
+              "frequency": 1,
+              "threshold": 1
+            }
+          ],
+          "IsLongTailEvidence": true,
+          "CurationReasons": [
+            "model_or_intervention",
+            "high sentence informativeness",
+            "long-tail evidence signal",
+            "recent evidence",
+            "PMID-traceable"
+          ],
+          "Sentence": "TRPC6 overexpression has been shown to rescue mushroom spine loss in presenilin and amyloid precursor protein (APP) knock-in mouse models of AD and also protect neurons from ischemic brain damage."
+        }
+      ]
+    }
+  },
+  "meta": {
+    "curation_scope": "server_full_query_pool",
+    "matched_event_count": 18277,
+    "event_unique_rows": 4985,
+    "selected_limit": 4,
+    "query_type": "gene",
+    "event_deduplication_key": "gene-fixed event key: alteration taxonomy + phenotype/term + hypothesis; fallback to PMID/sentence when structured fields are sparse"
+  }
+}
