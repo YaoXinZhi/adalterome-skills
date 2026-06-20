@@ -1,0 +1,22 @@
+{
+  "targets": [
+    {
+      "label": "MAPT",
+      "curation_source": "curated_pool",
+      "curation_scope": "offline_full_query_pool_prescreened",
+      "overview_event_count": null,
+      "matched_event_count": 27921,
+      "curation_pool_rows": 2700,
+      "event_unique_rows": 2700,
+      "unique_pmids": 1640,
+      "coverage_ratio": 0.0967,
+      "warnings": [
+        "low_fraction_of_matched_events_in_curation_pool"
+      ]
+    }
+  ],
+  "balance": {
+    "status": "not_applicable",
+    "notes": []
+  }
+}

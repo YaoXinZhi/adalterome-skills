@@ -1,0 +1,3373 @@
+[
+  {
+    "Gene": "PSEN1",
+    "PMID": "37998336",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37998336/",
+    "Journal": "Cells",
+    "Year": 2023,
+    "TermName": "Prolonged",
+    "TermType": "HPO",
+    "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct experimental evidence in a 3xTg AD mouse model with specific mutations, showing intervention effects on multiple AD pathologies.",
+    "CuratedPoolRank": 9,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "normalized variants:dna change",
+    "GeneAlteration": "PSEN1 / normalized variants:dna change",
+    "AlterationSignature": "normalized variants:dna change",
+    "AlterationType": "Normalized Variants:DNA Change",
+    "AlterationMention": "M146V",
+    "AlterationID": "rs63750306",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "accumulation",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', 'dbSNP', ('PSEN1', 'Gene', '5663', '-')) -- ThemeOf -- ('M146V', 'Var', '(323, 328)', ('M146V', 'Mutation', 'rs63750306', '-')) -- CauseOf -- ('accumulation', 'PosReg', '(100, 112)', ('accumulation', 'PosReg', '-', '-')) -- ThemeOf -- ('prolonged', 'CPA', '(19, 28)', ('prolonged', 'CPA', 'HP:0025297', 'Prolonged'))",
+    "EventDedupKey": "gene | normalized variants:dna change | hp:0025297 | amyloid hypothesis, neuroinflammation hypothesis, tau protein hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "neuroinflammation and microglia axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "Prolonged",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "In line with this, prolonged hyperbaric oxygen treatment can reduce hypoxia, neuroinflammation, the accumulation of Abeta and phosphorylated tau, leading to a significant improvement of cognitive performances in a 3xTg AD mouse model carrying three mutations associated with familial AD (APP Swedish, MAPT P301L, and PSEN1 M146V) when tested in hippocampal-dependent behavioral tasks and, possibly, in affected patients.",
+    "Target": "PSEN1",
+    "ExpertScore": 134.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0001",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37998336",
+        "Gene": "PSEN1",
+        "TermName": "Prolonged",
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+        "EventDedupKey": "gene | normalized variants:dna change | hp:0025297 | amyloid hypothesis, neuroinflammation hypothesis, tau protein hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "Prolonged"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / normalized variants:dna change"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "37455931",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37455931/",
+    "Journal": "Front Aging Neurosci",
+    "Year": 2023,
+    "TermName": "autophagosome",
+    "TermType": "GO",
+    "Hypothesis": "Abnormal Autophagy Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "The sentence directly links PSEN1 mutation to specific autophagy defects (synthesis and clearance) with molecular pathway details and experimental evidence (CQ treatment), highly relevant to AD pathology.",
+    "CuratedPoolRank": 864,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "PSEN1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutation",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "accelerate",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', '(24, 29)', ('PSEN1', 'Gene', '19164', '-')) -- ThemeOf -- ('mutation', 'Var', '(30, 38)', ('mutation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('accelerate', 'PosReg', '(54, 64)', ('accelerate', 'PosReg', '-', '-')) -- ThemeOf -- ('autophagosome synthesis', 'CPA', '(65, 88)', ('autophagosome synthesis', 'CPA', 'GO:0005776', 'autophagosome'))",
+    "EventDedupKey": "gene | point mutations:mutations | go:0005776 | abnormal autophagy hypothesis",
+    "EvidenceType": "molecular_mechanism",
+    "MechanismStrata": [
+      "proteostasis/autophagy axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "autophagosome",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "molecular_mechanism",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "This could suggest that PSEN1 mutation might not only accelerate autophagosome synthesis through Beclin1 and mTOR pathways but also alter autophagic clearance (increased p62/SQSTM1) likely due to a secondary degradation defect in lysosomes, triggering an autophagosome buildup (LC3II accumulation after CQ treatment).",
+    "Target": "PSEN1",
+    "ExpertScore": 126.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "molecular_mechanism evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0002",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37455931",
+        "Gene": "PSEN1",
+        "TermName": "autophagosome",
+        "Hypothesis": "Abnormal Autophagy Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | go:0005776 | abnormal autophagy hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Abnormal Autophagy Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "autophagosome"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "25812849",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/25812849/",
+    "Journal": "J. Alzheimers Dis.",
+    "Year": 2015,
+    "TermName": "Expressive aphasia",
+    "TermType": "HPO",
+    "Hypothesis": "Amyloid Hypothesis",
+    "SentenceQuality": 150.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 4,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "The sentence identifies a specific PSEN1 variant (Thr147Ile) in a family with very early onset dementia, directly linking a genetic alteration to AD-relevant phenotype, though mechanism is not explicitly described.",
+    "CuratedPoolRank": 1089,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "normalized variants:rsid normalized",
+    "GeneAlteration": "PSEN1 / normalized variants:rsid normalized",
+    "AlterationSignature": "normalized variants:rsid normalized",
+    "AlterationType": "Normalized Variants:RsID Normalized",
+    "AlterationMention": "Thr147Ile",
+    "AlterationID": "rs63750907",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "with",
+    "RegType": "Reg",
+    "MechanismProvided": "No",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', 'dbSNP', ('PSEN1', 'Gene', '5663', '-')) -- ThemeOf -- ('Thr147Ile', 'Var', '(26, 35)', ('Thr147Ile', 'Mutation', 'rs63750907', '-')) -- CauseOf -- ('with', 'Reg', '(56, 60)', ('with', 'Reg', '-', '-')) -- ThemeOf -- ('Expressive Aphasia', 'CPA', '(91, 109)', ('Expressive Aphasia', 'CPA', 'HP:0002427', 'Motor aphasia'))",
+    "EventDedupKey": "gene | normalized variants:rsid normalized | hp:0002427 | amyloid hypothesis",
+    "EvidenceType": "alteration_evidence",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "proteostasis/autophagy axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "Expressive aphasia",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "alteration_evidence",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "PMID-traceable"
+    ],
+    "Sentence": "Identification of the PS1 Thr147Ile Variant in a Family with Very Early Onset Dementia and Expressive Aphasia Background: Early onset dementias have variable clinical presentations and are often difficult to diagnose.",
+    "Target": "PSEN1",
+    "ExpertScore": 124.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "alteration_evidence evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0003",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "25812849",
+        "Gene": "PSEN1",
+        "TermName": "Expressive aphasia",
+        "Hypothesis": "Amyloid Hypothesis",
+        "EventDedupKey": "gene | normalized variants:rsid normalized | hp:0002427 | amyloid hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "Expressive aphasia"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / normalized variants:rsid normalized"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "37718800",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37718800/",
+    "Journal": "J Alzheimers Dis",
+    "Year": 2023,
+    "TermName": "iron ion homeostasis",
+    "TermType": "GO",
+    "Hypothesis": "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis",
+    "SentenceQuality": 152.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 4,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "The sentence integrates multiple AD-relevant mechanisms (endolysosomal, mitochondrial, iron homeostasis) linked to fAD mutations, providing a unified pathological mechanism with high specificity and self-containment.",
+    "CuratedPoolRank": 122,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "PSEN1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutations",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "effects",
+    "RegType": "Reg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', '(26, 31)', ('PSEN1', 'Gene', '5663', '-')) -- ThemeOf -- ('mutations', 'Var', '(8, 17)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('effects', 'Reg', '(180, 187)', ('effects', 'Reg', '-', '-')) -- ThemeOf -- ('iron homeostasis', 'MPA', '(191, 207)', ('iron homeostasis', 'MPA', 'GO:0055072', 'iron ion homeostasis'))",
+    "EventDedupKey": "gene | point mutations:mutations | go:0055072 | amyloid hypothesis, mitochondrial autophagy hypothesis",
+    "EvidenceType": "cellular_or_pathway_process",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "mitochondrial and oxidative stress axis",
+      "synaptic and neuronal dysfunction axis",
+      "proteostasis/autophagy axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "iron ion homeostasis",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "cellular_or_pathway_process",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "All fAD mutations in APP, PSEN1, and PSEN2 likely find unity of pathological mechanism in their actions on endolysosomal acidification and mitochondrial function, with detrimental effects on iron homeostasis and promotion of \"pseudo-hypoxia\" being of central importance.",
+    "Target": "PSEN1",
+    "ExpertScore": 127.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "cellular_or_pathway_process evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0004",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37718800",
+        "Gene": "PSEN1",
+        "TermName": "iron ion homeostasis",
+        "Hypothesis": "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | go:0055072 | amyloid hypothesis, mitochondrial autophagy hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "iron ion homeostasis"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "32722745",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/32722745/",
+    "Journal": "JAMA",
+    "Year": 2020,
+    "TermName": "-",
+    "TermType": "-",
+    "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+    "SentenceQuality": 143.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 4,
+    "ExpertPathologyGranularityScore": 4,
+    "ExpertExperimentalDirectnessScore": 4,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Directly links PSEN1 mutation carriers to elevated plasma P-tau217, a specific AD biomarker, with clear temporal relationship to disease onset.",
+    "CuratedPoolRank": 690,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "PSEN1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutation",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "greater",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', '(69, 74)', ('PSEN1', 'Gene', '5663', '-')) -- ThemeOf -- ('mutation', 'Var', '(75, 83)', ('mutation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('greater', 'PosReg', '(55, 62)', ('greater', 'PosReg', '-', '-')) -- ThemeOf -- ('plasma P-tau217 levels', 'MPA', '(13, 35)', ('plasma P-tau217 levels', 'MPA', '-', '-'))",
+    "EventDedupKey": "gene | point mutations:mutations | plasma p-tau217 levels | amyloid hypothesis, tau protein hypothesis",
+    "EvidenceType": "clinical_or_cohort_association",
+    "MechanismStrata": [
+      "amyloid/tau axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "plasma P-tau217 levels",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "clinical_or_cohort_association",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "In cohort 3, plasma P-tau217 levels were significantly greater among PSEN1 mutation carriers, compared with noncarriers, from approximately 25 years and older, which is 20 years prior to estimated onset of MCI among mutation carriers.",
+    "Target": "PSEN1",
+    "ExpertScore": 111.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "clinical_or_cohort_association evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0005",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "32722745",
+        "Gene": "PSEN1",
+        "TermName": "-",
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | plasma p-tau217 levels | amyloid hypothesis, tau protein hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis,Tau Protein Hypothesis"
+    ],
+    "MergedPhenotypes": [],
+    "MergedGeneAlterations": [
+      "PSEN1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "FAD",
+    "PMID": "35847683",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35847683/",
+    "Journal": "Front Aging Neurosci",
+    "Year": 2022,
+    "TermName": "lysosomal deficiencies",
+    "TermType": "MeSH",
+    "Hypothesis": "Abnormal Autophagy Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct evidence from FAD patient fibroblasts showing elevated autophagy markers linked to PS1 mutations, with clear AD relevance and mechanistic detail.",
+    "CuratedPoolRank": 26,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "FAD / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutations",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "elevated",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('FAD', 'Gene', '(32, 35)', ('FAD', 'Gene', '5663', '-')) -- ThemeOf -- ('mutations', 'Var', '(254, 263)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('elevated', 'PosReg', '(52, 60)', ('elevated', 'PosReg', '-', '-')) -- ThemeOf -- ('lysosomal deficiencies', 'Disease', '(328, 350)', ('lysosomal deficiencies', 'Disease', 'MESH:D016464', '-'))",
+    "EventDedupKey": "gene | point mutations:mutations | mesh:d016464 | abnormal autophagy hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "synaptic and neuronal dysfunction axis",
+      "proteostasis/autophagy axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "lysosomal deficiencies",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "In this study, fibroblasts from FAD patients showed elevated expression of the markers LC3II, LAMP2 and CatD (Figure 2), likely reflecting the alterations in the autophagic lysosomal pathway described in neuronal cell models and transgenic mice with PS1 mutations, due to the progressive accumulation of autophagic vacuoles and lysosomal deficiencies.",
+    "Target": "PSEN1",
+    "ExpertScore": 131.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0006",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "35847683",
+        "Gene": "FAD",
+        "TermName": "lysosomal deficiencies",
+        "Hypothesis": "Abnormal Autophagy Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | mesh:d016464 | abnormal autophagy hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Abnormal Autophagy Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "lysosomal deficiencies"
+    ],
+    "MergedGeneAlterations": [
+      "FAD / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "presenilin 1",
+    "PMID": "34764472",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/34764472/",
+    "Journal": "Nat Rev Immunol",
+    "Year": 2021,
+    "TermName": "fibrinogen",
+    "TermType": "GO",
+    "Hypothesis": "Neuroinflammation Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct experimental evidence in APP/PS1 mice with specific mutations shows Il1b upregulation and BBB breakdown, strongly supporting neuroinflammation hypothesis.",
+    "CuratedPoolRank": 32,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "presenilin 1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutations",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "upregulation",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('presenilin 1', 'Gene', '(201, 213)', ('presenilin 1', 'Gene', '5663', '-')) -- ThemeOf -- ('mutations', 'Var', '(137, 146)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('upregulation', 'PosReg', '(251, 263)', ('upregulation', 'PosReg', '-', '-')) -- ThemeOf -- ('fibrinogen', 'MPA', '(300, 310)', ('fibrinogen', 'MPA', 'GO:0008001', 'fibrinogen'))",
+    "EventDedupKey": "gene | point mutations:mutations | go:0008001 | neuroinflammation hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "neuroinflammation and microglia axis",
+      "amyloid/tau axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "fibrinogen",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "In support, endotoxin challenge or respiratory infection by live bacteria in aged APP/PS1 mice (which harbour familial Alzheimer disease mutations in the human APP (amyloid precursor protein) and PS1 (presenilin 1) genes) resulted in more robust Il1b upregulation and BBB breakdown (characterized by fibrinogen deposition and infiltration of monocytes and T cells into the brain) (Fig.",
+    "Target": "PSEN1",
+    "ExpertScore": 128.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0007",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "34764472",
+        "Gene": "presenilin 1",
+        "TermName": "fibrinogen",
+        "Hypothesis": "Neuroinflammation Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | go:0008001 | neuroinflammation hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Neuroinflammation Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "fibrinogen"
+    ],
+    "MergedGeneAlterations": [
+      "presenilin 1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "33171143",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/33171143/",
+    "Journal": "Neurosci Biobehav Rev",
+    "Year": 2021,
+    "TermName": "pilus",
+    "TermType": "GO",
+    "Hypothesis": "Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct experimental evidence in 3xTg AD mouse model with specific PSEN1 M146V mutation, showing tau phosphorylation and JNK inhibition, highly relevant to AD pathology.",
+    "CuratedPoolRank": 27,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "normalized variants:dna change",
+    "GeneAlteration": "PSEN1 / normalized variants:dna change",
+    "AlterationSignature": "normalized variants:dna change",
+    "AlterationType": "Normalized Variants:DNA Change",
+    "AlterationMention": "M146V",
+    "AlterationID": "rs63750306",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "increase",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', 'dbSNP', ('PSEN1', 'Gene', '5663', '-')) -- ThemeOf -- ('M146V', 'Var', '(255, 260)', ('M146V', 'Mutation', 'rs63750306', '-')) -- CauseOf -- ('increase', 'PosReg', '(64, 72)', ('increase', 'PosReg', '-', '-')) -- ThemeOf -- ('fimbria', 'MPA', '(153, 160)', ('fimbria', 'MPA', 'GO:0009289', 'pilus'))",
+    "EventDedupKey": "gene | normalized variants:dna change | go:0009289 | neuroinflammation hypothesis, tau protein hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "neuroinflammation and microglia axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "pilus",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "Evidence has shown that CCI causes an injury-severity-dependent increase in P-tau (notably at Ser199, Thr205, Thr231, Ser396, Ser422) in the ipsilateral fimbria/amygdala and contralateral CA1 regions of 3xTg AD mice (carrying SweAPP, MAPT P301L and PSEN1 M146V transgenes) compared with sham 3xTg AD mice, which can be attenuated by a treatment of D-JNKil, a peptide inhibitor of JNK.",
+    "Target": "PSEN1",
+    "ExpertScore": 138.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0008",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "33171143",
+        "Gene": "PSEN1",
+        "TermName": "pilus",
+        "Hypothesis": "Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+        "EventDedupKey": "gene | normalized variants:dna change | go:0009289 | neuroinflammation hypothesis, tau protein hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Tau Protein Hypothesis,Neuroinflammation Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "pilus"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / normalized variants:dna change"
+    ]
+  },
+  {
+    "Gene": "PS-1",
+    "PMID": "25034304",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/25034304/",
+    "Journal": "Mitochondrion",
+    "Year": 2014,
+    "TermName": "stress-induced premature senescence",
+    "TermType": "GO",
+    "Hypothesis": "Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+    "SentenceQuality": 153.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct experimental evidence linking PS-1 mutation to ROS and senescence, with intervention by CoQ10, highly relevant to AD oxidative stress and mitochondrial hypotheses.",
+    "CuratedPoolRank": 72,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "PS-1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutation",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "increased",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PS-1', 'Gene', '(0, 4)', ('PS-1', 'Gene', '5663', '-')) -- ThemeOf -- ('mutation', 'Var', '(5, 13)', ('mutation', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('increased', 'PosReg', '(28, 37)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('stress induced premature senescence', 'MPA', '(83, 118)', ('stress induced premature senescence', 'MPA', 'GO:0090400', 'SIPS'))",
+    "EventDedupKey": "gene | point mutations:mutations | go:0090400 | mitochondrial autophagy hypothesis, oxidative stress hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "mitochondrial and oxidative stress axis",
+      "proteostasis/autophagy axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "stress-induced premature senescence",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "PMID-traceable"
+    ],
+    "Sentence": "PS-1 mutation correlated to increased reactive oxygen species (ROS) production and stress induced premature senescence (SIPS) in PSAF; WS-CoQ10 treatment decreased ROS generation, increased population doublings, and postponed SIPS.",
+    "Target": "PSEN1",
+    "ExpertScore": 124.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0009",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "25034304",
+        "Gene": "PS-1",
+        "TermName": "stress-induced premature senescence",
+        "Hypothesis": "Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | go:0090400 | mitochondrial autophagy hypothesis, oxidative stress hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "stress-induced premature senescence"
+    ],
+    "MergedGeneAlterations": [
+      "PS-1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "FAD",
+    "PMID": "19921519",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/19921519/",
+    "Journal": "Brain Struct Funct",
+    "Year": 2010,
+    "TermName": "hippocampal damage",
+    "TermType": "MeSH",
+    "Hypothesis": "Glutamatergic Excitotoxicity Hypothesis",
+    "SentenceQuality": 153.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct experimental evidence in mice with specific PS1 FAD mutants shows increased sensitivity to hippocampal damage and neuronal loss, strongly supporting AD relevance and mechanism.",
+    "CuratedPoolRank": 979,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "FAD / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutants",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "more",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('FAD', 'Gene', '(4, 7)', ('FAD', 'Gene', '5663', '-')) -- ThemeOf -- ('mutants', 'Var', '(8, 15)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('more', 'PosReg', '(33, 37)', ('more', 'PosReg', '-', '-')) -- ThemeOf -- ('hippocampal damage', 'Disease', '(72, 90)', ('hippocampal damage', 'Disease', 'MESH:D001930', '-'))",
+    "EventDedupKey": "gene | point mutations:mutations | mesh:d001930 | glutamatergic excitotoxicity hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "synaptic and neuronal dysfunction axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "hippocampal damage",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "PMID-traceable"
+    ],
+    "Sentence": "PS1 FAD mutants also render mice more sensitive to trimethyltin-induced hippocampal damage, and lesioning of the perforant path induces excessive neuronal loss in the entorhinal cortex in mice harboring the DeltaE9 PS1 FAD mutant.",
+    "Target": "PSEN1",
+    "ExpertScore": 124.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0010",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "19921519",
+        "Gene": "FAD",
+        "TermName": "hippocampal damage",
+        "Hypothesis": "Glutamatergic Excitotoxicity Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | mesh:d001930 | glutamatergic excitotoxicity hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Glutamatergic Excitotoxicity Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "hippocampal damage"
+    ],
+    "MergedGeneAlterations": [
+      "FAD / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "presenilin 1",
+    "PMID": "25152362",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/25152362/",
+    "Journal": "Exp. Eye Res.",
+    "Year": 2014,
+    "TermName": "AMD",
+    "TermType": "MeSH",
+    "Hypothesis": "Abnormal Autophagy Hypothesis",
+    "SentenceQuality": 150.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 4,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Directly links mutant PS1 to lysosomal dysfunction and autophagy impairment, connecting AD and AMD pathology with specific molecular mechanism.",
+    "CuratedPoolRank": 211,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "presenilin 1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutant",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "elevated",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('presenilin 1', 'Gene', '(128, 140)', ('presenilin 1', 'Gene', '5663', '-')) -- ThemeOf -- ('mutant', 'Var', '(121, 127)', ('mutant', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('elevated', 'PosReg', '(3, 11)', ('elevated', 'PosReg', '-', '-')) -- ThemeOf -- ('AMD', 'Disease', '(215, 218)', ('AMD', 'Disease', 'MESH:D006009', '-'))",
+    "EventDedupKey": "gene | point mutations:mutations | mesh:d006009 | abnormal autophagy hypothesis",
+    "EvidenceType": "molecular_mechanism",
+    "MechanismStrata": [
+      "proteostasis/autophagy axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "AMD",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "molecular_mechanism",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "PMID-traceable"
+    ],
+    "Sentence": "An elevated lysosomal pH with upregulation of TcFEB and vHATPase resembles the pathology in fibroblasts of patients with mutant presenilin 1 (PS1), suggesting a common link between age-related macular degeneration (AMD) and Alzheimer's disease.",
+    "Target": "PSEN1",
+    "ExpertScore": 125.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "molecular_mechanism evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0011",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "25152362",
+        "Gene": "presenilin 1",
+        "TermName": "AMD",
+        "Hypothesis": "Abnormal Autophagy Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | mesh:d006009 | abnormal autophagy hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Abnormal Autophagy Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "AMD"
+    ],
+    "MergedGeneAlterations": [
+      "presenilin 1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "35391749",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35391749/",
+    "Journal": "Front Aging Neurosci",
+    "Year": 2022,
+    "TermName": "-",
+    "TermType": "-",
+    "Hypothesis": "Metal Ion Hypothesis",
+    "SentenceQuality": 149.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 4,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 4,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct experimental evidence of FPN1 deletion causing AD-like atrophy and cognitive impairment in mice, with clear molecular mechanism linking iron dyshomeostasis to AD pathology.",
+    "CuratedPoolRank": 771,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "structural variation:deletion",
+    "GeneAlteration": "PSEN1 / structural variation:deletion",
+    "AlterationSignature": "structural variation:deletion",
+    "AlterationType": "structural variation:deletion",
+    "AlterationMention": "deletion",
+    "AlterationID": "structural variation:deletion",
+    "AlterationEvidenceLevel": "specific_alteration_mention",
+    "TriggerWord": "led to",
+    "RegType": "Reg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('presenilin-1', 'Gene', '(51, 63)', ('presenilin-1', 'Gene', '19164', '-')) -- ThemeOf -- ('deletion', 'Var', '(114, 122)', ('deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('led to', 'Reg', '(183, 189)', ('led to', 'Reg', '-', '-')) -- ThemeOf -- ('AD-like atrophy', 'CPA', '(190, 205)', ('AD-like atrophy', 'CPA', '-', '-'))",
+    "EventDedupKey": "gene | structural variation:deletion | ad-like atrophy | metal ion hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "synaptic and neuronal dysfunction axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "AD-like atrophy",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "found that FPN1 was decreased in the brains of APP/presenilin-1(PS1) mice and AD patients; moreover, genetic FPN1 deletion in the neurons of neocortex and hippocampus in NEX-Cre mice led to AD-like atrophy in the hippocampus and cognitive impairment.",
+    "Target": "PSEN1",
+    "ExpertScore": 130.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0012",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "35391749",
+        "Gene": "PSEN1",
+        "TermName": "-",
+        "Hypothesis": "Metal Ion Hypothesis",
+        "EventDedupKey": "gene | structural variation:deletion | ad-like atrophy | metal ion hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Metal Ion Hypothesis"
+    ],
+    "MergedPhenotypes": [],
+    "MergedGeneAlterations": [
+      "PSEN1 / structural variation:deletion"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "34088252",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/34088252/",
+    "Journal": "",
+    "Year": 2022,
+    "TermName": "-",
+    "TermType": "-",
+    "Hypothesis": "Glutamatergic Excitotoxicity Hypothesis",
+    "SentenceQuality": 149.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 4,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 4,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Clear experimental evidence showing mGluR5 deletion improves AD pathology and cognition in APP/PS1 mice, directly linking to glutamatergic excitotoxicity hypothesis.",
+    "CuratedPoolRank": 768,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "structural variation:deletion",
+    "GeneAlteration": "PSEN1 / structural variation:deletion",
+    "AlterationSignature": "structural variation:deletion",
+    "AlterationType": "structural variation:deletion",
+    "AlterationMention": "deletion",
+    "AlterationID": "structural variation:deletion",
+    "AlterationEvidenceLevel": "specific_alteration_mention",
+    "TriggerWord": "improves",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('Presenilin 1', 'Gene', '(124, 136)', ('Presenilin 1', 'Gene', '5663', '-')) -- ThemeOf -- ('deletion', 'Var', '(56, 64)', ('deletion', 'Mutation', 'structural variation:deletion', 'structural variation:deletion')) -- CauseOf -- ('improves', 'PosReg', '(65, 73)', ('improves', 'PosReg', '-', '-')) -- ThemeOf -- ('AD pathogenesis', 'CPA', '(74, 89)', ('AD pathogenesis', 'CPA', '-', '-'))",
+    "EventDedupKey": "gene | structural variation:deletion | ad pathogenesis | glutamatergic excitotoxicity hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "synaptic and neuronal dysfunction axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "AD pathogenesis",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "This conclusion is confirmed by the finding that mGluR5 deletion improves AD pathogenesis and cognitive decline in APP/PS1 (Presenilin 1) mice.",
+    "Target": "PSEN1",
+    "ExpertScore": 130.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0013",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "34088252",
+        "Gene": "PSEN1",
+        "TermName": "-",
+        "Hypothesis": "Glutamatergic Excitotoxicity Hypothesis",
+        "EventDedupKey": "gene | structural variation:deletion | ad pathogenesis | glutamatergic excitotoxicity hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Glutamatergic Excitotoxicity Hypothesis"
+    ],
+    "MergedPhenotypes": [],
+    "MergedGeneAlterations": [
+      "PSEN1 / structural variation:deletion"
+    ]
+  },
+  {
+    "Gene": "PS-1",
+    "PMID": "35204298",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/35204298/",
+    "Journal": "",
+    "Year": 2022,
+    "TermName": "-",
+    "TermType": "-",
+    "Hypothesis": "Oxidative Stress Hypothesis",
+    "SentenceQuality": 147.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 4,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 3,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct intervention in AD mouse model shows NAC reduces oxidative damage and boosts antioxidant enzymes, strongly supporting oxidative stress hypothesis.",
+    "CuratedPoolRank": 822,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "genetic manipulation:knock-in",
+    "GeneAlteration": "PS-1 / genetic manipulation:knock-in",
+    "AlterationSignature": "genetic manipulation:knock-in",
+    "AlterationType": "genetic manipulation:knock-in",
+    "AlterationMention": "knock-in",
+    "AlterationID": "-",
+    "AlterationEvidenceLevel": "alteration_taxonomy_level",
+    "TriggerWord": "raised",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PS-1', 'Gene', '(33, 37)', ('PS-1', 'Gene', '5663', '-')) -- ThemeOf -- ('knock-in', 'Var', '(38, 46)', ('knock-in', 'Mutation', '-', '-')) -- CauseOf -- ('raised', 'PosReg', '(161, 167)', ('raised', 'PosReg', '-', '-')) -- ThemeOf -- ('activities', 'MPA', '(205, 215)', ('activities', 'MPA', '-', '-'))",
+    "EventDedupKey": "gene | genetic manipulation:knock-in | activities | oxidative stress hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "mitochondrial and oxidative stress axis",
+      "vascular/metabolic axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "activities",
+        "frequency": 1,
+        "threshold": 1
+      },
+      {
+        "dimension": "gene_alteration",
+        "value": "PS-1 / genetic manipulation:knock-in",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "NAC supplementation to human APP/PS-1 knock-in mice preceding brain accumulation of Abeta, diminished protein and lipid oxidative damage, protein nitration, and raised glutathione peroxidase and reductase activities compared to normal aged animals.",
+    "Target": "PSEN1",
+    "ExpertScore": 124.5,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "high-confidence expert annotation",
+      "LLM-reviewed curation annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0014",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "35204298",
+        "Gene": "PS-1",
+        "TermName": "-",
+        "Hypothesis": "Oxidative Stress Hypothesis",
+        "EventDedupKey": "gene | genetic manipulation:knock-in | activities | oxidative stress hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Oxidative Stress Hypothesis"
+    ],
+    "MergedPhenotypes": [],
+    "MergedGeneAlterations": [
+      "PS-1 / genetic manipulation:knock-in"
+    ]
+  },
+  {
+    "Gene": "presenilin-1",
+    "PMID": "29094046",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/29094046/",
+    "Journal": "Biomed Res Int",
+    "Year": 2017,
+    "TermName": "mitochondrial dysfunction",
+    "TermType": "MeSH",
+    "Hypothesis": "Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+    "SentenceQuality": 147.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 4,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "heuristic_only",
+    "AnnotationConfidence": "heuristic",
+    "ExpertReason": "cellular_or_pathway_process; overall 5/5; mechanism 5/5; alteration 5/5; PMID traceable",
+    "CuratedPoolRank": 1081,
+    "SamplingBucket": "diverse_representative",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "presenilin-1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutations",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "play",
+    "RegType": "Reg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('presenilin-1', 'Gene', '(180, 192)', ('presenilin-1', 'Gene', '5663', '-')) -- ThemeOf -- ('mutations', 'Var', '(193, 202)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('play', 'Reg', '(45, 49)', ('play', 'Reg', '-', '-')) -- ThemeOf -- ('mitochondrial dysfunction', 'Disease', '(71, 96)', ('mitochondrial dysfunction', 'Disease', 'MESH:D028361', '-'))",
+    "EventDedupKey": "gene | point mutations:mutations | mesh:d028361 | mitochondrial autophagy hypothesis, oxidative stress hypothesis",
+    "EvidenceType": "cellular_or_pathway_process",
+    "MechanismStrata": [
+      "mitochondrial and oxidative stress axis",
+      "proteostasis/autophagy axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "mitochondrial dysfunction",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "cellular_or_pathway_process",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "PMID-traceable"
+    ],
+    "Sentence": "Finally, perturbed calcium homeostasis might play an important role in mitochondrial dysfunction and oxidative stress in dementia patients, especially for patients correlated with presenilin-1 mutations.",
+    "Target": "PSEN1",
+    "ExpertScore": 111.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "cellular_or_pathway_process evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "AD-pathology vocabulary present"
+    ],
+    "ExpertCautions": [
+      "heuristic-only annotation"
+    ],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0015",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "29094046",
+        "Gene": "presenilin-1",
+        "TermName": "mitochondrial dysfunction",
+        "Hypothesis": "Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | mesh:d028361 | mitochondrial autophagy hypothesis, oxidative stress hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Oxidative Stress Hypothesis,Mitochondrial Autophagy Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "mitochondrial dysfunction"
+    ],
+    "MergedGeneAlterations": [
+      "presenilin-1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "FAD",
+    "PMID": "29946548",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/29946548/",
+    "Journal": "Front Mol Biosci. 2018 Jun 12",
+    "Year": 2018,
+    "TermName": "-",
+    "TermType": "-",
+    "Hypothesis": "Glutamatergic Excitotoxicity Hypothesis",
+    "SentenceQuality": 131.0,
+    "ExpertOverallScore": 4,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 4,
+    "ExpertExperimentalDirectnessScore": 4,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "heuristic_only",
+    "AnnotationConfidence": "heuristic",
+    "ExpertReason": "molecular_mechanism; overall 4/5; mechanism 5/5; alteration 5/5; PMID traceable",
+    "CuratedPoolRank": 1468,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:substitution",
+    "GeneAlteration": "FAD / point mutations:substitution",
+    "AlterationSignature": "point mutations:substitution",
+    "AlterationType": "point mutations:substitution",
+    "AlterationMention": "substitution",
+    "AlterationID": "point mutations:substitution",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "leads to",
+    "RegType": "Reg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('FAD', 'Gene', '(284, 287)', ('FAD', 'Gene', '5663', '-')) -- ThemeOf -- ('substitution', 'Var', '(10, 22)', ('substitution', 'Mutation', 'point mutations:substitution', 'point mutations:substitution')) -- CauseOf -- ('leads to', 'Reg', '(72, 80)', ('leads to', 'Reg', '-', '-')) -- ThemeOf -- ('electrostatic', 'MPA', '(92, 105)', ('electrostatic', 'MPA', '-', '-'))",
+    "EventDedupKey": "gene | point mutations:substitution | electrostatic | glutamatergic excitotoxicity hypothesis",
+    "EvidenceType": "molecular_mechanism",
+    "MechanismStrata": [
+      "mitochondrial and oxidative stress axis",
+      "synaptic and neuronal dysfunction axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "electrostatic",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "molecular_mechanism",
+      "expert score 4/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "PMID-traceable"
+    ],
+    "Sentence": "Here, the substitution of the wild-type residue with an arginine likely leads to additional electrostatic and H-bond interactions with the surrounding residues side chain, as well as with the -CO and -NH backbone groups that are in close contact with the adenine nucleotide moiety of FAD (Figure 4B).",
+    "Target": "PSEN1",
+    "ExpertScore": 115.8,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "molecular_mechanism evidence",
+      "informative original sentence",
+      "curation expert score 4/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "AD-pathology vocabulary present"
+    ],
+    "ExpertCautions": [
+      "heuristic-only annotation"
+    ],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0016",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "29946548",
+        "Gene": "FAD",
+        "TermName": "-",
+        "Hypothesis": "Glutamatergic Excitotoxicity Hypothesis",
+        "EventDedupKey": "gene | point mutations:substitution | electrostatic | glutamatergic excitotoxicity hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Glutamatergic Excitotoxicity Hypothesis"
+    ],
+    "MergedPhenotypes": [],
+    "MergedGeneAlterations": [
+      "FAD / point mutations:substitution"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "34331941",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/34331941/",
+    "Journal": "Am J Pathol",
+    "Year": 2021,
+    "TermName": "-",
+    "TermType": "-",
+    "Hypothesis": "Vascular Hypothesis",
+    "SentenceQuality": 123.0,
+    "ExpertOverallScore": 4,
+    "ExpertMechanismSpecificityScore": 3,
+    "ExpertPathologyGranularityScore": 3,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 4,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct experimental evidence of PSEN1 knockout mice showing abnormal vessel development, relevant to vascular hypothesis in AD, but lacks molecular mechanism detail.",
+    "CuratedPoolRank": 779,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "expression changes:dysregulation",
+    "GeneAlteration": "PSEN1 / expression changes:dysregulation",
+    "AlterationSignature": "expression changes:dysregulation",
+    "AlterationType": "expression changes:dysregulation",
+    "AlterationMention": "lacking",
+    "AlterationID": "expression changes:dysregulation",
+    "AlterationEvidenceLevel": "specific_alteration_mention",
+    "TriggerWord": "presenting with",
+    "RegType": "Reg",
+    "MechanismProvided": "No",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', '(44, 49)', ('PSEN1', 'Gene', '19164', '-')) -- ThemeOf -- ('lacking', 'Var', '(36, 43)', ('lacking', 'Mutation', 'expression changes:dysregulation', 'expression changes:dysregulation')) -- CauseOf -- ('presenting with', 'Reg', '(50, 65)', ('presenting with', 'Reg', '-', '-')) -- ThemeOf -- ('abnormal vessel development', 'MPA', '(66, 93)', ('abnormal vessel development', 'MPA', '-', '-'))",
+    "EventDedupKey": "gene | expression changes:dysregulation | abnormal vessel development | vascular hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "vascular/metabolic axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "abnormal vessel development",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 4/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "Of particular relevance is the mice lacking PSEN1 presenting with abnormal vessel development.",
+    "Target": "PSEN1",
+    "ExpertScore": 113.8,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 4/5",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation",
+      "LLM-reviewed curation annotation",
+      "AD-pathology vocabulary present"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0017",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "34331941",
+        "Gene": "PSEN1",
+        "TermName": "-",
+        "Hypothesis": "Vascular Hypothesis",
+        "EventDedupKey": "gene | expression changes:dysregulation | abnormal vessel development | vascular hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Vascular Hypothesis"
+    ],
+    "MergedPhenotypes": [],
+    "MergedGeneAlterations": [
+      "PSEN1 / expression changes:dysregulation"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "36142879",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36142879/",
+    "Journal": "",
+    "Year": 2022,
+    "TermName": "juvenile disease",
+    "TermType": "MeSH",
+    "Hypothesis": "Not applicable to any AD hypothesis",
+    "SentenceQuality": 99.0,
+    "ExpertOverallScore": 3,
+    "ExpertMechanismSpecificityScore": 2,
+    "ExpertPathologyGranularityScore": 3,
+    "ExpertExperimentalDirectnessScore": 2,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "medium",
+    "ExpertReason": "Specific mutation (Met233Ile) in PSEN1 associated with juvenile disease, but no molecular mechanism or direct AD relevance is provided.",
+    "CuratedPoolRank": 2176,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "normalized variants:rsid normalized",
+    "GeneAlteration": "PSEN1 / normalized variants:rsid normalized",
+    "AlterationSignature": "normalized variants:rsid normalized",
+    "AlterationType": "Normalized Variants:RsID Normalized",
+    "AlterationMention": "Met233Ile",
+    "AlterationID": "rs63751287",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "associated",
+    "RegType": "Reg",
+    "MechanismProvided": "No",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', 'dbSNP', ('PSEN1', 'Gene', '5663', '-')) -- ThemeOf -- ('Met233Ile', 'Var', '(45, 54)', ('Met233Ile', 'Mutation', 'rs63751287', '-')) -- CauseOf -- ('associated', 'Reg', '(65, 75)', ('associated', 'Reg', '-', '-')) -- ThemeOf -- ('juvenile disease', 'Disease', '(81, 97)', ('juvenile disease', 'Disease', 'MESH:D020734', '-'))",
+    "EventDedupKey": "gene | normalized variants:rsid normalized | mesh:d020734 | not applicable to any ad hypothesis",
+    "EvidenceType": "alteration_evidence",
+    "MechanismStrata": [
+      "amyloid/tau axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "juvenile disease",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "alteration_evidence",
+      "expert score 3/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "TM5 mutations, for Met233Val, Ser237Cys, and Met233Ile were also associated with juvenile disease cases (under 30).",
+    "Target": "PSEN1",
+    "ExpertScore": 98.1,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "alteration_evidence evidence",
+      "informative original sentence",
+      "curation expert score 3/5",
+      "strong alteration informativeness",
+      "medium-confidence expert annotation",
+      "LLM-reviewed curation annotation",
+      "AD-pathology vocabulary present",
+      "molecular or experimental mechanism detail"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": false,
+    "HypothesisRole": "not_counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0018",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "36142879",
+        "Gene": "PSEN1",
+        "TermName": "juvenile disease",
+        "Hypothesis": "Not applicable to any AD hypothesis",
+        "EventDedupKey": "gene | normalized variants:rsid normalized | mesh:d020734 | not applicable to any ad hypothesis"
+      }
+    ],
+    "MergedHypotheses": [],
+    "MergedPhenotypes": [
+      "juvenile disease"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / normalized variants:rsid normalized"
+    ]
+  },
+  {
+    "Gene": "presenilin-1",
+    "PMID": "10822162",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/10822162/",
+    "Journal": "Brain Res. Bull.",
+    "Year": 2000,
+    "TermName": "-",
+    "TermType": "-",
+    "Hypothesis": "Not applicable to any AD hypothesis",
+    "SentenceQuality": 96.0,
+    "ExpertOverallScore": 3,
+    "ExpertMechanismSpecificityScore": 2,
+    "ExpertPathologyGranularityScore": 2,
+    "ExpertExperimentalDirectnessScore": 3,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "medium",
+    "ExpertReason": "The sentence reports a negative finding (no alteration) in phospholipid composition/levels in fibroblasts with PSEN1 mutations, which is specific and self-contained but lacks mechanistic detail and direct AD pathology relevance.",
+    "CuratedPoolRank": 2264,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "presenilin-1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutations",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "altered",
+    "RegType": "Reg",
+    "MechanismProvided": "No",
+    "RelevantToAD": "Yes",
+    "Event": "('presenilin-1', 'Gene', '(75, 87)', ('presenilin-1', 'Gene', '5663', '-')) -- ThemeOf -- ('mutations', 'Var', '(88, 97)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('altered', 'Reg', '(44, 51)', ('altered', 'Reg', '-', '-')) -- ThemeOf -- ('Phospholipid composition', 'MPA', '(0, 24)', ('Phospholipid composition', 'MPA', '-', '-'))",
+    "EventDedupKey": "gene | point mutations:mutations | phospholipid composition | not applicable to any ad hypothesis",
+    "EvidenceType": "alteration_evidence",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "vascular/metabolic axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "Phospholipid composition",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "alteration_evidence",
+      "expert score 3/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "PMID-traceable"
+    ],
+    "Sentence": "Phospholipid composition and levels are not altered in fibroblasts bearing presenilin-1 mutations.",
+    "Target": "PSEN1",
+    "ExpertScore": 100.1,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "alteration_evidence evidence",
+      "informative original sentence",
+      "curation expert score 3/5",
+      "strong alteration informativeness",
+      "medium-confidence expert annotation",
+      "LLM-reviewed curation annotation",
+      "AD-pathology vocabulary present",
+      "molecular or experimental mechanism detail"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": false,
+    "HypothesisRole": "not_counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0019",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "10822162",
+        "Gene": "presenilin-1",
+        "TermName": "-",
+        "Hypothesis": "Not applicable to any AD hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | phospholipid composition | not applicable to any ad hypothesis"
+      }
+    ],
+    "MergedHypotheses": [],
+    "MergedPhenotypes": [],
+    "MergedGeneAlterations": [
+      "presenilin-1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "presenilin 1",
+    "PMID": "33789210",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/33789210/",
+    "Journal": "Neurobiol Aging",
+    "Year": 2021,
+    "TermName": "familial Alzheimer's disease",
+    "TermType": "MeSH",
+    "Hypothesis": "Cholinergic Hypothesis",
+    "SentenceQuality": 98.0,
+    "ExpertOverallScore": 3,
+    "ExpertMechanismSpecificityScore": 3,
+    "ExpertPathologyGranularityScore": 4,
+    "ExpertExperimentalDirectnessScore": 2,
+    "ExpertAlterationInformativenessScore": 4,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "medium",
+    "ExpertReason": "The sentence is a title linking a specific PSEN1 mutation to cholinesterase expression in early-onset familial AD, but lacks detailed mechanism or experimental results.",
+    "CuratedPoolRank": 1798,
+    "SamplingBucket": "diverse_representative",
+    "AlterationTaxonomy": "normalized variants:rsid normalized",
+    "GeneAlteration": "presenilin 1 / normalized variants:rsid normalized",
+    "AlterationSignature": "normalized variants:rsid normalized",
+    "AlterationType": "Normalized Variants:RsID Normalized",
+    "AlterationMention": "Leu235Pro",
+    "AlterationID": "-",
+    "AlterationEvidenceLevel": "specific_alteration_mention",
+    "TriggerWord": "with",
+    "RegType": "Reg",
+    "MechanismProvided": "No",
+    "RelevantToAD": "Yes",
+    "Event": "('presenilin 1', 'Gene', '(116, 128)', ('presenilin 1', 'Gene', '5663', '-')) -- ThemeOf -- ('Leu235Pro', 'Var', '(139, 148)', ('Leu235Pro', 'Mutation', '-', '-')) -- CauseOf -- ('with', 'Reg', '(107, 111)', ('with', 'Reg', '-', '-')) -- ThemeOf -- (\"familial Alzheimer's disease\", 'Disease', '(78, 106)', (\"familial Alzheimer's disease\", 'Disease', 'MESH:D000544', '-'))",
+    "EventDedupKey": "gene | normalized variants:rsid normalized | mesh:d000544 | cholinergic hypothesis",
+    "EvidenceType": "clinical_or_cohort_association",
+    "MechanismStrata": [
+      "cholinergic hypothesis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "gene_alteration",
+        "value": "presenilin 1 / normalized variants:rsid normalized",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "clinical_or_cohort_association",
+      "expert score 3/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "Clinicopathological correlations and cholinesterase expression in early-onset familial Alzheimer's disease with the presenilin 1 mutation, Leu235Pro.",
+    "Target": "PSEN1",
+    "ExpertScore": 89.6,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "clinical_or_cohort_association evidence",
+      "informative original sentence",
+      "curation expert score 3/5",
+      "strong pathology granularity",
+      "strong alteration informativeness",
+      "medium-confidence expert annotation",
+      "LLM-reviewed curation annotation",
+      "AD-pathology vocabulary present"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0020",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "33789210",
+        "Gene": "presenilin 1",
+        "TermName": "familial Alzheimer's disease",
+        "Hypothesis": "Cholinergic Hypothesis",
+        "EventDedupKey": "gene | normalized variants:rsid normalized | mesh:d000544 | cholinergic hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Cholinergic Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "familial Alzheimer's disease"
+    ],
+    "MergedGeneAlterations": [
+      "presenilin 1 / normalized variants:rsid normalized"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "37942288",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37942288/",
+    "Journal": "Front Mol Biosci",
+    "Year": 2023,
+    "TermName": "cell septum",
+    "TermType": "GO",
+    "Hypothesis": "Amyloid Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "The sentence describes a well-established AD mouse model (5xFAD) with specific APP and PSEN1 mutations leading to Aβ accumulation, directly relevant to the Amyloid Hypothesis, and includes detailed experimental methods.",
+    "CuratedPoolRank": 8,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "PSEN1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutations",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "leading to",
+    "RegType": "Reg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', '(178, 183)', ('PSEN1', 'Gene', '19164', '-')) -- ThemeOf -- ('mutations', 'Var', '(125, 134)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('leading to', 'Reg', '(190, 200)', ('leading to', 'Reg', '-', '-')) -- ThemeOf -- ('septum', 'MPA', '(350, 356)', ('septum', 'MPA', 'GO:0030428', 'cell septum'))",
+    "EventDedupKey": "gene | point mutations:mutations | go:0030428 | amyloid hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "cell septum",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "To investigate the regional selectivity of axonal dystrophies in an amyloidopathy mouse model, we used 5xFAD mice that carry mutations in the amyloid precursor protein (APP) and PSEN1 genes leading to Abeta accumulation to introduce AAV tracers expressing EGFP (AAV1-hSyn1-EGFP-P2A-EGFPf-WPRE-HGHpA) into the ventral dentate gyrus (vDG), the lateral septum (LS), and the medial prefrontal cortex (mPFC) (Figures 1A,B).",
+    "Target": "PSEN1",
+    "ExpertScore": 124.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0021",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37942288",
+        "Gene": "PSEN1",
+        "TermName": "cell septum",
+        "Hypothesis": "Amyloid Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | go:0030428 | amyloid hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "cell septum"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "37298443",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37298443/",
+    "Journal": "Int J Mol Sci",
+    "Year": 2023,
+    "TermName": "voluntary alcohol consumption",
+    "TermType": "MeSH",
+    "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Vascular Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct experimental evidence in AD mouse model with specific mutations shows alcohol increases Aβ ratio and tau, key AD pathologies, with clear mechanism and high granularity.",
+    "CuratedPoolRank": 12,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "PSEN1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutations",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "increased",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', '(82, 87)', ('PSEN1', 'Gene', '19164', '-')) -- ThemeOf -- ('mutations', 'Var', '(60, 69)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('increased', 'PosReg', '(206, 215)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('voluntary alcohol consumption', 'Disease', '(112, 141)', ('voluntary alcohol consumption', 'Disease', 'MESH:D009155', '-'))",
+    "EventDedupKey": "gene | point mutations:mutations | mesh:d009155 | amyloid hypothesis, tau protein hypothesis, vascular hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "mitochondrial and oxidative stress axis",
+      "vascular/metabolic axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "voluntary alcohol consumption",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "In three-month-old male and female 3xTg-AD mice that harbor mutations in the APP, PSEN1, and tau genes, chronic voluntary alcohol consumption (25% w/v alcohol + 0.1% saccharin w/v in water) for four months increased the Abeta (42/40) ratio and total tau protein in the lateral entorhinal cortex (LEC) and prefrontal cortex (PFC), which is consistent with enhanced AD-related pathological changes.",
+    "Target": "PSEN1",
+    "ExpertScore": 130.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0022",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37298443",
+        "Gene": "PSEN1",
+        "TermName": "voluntary alcohol consumption",
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Vascular Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | mesh:d009155 | amyloid hypothesis, tau protein hypothesis, vascular hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis,Tau Protein Hypothesis,Vascular Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "voluntary alcohol consumption"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "presenilin 1",
+    "PMID": "37190020",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37190020/",
+    "Journal": "Cells;2023Apr08; 12 (8) . doi:10.3390/cells12081111",
+    "Year": 2023,
+    "TermName": "mitochondrion",
+    "TermType": "-",
+    "Hypothesis": "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct experimental evidence in AD mouse model with specific mutation, linking ceramide reduction to improved mitochondria-ER communication, highly relevant to AD pathology.",
+    "CuratedPoolRank": 854,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "presenilin 1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutations",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "improved",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('presenilin 1', 'Gene', '(159, 171)', ('presenilin 1', 'Gene', '5663', '-')) -- ThemeOf -- ('mutations', 'Var', '(104, 113)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('improved', 'PosReg', '(348, 356)', ('improved', 'PosReg', '-', '-')) -- ThemeOf -- ('mitochondria-ER communication', 'MPA', '(357, 386)', ('mitochondria-ER communication', 'MPA', 'GO:0005739', 'mitochondrion'))",
+    "EventDedupKey": "gene | point mutations:mutations | go:0005739 | amyloid hypothesis, mitochondrial autophagy hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "mitochondrial and oxidative stress axis",
+      "proteostasis/autophagy axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "mitochondrion",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "Targeted metabolomic profiling conducted in the plasma of CP2-treated female mice harboring familial AD mutations in human amyloid precursor protein (APP) and presenilin 1 (PS1), the APP/PS1 mice, revealed a reduction in levels of ceramides Cer16, Cer18, and Cer24 implicated in excessive MERCS formation, suggesting that treatment might also have improved mitochondria-ER communication.",
+    "Target": "PSEN1",
+    "ExpertScore": 127.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0023",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37190020",
+        "Gene": "presenilin 1",
+        "TermName": "mitochondrion",
+        "Hypothesis": "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | go:0005739 | amyloid hypothesis, mitochondrial autophagy hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "mitochondrion"
+    ],
+    "MergedGeneAlterations": [
+      "presenilin 1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "37394008",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37394008/",
+    "Journal": "J Biol Chem",
+    "Year": 2023,
+    "TermName": "Stable",
+    "TermType": "HPO",
+    "Hypothesis": "Amyloid Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct experimental evidence in a cellular model showing specific PSEN1 mutations increase Aβ42/Aβ40 ratio, a key amyloid hypothesis mechanism.",
+    "CuratedPoolRank": 856,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "PSEN1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutations",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "increase",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', '(103, 108)', ('PSEN1', 'Gene', '19164', '-')) -- ThemeOf -- ('mutations', 'Var', '(109, 118)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('increase', 'PosReg', '(243, 251)', ('increase', 'PosReg', '-', '-')) -- ThemeOf -- ('stable', 'CPA', '(343, 349)', ('stable', 'CPA', 'HP:0031915', 'Stable'))",
+    "EventDedupKey": "gene | point mutations:mutations | hp:0031915 | amyloid hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "proteostasis/autophagy axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "Stable",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "To address this controversial issue in a cellular model with heterozygous and endogenous expression of PSEN1 mutations, three mutations were chosen that cause eFAD in the second or third decade of life, and were shown to promote a substantial increase in secreted Abeta42 levels and the Abeta42/Abeta40 ratio compared to wild-type PSEN1 after stable overexpression in HEK293 cells.",
+    "Target": "PSEN1",
+    "ExpertScore": 132.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0024",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37394008",
+        "Gene": "PSEN1",
+        "TermName": "Stable",
+        "Hypothesis": "Amyloid Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | hp:0031915 | amyloid hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "Stable"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "36829747",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36829747/",
+    "Journal": "Bioengineering (Basel)",
+    "Year": 2023,
+    "TermName": "attenuated neuroinflammation",
+    "TermType": "MeSH",
+    "Hypothesis": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Strong experimental evidence using multiple AD models including PSEN1 M146V, showing exosome effects on Aβ, neurogenesis, and neuroinflammation.",
+    "CuratedPoolRank": 11,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "normalized variants:dna change",
+    "GeneAlteration": "PSEN1 / normalized variants:dna change",
+    "AlterationSignature": "normalized variants:dna change",
+    "AlterationType": "Normalized Variants:DNA Change",
+    "AlterationMention": "M146V",
+    "AlterationID": "rs63750306",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "promoted",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', 'dbSNP', ('PSEN1', 'Gene', '5663', '-')) -- ThemeOf -- ('M146V', 'Var', '(314, 319)', ('M146V', 'Mutation', 'rs63750306', '-')) -- CauseOf -- ('promoted', 'PosReg', '(111, 119)', ('promoted', 'PosReg', '-', '-')) -- ThemeOf -- ('attenuated neuroinflammation', 'Disease', '(164, 192)', ('attenuated neuroinflammation', 'Disease', 'MESH:C538265', '-'))",
+    "EventDedupKey": "gene | normalized variants:dna change | mesh:c538265 | amyloid hypothesis, neuroinflammation hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "neuroinflammation and microglia axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "attenuated neuroinflammation",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "In addition to alleviation of Abeta-induced cognitive impairment, other groups found that MSC-derived exosomes promoted neurogenesis in the subventricular zone and attenuated neuroinflammation in drug (streptozotocin)-induced AD mice, double transgenic (APP/PS1) AD, and triple (APP Swedish, MAPT P301L, and PSEN1 M146V) transgenic AD mouse models.",
+    "Target": "PSEN1",
+    "ExpertScore": 136.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0025",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "36829747",
+        "Gene": "PSEN1",
+        "TermName": "attenuated neuroinflammation",
+        "Hypothesis": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+        "EventDedupKey": "gene | normalized variants:dna change | mesh:c538265 | amyloid hypothesis, neuroinflammation hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis,Neuroinflammation Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "attenuated neuroinflammation"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / normalized variants:dna change"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "37095621",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37095621/",
+    "Journal": "Aging Cell",
+    "Year": 2023,
+    "TermName": "reactive gliosis",
+    "TermType": "GO",
+    "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "The sentence describes a transgenic rat model expressing mutant APP and PSEN1, recapitulating key AD pathologies including amyloid-beta, tau hyperphosphorylation, neuronal loss, and gliosis, providing direct experimental evidence with high specificity and self-containment.",
+    "CuratedPoolRank": 859,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "PSEN1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutant",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "elevated",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('presenilin 1', 'Gene', '(135, 147)', ('presenilin 1', 'Gene', '29192', '-')) -- ThemeOf -- ('mutant', 'Var', '(81, 87)', ('mutant', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('elevated', 'PosReg', '(234, 242)', ('elevated', 'PosReg', '-', '-')) -- ThemeOf -- ('gliosis', 'MPA', '(309, 316)', ('gliosis', 'MPA', 'GO:0150103', 'reactive gliosis'))",
+    "EventDedupKey": "gene | point mutations:mutations | go:0150103 | amyloid hypothesis, neuroinflammation hypothesis, tau protein hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "neuroinflammation and microglia axis",
+      "synaptic and neuronal dysfunction axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "reactive gliosis",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "To this end, we employed the TgF344-AD transgenic rat model which expresses both mutant human amyloid precursor protein (APP  SW ) and presenilin 1 (PS1DeltaE9), resulting in the recapitulation of age-dependent AD pathology including elevated soluble amyloid-beta, hyperphosphorylated tau, neuronal loss, and gliosis as early as 6 months of age.",
+    "Target": "PSEN1",
+    "ExpertScore": 134.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0026",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37095621",
+        "Gene": "PSEN1",
+        "TermName": "reactive gliosis",
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | go:0150103 | amyloid hypothesis, neuroinflammation hypothesis, tau protein hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "reactive gliosis"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "37365538",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37365538/",
+    "Journal": "BMC Med",
+    "Year": 2023,
+    "TermName": "palmitoylation",
+    "TermType": "ADMO",
+    "Hypothesis": "Amyloid Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct experimental evidence in mouse model linking a specific mutation (p.T209S) to increased Aβ accumulation via enhanced APP palmitoylation, highly relevant to AD amyloid pathology.",
+    "CuratedPoolRank": 867,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "normalized variants:dna change",
+    "GeneAlteration": "PSEN1 / normalized variants:dna change",
+    "AlterationSignature": "normalized variants:dna change",
+    "AlterationType": "Normalized Variants:DNA Change",
+    "AlterationMention": "T209S",
+    "AlterationID": "p.T209S",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "enhancing",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', '(130, 135)', ('PSEN1', 'Gene', '19164', '-')) -- ThemeOf -- ('T209S', 'Var', '(24, 29)', ('T209S', 'Mutation', 'p.T209S', '-')) -- CauseOf -- ('enhancing', 'PosReg', '(216, 225)', ('enhancing', 'PosReg', '-', '-')) -- ThemeOf -- ('palmitoylation', 'MPA', '(230, 244)', ('palmitoylation', 'MPA', 'ADMO:0000099', 'palmitoylation'))",
+    "EventDedupKey": "gene | normalized variants:dna change | admo:0000099 | amyloid hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "palmitoylation",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "In our study, ZDHHC21 p.T209S, the first probable pathological mutation identified in a Chinese FAD pedigree (apart from those in PSEN1/PSEN 2 and APP), caused an increase in Abeta accumulation in the mouse brain by enhancing the palmitoylation of APP, which occurred before beta- and gamma-secretase cleavage of APP.",
+    "Target": "PSEN1",
+    "ExpertScore": 128.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0027",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37365538",
+        "Gene": "PSEN1",
+        "TermName": "palmitoylation",
+        "Hypothesis": "Amyloid Hypothesis",
+        "EventDedupKey": "gene | normalized variants:dna change | admo:0000099 | amyloid hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "palmitoylation"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / normalized variants:dna change"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "37655317",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37655317/",
+    "Journal": "Acta Pharm Sin B",
+    "Year": 2023,
+    "TermName": "cell population proliferation",
+    "TermType": "GO",
+    "Hypothesis": "Amyloid Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct experimental evidence in a relevant AD mouse model with specific molecular mechanism (CREB activation) and clear alteration (mutant APP/PS1).",
+    "CuratedPoolRank": 3,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "PSEN1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutant",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "increased",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('presenilin-1', 'Gene', '(91, 103)', ('presenilin-1', 'Gene', '19164', '-')) -- ThemeOf -- ('mutant', 'Var', '(43, 49)', ('mutant', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('increased', 'PosReg', '(151, 160)', ('increased', 'PosReg', '-', '-')) -- ThemeOf -- ('cell proliferation', 'MPA', '(161, 179)', ('cell proliferation', 'MPA', 'GO:0008283', 'cell population proliferation'))",
+    "EventDedupKey": "gene | point mutations:mutations | go:0008283 | amyloid hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "synaptic and neuronal dysfunction axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "cell population proliferation",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "In double transgenic mice expressing human mutant amyloid-beta precursor protein (APP) and presenilin-1 (PS1) (TgAPP/PS1 model), EGb 761 significantly increased cell proliferation in the hippocampus, which may be mediated by activation of cellular transcription factor cAMP response element-binding protein (CREB).",
+    "Target": "PSEN1",
+    "ExpertScore": 136.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0028",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37655317",
+        "Gene": "PSEN1",
+        "TermName": "cell population proliferation",
+        "Hypothesis": "Amyloid Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | go:0008283 | amyloid hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "cell population proliferation"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "36968493",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36968493/",
+    "Journal": "Front Neurosci",
+    "Year": 2023,
+    "TermName": "AD hallmarks",
+    "TermType": "MeSH",
+    "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Directly uses a specific PSEN1 mutation (M146V) in a well-defined AD mouse model, investigates sex differences in core AD hallmarks (Abeta, p-Tau) and hormonal regulation, providing strong molecular and experimental evidence.",
+    "CuratedPoolRank": 16,
+    "SamplingBucket": "coverage_alteration",
+    "AlterationTaxonomy": "normalized variants:dna change",
+    "GeneAlteration": "PSEN1 / normalized variants:dna change",
+    "AlterationSignature": "normalized variants:dna change",
+    "AlterationType": "Normalized Variants:DNA Change",
+    "AlterationMention": "M146V",
+    "AlterationID": "rs63750306",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "regulate",
+    "RegType": "Reg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', 'dbSNP', ('PSEN1', 'Gene', '5663', '-')) -- ThemeOf -- ('M146V', 'Var', '(86, 91)', ('M146V', 'Mutation', 'rs63750306', '-')) -- CauseOf -- ('regulate', 'Reg', '(270, 278)', ('regulate', 'Reg', '-', '-')) -- ThemeOf -- ('AD hallmarks', 'Disease', '(216, 228)', ('AD hallmarks', 'Disease', 'MESH:D000544', '-'))",
+    "EventDedupKey": "gene | normalized variants:dna change | mesh:d000544 | amyloid hypothesis, tau protein hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "AD hallmarks",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "We aimed to investigate whether the triple-transgenic AD (3xTg-AD) mice harboring PS1 M146V , APP Swe , and Tau P301L show sex differences in beta-amyloid (Abeta) and hyperphosphorylated tau (p-Tau), the two primary AD hallmarks, and how local 17beta-estradiol (E2) may regulate the expression of EGR1 and AChE.",
+    "Target": "PSEN1",
+    "ExpertScore": 134.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0029",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "36968493",
+        "Gene": "PSEN1",
+        "TermName": "AD hallmarks",
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+        "EventDedupKey": "gene | normalized variants:dna change | mesh:d000544 | amyloid hypothesis, tau protein hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis,Tau Protein Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "AD hallmarks"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / normalized variants:dna change"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "37222855",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37222855/",
+    "Journal": "Neurosci Bull",
+    "Year": 2023,
+    "TermName": "reproduction",
+    "TermType": "GO",
+    "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "The sentence directly describes AD patient-derived brain organoids recapitulating key pathologies (amyloid, tau) and identifies tau interactome modulators, providing strong experimental evidence with high specificity and self-containment.",
+    "CuratedPoolRank": 4,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "PSEN1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutations",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "modulators",
+    "RegType": "Reg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', '(80, 85)', ('PSEN1', 'Gene', '5663', '-')) -- ThemeOf -- ('mutations', 'Var', '(97, 106)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('modulators', 'Reg', '(171, 181)', ('modulators', 'Reg', '-', '-')) -- ThemeOf -- ('reproduction', 'MPA', '(206, 218)', ('reproduction', 'MPA', 'GO:0000003', 'reproduction'))",
+    "EventDedupKey": "gene | point mutations:mutations | go:0000003 | amyloid hypothesis, tau protein hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "reproduction",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "Brain organoids can be induced from hiPSCs from patients with familial AD (APP, PSEN1, and PSEN2 mutations) or patients with sporadic AD, leading to the identification of modulators of the tau interactome, reproduction of AD pathology, and findings of cell fate changes in AD organoids.",
+    "Target": "PSEN1",
+    "ExpertScore": 121.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0030",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37222855",
+        "Gene": "PSEN1",
+        "TermName": "reproduction",
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | go:0000003 | amyloid hypothesis, tau protein hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis,Tau Protein Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "reproduction"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "presenilin-1",
+    "PMID": "37513800",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37513800/",
+    "Journal": "Pathogens",
+    "Year": 2023,
+    "TermName": "roseolovirus infection",
+    "TermType": "MeSH",
+    "Hypothesis": "Amyloid Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Directly describes a transgenic mouse model with APP and PSEN1 mutants leading to plaque formation, used to study viral link to AD; highly specific and self-contained.",
+    "CuratedPoolRank": 13,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "presenilin-1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutants",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "link",
+    "RegType": "Reg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('presenilin-1', 'Gene', '(238, 250)', ('presenilin-1', 'Gene', '5663', '-')) -- ThemeOf -- ('mutants', 'Var', '(181, 188)', ('mutants', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('link', 'Reg', '(27, 31)', ('link', 'Reg', '-', '-')) -- ThemeOf -- ('roseolovirus infection', 'Disease', '(40, 62)', ('roseolovirus infection', 'Disease', 'MESH:D019349', '-'))",
+    "EventDedupKey": "gene | point mutations:mutations | mesh:d019349 | amyloid hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "roseolovirus infection",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "To investigate a potential link between roseolovirus infection and Alzheimer's disease, Bigley and colleagues used MRV to infect a transgenic mouse model in which overexpression of mutants of the human amyloid precursor protein (APP) and presenilin-1 leads to plaque formation.",
+    "Target": "PSEN1",
+    "ExpertScore": 134.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0031",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37513800",
+        "Gene": "presenilin-1",
+        "TermName": "roseolovirus infection",
+        "Hypothesis": "Amyloid Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | mesh:d019349 | amyloid hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "roseolovirus infection"
+    ],
+    "MergedGeneAlterations": [
+      "presenilin-1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "37553376",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37553376/",
+    "Journal": "Sci Rep",
+    "Year": 2023,
+    "TermName": "Melanoma",
+    "TermType": "HPO",
+    "Hypothesis": "Amyloid Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Directly links specific PSEN1 mutations to gamma-secretase re-localization and increased intracellular Aβ42, a key AD mechanism, with clear experimental evidence in relevant cells.",
+    "CuratedPoolRank": 10,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "normalized variants:dna change",
+    "GeneAlteration": "PSEN1 / normalized variants:dna change",
+    "AlterationSignature": "normalized variants:dna change",
+    "AlterationType": "Normalized Variants:DNA Change",
+    "AlterationMention": "L166P",
+    "AlterationID": "rs63750265",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "promotes",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', 'dbSNP', ('PSEN1', 'Gene', '5663', '-')) -- ThemeOf -- ('L166P', 'Var', '(55, 60)', ('L166P', 'Mutation', 'rs63750265', '-')) -- CauseOf -- ('promotes', 'PosReg', '(198, 206)', ('promotes', 'PosReg', '-', '-')) -- ThemeOf -- ('melanoma', 'CPA', '(161, 169)', ('melanoma', 'CPA', 'HP:0002861', 'Malignant melanoma'))",
+    "EventDedupKey": "gene | normalized variants:dna change | hp:0002861 | amyloid hypothesis",
+    "EvidenceType": "molecular_mechanism",
+    "MechanismStrata": [
+      "amyloid/tau axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "Melanoma",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "molecular_mechanism",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "Interestingly, it has been demonstrated that the PSEN1 L166P and G384A mutations cause re-localization of gamma-secretase in MNT-1 cells (highly pigmented human melanoma cells), which significantly promotes the generation of intracellular long Abeta42.",
+    "Target": "PSEN1",
+    "ExpertScore": 130.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "molecular_mechanism evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0032",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37553376",
+        "Gene": "PSEN1",
+        "TermName": "Melanoma",
+        "Hypothesis": "Amyloid Hypothesis",
+        "EventDedupKey": "gene | normalized variants:dna change | hp:0002861 | amyloid hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "Melanoma"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / normalized variants:dna change"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "36901549",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36901549/",
+    "Journal": "Int J Environ Res Public Health",
+    "Year": 2023,
+    "TermName": "cognitive impairments",
+    "TermType": "MeSH",
+    "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "The sentence describes a well-established AD mouse model with specific mutations (PS1M146V) that directly cause both amyloid and tau pathologies and cognitive impairments, providing strong, self-contained evidence for AD relevance.",
+    "CuratedPoolRank": 5,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "PSEN1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutant",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "develop",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('presenilin-1', 'Gene', '(93, 105)', ('presenilin-1', 'Gene', '19164', '-')) -- ThemeOf -- ('mutant', 'Var', '(27, 33)', ('mutant', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('develop', 'PosReg', '(173, 180)', ('develop', 'PosReg', '-', '-')) -- ThemeOf -- ('cognitive impairments', 'Disease', '(213, 234)', ('cognitive impairments', 'Disease', 'MESH:D003072', '-'))",
+    "EventDedupKey": "gene | point mutations:mutations | mesh:d003072 | amyloid hypothesis, tau protein hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "cognitive impairments",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "3xTg-AD mice harbour three mutant genes for the beta-amyloid precursor protein (betaAPPSwe), presenilin-1 (PS1M146V), and tauP301L; as a consequence, the mice progressively develop plaques and tangles, as well as cognitive impairments.",
+    "Target": "PSEN1",
+    "ExpertScore": 130.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0033",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "36901549",
+        "Gene": "PSEN1",
+        "TermName": "cognitive impairments",
+        "Hypothesis": "Amyloid Hypothesis,Tau Protein Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | mesh:d003072 | amyloid hypothesis, tau protein hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis,Tau Protein Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "cognitive impairments"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "37394008",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37394008/",
+    "Journal": "J Biol Chem",
+    "Year": 2023,
+    "TermName": "Transient",
+    "TermType": "HPO",
+    "Hypothesis": "Amyloid Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct experimental evidence of PSEN1 mutation effect on Aβ42/Aβ40 ratio in a controlled cellular model, highly specific to amyloid hypothesis.",
+    "CuratedPoolRank": 849,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "normalized variants:dna change",
+    "GeneAlteration": "PSEN1 / normalized variants:dna change",
+    "AlterationSignature": "normalized variants:dna change",
+    "AlterationType": "Normalized Variants:DNA Change",
+    "AlterationMention": "M146L",
+    "AlterationID": "rs63750306",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "elevated",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', 'dbSNP', ('PSEN1', 'Gene', '5663', '-')) -- ThemeOf -- ('M146L', 'Var', '(172, 177)', ('M146L', 'Mutation', 'rs63750306', '-')) -- CauseOf -- ('elevated', 'PosReg', '(40, 48)', ('elevated', 'PosReg', '-', '-')) -- ThemeOf -- ('transient', 'CPA', '(90, 99)', ('transient', 'CPA', 'HP:0025153', 'Transient'))",
+    "EventDedupKey": "gene | normalized variants:dna change | hp:0025153 | amyloid hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "Transient",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "in which a non-significant trend for an elevated Abeta42/Abeta40 ratio was observed after transient co-expression of wild-type PSEN1 with a catalytically-dead eFAD mutant (M146L/D385A double-mutation) in PSEN1/PSEN2-deficient cells.",
+    "Target": "PSEN1",
+    "ExpertScore": 130.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0034",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37394008",
+        "Gene": "PSEN1",
+        "TermName": "Transient",
+        "Hypothesis": "Amyloid Hypothesis",
+        "EventDedupKey": "gene | normalized variants:dna change | hp:0025153 | amyloid hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "Transient"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / normalized variants:dna change"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "36959497",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36959497/",
+    "Journal": "Mol Psychiatry. 2023 Mar 23. doi: 10.1038/s41380-023-02018-x.",
+    "Year": 2023,
+    "TermName": "amyloid aggregation",
+    "TermType": "MeSH",
+    "Hypothesis": "Amyloid Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Directly describes a well-known AD mouse model with specific mutations in APP and PSEN1 that induce amyloid aggregation, providing strong experimental evidence for the amyloid hypothesis.",
+    "CuratedPoolRank": 15,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "PSEN1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutations",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "inducing",
+    "RegType": "Reg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN1', 'Gene', '(137, 142)', ('PSEN1', 'Gene', '5663', '-')) -- ThemeOf -- ('mutations', 'Var', '(53, 62)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('inducing', 'Reg', '(145, 153)', ('inducing', 'Reg', '-', '-')) -- ThemeOf -- ('amyloid aggregation', 'Disease', '(170, 189)', ('amyloid aggregation', 'Disease', 'MESH:C000718787', '-'))",
+    "EventDedupKey": "gene | point mutations:mutations | mesh:c000718787 | amyloid hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "proteostasis/autophagy axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "amyloid aggregation",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "This study used the 5xFAD mouse line which carries 3 mutations in human amyloid precursor protein (APP) and 2 mutations in presenilin 1 (PSEN1), inducing early and rapid amyloid aggregation before the emergence of memory deficits.",
+    "Target": "PSEN1",
+    "ExpertScore": 132.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0035",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "36959497",
+        "Gene": "PSEN1",
+        "TermName": "amyloid aggregation",
+        "Hypothesis": "Amyloid Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | mesh:c000718787 | amyloid hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "amyloid aggregation"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / point mutations:mutations"
+    ]
+  },
+  {
+    "Gene": "PSEN1",
+    "PMID": "38063257",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/38063257/",
+    "Journal": "J Neurochem",
+    "Year": 2023,
+    "TermName": "glycolytic process",
+    "TermType": "GO",
+    "Hypothesis": "Amyloid Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+    "SentenceQuality": 155.0,
+    "ExpertOverallScore": 5,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 5,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "llm_reviewed",
+    "AnnotationConfidence": "high",
+    "ExpertReason": "Direct experimental evidence of metabolic changes in AD-relevant mutations, with clear molecular mechanism and high specificity.",
+    "CuratedPoolRank": 6,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "point mutations:mutations",
+    "GeneAlteration": "PSEN1 / point mutations:mutations",
+    "AlterationSignature": "point mutations:mutations",
+    "AlterationType": "point mutations:Mutations",
+    "AlterationMention": "mutations",
+    "AlterationID": "point mutations:Mutations",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "greater",
+    "RegType": "PosReg",
+    "MechanismProvided": "Yes",
+    "RelevantToAD": "Yes",
+    "Event": "('PSEN-1', 'Gene', '(111, 117)', ('PSEN-1', 'Gene', '5663', '-')) -- ThemeOf -- ('mutations', 'Var', '(118, 127)', ('mutations', 'Mutation', 'point mutations:Mutations', 'point mutations:Mutations')) -- CauseOf -- ('greater', 'PosReg', '(21, 28)', ('greater', 'PosReg', '-', '-')) -- ThemeOf -- ('glycolysis', 'MPA', '(29, 39)', ('glycolysis', 'MPA', 'GO:0006096', 'glycolytic process'))",
+    "EventDedupKey": "gene | point mutations:mutations | go:0006096 | amyloid hypothesis, glutamatergic excitotoxicity hypothesis",
+    "EvidenceType": "model_or_intervention",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "mitochondrial and oxidative stress axis",
+      "synaptic and neuronal dysfunction axis",
+      "vascular/metabolic axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "glycolytic process",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "model_or_intervention",
+      "expert score 5/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "recent evidence"
+    ],
+    "Sentence": "Our results revealed greater glycolysis and glucose oxidative metabolism in astrocytes and neurons with APP or PSEN-1 mutations, accompanied by an elevated glutamate synthesis compared to control WT cells.",
+    "Target": "PSEN1",
+    "ExpertScore": 133.0,
+    "ExpertTier": "high_insight",
+    "ExpertDecision": "include",
+    "ExpertReasons": [
+      "model_or_intervention evidence",
+      "informative original sentence",
+      "curation expert score 5/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "high-confidence expert annotation"
+    ],
+    "ExpertCautions": [],
+    "HypothesisCountable": true,
+    "HypothesisRole": "counted",
+    "NarrativeEligibility": "mechanism_eligible",
+    "DuplicateGroupID": "dup_0036",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "38063257",
+        "Gene": "PSEN1",
+        "TermName": "glycolytic process",
+        "Hypothesis": "Amyloid Hypothesis,Glutamatergic Excitotoxicity Hypothesis",
+        "EventDedupKey": "gene | point mutations:mutations | go:0006096 | amyloid hypothesis, glutamatergic excitotoxicity hypothesis"
+      }
+    ],
+    "MergedHypotheses": [
+      "Amyloid Hypothesis,Glutamatergic Excitotoxicity Hypothesis"
+    ],
+    "MergedPhenotypes": [
+      "glycolytic process"
+    ],
+    "MergedGeneAlterations": [
+      "PSEN1 / point mutations:mutations"
+    ]
+  }
+]

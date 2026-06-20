@@ -1,0 +1,119 @@
+{
+  "title": "PSEN1",
+  "created_date": "2026-06-21",
+  "framing": "AI for Biomedical Knowledge Synthesis",
+  "output_role": "AI-organized evidence packet for expert evaluation",
+  "mode": "gene",
+  "analytical_pattern": "single_gene",
+  "question": "Organize AD-Alterome evidence for PSEN1 into a knowledge synthesis packet.",
+  "candidate_limit_requested": 20,
+  "candidate_limit_api_capped": 20,
+  "organized_limit": 6,
+  "coverage": {
+    "targets": [
+      {
+        "label": "PSEN1",
+        "curation_source": "curated_pool",
+        "curation_scope": "offline_full_query_pool_prescreened",
+        "overview_event_count": null,
+        "matched_event_count": 21835,
+        "curation_pool_rows": 2398,
+        "event_unique_rows": 2398,
+        "unique_pmids": 1481,
+        "coverage_ratio": 0.1098,
+        "warnings": []
+      }
+    ],
+    "balance": {
+      "status": "not_applicable",
+      "notes": []
+    }
+  },
+  "candidate_counts": {
+    "premerge_candidate_count": 36,
+    "postmerge_candidate_count": 36,
+    "duplicate_group_count": 0,
+    "included_evidence_count": 6,
+    "secondary_evidence_count": 0,
+    "deprioritized_evidence_count": 0
+  },
+  "reviewer_types": [
+    "clinical_or_translational_AD_expert",
+    "AD_or_neurodegeneration_researcher",
+    "biomedical_graduate_student_or_postdoc"
+  ],
+  "scoring_dimensions": [
+    {
+      "field": "TraceabilityScore_1_5",
+      "label": "Traceability",
+      "question": "Are important statements backed by PMID and original sentence evidence?"
+    },
+    {
+      "field": "AccuracyScore_1_5",
+      "label": "Accuracy",
+      "question": "Are gene, alteration, phenotype/process, and hypothesis attributions correct?"
+    },
+    {
+      "field": "BreadthScore_1_5",
+      "label": "Breadth",
+      "question": "Does the packet cover the relevant evidence space rather than only dominant high-frequency records?"
+    },
+    {
+      "field": "DepthScore_1_5",
+      "label": "Depth",
+      "question": "Does the organized evidence include molecular, cellular, pathological, or model-level detail?"
+    },
+    {
+      "field": "OrganizationUsefulness_1_5",
+      "label": "Organization usefulness",
+      "question": "Do the evidence groups make the complex AD evidence easier to review?"
+    },
+    {
+      "field": "LongTailUsefulness_1_5",
+      "label": "Long-tail usefulness",
+      "question": "Are low-frequency but potentially informative records surfaced for review?"
+    },
+    {
+      "field": "HallucinationOrOverclaimRisk_1_5",
+      "label": "Hallucination or overclaim risk",
+      "question": "Score high when hallucination or unsupported overclaim risk is low."
+    },
+    {
+      "field": "Inspiration_1_5",
+      "label": "Inspiration",
+      "question": "Does the packet help generate useful review, mechanism, or experiment questions?"
+    },
+    {
+      "field": "ReviewEfficiency_1_5",
+      "label": "Review efficiency",
+      "question": "Does the packet reduce the time needed to inspect the evidence?"
+    },
+    {
+      "field": "OverallUsefulness_1_5",
+      "label": "Overall usefulness",
+      "question": "Does the packet meet the user need better than unstructured search or generic LLM output?"
+    }
+  ],
+  "recommended_baselines": [
+    "generic_LLM_without_AD_Alterome",
+    "generic_LLM_plus_ordinary_RAG",
+    "frequency_top_k_AD_Alterome",
+    "AD_Alterome_without_long_tail_rescue",
+    "AD_Alterome_knowledge_synthesis_skill"
+  ],
+  "fairness_controls": [
+    "same_natural_language_question",
+    "same_model_when_comparing_LLM_conditions",
+    "same_output_length_budget",
+    "same_time_budget",
+    "same_scoring_rubric",
+    "blinded_method_labels_when_feasible"
+  ],
+  "non_claims": [
+    "The packet does not prove an AD mechanism.",
+    "The packet does not replace expert review.",
+    "AI-organized evidence groups are review candidates, not manuscript conclusions.",
+    "Sentence-level PubMed evidence is provenance, not causal validation.",
+    "Raw EvidenceScore is not used as evidence strength."
+  ]
+}

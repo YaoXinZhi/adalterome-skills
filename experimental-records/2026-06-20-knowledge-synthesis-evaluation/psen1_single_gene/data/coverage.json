@@ -1,0 +1,20 @@
+{
+  "targets": [
+    {
+      "label": "PSEN1",
+      "curation_source": "curated_pool",
+      "curation_scope": "offline_full_query_pool_prescreened",
+      "overview_event_count": null,
+      "matched_event_count": 21835,
+      "curation_pool_rows": 2398,
+      "event_unique_rows": 2398,
+      "unique_pmids": 1481,
+      "coverage_ratio": 0.1098,
+      "warnings": []
+    }
+  ],
+  "balance": {
+    "status": "not_applicable",
+    "notes": []
+  }
+}

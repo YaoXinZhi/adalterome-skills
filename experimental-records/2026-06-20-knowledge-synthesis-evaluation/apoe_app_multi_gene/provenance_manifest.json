@@ -1,0 +1,82 @@
+{
+  "title": "APOE vs APP",
+  "mode": "compare",
+  "analytical_pattern": "multi_gene",
+  "question": "Organize AD-Alterome evidence comparing APOE and APP for expert review.",
+  "base_url": "http://117.72.176.137/api/adalterome",
+  "candidate_limit": 12,
+  "organized_limit": 6,
+  "timeout": 240,
+  "compare_url": "http://117.72.176.137/api/adalterome/compare/genes?gene_a=APOE&gene_b=APP",
+  "source_payloads": [
+    {
+      "label": "APOE",
+      "kind": "compare_gene",
+      "overview_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=APOE",
+      "evidence_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=APOE&selected_limit=12",
+      "fallback_reason": null,
+      "coverage_scope": {
+        "query_type": "gene",
+        "curation_source": "curated_pool",
+        "curation_scope": "offline_full_query_pool_prescreened",
+        "overview_event_count": null,
+        "matched_event_count": 13322,
+        "curation_pool_rows": 1844,
+        "coverage_ratio": 0.1384,
+        "api_limit_notice": null,
+        "requested_selected_limit": 12,
+        "returned_selected_count": 12,
+        "eligible_after_filter_count": 1844,
+        "selection_shortfall_reason": null,
+        "curated_query_match_count": 1,
+        "curated_pool_entries": 1844,
+        "curated_filtered_pool_rows": 1844,
+        "curated_query_stats_raw_event_count": 13322,
+        "curated_query_stats_count_is_alias_merged": false,
+        "annotation_source": "event_expert_annotation_final",
+        "curation_endpoint_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=APOE&selected_limit=12",
+        "used_selected_limit": 12,
+        "local_raw_payload_cache": "/Users/yao/.adalterome-skills/cache/requests/f1/f1da63fa39bff6c06b08671962f711daf8b54a5c86309efab6b01a7183d4d97a.json",
+        "local_cache_hit": true
+      }
+    },
+    {
+      "label": "APP",
+      "kind": "compare_gene",
+      "overview_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=APP",
+      "evidence_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=APP&selected_limit=12",
+      "fallback_reason": null,
+      "coverage_scope": {
+        "query_type": "gene",
+        "curation_source": "curated_pool",
+        "curation_scope": "offline_full_query_pool_prescreened",
+        "overview_event_count": null,
+        "matched_event_count": 18636,
+        "curation_pool_rows": 2310,
+        "coverage_ratio": 0.124,
+        "api_limit_notice": null,
+        "requested_selected_limit": 12,
+        "returned_selected_count": 12,
+        "eligible_after_filter_count": 2310,
+        "selection_shortfall_reason": null,
+        "curated_query_match_count": 1,
+        "curated_pool_entries": 2310,
+        "curated_filtered_pool_rows": 2310,
+        "curated_query_stats_raw_event_count": 18636,
+        "curated_query_stats_count_is_alias_merged": false,
+        "annotation_source": "event_expert_annotation_final",
+        "curation_endpoint_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=APP&selected_limit=12",
+        "used_selected_limit": 12,
+        "local_raw_payload_cache": "/Users/yao/.adalterome-skills/cache/requests/04/04f1769bfc4258e4fa07d741701b601769a25178f1c99c896c5cc7b5f2fc628f.json",
+        "local_cache_hit": true
+      }
+    }
+  ],
+  "local_files": {
+    "knowledge_packet": "knowledge_packet.md",
+    "evidence_map": "evidence_map.md",
+    "expert_review_sheet": "expert_review_sheet.tsv",
+    "evaluation_record": "evaluation_record.json",
+    "cache_manifest": "data/cache_manifest.json"
+  }
+}

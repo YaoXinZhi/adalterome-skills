@@ -1,0 +1,4 @@
+interface:
+  display_name: "AD-Alterome Knowledge Synthesis"
+  short_description: "Researcher-facing evidence organization packets with expert review sheets"
+  default_prompt: "Use $adalterome-knowledge-synthesis to build a PSEN1 knowledge packet for expert evaluation."

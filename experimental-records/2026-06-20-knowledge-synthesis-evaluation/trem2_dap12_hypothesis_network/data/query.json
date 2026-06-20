@@ -1,0 +1,21 @@
+{
+  "gene": null,
+  "term": null,
+  "hypothesis": "Neuroinflammation Hypothesis",
+  "gene_a": null,
+  "gene_b": null,
+  "gene_set": [
+    "TREM2",
+    "TYROBP"
+  ],
+  "axis": "TREM2-DAP12 neuroinflammatory axis",
+  "pattern": "hypothesis_network",
+  "question": "",
+  "output_dir": "experimental-records/2026-06-20-knowledge-synthesis-evaluation/trem2_dap12_hypothesis_network",
+  "base_url": "http://117.72.176.137/api/adalterome",
+  "candidate_limit": 12,
+  "organized_limit": 6,
+  "expert_limit": null,
+  "curation_limit": 50,
+  "timeout": 240
+}

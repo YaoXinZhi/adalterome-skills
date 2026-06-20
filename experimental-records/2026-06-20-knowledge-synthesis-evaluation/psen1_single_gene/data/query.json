@@ -1,0 +1,18 @@
+{
+  "gene": "PSEN1",
+  "term": null,
+  "hypothesis": null,
+  "gene_a": null,
+  "gene_b": null,
+  "gene_set": null,
+  "axis": null,
+  "pattern": "single_gene",
+  "question": "",
+  "output_dir": "experimental-records/2026-06-20-knowledge-synthesis-evaluation/psen1_single_gene",
+  "base_url": "http://117.72.176.137/api/adalterome",
+  "candidate_limit": 20,
+  "organized_limit": 6,
+  "expert_limit": null,
+  "curation_limit": 50,
+  "timeout": 240
+}

@@ -1,0 +1,127 @@
+{
+  "tool": "get_gene_overview",
+  "status": "ok",
+  "query": {
+    "gene": "PSEN1"
+  },
+  "count": 1,
+  "data": {
+    "summary": {
+      "Gene": "PSEN1",
+      "event_count": 15959,
+      "pmid_count": 3603,
+      "term_count": 638,
+      "hypothesis_count": 11,
+      "avg_evidence_score": 1.0
+    },
+    "top_terms": [
+      {
+        "TermName": "Onset",
+        "TermType": "HPO",
+        "freq": 1402
+      },
+      {
+        "TermName": "protein",
+        "TermType": "GO",
+        "freq": 951
+      },
+      {
+        "TermName": "Alzheimer's disease",
+        "TermType": "MeSH",
+        "freq": 547
+      },
+      {
+        "TermName": "AD",
+        "TermType": "MeSH",
+        "freq": 503
+      },
+      {
+        "TermName": "familial AD",
+        "TermType": "MeSH",
+        "freq": 341
+      },
+      {
+        "TermName": "familial Alzheimer's disease",
+        "TermType": "MeSH",
+        "freq": 254
+      },
+      {
+        "TermName": "All",
+        "TermType": "HPO",
+        "freq": 239
+      },
+      {
+        "TermName": "FAD",
+        "TermType": "MeSH",
+        "freq": 224
+      },
+      {
+        "TermName": "Dementia",
+        "TermType": "HPO",
+        "freq": 206
+      },
+      {
+        "TermName": "Alzheimer disease",
+        "TermType": "HPO",
+        "freq": 175
+      }
+    ],
+    "top_hypotheses": [
+      {
+        "Hypothesis": "Amyloid Hypothesis",
+        "freq": 14731
+      },
+      {
+        "Hypothesis": "Tau Protein Hypothesis",
+        "freq": 1258
+      },
+      {
+        "Hypothesis": "Neuroinflammation Hypothesis",
+        "freq": 613
+      },
+      {
+        "Hypothesis": "Mitochondrial Autophagy Hypothesis",
+        "freq": 500
+      },
+      {
+        "Hypothesis": "Abnormal Autophagy Hypothesis",
+        "freq": 429
+      },
+      {
+        "Hypothesis": "Oxidative Stress Hypothesis",
+        "freq": 361
+      },
+      {
+        "Hypothesis": "Vascular Hypothesis",
+        "freq": 342
+      },
+      {
+        "Hypothesis": "Glutamatergic Excitotoxicity Hypothesis",
+        "freq": 331
+      },
+      {
+        "Hypothesis": "Cholinergic Hypothesis",
+        "freq": 66
+      },
+      {
+        "Hypothesis": "Metal Ion Hypothesis",
+        "freq": 47
+      }
+    ]
+  },
+  "meta": {
+    "raw_top_terms_count": 100,
+    "raw_top_hypotheses_count": 71,
+    "hypothesis_field_handling": "Hypothesis values are comma-split before unique counts and top-hypothesis aggregation.",
+    "_local_cache": {
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=PSEN1",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/88/885fd2bc72465aee515f6b7cac85ea36e566b0f72ec8bf93d337214c98af659b.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:54:36+00:00",
+      "age_seconds": 711.794
+    }
+  }
+}

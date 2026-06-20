@@ -1,0 +1,166 @@
+{
+  "tool": "compare_genes",
+  "status": "ok",
+  "query": {
+    "gene_a": "APOE",
+    "gene_b": "APP"
+  },
+  "count": 1,
+  "data": {
+    "gene_a_overview": {
+      "Gene": "APOE",
+      "event_count": 13188,
+      "pmid_count": 3086,
+      "term_count": 660,
+      "hypothesis_count": 11,
+      "avg_evidence_score": 3.0
+    },
+    "gene_b_overview": {
+      "Gene": "APP",
+      "event_count": 18277,
+      "pmid_count": 4724,
+      "term_count": 621,
+      "hypothesis_count": 11,
+      "avg_evidence_score": 3.0
+    },
+    "shared_terms": [
+      {
+        "TermName": "Alzheimer Disease",
+        "freq_a": 1783,
+        "freq_b": 2459
+      },
+      {
+        "TermName": "protein",
+        "freq_a": 291,
+        "freq_b": 2030
+      },
+      {
+        "TermName": "Onset",
+        "freq_a": 627,
+        "freq_b": 959
+      },
+      {
+        "TermName": "Dementia",
+        "freq_a": 289,
+        "freq_b": 162
+      },
+      {
+        "TermName": "Sporadic",
+        "freq_a": 266,
+        "freq_b": 173
+      },
+      {
+        "TermName": "Alzheimer disease",
+        "freq_a": 140,
+        "freq_b": 176
+      }
+    ],
+    "unique_terms_a": [
+      {
+        "TermName": "Late onset",
+        "freq": 455
+      },
+      {
+        "TermName": "Cognition Disorders",
+        "freq": 173
+      },
+      {
+        "TermName": "developmental process",
+        "freq": 164
+      },
+      {
+        "TermName": "Cognitive impairment",
+        "freq": 129
+      }
+    ],
+    "unique_terms_b": [
+      {
+        "TermName": "All",
+        "freq": 262
+      },
+      {
+        "TermName": "biosynthetic process",
+        "freq": 253
+      },
+      {
+        "TermName": "chromosome",
+        "freq": 183
+      },
+      {
+        "TermName": "cleavage",
+        "freq": 144
+      }
+    ],
+    "shared_hypotheses": [
+      {
+        "Hypothesis": "Amyloid Hypothesis",
+        "freq_a": 8358,
+        "freq_b": 17216
+      },
+      {
+        "Hypothesis": "Vascular Hypothesis",
+        "freq_a": 4960,
+        "freq_b": 559
+      },
+      {
+        "Hypothesis": "Tau Protein Hypothesis",
+        "freq_a": 757,
+        "freq_b": 1736
+      },
+      {
+        "Hypothesis": "Neuroinflammation Hypothesis",
+        "freq_a": 1338,
+        "freq_b": 892
+      },
+      {
+        "Hypothesis": "Oxidative Stress Hypothesis",
+        "freq_a": 382,
+        "freq_b": 617
+      },
+      {
+        "Hypothesis": "Mitochondrial Autophagy Hypothesis",
+        "freq_a": 221,
+        "freq_b": 547
+      },
+      {
+        "Hypothesis": "Glutamatergic Excitotoxicity Hypothesis",
+        "freq_a": 66,
+        "freq_b": 209
+      },
+      {
+        "Hypothesis": "Metal Ion Hypothesis",
+        "freq_a": 74,
+        "freq_b": 182
+      },
+      {
+        "Hypothesis": "Cholinergic Hypothesis",
+        "freq_a": 154,
+        "freq_b": 87
+      }
+    ],
+    "unique_hypotheses_a": [
+      {
+        "Hypothesis": "Microbiota-Gut-Brain Axis Hypothesis",
+        "freq": 184
+      }
+    ],
+    "unique_hypotheses_b": [
+      {
+        "Hypothesis": "Abnormal Autophagy Hypothesis",
+        "freq": 303
+      }
+    ]
+  },
+  "meta": {
+    "_local_cache": {
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/compare/genes?gene_a=APOE&gene_b=APP",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/da/dac913c297e2758557a828d35eec4f57c9fcb1b44dc51759f302fd0d5173ffa6.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-07T21:47:26+00:00",
+      "age_seconds": 1124342.397
+    }
+  }
+}

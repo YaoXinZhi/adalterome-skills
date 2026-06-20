@@ -1,0 +1,428 @@
+{
+  "title": "APOE vs APP",
+  "mode": "compare",
+  "analytical_pattern": "multi_gene",
+  "question": "Organize AD-Alterome evidence comparing APOE and APP for expert review.",
+  "coverage": {
+    "targets": [
+      {
+        "label": "APOE",
+        "curation_source": "curated_pool",
+        "curation_scope": "offline_full_query_pool_prescreened",
+        "overview_event_count": null,
+        "matched_event_count": 13322,
+        "curation_pool_rows": 1844,
+        "event_unique_rows": 1844,
+        "unique_pmids": 1167,
+        "coverage_ratio": 0.1384,
+        "warnings": []
+      },
+      {
+        "label": "APP",
+        "curation_source": "curated_pool",
+        "curation_scope": "offline_full_query_pool_prescreened",
+        "overview_event_count": null,
+        "matched_event_count": 18636,
+        "curation_pool_rows": 2310,
+        "event_unique_rows": 2310,
+        "unique_pmids": 1606,
+        "coverage_ratio": 0.124,
+        "warnings": []
+      }
+    ],
+    "balance": {
+      "status": "balanced",
+      "notes": [
+        "Targets have comparable curation scope for knowledge synthesis."
+      ]
+    }
+  },
+  "target_summaries": [
+    {
+      "label": "APOE",
+      "kind": "compare_gene",
+      "curation_scope": "offline_full_query_pool_prescreened",
+      "curation_source": "curated_pool",
+      "matched_event_count": 13322,
+      "curation_pool_rows": 1844,
+      "event_unique_rows": 1844,
+      "unique_pmids": 1167,
+      "selection_trace": {
+        "requested_selected_limit": 12,
+        "returned_selected_count": 12,
+        "representative_count": 12,
+        "selection_shortfall_reason": null
+      },
+      "top_patterns": {
+        "top_genes": [
+          {
+            "value": "APOE [Entrez:348]",
+            "count": 3526
+          },
+          {
+            "value": "APOLIPOPROTEIN E [Entrez:348]",
+            "count": 253
+          },
+          {
+            "value": "APOE4 [Entrez:348]",
+            "count": 202
+          },
+          {
+            "value": "APO-E [Entrez:348]",
+            "count": 4
+          },
+          {
+            "value": "APOLIPOPROTEIN E3 [Entrez:348]",
+            "count": 1
+          }
+        ],
+        "top_gene_alterations": [
+          {
+            "value": "APOE / point mutations:mutations",
+            "count": 2206
+          },
+          {
+            "value": "APOE / normalized variants:rsid normalized",
+            "count": 328
+          },
+          {
+            "value": "APOLIPOPROTEIN E / point mutations:mutations",
+            "count": 223
+          },
+          {
+            "value": "APOE / normalized variants:dna change",
+            "count": 162
+          },
+          {
+            "value": "APOE / structural variation:deletion",
+            "count": 160
+          },
+          {
+            "value": "APOE4 / point mutations:mutations",
+            "count": 128
+          },
+          {
+            "value": "APOE / genetic manipulation:knockout",
+            "count": 105
+          },
+          {
+            "value": "APOE / structural variation:chromosomal variation",
+            "count": 97
+          }
+        ],
+        "top_phenotypes": [
+          {
+            "value": "AD [MESH:D000544]",
+            "count": 60
+          },
+          {
+            "value": "AD",
+            "count": 56
+          },
+          {
+            "value": "Onset [HP:0003674]",
+            "count": 42
+          },
+          {
+            "value": "protein [GO:0003675]",
+            "count": 42
+          },
+          {
+            "value": "expression",
+            "count": 35
+          },
+          {
+            "value": "Dementia [HP:0000726]",
+            "count": 27
+          },
+          {
+            "value": "Late onset [HP:0003584]",
+            "count": 26
+          },
+          {
+            "value": "metabolic process [GO:0008152]",
+            "count": 24
+          }
+        ],
+        "top_hypotheses": [
+          {
+            "value": "Amyloid Hypothesis",
+            "count": 1748
+          },
+          {
+            "value": "Vascular Hypothesis",
+            "count": 1202
+          },
+          {
+            "value": "Neuroinflammation Hypothesis",
+            "count": 407
+          },
+          {
+            "value": "Tau Protein Hypothesis",
+            "count": 138
+          },
+          {
+            "value": "Oxidative Stress Hypothesis",
+            "count": 66
+          }
+        ],
+        "long_tail_genes": null,
+        "long_tail_gene_alterations": null,
+        "long_tail_phenotypes": null
+      }
+    },
+    {
+      "label": "APP",
+      "kind": "compare_gene",
+      "curation_scope": "offline_full_query_pool_prescreened",
+      "curation_source": "curated_pool",
+      "matched_event_count": 18636,
+      "curation_pool_rows": 2310,
+      "event_unique_rows": 2310,
+      "unique_pmids": 1606,
+      "selection_trace": {
+        "requested_selected_limit": 12,
+        "returned_selected_count": 12,
+        "representative_count": 12,
+        "selection_shortfall_reason": null
+      },
+      "top_patterns": {
+        "top_genes": [
+          {
+            "value": "APP [Entrez:351]",
+            "count": 4103
+          },
+          {
+            "value": "AMYLOID PRECURSOR PROTEIN [Entrez:351]",
+            "count": 759
+          },
+          {
+            "value": "BETA-AMYLOID PRECURSOR PROTEIN [Entrez:351]",
+            "count": 44
+          },
+          {
+            "value": "AMYLOID-BETA PRECURSOR PROTEIN [Entrez:351]",
+            "count": 24
+          },
+          {
+            "value": "BETA-AMYLOID PEPTIDE [Entrez:351]",
+            "count": 18
+          },
+          {
+            "value": "AMYLOID BETA PRECURSOR PROTEIN [Entrez:351]",
+            "count": 10
+          },
+          {
+            "value": "AD1 [Entrez:351]",
+            "count": 2
+          },
+          {
+            "value": "PN2 [Entrez:351]",
+            "count": 1
+          }
+        ],
+        "top_gene_alterations": [
+          {
+            "value": "APP / point mutations:mutations",
+            "count": 1657
+          },
+          {
+            "value": "APP / normalized variants:dna change",
+            "count": 627
+          },
+          {
+            "value": "AMYLOID PRECURSOR PROTEIN / point mutations:mutations",
+            "count": 541
+          },
+          {
+            "value": "APP / structural variation:deletion",
+            "count": 260
+          },
+          {
+            "value": "APP / expression changes:underexpression",
+            "count": 209
+          },
+          {
+            "value": "APP / expression changes:dysregulation",
+            "count": 191
+          },
+          {
+            "value": "APP / structural variation:chromosomal variation",
+            "count": 149
+          },
+          {
+            "value": "APP / genetic manipulation:gene aggregation",
+            "count": 146
+          }
+        ],
+        "top_phenotypes": [
+          {
+            "value": "protein [GO:0003675]",
+            "count": 118
+          },
+          {
+            "value": "AD [MESH:D000544]",
+            "count": 69
+          },
+          {
+            "value": "AD",
+            "count": 55
+          },
+          {
+            "value": "Onset [HP:0003674]",
+            "count": 47
+          },
+          {
+            "value": "biosynthetic process [GO:0009058]",
+            "count": 45
+          },
+          {
+            "value": "Neurodegeneration [HP:0002180]",
+            "count": 42
+          },
+          {
+            "value": "expression",
+            "count": 36
+          },
+          {
+            "value": "Dementia [HP:0000726]",
+            "count": 34
+          }
+        ],
+        "top_hypotheses": [
+          {
+            "value": "Amyloid Hypothesis",
+            "count": 3691
+          },
+          {
+            "value": "Tau Protein Hypothesis",
+            "count": 581
+          },
+          {
+            "value": "Neuroinflammation Hypothesis",
+            "count": 339
+          },
+          {
+            "value": "Vascular Hypothesis",
+            "count": 219
+          },
+          {
+            "value": "Oxidative Stress Hypothesis",
+            "count": 134
+          },
+          {
+            "value": "Abnormal Autophagy Hypothesis",
+            "count": 105
+          },
+          {
+            "value": "Mitochondrial Autophagy Hypothesis",
+            "count": 103
+          }
+        ],
+        "long_tail_genes": null,
+        "long_tail_gene_alterations": null,
+        "long_tail_phenotypes": null
+      }
+    }
+  ],
+  "dominant_mechanism_strata": [
+    {
+      "value": "amyloid/tau axis",
+      "count": 5
+    },
+    {
+      "value": "mitochondrial and oxidative stress axis",
+      "count": 3
+    },
+    {
+      "value": "synaptic and neuronal dysfunction axis",
+      "count": 3
+    },
+    {
+      "value": "neuroinflammation and microglia axis",
+      "count": 3
+    },
+    {
+      "value": "proteostasis/autophagy axis",
+      "count": 2
+    },
+    {
+      "value": "vascular/metabolic axis",
+      "count": 2
+    }
+  ],
+  "top_genes": [
+    {
+      "value": "APOE",
+      "count": 3
+    },
+    {
+      "value": "APP",
+      "count": 2
+    },
+    {
+      "value": "amyloid precursor protein",
+      "count": 1
+    }
+  ],
+  "top_phenotype_processes": [
+    {
+      "value": "mitophagy",
+      "count": 1
+    },
+    {
+      "value": "chemical synaptic transmission",
+      "count": 1
+    },
+    {
+      "value": "reactive gliosis",
+      "count": 1
+    },
+    {
+      "value": "lipid binding",
+      "count": 1
+    },
+    {
+      "value": "lysosome",
+      "count": 1
+    },
+    {
+      "value": "inflammatory",
+      "count": 1
+    }
+  ],
+  "top_hypotheses": [
+    {
+      "value": "Amyloid Hypothesis,Mitochondrial Autophagy Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Cholinergic Hypothesis,Amyloid Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Neuroinflammation Hypothesis,Vascular Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Oxidative Stress Hypothesis,Abnormal Autophagy Hypothesis,Mitochondrial Autophagy Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+      "count": 1
+    }
+  ],
+  "long_tail_organized_count": 6,
+  "non_claims": [
+    "The packet does not prove an AD mechanism.",
+    "The packet does not replace expert review.",
+    "AI-organized evidence groups are review candidates, not manuscript conclusions.",
+    "Sentence-level PubMed evidence is provenance, not causal validation.",
+    "Raw EvidenceScore is not used as evidence strength."
+  ]
+}

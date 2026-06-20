@@ -1,0 +1,127 @@
+{
+  "tool": "get_gene_overview",
+  "status": "ok",
+  "query": {
+    "gene": "APOE"
+  },
+  "count": 1,
+  "data": {
+    "summary": {
+      "Gene": "APOE",
+      "event_count": 11186,
+      "pmid_count": 2858,
+      "term_count": 630,
+      "hypothesis_count": 11,
+      "avg_evidence_score": 1.0
+    },
+    "top_terms": [
+      {
+        "TermName": "AD",
+        "TermType": "MeSH",
+        "freq": 672
+      },
+      {
+        "TermName": "Alzheimer's disease",
+        "TermType": "MeSH",
+        "freq": 599
+      },
+      {
+        "TermName": "Onset",
+        "TermType": "HPO",
+        "freq": 506
+      },
+      {
+        "TermName": "Late onset",
+        "TermType": "HPO",
+        "freq": 359
+      },
+      {
+        "TermName": "protein",
+        "TermType": "GO",
+        "freq": 256
+      },
+      {
+        "TermName": "Dementia",
+        "TermType": "HPO",
+        "freq": 236
+      },
+      {
+        "TermName": "Sporadic",
+        "TermType": "HPO",
+        "freq": 210
+      },
+      {
+        "TermName": "developmental process",
+        "TermType": "GO",
+        "freq": 123
+      },
+      {
+        "TermName": "Alzheimer disease",
+        "TermType": "HPO",
+        "freq": 114
+      },
+      {
+        "TermName": "Cognitive impairment",
+        "TermType": "HPO",
+        "freq": 97
+      }
+    ],
+    "top_hypotheses": [
+      {
+        "Hypothesis": "Amyloid Hypothesis",
+        "freq": 7047
+      },
+      {
+        "Hypothesis": "Vascular Hypothesis",
+        "freq": 4176
+      },
+      {
+        "Hypothesis": "Neuroinflammation Hypothesis",
+        "freq": 1227
+      },
+      {
+        "Hypothesis": "Tau Protein Hypothesis",
+        "freq": 662
+      },
+      {
+        "Hypothesis": "Oxidative Stress Hypothesis",
+        "freq": 324
+      },
+      {
+        "Hypothesis": "Mitochondrial Autophagy Hypothesis",
+        "freq": 206
+      },
+      {
+        "Hypothesis": "Microbiota-Gut-Brain Axis Hypothesis",
+        "freq": 167
+      },
+      {
+        "Hypothesis": "Cholinergic Hypothesis",
+        "freq": 111
+      },
+      {
+        "Hypothesis": "Abnormal Autophagy Hypothesis",
+        "freq": 63
+      },
+      {
+        "Hypothesis": "Metal Ion Hypothesis",
+        "freq": 60
+      }
+    ]
+  },
+  "meta": {
+    "raw_top_terms_count": 100,
+    "raw_top_hypotheses_count": 67,
+    "hypothesis_field_handling": "Hypothesis values are comma-split before unique counts and top-hypothesis aggregation.",
+    "_local_cache": {
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=APOE",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/ed/ed101668234506878ee79ca1ecde85632113d4d1ad0e68b59ced16ccab695610.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:54:48+00:00",
+      "age_seconds": 699.936
+    }
+  }
+}

@@ -1,4 +1,4 @@
-"""Reusable AD pathologist-style pruning for AD-Alterome case studies."""
+"""Reusable AD-Alterome evidence pruning for knowledge synthesis and case studies."""
 
 from __future__ import annotations
 
@@ -579,7 +579,7 @@ def evidence_reason_text(item: dict[str, Any]) -> str:
 
 def pruning_policy(question: str, mode: str, expert_limit: int) -> dict[str, Any]:
     return {
-        "role": "AD pathologist biological pruning over AD-Alterome curated evidence",
+        "role": "AD-Alterome evidence organization and biological pruning over curated evidence",
         "question": question,
         "mode": mode,
         "expert_limit": expert_limit,

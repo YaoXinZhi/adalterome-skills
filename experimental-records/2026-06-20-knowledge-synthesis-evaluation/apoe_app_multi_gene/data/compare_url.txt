@@ -1,0 +1,1 @@
+http://117.72.176.137/api/adalterome/compare/genes?gene_a=APOE&gene_b=APP

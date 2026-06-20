@@ -1,0 +1,107 @@
+{
+  "tool": "get_gene_overview",
+  "status": "ok",
+  "query": {
+    "gene": "TYROBP"
+  },
+  "count": 1,
+  "data": {
+    "summary": {
+      "Gene": "TYROBP",
+      "event_count": 538,
+      "pmid_count": 92,
+      "term_count": 103,
+      "hypothesis_count": 5,
+      "avg_evidence_score": 1.0
+    },
+    "top_terms": [
+      {
+        "TermName": "Nasu-Hakola disease",
+        "TermType": "MeSH",
+        "freq": 45
+      },
+      {
+        "TermName": "Dementia",
+        "TermType": "HPO",
+        "freq": 30
+      },
+      {
+        "TermName": "NHD",
+        "TermType": "MeSH",
+        "freq": 25
+      },
+      {
+        "TermName": "Leukoencephalopathy",
+        "TermType": "HPO",
+        "freq": 22
+      },
+      {
+        "TermName": "protein tyrosine kinase binding",
+        "TermType": "GO",
+        "freq": 20
+      },
+      {
+        "TermName": "Onset",
+        "TermType": "HPO",
+        "freq": 18
+      },
+      {
+        "TermName": "binding",
+        "TermType": "GO",
+        "freq": 15
+      },
+      {
+        "TermName": "kinase binding",
+        "TermType": "GO",
+        "freq": 11
+      },
+      {
+        "TermName": "polycystic lipomembranous osteodysplasia",
+        "TermType": "MeSH",
+        "freq": 10
+      },
+      {
+        "TermName": "protein",
+        "TermType": "GO",
+        "freq": 8
+      }
+    ],
+    "top_hypotheses": [
+      {
+        "Hypothesis": "Neuroinflammation Hypothesis",
+        "freq": 229
+      },
+      {
+        "Hypothesis": "Tau Protein Hypothesis",
+        "freq": 87
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis",
+        "freq": 53
+      },
+      {
+        "Hypothesis": "Abnormal Autophagy Hypothesis",
+        "freq": 6
+      },
+      {
+        "Hypothesis": "Mitochondrial Autophagy Hypothesis",
+        "freq": 1
+      }
+    ]
+  },
+  "meta": {
+    "raw_top_terms_count": 100,
+    "raw_top_hypotheses_count": 10,
+    "hypothesis_field_handling": "Hypothesis values are comma-split before unique counts and top-hypothesis aggregation.",
+    "_local_cache": {
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=TYROBP",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/3c/3c3e88596ab282d04f6f135a822901715af14d488411183c2e3c3fc0f0933b34.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:55:02+00:00",
+      "age_seconds": 685.813
+    }
+  }
+}

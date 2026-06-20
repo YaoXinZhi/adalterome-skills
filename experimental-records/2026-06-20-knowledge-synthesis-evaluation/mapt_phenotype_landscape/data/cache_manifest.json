@@ -1,0 +1,29 @@
+{
+  "cache_dir": "/Users/yao/.adalterome-skills/cache",
+  "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+  "entries": [
+    {
+      "label": "MAPT overview",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=MAPT",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/3e/3eb3c091f6b56625458a767c8050107db94747220119839c03e6f8a37a37761d.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:54:50+00:00",
+      "age_seconds": 698.181
+    },
+    {
+      "label": "MAPT curation/evidence",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=MAPT&selected_limit=20",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/ff/ffe5a5afa83b97d109de2f4f3a740e8fc92e0f22eb4de66b439deeb042db9332.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:54:47+00:00",
+      "age_seconds": 701.015
+    }
+  ],
+  "note": "These files preserve raw API JSON payloads for exact repeat requests. Set ADALTEROME_REFRESH_CACHE=1 to force a fresh API request or ADALTEROME_DISABLE_CACHE=1 to bypass caching."
+}

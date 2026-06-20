@@ -1,0 +1,127 @@
+{
+  "tool": "get_gene_overview",
+  "status": "ok",
+  "query": {
+    "gene": "TREM2"
+  },
+  "count": 1,
+  "data": {
+    "summary": {
+      "Gene": "TREM2",
+      "event_count": 6233,
+      "pmid_count": 1081,
+      "term_count": 362,
+      "hypothesis_count": 10,
+      "avg_evidence_score": 1.0
+    },
+    "top_terms": [
+      {
+        "TermName": "AD",
+        "TermType": "MeSH",
+        "freq": 347
+      },
+      {
+        "TermName": "Alzheimer's disease",
+        "TermType": "MeSH",
+        "freq": 307
+      },
+      {
+        "TermName": "Onset",
+        "TermType": "HPO",
+        "freq": 260
+      },
+      {
+        "TermName": "Dementia",
+        "TermType": "HPO",
+        "freq": 213
+      },
+      {
+        "TermName": "Late onset",
+        "TermType": "HPO",
+        "freq": 203
+      },
+      {
+        "TermName": "Frontotemporal dementia",
+        "TermType": "HPO",
+        "freq": 150
+      },
+      {
+        "TermName": "Nasu-Hakola disease",
+        "TermType": "MeSH",
+        "freq": 139
+      },
+      {
+        "TermName": "protein",
+        "TermType": "GO",
+        "freq": 79
+      },
+      {
+        "TermName": "neurodegenerative diseases",
+        "TermType": "MeSH",
+        "freq": 78
+      },
+      {
+        "TermName": "binding",
+        "TermType": "GO",
+        "freq": 72
+      }
+    ],
+    "top_hypotheses": [
+      {
+        "Hypothesis": "Neuroinflammation Hypothesis",
+        "freq": 4847
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis",
+        "freq": 1163
+      },
+      {
+        "Hypothesis": "Tau Protein Hypothesis",
+        "freq": 435
+      },
+      {
+        "Hypothesis": "Microbiota-Gut-Brain Axis Hypothesis",
+        "freq": 81
+      },
+      {
+        "Hypothesis": "Vascular Hypothesis",
+        "freq": 79
+      },
+      {
+        "Hypothesis": "Abnormal Autophagy Hypothesis",
+        "freq": 65
+      },
+      {
+        "Hypothesis": "Mitochondrial Autophagy Hypothesis",
+        "freq": 27
+      },
+      {
+        "Hypothesis": "Glutamatergic Excitotoxicity Hypothesis",
+        "freq": 22
+      },
+      {
+        "Hypothesis": "Oxidative Stress Hypothesis",
+        "freq": 16
+      },
+      {
+        "Hypothesis": "Metal Ion Hypothesis",
+        "freq": 7
+      }
+    ]
+  },
+  "meta": {
+    "raw_top_terms_count": 100,
+    "raw_top_hypotheses_count": 33,
+    "hypothesis_field_handling": "Hypothesis values are comma-split before unique counts and top-hypothesis aggregation.",
+    "_local_cache": {
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=TREM2",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/20/207ee87555bea21347dd20dadd3e151e53d41b2b7430aa7b3acddee0a4da8f2d.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:55:00+00:00",
+      "age_seconds": 688.18
+    }
+  }
+}

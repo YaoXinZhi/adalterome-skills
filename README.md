@@ -1,27 +1,30 @@
 # AD-Alterome Skills
 
-AD-Alterome Skills provides a set of Codex skills for querying AD-Alterome and turning Alzheimer disease literature evidence into structured, source-traceable reports.
+AD-Alterome Skills provides a set of Codex skills for querying AD-Alterome and turning Alzheimer disease literature evidence into structured, source-traceable reports and expert-evaluable knowledge synthesis packets.
 
-These skills are designed for users who want to explore AD-related genes, phenotypes, ontology terms, hypotheses, and sentence-level evidence without manually assembling API calls or reformatting PubMed-linked evidence tables.
+These skills are designed for users who want to explore AD-related genes, phenotypes, ontology terms, hypotheses, and sentence-level evidence without manually assembling API calls or reformatting PubMed-linked evidence tables. The publication-facing framing is **AI for Biomedical Knowledge Synthesis**: AI organizes complex alteration evidence for expert evaluation; it does not replace expert review or directly establish disease mechanisms.
 
 ## Skill Index
 
 | Skill | Status | Purpose | Trigger keywords |
 | --- | --- | --- | --- |
-| `adalterome` | Recommended | Unified entrypoint that routes natural-language AD-Alterome questions to API lookup, gene report, phenotype/process report, hypothesis report, comparison report, or expert case-study mode. | "AD-Alterome", "query AD-Alterome", "write AD-Alterome report", "compare AD mechanisms" |
+| `adalterome` | Recommended | Unified entrypoint that routes natural-language AD-Alterome questions to API lookup, fixed report, deep report, knowledge synthesis, comparison, or legacy case-study mode. | "AD-Alterome", "query AD-Alterome", "write AD-Alterome report", "knowledge synthesis", "organize AD evidence" |
 | `adalterome-api` | Stable | Query AD-Alterome REST API for schema, hypotheses, gene events, term events, hypothesis support, full-pool curation packages, overviews, two-gene comparison, original evidence sentences, and PubMed links. | "query AD-Alterome", "gene events", "term events", "hypothesis support", "PubMed evidence", "PMID evidence" |
 | `adalterome-report` | Stable | Convert AD-Alterome API results into fixed-format evidence reports with stable sections, source links, original sentences, and caveats. | "fixed report", "standard report", "evidence summary", "AD-Alterome report" |
 | `adalterome-gene-report` | Advanced | Generate deep researcher-facing gene reports with API overview statistics, server-side full-pool curation, PubMed links, phenotype/process and hypothesis interpretation, mechanism synthesis, top and long-tail patterns, and research priorities. | "deep gene report", "MAPT report", "APOE evidence dossier", "mechanism synthesis" |
 | `adalterome-term-report` | Advanced | Generate deep phenotype, ontology term, or pathological-process reports with API top genes, hypotheses, server-side full-pool curation, PubMed links, top and long-tail gene/gene-alteration/phenotype/process patterns, and mechanism-oriented interpretation. | "phenotype report", "process report", "mitochondrial dysfunction", "neuroinflammation" |
 | `adalterome-hypothesis-report` | Advanced | Generate deep AD hypothesis support reports with top genes, top phenotype/process features, server-side full-pool curation, source-traceable evidence, and support pattern synthesis. | "hypothesis report", "Amyloid Hypothesis", "Tau Protein Hypothesis", "support evidence" |
 | `adalterome-compare-report` | Advanced | Generate two-gene comparison reports with shared/distinct phenotype/process features, shared/distinct hypotheses, and full-pool curation traces for each gene. | "compare genes", "APOE vs APP", "gene comparison", "shared mechanisms" |
-| `adalterome-case-study-expert` | Expert | Generate paper-level AD pathology case-study reports that interpret a user scientific question, check coverage and balance, score selected evidence for biological insight, protect long-tail candidates, and return both an expert narrative and an audit appendix. | "case study", "expert interpretation", "AD pathology insight", "paper-level report", "biological cut" |
+| `adalterome-knowledge-synthesis` | Recommended for evaluation | Generate researcher-facing knowledge packets, evidence maps, expert review sheets, evaluation records, and provenance manifests for AI-for-biomedical-knowledge-synthesis experiments. | "knowledge synthesis", "evidence organization", "expert review sheet", "scoring table", "long-tail evidence", "AI evaluation" |
+| `adalterome-case-study-expert` | Legacy/compatibility | Generate older AD pathology case-study narratives with audit appendices. Prefer `adalterome-knowledge-synthesis` for publication-facing work where AI output should be evaluated rather than used as final text. | "legacy case study", "AD pathology narrative", "biological cut" |
 
-## Report vs Expert Mode
+## Report vs Knowledge Synthesis
 
 Use the report skills when the user wants a pure, stable, source-traceable evidence packet for later human expert interpretation. Report mode optimizes provenance, reproducibility, fixed sections, original sentences, PubMed links, curation scope, long-tail visibility, and conservative caveats.
 
-Use `adalterome-case-study-expert` when the user wants the skill to behave more like an AD pathologist: infer the scientific question, define an evidence strategy, check coverage and comparison balance, score selected evidence for biological insight, demote generic evidence, protect low-frequency but mechanistically plausible long-tail candidates, and write a case-study argument supported by AD-Alterome traces.
+Use `adalterome-knowledge-synthesis` when the user wants AI to organize AD-Alterome evidence into an expert-evaluable knowledge packet. This mode produces an evidence map, organized evidence groups, a review worksheet, an evaluation record, and a provenance manifest. Its output is a review object, not a final biological conclusion.
+
+Use `adalterome-case-study-expert` only for compatibility with earlier narrative-style workflows. Publication-facing experiments should prefer knowledge synthesis plus human expert scoring.
 
 ## Requirements
 
@@ -49,6 +52,8 @@ The scripts use only Python standard library modules.
 
 ## Update Reports
 
+- [2026-06-20 knowledge synthesis revision update](UPDATE_REPORT_2026-06-20_KNOWLEDGE_SYNTHESIS.md)
+- [2026-06-20 knowledge synthesis revision plan](KNOWLEDGE_SYNTHESIS_REVISION_PLAN_2026-06-20.md)
 - [2026-06-15 field normalization and deployment update](UPDATE_REPORT_2026-06-15_FIELD_NORMALIZATION_AND_DEPLOYMENT.md)
 - [2026-06-07 skill implementation audit and consistency fixes](UPDATE_REPORT_2026-06-07_SKILL_AUDIT.md)
 - [2026-06-05 unified entrypoint and local raw-data cache update](UPDATE_REPORT_2026-06-05_UNIFIED_ENTRYPOINT_AND_CACHE.md)
@@ -77,6 +82,7 @@ cp -R skills/adalterome-gene-report "${CODEX_HOME:-$HOME/.codex}/skills/"
 cp -R skills/adalterome-term-report "${CODEX_HOME:-$HOME/.codex}/skills/"
 cp -R skills/adalterome-hypothesis-report "${CODEX_HOME:-$HOME/.codex}/skills/"
 cp -R skills/adalterome-compare-report "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R skills/adalterome-knowledge-synthesis "${CODEX_HOME:-$HOME/.codex}/skills/"
 cp -R skills/adalterome-case-study-expert "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
@@ -270,9 +276,60 @@ Expected outputs:
 - `outputs/apoe_vs_app/data/gene_b_curation.json`
 - `outputs/apoe_vs_app/data/cache_manifest.json`
 
+## Knowledge Synthesis Packet
+
+Use `adalterome-knowledge-synthesis` when the goal is to organize AD-Alterome
+evidence for expert evaluation rather than generate final manuscript claims:
+
+```text
+Use $adalterome-knowledge-synthesis to create a PSEN1 knowledge packet with an expert review sheet.
+```
+
+Equivalent script:
+
+```bash
+python skills/adalterome-knowledge-synthesis/scripts/build_knowledge_synthesis.py --gene PSEN1 --output-dir outputs/psen1_knowledge --candidate-limit 200 --organized-limit 18
+```
+
+Supported analytical patterns:
+
+```bash
+# Single-gene entry
+python skills/adalterome-knowledge-synthesis/scripts/build_knowledge_synthesis.py --gene PSEN1 --pattern single_gene --output-dir outputs/psen1_knowledge
+
+# Multi-gene entry
+python skills/adalterome-knowledge-synthesis/scripts/build_knowledge_synthesis.py --gene-a APOE --gene-b APP --pattern multi_gene --output-dir outputs/apoe_app_knowledge
+
+# Recommendation entry
+python skills/adalterome-knowledge-synthesis/scripts/build_knowledge_synthesis.py --gene MAPT --pattern recommendation --question "Organize the MAPT phenotype landscape for expert review." --output-dir outputs/mapt_phenotype_landscape
+
+# Hypothesis/network entry
+python skills/adalterome-knowledge-synthesis/scripts/build_knowledge_synthesis.py --gene-set TREM2 TYROBP --hypothesis "Neuroinflammation Hypothesis" --axis "TREM2-DAP12 neuroinflammatory axis" --pattern hypothesis_network --output-dir outputs/trem2_dap12_axis
+```
+
+Expected outputs:
+
+- `outputs/*/knowledge_packet.md`
+- `outputs/*/evidence_map.md`
+- `outputs/*/expert_review_sheet.tsv`
+- `outputs/*/evaluation_record.json`
+- `outputs/*/provenance_manifest.json`
+- `outputs/*/data/query.json`
+- `outputs/*/data/coverage.json`
+- `outputs/*/data/knowledge_synthesis.json`
+- `outputs/*/data/ad_expert_pruning.json`
+- `outputs/*/data/cache_manifest.json`
+
+Knowledge synthesis packets are designed as evaluation objects for
+`AI for Biomedical Knowledge Synthesis`. They explicitly include non-claims:
+the packet does not prove an AD mechanism, does not replace expert review, and
+does not treat AI-organized groups as final biological conclusions.
+
 ## Expert Case-Study Report
 
-Use `adalterome-case-study-expert` for a paper-level case study that should argue a scientific question using AD-Alterome evidence:
+Use `adalterome-case-study-expert` only for compatibility with the older
+narrative-style workflow. For publication-facing work and expert evaluation,
+prefer `adalterome-knowledge-synthesis`.
 
 ```text
 Use $adalterome-case-study-expert to compare APOE and APP as AD pathological mechanisms with coverage and balance checks.
@@ -303,7 +360,8 @@ Deep report builders return Markdown reports with stable modules plus JSON data 
 | Phenotype/process report | Query scope and data provenance; global evidence landscape; top genes and hypotheses; evidence curation layer; mechanism map; representative evidence; long-tail evidence signals; chronological trajectory; original evidence traces; interpretation guide; follow-up priorities. | For `mitochondrial dysfunction`, global evidence landscape shows API aggregate event, PMID, gene, and hypothesis counts; curation shows top genes, top gene-alteration pairs, and phenotype/process mappings from the server-side full-pool curation package. |
 | Hypothesis report | Query scope and hypothesis frame; global evidence landscape; top genes and phenotype/process features; evidence curation layer; mechanism map; representative support evidence; long-tail evidence signals; chronology; original evidence traces; interpretation guide; follow-up priorities. | For `Amyloid Hypothesis`, top patterns show genes, gene-alteration pairs, and phenotype/process features associated with the hypothesis in the server-side curation package. |
 | Compare report | Query scope and comparison frame; side-by-side overview; shared phenotype/process features and hypotheses; gene-specific patterns; curation layer for each gene; mechanism maps; representative and long-tail evidence for each gene; comparative interpretation guide; follow-up priorities. | For `APOE` vs `APP`, each gene has its own top phenotype/process features, top gene-alteration pairs, long-tail evidence signals, and original PubMed-linked evidence traces. |
-| Expert case-study report | Interpreted scientific question; evidence strategy; coverage and balance check; AD pathologist-style synthesis; expert-included evidence; long-tail candidates; limitations; audit appendix with scored evidence and original sentence traces. | For `APOE` vs `APP`, the expert layer marks whether the comparison is balanced, scores evidence for biological insight, protects mechanistically plausible long-tail candidates, and avoids strong comparative claims when one side falls back to capped sampling. |
+| Knowledge synthesis packet | Query scope and user intent; analytical pattern; event schema; evidence landscape and coverage; organized evidence groups; gene-alteration-phenotype/hypothesis map; long-tail candidates; AI-organized synthesis for expert review; expert review worksheet; original evidence traces; limitations and non-claims. | For `PSEN1`, the packet organizes evidence into a reviewable map and writes `expert_review_sheet.tsv` so human experts can score traceability, accuracy, breadth, depth, hallucination risk, and usefulness. |
+| Legacy expert case-study report | Interpreted scientific question; evidence strategy; coverage and balance check; AD pathologist-style synthesis; expert-included evidence; long-tail candidates; limitations; audit appendix with scored evidence and original sentence traces. | For `APOE` vs `APP`, the legacy expert layer marks whether the comparison is balanced and writes a narrative-style interpretation; use knowledge synthesis instead when the AI output must be treated as an expert-scored review object. |
 
 Note: API overview endpoints provide aggregate counts and top overview lists. Full-pool curation endpoints provide report-grade deduplication, query-relative distributions, long-tail signals, mechanism strata, and representative evidence. API event endpoints provide lightweight source-traceable sentence rows and currently cap `top_k` at 50.
 
@@ -329,7 +387,8 @@ These skills preserve source traceability first:
 - Treat `AlterationType` as the genetic alteration taxonomy. `TriggerWord` and `RegType` describe event relation/regulation context and are not counted as genetic alteration labels.
 - Avoid turning sentence-level associations into causal claims without direct support.
 - Prefer high-quality evidence rows, but still expose enough provenance for manual audit.
-- In expert mode, prefer biologically insightful evidence rows, but keep the expert score transparent and separate from the original AD-Alterome record.
+- In knowledge synthesis mode, AI organization scores are triage signals for expert review, not gold labels or final biological truth.
+- Legacy expert mode remains available, but publication-facing workflows should prefer knowledge packets plus expert review sheets.
 
 ## Repository Design
 

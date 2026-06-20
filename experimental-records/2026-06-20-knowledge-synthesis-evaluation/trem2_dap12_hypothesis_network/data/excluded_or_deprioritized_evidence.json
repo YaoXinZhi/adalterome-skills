@@ -1,0 +1,376 @@
+[
+  {
+    "Gene": "TREM2",
+    "PMID": "27658901",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/27658901/",
+    "Journal": "Neurobiol. Aging",
+    "Year": 2016,
+    "TermName": "Stroke",
+    "TermType": "HPO",
+    "Hypothesis": "Not applicable to any AD hypothesis",
+    "SentenceQuality": 125.0,
+    "ExpertOverallScore": 4,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 4,
+    "ExpertAlterationInformativenessScore": 4,
+    "AnnotationSource": "heuristic_only",
+    "AnnotationConfidence": "heuristic",
+    "ExpertReason": "cellular_or_pathway_process; overall 4/5; mechanism 5/5; alteration 4/5; PMID traceable",
+    "CuratedPoolRank": 997,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "normalized variants:protein change",
+    "GeneAlteration": "TREM2 / normalized variants:protein change",
+    "AlterationSignature": "normalized variants:protein change",
+    "AlterationType": "Normalized Variants:Protein Change",
+    "AlterationMention": "p.D50_L51ins14",
+    "AlterationID": "null",
+    "AlterationEvidenceLevel": "specific_alteration_mention",
+    "TriggerWord": "altering",
+    "RegType": "Reg",
+    "MechanismProvided": "No",
+    "RelevantToAD": "Yes",
+    "Event": "('TREM2', 'Gene', '(931, 936)', ('TREM2', 'Gene', '54209', '-')) -- ThemeOf -- ('p.D50_L51ins14', 'Var', '(871, 885)', ('p.D50_L51ins14', 'Mutation', 'null', '-')) -- CauseOf -- ('altering', 'Reg', '(922, 930)', ('altering', 'Reg', '-', '-')) -- ThemeOf -- ('Stroke', 'CPA', '(287, 293)', ('Stroke', 'CPA', 'HP:0001297', 'Cerebral vascular events'))",
+    "EventDedupKey": "gene | normalized variants:protein change | hp:0001297 | not applicable to any ad hypothesis",
+    "EvidenceType": "cellular_or_pathway_process",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "mitochondrial and oxidative stress axis",
+      "vascular/metabolic axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "Stroke",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "cellular_or_pathway_process",
+      "expert score 4/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "PMID-traceable"
+    ],
+    "Sentence": "AD Alzheimer's diease EOAD early-onset Alzheimer's disease LOAD late-onset Alzheimer's disease ADRC Alzheimer's disease research center CNR-MAJ centre national de reference pour les malades Alzheimer jeunes NINCDS-ADRDA National Institute of Neurological and Communicative Disorders and Stroke and the Alzheimer's Disease and Related Disorders Association UTR untranslated region GATK Genome Analysis Toolkit VQSR Variant Quality Score Recalibration PCR polymerase chain reaction CMC Combined and Multivariate Collapsing MAF minor allele frequency NHD Nasu-Hakola disease HDLS hereditary diffuse leukoencephalopathy with spheroids CSF cerebrospinal fluid ALS amyotrophic lateral sclerosis FTD frontotemporal dementia Exome sequencing of highly selected EOAD patients nominates 29 candidate genes Rare coding variants in TYROBP are genetically associated with EOAD TYROBP p.D50_L51ins14 is a potentially pathogenic variant altering TREM2 levels",
+    "Target": "TREM2",
+    "ExpertScore": 90.8,
+    "ExpertTier": "context",
+    "ExpertDecision": "secondary",
+    "ExpertReasons": [
+      "cellular_or_pathway_process evidence",
+      "informative original sentence",
+      "curation expert score 4/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "AD-pathology vocabulary present"
+    ],
+    "ExpertCautions": [
+      "heuristic-only annotation",
+      "not countable as support for a named AD hypothesis",
+      "long sentence may need manual trimming"
+    ],
+    "HypothesisCountable": false,
+    "HypothesisRole": "not_counted",
+    "NarrativeEligibility": "context_only",
+    "DuplicateGroupID": "dup_0008",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "27658901",
+        "Gene": "TREM2",
+        "TermName": "Stroke",
+        "Hypothesis": "Not applicable to any AD hypothesis",
+        "EventDedupKey": "gene | normalized variants:protein change | hp:0001297 | not applicable to any ad hypothesis"
+      }
+    ],
+    "MergedHypotheses": [],
+    "MergedPhenotypes": [
+      "Stroke"
+    ],
+    "MergedGeneAlterations": [
+      "TREM2 / normalized variants:protein change"
+    ]
+  },
+  {
+    "Gene": "TYROBP",
+    "PMID": "27658901",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/27658901/",
+    "Journal": "Neurobiol. Aging",
+    "Year": 2016,
+    "TermName": "Stroke",
+    "TermType": "HPO",
+    "Hypothesis": "Not applicable to any AD hypothesis",
+    "SentenceQuality": 125.0,
+    "ExpertOverallScore": 4,
+    "ExpertMechanismSpecificityScore": 5,
+    "ExpertPathologyGranularityScore": 5,
+    "ExpertExperimentalDirectnessScore": 4,
+    "ExpertAlterationInformativenessScore": 4,
+    "AnnotationSource": "heuristic_only",
+    "AnnotationConfidence": "heuristic",
+    "ExpertReason": "cellular_or_pathway_process; overall 4/5; mechanism 5/5; alteration 4/5; PMID traceable",
+    "CuratedPoolRank": 149,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "normalized variants:protein change",
+    "GeneAlteration": "TYROBP / normalized variants:protein change",
+    "AlterationSignature": "normalized variants:protein change",
+    "AlterationType": "Normalized Variants:Protein Change",
+    "AlterationMention": "p.D50_L51ins14",
+    "AlterationID": "null",
+    "AlterationEvidenceLevel": "specific_alteration_mention",
+    "TriggerWord": "altering",
+    "RegType": "Reg",
+    "MechanismProvided": "No",
+    "RelevantToAD": "Yes",
+    "Event": "('TYROBP', 'Gene', '(820, 826)', ('TYROBP', 'Gene', '7305', '-')) -- ThemeOf -- ('p.D50_L51ins14', 'Var', '(871, 885)', ('p.D50_L51ins14', 'Mutation', 'null', '-')) -- CauseOf -- ('altering', 'Reg', '(922, 930)', ('altering', 'Reg', '-', '-')) -- ThemeOf -- ('Stroke', 'CPA', '(287, 293)', ('Stroke', 'CPA', 'HP:0001297', 'Cerebral vascular events'))",
+    "EventDedupKey": "gene | normalized variants:protein change | hp:0001297 | not applicable to any ad hypothesis",
+    "EvidenceType": "cellular_or_pathway_process",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "mitochondrial and oxidative stress axis",
+      "vascular/metabolic axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "Stroke",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "cellular_or_pathway_process",
+      "expert score 4/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "PMID-traceable"
+    ],
+    "Sentence": "AD Alzheimer's diease EOAD early-onset Alzheimer's disease LOAD late-onset Alzheimer's disease ADRC Alzheimer's disease research center CNR-MAJ centre national de reference pour les malades Alzheimer jeunes NINCDS-ADRDA National Institute of Neurological and Communicative Disorders and Stroke and the Alzheimer's Disease and Related Disorders Association UTR untranslated region GATK Genome Analysis Toolkit VQSR Variant Quality Score Recalibration PCR polymerase chain reaction CMC Combined and Multivariate Collapsing MAF minor allele frequency NHD Nasu-Hakola disease HDLS hereditary diffuse leukoencephalopathy with spheroids CSF cerebrospinal fluid ALS amyotrophic lateral sclerosis FTD frontotemporal dementia Exome sequencing of highly selected EOAD patients nominates 29 candidate genes Rare coding variants in TYROBP are genetically associated with EOAD TYROBP p.D50_L51ins14 is a potentially pathogenic variant altering TREM2 levels",
+    "Target": "TYROBP",
+    "ExpertScore": 90.8,
+    "ExpertTier": "context",
+    "ExpertDecision": "secondary",
+    "ExpertReasons": [
+      "cellular_or_pathway_process evidence",
+      "informative original sentence",
+      "curation expert score 4/5",
+      "strong mechanism specificity",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "AD-pathology vocabulary present"
+    ],
+    "ExpertCautions": [
+      "heuristic-only annotation",
+      "not countable as support for a named AD hypothesis",
+      "long sentence may need manual trimming"
+    ],
+    "HypothesisCountable": false,
+    "HypothesisRole": "not_counted",
+    "NarrativeEligibility": "context_only",
+    "DuplicateGroupID": "dup_0033",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "27658901",
+        "Gene": "TYROBP",
+        "TermName": "Stroke",
+        "Hypothesis": "Not applicable to any AD hypothesis",
+        "EventDedupKey": "gene | normalized variants:protein change | hp:0001297 | not applicable to any ad hypothesis"
+      }
+    ],
+    "MergedHypotheses": [],
+    "MergedPhenotypes": [
+      "Stroke"
+    ],
+    "MergedGeneAlterations": [
+      "TYROBP / normalized variants:protein change"
+    ]
+  },
+  {
+    "Gene": "TREM2",
+    "PMID": "37113571",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/37113571/",
+    "Journal": "",
+    "Year": null,
+    "TermName": "-",
+    "TermType": "-",
+    "Hypothesis": "Not applicable to any AD hypothesis",
+    "SentenceQuality": 90.0,
+    "ExpertOverallScore": 3,
+    "ExpertMechanismSpecificityScore": 3,
+    "ExpertPathologyGranularityScore": 3,
+    "ExpertExperimentalDirectnessScore": 3,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "heuristic_only",
+    "AnnotationConfidence": "heuristic",
+    "ExpertReason": "alteration_evidence; overall 3/5; alteration 5/5; PMID traceable",
+    "CuratedPoolRank": 1011,
+    "SamplingBucket": "coverage_phenotype",
+    "AlterationTaxonomy": "normalized variants:rsid normalized",
+    "GeneAlteration": "TREM2 / normalized variants:rsid normalized",
+    "AlterationSignature": "normalized variants:rsid normalized",
+    "AlterationType": "Normalized Variants:RsID Normalized",
+    "AlterationMention": "rs75932628",
+    "AlterationID": "rs75932628",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "determine",
+    "RegType": "Reg",
+    "MechanismProvided": "No",
+    "RelevantToAD": "Yes",
+    "Event": "('TREM2', 'Gene', 'dbSNP', ('TREM2', 'Gene', '54209', '-')) -- ThemeOf -- ('rs75932628', 'Var', '(661, 671)', ('rs75932628', 'Mutation', 'rs75932628', 'rs75932628')) -- CauseOf -- ('determine', 'Reg', '(788, 797)', ('determine', 'Reg', '-', '-')) -- ThemeOf -- ('APOEepsilon', 'Disease', '(798, 809)', ('APOEepsilon', 'Disease', 'None', '-'))",
+    "EventDedupKey": "gene | normalized variants:rsid normalized | apoeepsilon | not applicable to any ad hypothesis",
+    "EvidenceType": "alteration_evidence",
+    "MechanismStrata": [
+      "amyloid/tau axis",
+      "vascular/metabolic axis"
+    ],
+    "LongTailSignals": [
+      {
+        "dimension": "phenotype",
+        "value": "APOEepsilon",
+        "frequency": 1,
+        "threshold": 1
+      }
+    ],
+    "IsLongTailEvidence": true,
+    "CurationReasons": [
+      "alteration_evidence",
+      "expert score 3/5",
+      "high sentence informativeness",
+      "long-tail evidence signal",
+      "PMID-traceable"
+    ],
+    "Sentence": "Blood was centrifuged at 4 C for 15 min at 2,500 rpm and plasma was immediately aliquoted and frozen at -80 C. Single nucleotide polymorphisms (SNPs) candidates were genotyped from blood using SNPlex  at the Spanish National Genotyping Centre (CEGEN) and included rs6656401 and rs6701713 of CR1, rs4311 of ACE, rs11136000, rs7012010, rs9331896, and rs9331888 of CLU, rs4147929 and rs3764650 of ABCA7, rs3851179 and rs10792832 of PICALM, rs744373 and rs6733839 of BIN1 gene, rs11767557 and rs11771145 of EPHA1, rs3865444 of CD33, rs9349407 and rs10948363 of CD2AP, rs11218343 of SORL1, rs9271192 of HLA-DRB5-DRB1 region, rs28834970 of PTK2B, rs6910730 of TREM1, rs75932628 of TREM2, and rs3747742 of TREML2, and rs4938933 and rs983392 of MS4A6A and rs429358 and rs7412 of the APOE gene to determine APOEepsilon genotype.",
+    "Target": "TREM2",
+    "ExpertScore": 84.1,
+    "ExpertTier": "context",
+    "ExpertDecision": "secondary",
+    "ExpertReasons": [
+      "alteration_evidence evidence",
+      "informative original sentence",
+      "curation expert score 3/5",
+      "strong alteration informativeness",
+      "AD-pathology vocabulary present",
+      "molecular or experimental mechanism detail",
+      "maps to a candidate AD mechanism stratum",
+      "long-tail signal with possible discovery value"
+    ],
+    "ExpertCautions": [
+      "heuristic-only annotation",
+      "not countable as support for a named AD hypothesis"
+    ],
+    "HypothesisCountable": false,
+    "HypothesisRole": "not_counted",
+    "NarrativeEligibility": "context_only",
+    "DuplicateGroupID": "dup_0011",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "37113571",
+        "Gene": "TREM2",
+        "TermName": "-",
+        "Hypothesis": "Not applicable to any AD hypothesis",
+        "EventDedupKey": "gene | normalized variants:rsid normalized | apoeepsilon | not applicable to any ad hypothesis"
+      }
+    ],
+    "MergedHypotheses": [],
+    "MergedPhenotypes": [],
+    "MergedGeneAlterations": [
+      "TREM2 / normalized variants:rsid normalized"
+    ]
+  },
+  {
+    "Gene": "TREM2",
+    "PMID": "36408688",
+    "PubMedURL": "https://pubmed.ncbi.nlm.nih.gov/36408688/",
+    "Journal": "Int J Neurosci",
+    "Year": 2022,
+    "TermName": "AD",
+    "TermType": "MeSH",
+    "Hypothesis": "Not applicable to any AD hypothesis",
+    "SentenceQuality": 123.0,
+    "ExpertOverallScore": 4,
+    "ExpertMechanismSpecificityScore": 3,
+    "ExpertPathologyGranularityScore": 4,
+    "ExpertExperimentalDirectnessScore": 4,
+    "ExpertAlterationInformativenessScore": 5,
+    "AnnotationSource": "heuristic_only",
+    "AnnotationConfidence": "heuristic",
+    "ExpertReason": "alteration_evidence; overall 4/5; alteration 5/5; recent evidence; PMID traceable",
+    "CuratedPoolRank": 1006,
+    "SamplingBucket": "evidence_type_alteration_evidence",
+    "AlterationTaxonomy": "normalized variants:rsid normalized",
+    "GeneAlteration": "TREM2 / normalized variants:rsid normalized",
+    "AlterationSignature": "normalized variants:rsid normalized",
+    "AlterationType": "Normalized Variants:RsID Normalized",
+    "AlterationMention": "rs75932628",
+    "AlterationID": "rs75932628",
+    "AlterationEvidenceLevel": "variant_or_mutation_level",
+    "TriggerWord": "association",
+    "RegType": "Reg",
+    "MechanismProvided": "No",
+    "RelevantToAD": "Yes",
+    "Event": "('TREM2', 'Gene', 'dbSNP', ('TREM2', 'Gene', '54209', '-')) -- ThemeOf -- ('rs75932628', 'Var', '(51, 61)', ('rs75932628', 'Mutation', 'rs75932628', 'rs75932628')) -- CauseOf -- ('association', 'Reg', '(25, 36)', ('association', 'Reg', '-', '-')) -- ThemeOf -- ('AD', 'Disease', '(88, 90)', ('AD', 'Disease', 'MESH:D000544', '-'))",
+    "EventDedupKey": "gene | normalized variants:rsid normalized | mesh:d000544 | not applicable to any ad hypothesis",
+    "EvidenceType": "alteration_evidence",
+    "MechanismStrata": [
+      "amyloid/tau axis"
+    ],
+    "LongTailSignals": [],
+    "IsLongTailEvidence": false,
+    "CurationReasons": [
+      "alteration_evidence",
+      "expert score 4/5",
+      "high sentence informativeness",
+      "recent evidence",
+      "PMID-traceable"
+    ],
+    "Sentence": "OBJECTIVE: To assess the association between TREM2 rs75932628 and late-onset (sporadic) AD in a Greek population, and perform a meta-analysis of current data.",
+    "Target": "TREM2",
+    "ExpertScore": 77.3,
+    "ExpertTier": "context",
+    "ExpertDecision": "secondary",
+    "ExpertReasons": [
+      "alteration_evidence evidence",
+      "informative original sentence",
+      "curation expert score 4/5",
+      "strong pathology granularity",
+      "strong experimental directness",
+      "strong alteration informativeness",
+      "AD-pathology vocabulary present",
+      "molecular or experimental mechanism detail"
+    ],
+    "ExpertCautions": [
+      "heuristic-only annotation",
+      "not countable as support for a named AD hypothesis"
+    ],
+    "HypothesisCountable": false,
+    "HypothesisRole": "not_counted",
+    "NarrativeEligibility": "context_only",
+    "DuplicateGroupID": "dup_0012",
+    "DuplicateGroupSize": 1,
+    "MergedFrom": [
+      {
+        "PMID": "36408688",
+        "Gene": "TREM2",
+        "TermName": "AD",
+        "Hypothesis": "Not applicable to any AD hypothesis",
+        "EventDedupKey": "gene | normalized variants:rsid normalized | mesh:d000544 | not applicable to any ad hypothesis"
+      }
+    ],
+    "MergedHypotheses": [],
+    "MergedPhenotypes": [
+      "AD"
+    ],
+    "MergedGeneAlterations": [
+      "TREM2 / normalized variants:rsid normalized"
+    ]
+  }
+]

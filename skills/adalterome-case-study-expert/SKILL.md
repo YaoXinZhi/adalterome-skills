@@ -1,27 +1,27 @@
 ---
 name: adalterome-case-study-expert
-description: Build AD pathologist-style AD-Alterome case-study reports. Use when the user asks for a paper-level case study, expert interpretation, biological insight, AD pathology framing, disease-mechanism comparison, evidence prioritization, long-tail candidate interpretation, coverage/balance-aware synthesis, or a report that should argue a scientific question using AD-Alterome evidence rather than only listing traceable records.
+description: Build legacy AD pathologist-style AD-Alterome case-study narratives. Use only when the user explicitly asks for the older narrative case-study style. For publication-facing evidence organization, expert review sheets, scoring tables, AI-for-biomedical-knowledge-synthesis evaluation, or outputs that should be assessed rather than treated as final conclusions, prefer adalterome-knowledge-synthesis.
 ---
 
 # AD-Alterome Case Study Expert
 
-Use this skill when the user wants AD-Alterome evidence interpreted as a scientific case study, not only a stable evidence report.
+Use this compatibility skill when the user explicitly wants AD-Alterome evidence interpreted as an older scientific case-study narrative.
 
-This skill is the expert layer above the report skills. It keeps AD-Alterome first, preserves traceability, and calls the reusable AD expert pruning layer over curated candidate evidence before writing the case-study narrative.
+For manuscript-facing work, prefer `adalterome-knowledge-synthesis`. The knowledge synthesis skill keeps the same AD-Alterome-first provenance discipline but outputs a knowledge packet, evidence map, expert review sheet, evaluation record, and provenance manifest so AI-organized content can be scored by human experts.
 
 ## When To Use
 
-Use this expert skill for:
+Use this legacy expert skill for:
 
-- paper-level case studies
-- AD pathology expert interpretation
+- older paper-level case-study narratives
+- explicit AD pathology narrative requests
 - gene, term, hypothesis, or two-gene questions that need a scientific argument
 - questions asking for mechanism differences, biological insight, or disease-pathology interpretation
 - long-tail candidate triage
 - molecular pathological mechanism screening
 - coverage-aware and balance-aware comparison reports
 
-Use the existing `adalterome-*-report` skills instead when the user asks for a pure evidence packet, fixed report, API trace, PMID table, or raw source-backed dossier for human experts to interpret later.
+Use `adalterome-knowledge-synthesis` instead when the user asks for evidence organization, expert scoring, hallucination/accuracy/usefulness evaluation, knowledge packets, or materials for AI-for-biomedical-knowledge-synthesis experiments. Use the existing `adalterome-*-report` skills when the user asks for a pure evidence packet, fixed report, API trace, PMID table, or raw source-backed dossier for human experts to interpret later.
 
 ## Quick Start
 

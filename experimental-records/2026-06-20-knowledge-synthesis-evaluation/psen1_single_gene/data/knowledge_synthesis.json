@@ -1,0 +1,249 @@
+{
+  "title": "PSEN1",
+  "mode": "gene",
+  "analytical_pattern": "single_gene",
+  "question": "Organize AD-Alterome evidence for PSEN1 into a knowledge synthesis packet.",
+  "coverage": {
+    "targets": [
+      {
+        "label": "PSEN1",
+        "curation_source": "curated_pool",
+        "curation_scope": "offline_full_query_pool_prescreened",
+        "overview_event_count": null,
+        "matched_event_count": 21835,
+        "curation_pool_rows": 2398,
+        "event_unique_rows": 2398,
+        "unique_pmids": 1481,
+        "coverage_ratio": 0.1098,
+        "warnings": []
+      }
+    ],
+    "balance": {
+      "status": "not_applicable",
+      "notes": []
+    }
+  },
+  "target_summaries": [
+    {
+      "label": "PSEN1",
+      "kind": "gene",
+      "curation_scope": "offline_full_query_pool_prescreened",
+      "curation_source": "curated_pool",
+      "matched_event_count": 21835,
+      "curation_pool_rows": 2398,
+      "event_unique_rows": 2398,
+      "unique_pmids": 1481,
+      "selection_trace": {
+        "requested_selected_limit": 20,
+        "returned_selected_count": 20,
+        "representative_count": 20,
+        "selection_shortfall_reason": null
+      },
+      "top_patterns": {
+        "top_genes": [
+          {
+            "value": "PSEN1 [Entrez:5663]",
+            "count": 3699
+          },
+          {
+            "value": "FAD [Entrez:5663]",
+            "count": 388
+          },
+          {
+            "value": "PRESENILIN 1 [Entrez:5663]",
+            "count": 354
+          },
+          {
+            "value": "PRESENILIN-1 [Entrez:5663]",
+            "count": 248
+          },
+          {
+            "value": "PS-1 [Entrez:5663]",
+            "count": 38
+          }
+        ],
+        "top_gene_alterations": [
+          {
+            "value": "PSEN1 / point mutations:mutations",
+            "count": 1804
+          },
+          {
+            "value": "PSEN1 / normalized variants:dna change",
+            "count": 1110
+          },
+          {
+            "value": "FAD / point mutations:mutations",
+            "count": 313
+          },
+          {
+            "value": "PRESENILIN 1 / point mutations:mutations",
+            "count": 262
+          },
+          {
+            "value": "PRESENILIN-1 / point mutations:mutations",
+            "count": 186
+          },
+          {
+            "value": "PSEN1 / normalized variants:rsid normalized",
+            "count": 146
+          },
+          {
+            "value": "PSEN1 / normalized variants:protein change",
+            "count": 140
+          },
+          {
+            "value": "PSEN1 / structural variation:deletion",
+            "count": 126
+          }
+        ],
+        "top_phenotypes": [
+          {
+            "value": "protein [GO:0003675]",
+            "count": 54
+          },
+          {
+            "value": "Onset [HP:0003674]",
+            "count": 52
+          },
+          {
+            "value": "AD",
+            "count": 46
+          },
+          {
+            "value": "cell [GO:0005623]",
+            "count": 36
+          },
+          {
+            "value": "execution phase of apoptosis [GO:0097194]",
+            "count": 28
+          },
+          {
+            "value": "biosynthetic process [GO:0009058]",
+            "count": 28
+          },
+          {
+            "value": "AD [MESH:D000544]",
+            "count": 28
+          },
+          {
+            "value": "expression",
+            "count": 28
+          }
+        ],
+        "top_hypotheses": [
+          {
+            "value": "Amyloid Hypothesis",
+            "count": 3510
+          },
+          {
+            "value": "Tau Protein Hypothesis",
+            "count": 447
+          },
+          {
+            "value": "Mitochondrial Autophagy Hypothesis",
+            "count": 203
+          },
+          {
+            "value": "Neuroinflammation Hypothesis",
+            "count": 170
+          },
+          {
+            "value": "Vascular Hypothesis",
+            "count": 159
+          },
+          {
+            "value": "Glutamatergic Excitotoxicity Hypothesis",
+            "count": 145
+          },
+          {
+            "value": "Abnormal Autophagy Hypothesis",
+            "count": 138
+          },
+          {
+            "value": "Oxidative Stress Hypothesis",
+            "count": 86
+          }
+        ],
+        "long_tail_genes": null,
+        "long_tail_gene_alterations": null,
+        "long_tail_phenotypes": null
+      }
+    }
+  ],
+  "dominant_mechanism_strata": [
+    {
+      "value": "amyloid/tau axis",
+      "count": 6
+    },
+    {
+      "value": "neuroinflammation and microglia axis",
+      "count": 4
+    },
+    {
+      "value": "synaptic and neuronal dysfunction axis",
+      "count": 2
+    }
+  ],
+  "top_genes": [
+    {
+      "value": "PSEN1",
+      "count": 6
+    }
+  ],
+  "top_phenotype_processes": [
+    {
+      "value": "pilus",
+      "count": 1
+    },
+    {
+      "value": "attenuated neuroinflammation",
+      "count": 1
+    },
+    {
+      "value": "cell population proliferation",
+      "count": 1
+    },
+    {
+      "value": "Prolonged",
+      "count": 1
+    },
+    {
+      "value": "reactive gliosis",
+      "count": 1
+    },
+    {
+      "value": "AD hallmarks",
+      "count": 1
+    }
+  ],
+  "top_hypotheses": [
+    {
+      "value": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+      "count": 2
+    },
+    {
+      "value": "Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Amyloid Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Amyloid Hypothesis,Tau Protein Hypothesis",
+      "count": 1
+    }
+  ],
+  "long_tail_organized_count": 6,
+  "non_claims": [
+    "The packet does not prove an AD mechanism.",
+    "The packet does not replace expert review.",
+    "AI-organized evidence groups are review candidates, not manuscript conclusions.",
+    "Sentence-level PubMed evidence is provenance, not causal validation.",
+    "Raw EvidenceScore is not used as evidence strength."
+  ]
+}

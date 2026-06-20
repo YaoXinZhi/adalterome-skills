@@ -1,0 +1,127 @@
+{
+  "tool": "get_gene_overview",
+  "status": "ok",
+  "query": {
+    "gene": "MAPT"
+  },
+  "count": 1,
+  "data": {
+    "summary": {
+      "Gene": "MAPT",
+      "event_count": 25246,
+      "pmid_count": 4407,
+      "term_count": 907,
+      "hypothesis_count": 11,
+      "avg_evidence_score": 1.0
+    },
+    "top_terms": [
+      {
+        "TermName": "Dementia",
+        "TermType": "HPO",
+        "freq": 1280
+      },
+      {
+        "TermName": "Frontotemporal dementia",
+        "TermType": "HPO",
+        "freq": 1127
+      },
+      {
+        "TermName": "protein",
+        "TermType": "GO",
+        "freq": 1000
+      },
+      {
+        "TermName": "chromosome",
+        "TermType": "GO",
+        "freq": 725
+      },
+      {
+        "TermName": "Parkinsonism",
+        "TermType": "HPO",
+        "freq": 609
+      },
+      {
+        "TermName": "AD",
+        "TermType": "MeSH",
+        "freq": 427
+      },
+      {
+        "TermName": "Neurodegeneration",
+        "TermType": "HPO",
+        "freq": 387
+      },
+      {
+        "TermName": "Alzheimer's disease",
+        "TermType": "MeSH",
+        "freq": 342
+      },
+      {
+        "TermName": "phosphorylation",
+        "TermType": "GO",
+        "freq": 300
+      },
+      {
+        "TermName": "biosynthetic process",
+        "TermType": "GO",
+        "freq": 286
+      }
+    ],
+    "top_hypotheses": [
+      {
+        "Hypothesis": "Tau Protein Hypothesis",
+        "freq": 16096
+      },
+      {
+        "Hypothesis": "Amyloid Hypothesis",
+        "freq": 3793
+      },
+      {
+        "Hypothesis": "Neuroinflammation Hypothesis",
+        "freq": 1452
+      },
+      {
+        "Hypothesis": "Mitochondrial Autophagy Hypothesis",
+        "freq": 749
+      },
+      {
+        "Hypothesis": "Oxidative Stress Hypothesis",
+        "freq": 649
+      },
+      {
+        "Hypothesis": "Abnormal Autophagy Hypothesis",
+        "freq": 629
+      },
+      {
+        "Hypothesis": "Vascular Hypothesis",
+        "freq": 324
+      },
+      {
+        "Hypothesis": "Glutamatergic Excitotoxicity Hypothesis",
+        "freq": 257
+      },
+      {
+        "Hypothesis": "Metal Ion Hypothesis",
+        "freq": 164
+      },
+      {
+        "Hypothesis": "Cholinergic Hypothesis",
+        "freq": 60
+      }
+    ]
+  },
+  "meta": {
+    "raw_top_terms_count": 100,
+    "raw_top_hypotheses_count": 84,
+    "hypothesis_field_handling": "Hypothesis values are comma-split before unique counts and top-hypothesis aggregation.",
+    "_local_cache": {
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=MAPT",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/3e/3eb3c091f6b56625458a767c8050107db94747220119839c03e6f8a37a37761d.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:54:50+00:00",
+      "age_seconds": 698.181
+    }
+  }
+}

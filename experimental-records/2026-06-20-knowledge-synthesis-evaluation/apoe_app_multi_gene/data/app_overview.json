@@ -1,0 +1,127 @@
+{
+  "tool": "get_gene_overview",
+  "status": "ok",
+  "query": {
+    "gene": "APP"
+  },
+  "count": 1,
+  "data": {
+    "summary": {
+      "Gene": "APP",
+      "event_count": 18277,
+      "pmid_count": 4724,
+      "term_count": 621,
+      "hypothesis_count": 11,
+      "avg_evidence_score": 3.0
+    },
+    "top_terms": [
+      {
+        "TermName": "Alzheimer Disease",
+        "TermType": "MeSH",
+        "freq": 2459
+      },
+      {
+        "TermName": "protein",
+        "TermType": "GO",
+        "freq": 2030
+      },
+      {
+        "TermName": "Onset",
+        "TermType": "HPO",
+        "freq": 959
+      },
+      {
+        "TermName": "All",
+        "TermType": "HPO",
+        "freq": 262
+      },
+      {
+        "TermName": "biosynthetic process",
+        "TermType": "GO",
+        "freq": 253
+      },
+      {
+        "TermName": "chromosome",
+        "TermType": "GO",
+        "freq": 183
+      },
+      {
+        "TermName": "Alzheimer disease",
+        "TermType": "HPO",
+        "freq": 176
+      },
+      {
+        "TermName": "Sporadic",
+        "TermType": "HPO",
+        "freq": 173
+      },
+      {
+        "TermName": "Dementia",
+        "TermType": "HPO",
+        "freq": 162
+      },
+      {
+        "TermName": "cleavage",
+        "TermType": "ADMO",
+        "freq": 144
+      }
+    ],
+    "top_hypotheses": [
+      {
+        "Hypothesis": "Amyloid Hypothesis",
+        "freq": 17216
+      },
+      {
+        "Hypothesis": "Tau Protein Hypothesis",
+        "freq": 1736
+      },
+      {
+        "Hypothesis": "Neuroinflammation Hypothesis",
+        "freq": 892
+      },
+      {
+        "Hypothesis": "Oxidative Stress Hypothesis",
+        "freq": 617
+      },
+      {
+        "Hypothesis": "Vascular Hypothesis",
+        "freq": 559
+      },
+      {
+        "Hypothesis": "Mitochondrial Autophagy Hypothesis",
+        "freq": 547
+      },
+      {
+        "Hypothesis": "Abnormal Autophagy Hypothesis",
+        "freq": 303
+      },
+      {
+        "Hypothesis": "Glutamatergic Excitotoxicity Hypothesis",
+        "freq": 209
+      },
+      {
+        "Hypothesis": "Metal Ion Hypothesis",
+        "freq": 182
+      },
+      {
+        "Hypothesis": "Cholinergic Hypothesis",
+        "freq": 87
+      }
+    ]
+  },
+  "meta": {
+    "raw_top_terms_count": 100,
+    "raw_top_hypotheses_count": 150,
+    "hypothesis_field_handling": "Hypothesis values are comma-split before unique counts and top-hypothesis aggregation.",
+    "_local_cache": {
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=APP",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/65/65762521679cdb5bce89717e1b0696d9ce399166ebb98e6ae00f5195362a3c80.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-05T21:41:54+00:00",
+      "age_seconds": 1297474.022
+    }
+  }
+}

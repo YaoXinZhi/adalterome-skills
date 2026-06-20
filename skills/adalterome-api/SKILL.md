@@ -110,12 +110,12 @@ Deep report skills use `scripts/evidence_fetch.py` plus `scripts/evidence_curati
 
 The curation package now separates broad case-study candidates from compact display evidence:
 
-- `candidate_evidence`: broad curated candidate rows for downstream AD expert pruning. Case-study mode usually targets 200 rows and can request up to 500 when the API can support it.
+- `candidate_evidence`: broad curated candidate rows for downstream knowledge synthesis, expert review sheets, and legacy AD expert pruning. Knowledge-synthesis mode usually targets 200 rows and can request up to 500 when the API can support it.
 - `representative_evidence`: compact display subset for report reading.
 - `selected_evidence`: backward-compatible alias for returned curated rows.
 - `selection_trace`: requested/returned candidate counts, eligible unique rows, representative count, and shortfall reason when the API cannot fill the requested limit.
 
-The shared helper `scripts/ad_expert_pruning.py` is the reusable second layer for AD pathologist-style biological trimming, duplicate merging, Not applicable hypothesis handling, and long-tail rescue before case-study narrative generation.
+The shared helper `scripts/ad_expert_pruning.py` is the reusable second layer for biological evidence organization, duplicate merging, Not applicable hypothesis handling, and long-tail rescue before knowledge packet or legacy case-study generation.
 
 Curated evidence rows may include:
 

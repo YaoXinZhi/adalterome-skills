@@ -1,0 +1,18 @@
+{
+  "gene": null,
+  "term": null,
+  "hypothesis": null,
+  "gene_a": "APOE",
+  "gene_b": "APP",
+  "gene_set": null,
+  "axis": null,
+  "pattern": "multi_gene",
+  "question": "",
+  "output_dir": "experimental-records/2026-06-20-knowledge-synthesis-evaluation/apoe_app_multi_gene",
+  "base_url": "http://117.72.176.137/api/adalterome",
+  "candidate_limit": 12,
+  "organized_limit": 6,
+  "expert_limit": null,
+  "curation_limit": 50,
+  "timeout": 240
+}

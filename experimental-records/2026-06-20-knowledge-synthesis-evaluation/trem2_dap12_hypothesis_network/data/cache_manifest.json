@@ -1,0 +1,73 @@
+{
+  "cache_dir": "/Users/yao/.adalterome-skills/cache",
+  "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+  "entries": [
+    {
+      "label": "TREM2 overview",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=TREM2",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/20/207ee87555bea21347dd20dadd3e151e53d41b2b7430aa7b3acddee0a4da8f2d.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:55:00+00:00",
+      "age_seconds": 688.18
+    },
+    {
+      "label": "TREM2 curation/evidence",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=TREM2&selected_limit=12",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/87/8741a65695eda9ffbd00da0ac0bb25af9d052c9c0877f27c5548a4e2ed616c2e.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:54:59+00:00",
+      "age_seconds": 689.286
+    },
+    {
+      "label": "TYROBP overview",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=TYROBP",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/3c/3c3e88596ab282d04f6f135a822901715af14d488411183c2e3c3fc0f0933b34.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:55:02+00:00",
+      "age_seconds": 685.813
+    },
+    {
+      "label": "TYROBP curation/evidence",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=TYROBP&selected_limit=12",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/80/809d9a66820055b9542b8c69f00ab89bb13adbc4a27d0d4e47ef20932bcc99cd.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:55:02+00:00",
+      "age_seconds": 686.406
+    },
+    {
+      "label": "Neuroinflammation Hypothesis overview",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/hypothesis/overview?hypothesis=Neuroinflammation+Hypothesis",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/5b/5b3af874e1f1c10df4249db9aad1b1c73c81409d0b0b65437247faf4d819e9a7.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-07T21:47:08+00:00",
+      "age_seconds": 1124360.305
+    },
+    {
+      "label": "Neuroinflammation Hypothesis curation/evidence",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/hypothesis/curation?hypothesis=Neuroinflammation+Hypothesis&selected_limit=12",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/3c/3c07bd40936924ce583ef0186f98f958bb06cce05d626bb977fa32a0de5022ee.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:55:06+00:00",
+      "age_seconds": 681.754
+    }
+  ],
+  "note": "These files preserve raw API JSON payloads for exact repeat requests. Set ADALTEROME_REFRESH_CACHE=1 to force a fresh API request or ADALTEROME_DISABLE_CACHE=1 to bypass caching."
+}

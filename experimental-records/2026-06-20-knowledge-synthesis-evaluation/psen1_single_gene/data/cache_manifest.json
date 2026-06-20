@@ -1,0 +1,29 @@
+{
+  "cache_dir": "/Users/yao/.adalterome-skills/cache",
+  "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+  "entries": [
+    {
+      "label": "PSEN1 overview",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=PSEN1",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/88/885fd2bc72465aee515f6b7cac85ea36e566b0f72ec8bf93d337214c98af659b.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:54:36+00:00",
+      "age_seconds": 711.794
+    },
+    {
+      "label": "PSEN1 curation/evidence",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=PSEN1&selected_limit=20",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/fb/fb781c04c459ff45df1b7125194d9dd982ac69a2a4684197cb6abc466788eb01.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:54:33+00:00",
+      "age_seconds": 714.617
+    }
+  ],
+  "note": "These files preserve raw API JSON payloads for exact repeat requests. Set ADALTEROME_REFRESH_CACHE=1 to force a fresh API request or ADALTEROME_DISABLE_CACHE=1 to bypass caching."
+}

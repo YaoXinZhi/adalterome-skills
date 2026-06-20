@@ -1,0 +1,51 @@
+{
+  "title": "MAPT",
+  "mode": "gene",
+  "analytical_pattern": "recommendation",
+  "question": "Organize the MAPT phenotype landscape for expert review.",
+  "base_url": "http://117.72.176.137/api/adalterome",
+  "candidate_limit": 20,
+  "organized_limit": 6,
+  "timeout": 240,
+  "compare_url": null,
+  "source_payloads": [
+    {
+      "label": "MAPT",
+      "kind": "gene",
+      "overview_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=MAPT",
+      "evidence_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=MAPT&selected_limit=20",
+      "fallback_reason": null,
+      "coverage_scope": {
+        "query_type": "gene",
+        "curation_source": "curated_pool",
+        "curation_scope": "offline_full_query_pool_prescreened",
+        "overview_event_count": null,
+        "matched_event_count": 27921,
+        "curation_pool_rows": 2700,
+        "coverage_ratio": 0.0967,
+        "api_limit_notice": null,
+        "requested_selected_limit": 20,
+        "returned_selected_count": 20,
+        "eligible_after_filter_count": 2700,
+        "selection_shortfall_reason": null,
+        "curated_query_match_count": 1,
+        "curated_pool_entries": 2700,
+        "curated_filtered_pool_rows": 2700,
+        "curated_query_stats_raw_event_count": 27921,
+        "curated_query_stats_count_is_alias_merged": false,
+        "annotation_source": "event_expert_annotation_final",
+        "curation_endpoint_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=MAPT&selected_limit=20",
+        "used_selected_limit": 20,
+        "local_raw_payload_cache": "/Users/yao/.adalterome-skills/cache/requests/ff/ffe5a5afa83b97d109de2f4f3a740e8fc92e0f22eb4de66b439deeb042db9332.json",
+        "local_cache_hit": true
+      }
+    }
+  ],
+  "local_files": {
+    "knowledge_packet": "knowledge_packet.md",
+    "evidence_map": "evidence_map.md",
+    "expert_review_sheet": "expert_review_sheet.tsv",
+    "evaluation_record": "evaluation_record.json",
+    "cache_manifest": "data/cache_manifest.json"
+  }
+}

@@ -1,0 +1,549 @@
+{
+  "title": "TREM2-DAP12 neuroinflammatory axis",
+  "mode": "gene_set",
+  "analytical_pattern": "hypothesis_network",
+  "question": "Organize AD-Alterome evidence for the TREM2-DAP12 neuroinflammatory axis as a hypothesis/network review object.",
+  "coverage": {
+    "targets": [
+      {
+        "label": "TREM2",
+        "curation_source": "curated_pool",
+        "curation_scope": "offline_full_query_pool_prescreened",
+        "overview_event_count": null,
+        "matched_event_count": 6446,
+        "curation_pool_rows": 1019,
+        "event_unique_rows": 1019,
+        "unique_pmids": 486,
+        "coverage_ratio": 0.1581,
+        "warnings": []
+      },
+      {
+        "label": "TYROBP",
+        "curation_source": "curated_pool",
+        "curation_scope": "offline_full_query_pool_prescreened",
+        "overview_event_count": null,
+        "matched_event_count": 673,
+        "curation_pool_rows": 189,
+        "event_unique_rows": 189,
+        "unique_pmids": 57,
+        "coverage_ratio": 0.2808,
+        "warnings": []
+      },
+      {
+        "label": "Neuroinflammation Hypothesis",
+        "curation_source": "curated_pool",
+        "curation_scope": "offline_full_query_pool_prescreened",
+        "overview_event_count": null,
+        "matched_event_count": 34086,
+        "curation_pool_rows": 5304,
+        "event_unique_rows": 5304,
+        "unique_pmids": 3063,
+        "coverage_ratio": 0.1556,
+        "warnings": []
+      }
+    ],
+    "balance": {
+      "status": "balanced",
+      "notes": [
+        "Targets have comparable curation scope for knowledge synthesis."
+      ]
+    }
+  },
+  "target_summaries": [
+    {
+      "label": "TREM2",
+      "kind": "gene",
+      "curation_scope": "offline_full_query_pool_prescreened",
+      "curation_source": "curated_pool",
+      "matched_event_count": 6446,
+      "curation_pool_rows": 1019,
+      "event_unique_rows": 1019,
+      "unique_pmids": 486,
+      "selection_trace": {
+        "requested_selected_limit": 12,
+        "returned_selected_count": 12,
+        "representative_count": 12,
+        "selection_shortfall_reason": null
+      },
+      "top_patterns": {
+        "top_genes": [
+          {
+            "value": "TREM2 [Entrez:54209]",
+            "count": 2117
+          },
+          {
+            "value": "TRIGGERING RECEPTOR EXPRESSED ON MYELOID CELLS 2 [Entrez:54209]",
+            "count": 37
+          },
+          {
+            "value": "TREM-2 [Entrez:54209]",
+            "count": 4
+          }
+        ],
+        "top_gene_alterations": [
+          {
+            "value": "TREM2 / point mutations:mutations",
+            "count": 665
+          },
+          {
+            "value": "TREM2 / normalized variants:dna change",
+            "count": 456
+          },
+          {
+            "value": "TREM2 / structural variation:deletion",
+            "count": 271
+          },
+          {
+            "value": "TREM2 / normalized variants:protein change",
+            "count": 157
+          },
+          {
+            "value": "TREM2 / expression changes:dysregulation",
+            "count": 137
+          },
+          {
+            "value": "TREM2 / genetic manipulation:knockout",
+            "count": 103
+          },
+          {
+            "value": "TREM2 / normalized variants:rsid normalized",
+            "count": 98
+          },
+          {
+            "value": "TREM2 / expression changes:overexpression",
+            "count": 62
+          }
+        ],
+        "top_phenotypes": [
+          {
+            "value": "AD",
+            "count": 35
+          },
+          {
+            "value": "Onset [HP:0003674]",
+            "count": 31
+          },
+          {
+            "value": "AD [MESH:D000544]",
+            "count": 27
+          },
+          {
+            "value": "protein [GO:0003675]",
+            "count": 26
+          },
+          {
+            "value": "Dementia [HP:0000726]",
+            "count": 25
+          },
+          {
+            "value": "Neurodegeneration [HP:0002180]",
+            "count": 24
+          },
+          {
+            "value": "activation [ADMO:0000042]",
+            "count": 24
+          },
+          {
+            "value": "Late onset [HP:0003584]",
+            "count": 22
+          }
+        ],
+        "top_hypotheses": [
+          {
+            "value": "Neuroinflammation Hypothesis",
+            "count": 1553
+          },
+          {
+            "value": "Amyloid Hypothesis",
+            "count": 552
+          },
+          {
+            "value": "Tau Protein Hypothesis",
+            "count": 269
+          },
+          {
+            "value": "Microbiota-Gut-Brain Axis Hypothesis",
+            "count": 52
+          },
+          {
+            "value": "Abnormal Autophagy Hypothesis",
+            "count": 33
+          },
+          {
+            "value": "Vascular Hypothesis",
+            "count": 23
+          }
+        ],
+        "long_tail_genes": null,
+        "long_tail_gene_alterations": null,
+        "long_tail_phenotypes": null
+      }
+    },
+    {
+      "label": "TYROBP",
+      "kind": "gene",
+      "curation_scope": "offline_full_query_pool_prescreened",
+      "curation_source": "curated_pool",
+      "matched_event_count": 673,
+      "curation_pool_rows": 189,
+      "event_unique_rows": 189,
+      "unique_pmids": 57,
+      "selection_trace": {
+        "requested_selected_limit": 12,
+        "returned_selected_count": 12,
+        "representative_count": 12,
+        "selection_shortfall_reason": null
+      },
+      "top_patterns": {
+        "top_genes": [
+          {
+            "value": "TYROBP [Entrez:7305]",
+            "count": 250
+          },
+          {
+            "value": "DAP12 [Entrez:7305]",
+            "count": 32
+          },
+          {
+            "value": "PLOSL [Entrez:7305]",
+            "count": 4
+          },
+          {
+            "value": "TYRO PROTEIN TYROSINE KINASE BINDING PROTEIN [Entrez:7305]",
+            "count": 2
+          }
+        ],
+        "top_gene_alterations": [
+          {
+            "value": "TYROBP / point mutations:mutations",
+            "count": 80
+          },
+          {
+            "value": "TYROBP / structural variation:deletion",
+            "count": 62
+          },
+          {
+            "value": "TYROBP / genetic manipulation:knockout",
+            "count": 23
+          },
+          {
+            "value": "DAP12 / point mutations:mutations",
+            "count": 19
+          },
+          {
+            "value": "TYROBP / normalized variants:dna change",
+            "count": 17
+          },
+          {
+            "value": "TYROBP / expression changes:dysregulation",
+            "count": 16
+          },
+          {
+            "value": "TYROBP / point mutations:nonsynonymous mutation",
+            "count": 15
+          },
+          {
+            "value": "TYROBP / normalized variants:protein change",
+            "count": 9
+          }
+        ],
+        "top_phenotypes": [
+          {
+            "value": "Dementia [HP:0000726]",
+            "count": 10
+          },
+          {
+            "value": "Onset [HP:0003674]",
+            "count": 8
+          },
+          {
+            "value": "Nasu-Hakola disease [MESH:C536329]",
+            "count": 7
+          },
+          {
+            "value": "Leukoencephalopathy [HP:0002352]",
+            "count": 7
+          },
+          {
+            "value": "signaling [GO:0023052]",
+            "count": 7
+          },
+          {
+            "value": "activation [ADMO:0000042]",
+            "count": 7
+          },
+          {
+            "value": "protein [GO:0003675]",
+            "count": 7
+          },
+          {
+            "value": "NHD [MESH:C565740]",
+            "count": 6
+          }
+        ],
+        "top_hypotheses": [
+          {
+            "value": "Neuroinflammation Hypothesis",
+            "count": 175
+          },
+          {
+            "value": "Tau Protein Hypothesis",
+            "count": 59
+          },
+          {
+            "value": "Amyloid Hypothesis",
+            "count": 54
+          },
+          {
+            "value": "Abnormal Autophagy Hypothesis",
+            "count": 4
+          },
+          {
+            "value": "Mitochondrial Autophagy Hypothesis",
+            "count": 1
+          }
+        ],
+        "long_tail_genes": null,
+        "long_tail_gene_alterations": null,
+        "long_tail_phenotypes": null
+      }
+    },
+    {
+      "label": "Neuroinflammation Hypothesis",
+      "kind": "hypothesis",
+      "curation_scope": "offline_full_query_pool_prescreened",
+      "curation_source": "curated_pool",
+      "matched_event_count": 34086,
+      "curation_pool_rows": 5304,
+      "event_unique_rows": 5304,
+      "unique_pmids": 3063,
+      "selection_trace": {
+        "requested_selected_limit": 12,
+        "returned_selected_count": 12,
+        "representative_count": 12,
+        "selection_shortfall_reason": null
+      },
+      "top_patterns": {
+        "top_genes": [
+          {
+            "value": "TREM2 [Entrez:54209]",
+            "count": 1309
+          },
+          {
+            "value": "MAPT [Entrez:4137]",
+            "count": 742
+          },
+          {
+            "value": "APOE [Entrez:348]",
+            "count": 479
+          },
+          {
+            "value": "TAS2R62P [Entrez:338399]",
+            "count": 438
+          },
+          {
+            "value": "APP [Entrez:351]",
+            "count": 416
+          },
+          {
+            "value": "BDNF-AS [Entrez:497258]",
+            "count": 338
+          },
+          {
+            "value": "TNF [Entrez:7124]",
+            "count": 300
+          },
+          {
+            "value": "NLRP3 [Entrez:114548]",
+            "count": 289
+          }
+        ],
+        "top_gene_alterations": [
+          {
+            "value": "TREM2 / point mutations:mutations",
+            "count": 345
+          },
+          {
+            "value": "TREM2 / normalized variants:dna change",
+            "count": 305
+          },
+          {
+            "value": "APOE / point mutations:mutations",
+            "count": 240
+          },
+          {
+            "value": "MAPT / normalized variants:dna change",
+            "count": 213
+          },
+          {
+            "value": "TREM2 / structural variation:deletion",
+            "count": 181
+          },
+          {
+            "value": "MAPT / point mutations:mutations",
+            "count": 177
+          },
+          {
+            "value": "PSEN1 / point mutations:mutations",
+            "count": 129
+          },
+          {
+            "value": "APP / point mutations:mutations",
+            "count": 125
+          }
+        ],
+        "top_phenotypes": [
+          {
+            "value": "AD [MESH:D000544]",
+            "count": 434
+          },
+          {
+            "value": "AD",
+            "count": 428
+          },
+          {
+            "value": "expression",
+            "count": 400
+          },
+          {
+            "value": "protein [GO:0003675]",
+            "count": 381
+          },
+          {
+            "value": "inflammatory response [GO:0006954]",
+            "count": 340
+          },
+          {
+            "value": "activation [ADMO:0000042]",
+            "count": 332
+          },
+          {
+            "value": "signaling [GO:0023052]",
+            "count": 271
+          },
+          {
+            "value": "Neuroinflammation [HP:0033429]",
+            "count": 262
+          }
+        ],
+        "top_hypotheses": [
+          {
+            "value": "Neuroinflammation Hypothesis",
+            "count": 18022
+          },
+          {
+            "value": "Amyloid Hypothesis",
+            "count": 5177
+          },
+          {
+            "value": "Tau Protein Hypothesis",
+            "count": 2797
+          },
+          {
+            "value": "Oxidative Stress Hypothesis",
+            "count": 1438
+          },
+          {
+            "value": "Abnormal Autophagy Hypothesis",
+            "count": 813
+          },
+          {
+            "value": "Vascular Hypothesis",
+            "count": 590
+          },
+          {
+            "value": "Glutamatergic Excitotoxicity Hypothesis",
+            "count": 492
+          }
+        ],
+        "long_tail_genes": null,
+        "long_tail_gene_alterations": null,
+        "long_tail_phenotypes": null
+      }
+    }
+  ],
+  "dominant_mechanism_strata": [
+    {
+      "value": "neuroinflammation and microglia axis",
+      "count": 6
+    },
+    {
+      "value": "amyloid/tau axis",
+      "count": 5
+    },
+    {
+      "value": "synaptic and neuronal dysfunction axis",
+      "count": 3
+    }
+  ],
+  "top_genes": [
+    {
+      "value": "TREM2",
+      "count": 2
+    },
+    {
+      "value": "TYROBP",
+      "count": 2
+    },
+    {
+      "value": "MAPT",
+      "count": 1
+    },
+    {
+      "value": "NLRC3",
+      "count": 1
+    }
+  ],
+  "top_phenotype_processes": [
+    {
+      "value": "entorhinal cortex loss",
+      "count": 1
+    },
+    {
+      "value": "Neurodegeneration",
+      "count": 1
+    },
+    {
+      "value": "complement activation",
+      "count": 1
+    },
+    {
+      "value": "amyloid protein",
+      "count": 1
+    },
+    {
+      "value": "hyperphosphorylation",
+      "count": 1
+    },
+    {
+      "value": "Alzheimer",
+      "count": 1
+    }
+  ],
+  "top_hypotheses": [
+    {
+      "value": "Amyloid Hypothesis,Neuroinflammation Hypothesis",
+      "count": 3
+    },
+    {
+      "value": "Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Neuroinflammation Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Amyloid Hypothesis,Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+      "count": 1
+    }
+  ],
+  "long_tail_organized_count": 6,
+  "non_claims": [
+    "The packet does not prove an AD mechanism.",
+    "The packet does not replace expert review.",
+    "AI-organized evidence groups are review candidates, not manuscript conclusions.",
+    "Sentence-level PubMed evidence is provenance, not causal validation.",
+    "Raw EvidenceScore is not used as evidence strength."
+  ]
+}

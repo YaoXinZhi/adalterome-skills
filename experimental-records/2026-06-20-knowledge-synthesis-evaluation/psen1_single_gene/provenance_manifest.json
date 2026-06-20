@@ -1,0 +1,51 @@
+{
+  "title": "PSEN1",
+  "mode": "gene",
+  "analytical_pattern": "single_gene",
+  "question": "Organize AD-Alterome evidence for PSEN1 into a knowledge synthesis packet.",
+  "base_url": "http://117.72.176.137/api/adalterome",
+  "candidate_limit": 20,
+  "organized_limit": 6,
+  "timeout": 240,
+  "compare_url": null,
+  "source_payloads": [
+    {
+      "label": "PSEN1",
+      "kind": "gene",
+      "overview_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=PSEN1",
+      "evidence_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=PSEN1&selected_limit=20",
+      "fallback_reason": null,
+      "coverage_scope": {
+        "query_type": "gene",
+        "curation_source": "curated_pool",
+        "curation_scope": "offline_full_query_pool_prescreened",
+        "overview_event_count": null,
+        "matched_event_count": 21835,
+        "curation_pool_rows": 2398,
+        "coverage_ratio": 0.1098,
+        "api_limit_notice": null,
+        "requested_selected_limit": 20,
+        "returned_selected_count": 20,
+        "eligible_after_filter_count": 2398,
+        "selection_shortfall_reason": null,
+        "curated_query_match_count": 1,
+        "curated_pool_entries": 2398,
+        "curated_filtered_pool_rows": 2398,
+        "curated_query_stats_raw_event_count": 21835,
+        "curated_query_stats_count_is_alias_merged": false,
+        "annotation_source": "event_expert_annotation_final",
+        "curation_endpoint_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=PSEN1&selected_limit=20",
+        "used_selected_limit": 20,
+        "local_raw_payload_cache": "/Users/yao/.adalterome-skills/cache/requests/fb/fb781c04c459ff45df1b7125194d9dd982ac69a2a4684197cb6abc466788eb01.json",
+        "local_cache_hit": true
+      }
+    }
+  ],
+  "local_files": {
+    "knowledge_packet": "knowledge_packet.md",
+    "evidence_map": "evidence_map.md",
+    "expert_review_sheet": "expert_review_sheet.tsv",
+    "evaluation_record": "evaluation_record.json",
+    "cache_manifest": "data/cache_manifest.json"
+  }
+}

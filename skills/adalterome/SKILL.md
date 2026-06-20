@@ -1,6 +1,6 @@
 ---
 name: adalterome
-description: Unified AD-Alterome entrypoint. Use when the user asks any AD-Alterome question and should not need to choose between API, gene, phenotype/process, hypothesis, comparison, or expert case-study skills. Route the request to the most appropriate AD-Alterome skill, preserve original evidence and PubMed links, and report where raw query data were saved.
+description: Unified AD-Alterome entrypoint. Use when the user asks any AD-Alterome question and should not need to choose between API, gene, phenotype/process, hypothesis, comparison, knowledge synthesis, evaluation, or legacy case-study skills. Route the request to the most appropriate AD-Alterome skill, preserve original evidence and PubMed links, and report where raw query data were saved.
 ---
 
 # AD-Alterome Unified Skill
@@ -16,8 +16,10 @@ Choose the smallest workflow that answers the user:
 - Use `adalterome-gene-report` when the target is one gene, such as `MAPT`, `APOE`, `APP`, `PSEN1`, or a gene-like symbol.
 - Use `adalterome-term-report` when the target is a phenotype, downstream biological process, ontology term, pathological process, or phrase such as mitochondrial dysfunction, neuroinflammation, synaptic dysfunction, or amyloid processing. The CLI argument remains `--term` for API compatibility, but describe this to users as a phenotype/process query.
 - Use `adalterome-hypothesis-report` when the target is one AD hypothesis, such as Amyloid Hypothesis, Tau Protein Hypothesis, Neuroinflammation Hypothesis, Oxidative Stress Hypothesis, Vascular Hypothesis, or Mitochondrial Autophagy Hypothesis.
-- Use `adalterome-compare-report` when the user asks to compare two genes and wants a structured evidence dossier.
-- Use `adalterome-case-study-expert` when the user asks for expert interpretation, a paper-level case study, biological insight, long-tail candidate judgment, or an AD pathologist-style argument rather than only a traceable evidence packet.
+- Use `adalterome-compare-report` when the user asks to compare two genes and wants a stable structured evidence dossier.
+- Use `adalterome-knowledge-synthesis` when the user asks for AI for biomedical knowledge synthesis, evidence organization, evidence topology, literature-review support, expert review sheets, scoring tables, evaluation materials, hallucination/accuracy/usefulness assessment, long-tail evidence review, analytical patterns, or publication-facing outputs that should be evaluated by human experts rather than treated as final conclusions.
+- Use `adalterome-knowledge-synthesis` for analytical patterns such as single-gene `PSEN1`, multi-gene `APOE vs APP`, gene-set review, `MAPT` phenotype landscape, or `TREM2-DAP12 neuroinflammatory axis`.
+- Use `adalterome-case-study-expert` only when the user explicitly asks for the older narrative case-study style or AD pathologist-style argument. Prefer `adalterome-knowledge-synthesis` for manuscript experiments and expert scoring.
 
 If the request is ambiguous, start with `adalterome-api` to inspect the target and available hypotheses, then route to the report builder that matches the discovered target.
 
@@ -46,6 +48,8 @@ requirement changes.
 - Split comma-delimited hypothesis fields before counting or summarizing hypotheses.
 - Separate statistics and recommendations: report aggregate distributions, then explain which genes, phenotype/process features, alterations, or long-tail evidence look most biologically informative.
 - Keep claims conservative: AD-Alterome provides sentence-level literature evidence, not direct causal proof.
+- When using `adalterome-knowledge-synthesis`, call AI output an expert-evaluable knowledge packet, not a final biological conclusion or manuscript-ready mechanism claim.
+- Expert review materials should include traceability, accuracy, breadth, depth, organization usefulness, long-tail usefulness, hallucination or overclaim risk, inspiration, review efficiency, and overall usefulness scoring dimensions.
 
 ## Examples
 
@@ -54,7 +58,10 @@ Natural-language requests and expected routing:
 - "查 MAPT 的 AD-Alterome 证据并写报告" -> `adalterome-gene-report`
 - "线粒体功能紊乱有哪些基因和突变证据？" -> `adalterome-term-report`
 - "总结 Tau Protein Hypothesis 的支持证据" -> `adalterome-hypothesis-report`
-- "比较 APP 和 APOE 的病理机制" -> `adalterome-compare-report`, or `adalterome-case-study-expert` if the user asks for expert interpretation
+- "比较 APP 和 APOE 的证据组织，并生成专家评分表" -> `adalterome-knowledge-synthesis`
+- "为 PSEN1 生成 knowledge synthesis packet" -> `adalterome-knowledge-synthesis`
+- "整理 TREM2-DAP12 neuroinflammatory axis 的证据拓扑" -> `adalterome-knowledge-synthesis`
+- "比较 APP 和 APOE 的病理机制" -> `adalterome-compare-report`, or `adalterome-knowledge-synthesis` if the output is for expert evaluation
 - "给我几个 PMID 证据句子" -> `adalterome-api`
 
 ## Resources
@@ -64,4 +71,5 @@ Natural-language requests and expected routing:
 - Phenotype/process report skill: ../adalterome-term-report/SKILL.md
 - Hypothesis report skill: ../adalterome-hypothesis-report/SKILL.md
 - Compare report skill: ../adalterome-compare-report/SKILL.md
+- Knowledge synthesis skill: ../adalterome-knowledge-synthesis/SKILL.md
 - Expert case-study skill: ../adalterome-case-study-expert/SKILL.md

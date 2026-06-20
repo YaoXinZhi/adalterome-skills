@@ -1,0 +1,34 @@
+{
+  "targets": [
+    {
+      "label": "APOE",
+      "curation_source": "curated_pool",
+      "curation_scope": "offline_full_query_pool_prescreened",
+      "overview_event_count": null,
+      "matched_event_count": 13322,
+      "curation_pool_rows": 1844,
+      "event_unique_rows": 1844,
+      "unique_pmids": 1167,
+      "coverage_ratio": 0.1384,
+      "warnings": []
+    },
+    {
+      "label": "APP",
+      "curation_source": "curated_pool",
+      "curation_scope": "offline_full_query_pool_prescreened",
+      "overview_event_count": null,
+      "matched_event_count": 18636,
+      "curation_pool_rows": 2310,
+      "event_unique_rows": 2310,
+      "unique_pmids": 1606,
+      "coverage_ratio": 0.124,
+      "warnings": []
+    }
+  ],
+  "balance": {
+    "status": "balanced",
+    "notes": [
+      "Targets have comparable curation scope for knowledge synthesis."
+    ]
+  }
+}

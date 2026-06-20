@@ -1,0 +1,127 @@
+{
+  "tool": "get_hypothesis_overview",
+  "status": "ok",
+  "query": {
+    "hypothesis": "Neuroinflammation Hypothesis"
+  },
+  "count": 1,
+  "data": {
+    "summary": {
+      "event_count": 34067,
+      "pmid_count": 5160,
+      "gene_count": 1780,
+      "term_count": 1060
+    },
+    "top_genes": [
+      {
+        "Gene": "TREM2",
+        "freq": 5011
+      },
+      {
+        "Gene": "MAPT",
+        "freq": 1480
+      },
+      {
+        "Gene": "APOE",
+        "freq": 1338
+      },
+      {
+        "Gene": "APP",
+        "freq": 892
+      },
+      {
+        "Gene": "PSEN1",
+        "freq": 761
+      },
+      {
+        "Gene": "TAS2R62P",
+        "freq": 701
+      },
+      {
+        "Gene": "TNF",
+        "freq": 697
+      },
+      {
+        "Gene": "BDNF-AS",
+        "freq": 625
+      },
+      {
+        "Gene": "GRN",
+        "freq": 600
+      },
+      {
+        "Gene": "IL6",
+        "freq": 600
+      }
+    ],
+    "top_terms": [
+      {
+        "TermName": "Alzheimer Disease",
+        "TermType": "MeSH",
+        "freq": 2750
+      },
+      {
+        "TermName": "protein",
+        "TermType": "GO",
+        "freq": 762
+      },
+      {
+        "TermName": "Onset",
+        "TermType": "HPO",
+        "freq": 591
+      },
+      {
+        "TermName": "inflammatory response",
+        "TermType": "GO",
+        "freq": 554
+      },
+      {
+        "TermName": "binding",
+        "TermType": "GO",
+        "freq": 444
+      },
+      {
+        "TermName": "Neuroinflammation",
+        "TermType": "HPO",
+        "freq": 427
+      },
+      {
+        "TermName": "Late onset",
+        "TermType": "HPO",
+        "freq": 408
+      },
+      {
+        "TermName": "Cognition Disorders",
+        "TermType": "MeSH",
+        "freq": 399
+      },
+      {
+        "TermName": "signaling",
+        "TermType": "GO",
+        "freq": 383
+      },
+      {
+        "TermName": "Neurodegenerative Diseases",
+        "TermType": "MeSH",
+        "freq": 381
+      }
+    ]
+  },
+  "meta": {
+    "raw_top_genes_count": 100,
+    "raw_top_terms_count": 100,
+    "hypothesis_query_terms": [
+      "Neuroinflammation Hypothesis"
+    ],
+    "_local_cache": {
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/hypothesis/overview?hypothesis=Neuroinflammation+Hypothesis",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/5b/5b3af874e1f1c10df4249db9aad1b1c73c81409d0b0b65437247faf4d819e9a7.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-07T21:47:08+00:00",
+      "age_seconds": 1124360.305
+    }
+  }
+}

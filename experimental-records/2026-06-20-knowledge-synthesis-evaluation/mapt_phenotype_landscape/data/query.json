@@ -1,0 +1,18 @@
+{
+  "gene": "MAPT",
+  "term": null,
+  "hypothesis": null,
+  "gene_a": null,
+  "gene_b": null,
+  "gene_set": null,
+  "axis": null,
+  "pattern": "recommendation",
+  "question": "Organize the MAPT phenotype landscape for expert review.",
+  "output_dir": "experimental-records/2026-06-20-knowledge-synthesis-evaluation/mapt_phenotype_landscape",
+  "base_url": "http://117.72.176.137/api/adalterome",
+  "candidate_limit": 20,
+  "organized_limit": 6,
+  "expert_limit": null,
+  "curation_limit": 50,
+  "timeout": 240
+}

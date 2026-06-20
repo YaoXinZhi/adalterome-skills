@@ -1,0 +1,46 @@
+{
+  "targets": [
+    {
+      "label": "TREM2",
+      "curation_source": "curated_pool",
+      "curation_scope": "offline_full_query_pool_prescreened",
+      "overview_event_count": null,
+      "matched_event_count": 6446,
+      "curation_pool_rows": 1019,
+      "event_unique_rows": 1019,
+      "unique_pmids": 486,
+      "coverage_ratio": 0.1581,
+      "warnings": []
+    },
+    {
+      "label": "TYROBP",
+      "curation_source": "curated_pool",
+      "curation_scope": "offline_full_query_pool_prescreened",
+      "overview_event_count": null,
+      "matched_event_count": 673,
+      "curation_pool_rows": 189,
+      "event_unique_rows": 189,
+      "unique_pmids": 57,
+      "coverage_ratio": 0.2808,
+      "warnings": []
+    },
+    {
+      "label": "Neuroinflammation Hypothesis",
+      "curation_source": "curated_pool",
+      "curation_scope": "offline_full_query_pool_prescreened",
+      "overview_event_count": null,
+      "matched_event_count": 34086,
+      "curation_pool_rows": 5304,
+      "event_unique_rows": 5304,
+      "unique_pmids": 3063,
+      "coverage_ratio": 0.1556,
+      "warnings": []
+    }
+  ],
+  "balance": {
+    "status": "balanced",
+    "notes": [
+      "Targets have comparable curation scope for knowledge synthesis."
+    ]
+  }
+}

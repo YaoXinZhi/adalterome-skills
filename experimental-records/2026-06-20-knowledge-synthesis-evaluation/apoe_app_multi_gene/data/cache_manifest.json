@@ -1,0 +1,62 @@
+{
+  "cache_dir": "/Users/yao/.adalterome-skills/cache",
+  "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+  "entries": [
+    {
+      "label": "gene comparison",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/compare/genes?gene_a=APOE&gene_b=APP",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/da/dac913c297e2758557a828d35eec4f57c9fcb1b44dc51759f302fd0d5173ffa6.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-07T21:47:26+00:00",
+      "age_seconds": 1124342.397
+    },
+    {
+      "label": "APOE overview",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=APOE",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/ed/ed101668234506878ee79ca1ecde85632113d4d1ad0e68b59ced16ccab695610.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:54:48+00:00",
+      "age_seconds": 699.936
+    },
+    {
+      "label": "APOE curation/evidence",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=APOE&selected_limit=12",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/f1/f1da63fa39bff6c06b08671962f711daf8b54a5c86309efab6b01a7183d4d97a.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:54:46+00:00",
+      "age_seconds": 701.723
+    },
+    {
+      "label": "APP overview",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/overview?gene=APP",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/65/65762521679cdb5bce89717e1b0696d9ce399166ebb98e6ae00f5195362a3c80.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-05T21:41:54+00:00",
+      "age_seconds": 1297474.022
+    },
+    {
+      "label": "APP curation/evidence",
+      "enabled": true,
+      "cache_hit": true,
+      "request_url": "http://117.72.176.137/api/adalterome/gene/curation?gene=APP&selected_limit=12",
+      "cache_file": "/Users/yao/.adalterome-skills/cache/requests/04/04f1769bfc4258e4fa07d741701b601769a25178f1c99c896c5cc7b5f2fc628f.json",
+      "cache_dir": "/Users/yao/.adalterome-skills/cache",
+      "index_file": "/Users/yao/.adalterome-skills/cache/index.jsonl",
+      "saved_at": "2026-06-20T21:54:51+00:00",
+      "age_seconds": 697.388
+    }
+  ],
+  "note": "These files preserve raw API JSON payloads for exact repeat requests. Set ADALTEROME_REFRESH_CACHE=1 to force a fresh API request or ADALTEROME_DISABLE_CACHE=1 to bypass caching."
+}

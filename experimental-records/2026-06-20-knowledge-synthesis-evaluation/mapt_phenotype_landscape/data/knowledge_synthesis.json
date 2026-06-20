@@ -1,0 +1,267 @@
+{
+  "title": "MAPT",
+  "mode": "gene",
+  "analytical_pattern": "recommendation",
+  "question": "Organize the MAPT phenotype landscape for expert review.",
+  "coverage": {
+    "targets": [
+      {
+        "label": "MAPT",
+        "curation_source": "curated_pool",
+        "curation_scope": "offline_full_query_pool_prescreened",
+        "overview_event_count": null,
+        "matched_event_count": 27921,
+        "curation_pool_rows": 2700,
+        "event_unique_rows": 2700,
+        "unique_pmids": 1640,
+        "coverage_ratio": 0.0967,
+        "warnings": [
+          "low_fraction_of_matched_events_in_curation_pool"
+        ]
+      }
+    ],
+    "balance": {
+      "status": "not_applicable",
+      "notes": []
+    }
+  },
+  "target_summaries": [
+    {
+      "label": "MAPT",
+      "kind": "gene",
+      "curation_scope": "offline_full_query_pool_prescreened",
+      "curation_source": "curated_pool",
+      "matched_event_count": 27921,
+      "curation_pool_rows": 2700,
+      "event_unique_rows": 2700,
+      "unique_pmids": 1640,
+      "selection_trace": {
+        "requested_selected_limit": 20,
+        "returned_selected_count": 20,
+        "representative_count": 20,
+        "selection_shortfall_reason": null
+      },
+      "top_patterns": {
+        "top_genes": [
+          {
+            "value": "MAPT [Entrez:4137]",
+            "count": 7711
+          },
+          {
+            "value": "FTDP-17 [Entrez:4137]",
+            "count": 85
+          },
+          {
+            "value": "TAU [Entrez:4137]",
+            "count": 64
+          },
+          {
+            "value": "MICROTUBULE-ASSOCIATED PROTEIN TAU [Entrez:4137]",
+            "count": 40
+          },
+          {
+            "value": "MICROTUBULE ASSOCIATED PROTEIN TAU [Entrez:4137]",
+            "count": 11
+          },
+          {
+            "value": "PHF-TAU [Entrez:4137]",
+            "count": 5
+          }
+        ],
+        "top_gene_alterations": [
+          {
+            "value": "MAPT / point mutations:mutations",
+            "count": 2300
+          },
+          {
+            "value": "MAPT / normalized variants:dna change",
+            "count": 1893
+          },
+          {
+            "value": "MAPT / structural variation:deletion",
+            "count": 491
+          },
+          {
+            "value": "MAPT / expression changes:dysregulation",
+            "count": 452
+          },
+          {
+            "value": "MAPT / epigenic changes:phosphorylation",
+            "count": 437
+          },
+          {
+            "value": "MAPT / structural variation:chromosomal variation",
+            "count": 328
+          },
+          {
+            "value": "MAPT / expression changes:underexpression",
+            "count": 260
+          },
+          {
+            "value": "MAPT / genetic manipulation:gene aggregation",
+            "count": 239
+          }
+        ],
+        "top_phenotypes": [
+          {
+            "value": "protein [GO:0003675]",
+            "count": 100
+          },
+          {
+            "value": "Neurodegeneration [HP:0002180]",
+            "count": 77
+          },
+          {
+            "value": "AD [MESH:D000544]",
+            "count": 69
+          },
+          {
+            "value": "phosphorylation [GO:0016310]",
+            "count": 64
+          },
+          {
+            "value": "biosynthetic process [GO:0009058]",
+            "count": 63
+          },
+          {
+            "value": "Dementia [HP:0000726]",
+            "count": 61
+          },
+          {
+            "value": "AD",
+            "count": 56
+          },
+          {
+            "value": "hyperphosphorylation [GO:0048151]",
+            "count": 54
+          }
+        ],
+        "top_hypotheses": [
+          {
+            "value": "Tau Protein Hypothesis",
+            "count": 5270
+          },
+          {
+            "value": "Amyloid Hypothesis",
+            "count": 1193
+          },
+          {
+            "value": "Neuroinflammation Hypothesis",
+            "count": 617
+          },
+          {
+            "value": "Abnormal Autophagy Hypothesis",
+            "count": 259
+          },
+          {
+            "value": "Mitochondrial Autophagy Hypothesis",
+            "count": 221
+          },
+          {
+            "value": "Oxidative Stress Hypothesis",
+            "count": 167
+          },
+          {
+            "value": "Glutamatergic Excitotoxicity Hypothesis",
+            "count": 121
+          }
+        ],
+        "long_tail_genes": null,
+        "long_tail_gene_alterations": null,
+        "long_tail_phenotypes": null
+      }
+    }
+  ],
+  "dominant_mechanism_strata": [
+    {
+      "value": "amyloid/tau axis",
+      "count": 6
+    },
+    {
+      "value": "proteostasis/autophagy axis",
+      "count": 4
+    },
+    {
+      "value": "neuroinflammation and microglia axis",
+      "count": 2
+    },
+    {
+      "value": "synaptic and neuronal dysfunction axis",
+      "count": 1
+    },
+    {
+      "value": "mitochondrial and oxidative stress axis",
+      "count": 1
+    },
+    {
+      "value": "vascular/metabolic axis",
+      "count": 1
+    }
+  ],
+  "top_genes": [
+    {
+      "value": "MAPT",
+      "count": 6
+    }
+  ],
+  "top_phenotype_processes": [
+    {
+      "value": "-",
+      "count": 1
+    },
+    {
+      "value": "Drosophila tauopathy",
+      "count": 1
+    },
+    {
+      "value": "neuropathological abnormalities",
+      "count": 1
+    },
+    {
+      "value": "import across plasma membrane",
+      "count": 1
+    },
+    {
+      "value": "process",
+      "count": 1
+    },
+    {
+      "value": "translation",
+      "count": 1
+    }
+  ],
+  "top_hypotheses": [
+    {
+      "value": "Abnormal Autophagy Hypothesis,Mitochondrial Autophagy Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Tau Protein Hypothesis,Neuroinflammation Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Amyloid Hypothesis,Vascular Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Tau Protein Hypothesis,Abnormal Autophagy Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Neuroinflammation Hypothesis,Microbiota-Gut-Brain Axis Hypothesis",
+      "count": 1
+    },
+    {
+      "value": "Amyloid Hypothesis,Tau Protein Hypothesis,Abnormal Autophagy Hypothesis",
+      "count": 1
+    }
+  ],
+  "long_tail_organized_count": 6,
+  "non_claims": [
+    "The packet does not prove an AD mechanism.",
+    "The packet does not replace expert review.",
+    "AI-organized evidence groups are review candidates, not manuscript conclusions.",
+    "Sentence-level PubMed evidence is provenance, not causal validation.",
+    "Raw EvidenceScore is not used as evidence strength."
+  ]
+}
