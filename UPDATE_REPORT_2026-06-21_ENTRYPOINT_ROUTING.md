@@ -28,6 +28,9 @@ specific helper skill, builder script, or reproducible output contract.
 - Updated `DESIGN.md` with deployment and trigger strategy notes.
 - Added a knowledge-synthesis usability guard that raises very small
   `--candidate-limit` values to 20 while recording the user's original request.
+- Set knowledge synthesis `--candidate-limit` default to the current API maximum
+  of 500 so the research/evaluation entrypoint starts from the broadest stable
+  curated candidate pool by default.
 
 ## Expected Effect
 

@@ -68,6 +68,7 @@ The scripts use only Python standard library modules.
 ## Update Reports
 
 - [2026-06-21 entrypoint routing and skill hierarchy update](UPDATE_REPORT_2026-06-21_ENTRYPOINT_ROUTING.md)
+- [2026-06-21 curation limit stability test](UPDATE_REPORT_2026-06-21_CURATION_LIMIT_STABILITY.md)
 - [2026-06-20 knowledge synthesis revision update](UPDATE_REPORT_2026-06-20_KNOWLEDGE_SYNTHESIS.md)
 - [2026-06-20 knowledge synthesis revision plan](KNOWLEDGE_SYNTHESIS_REVISION_PLAN_2026-06-20.md)
 - [2026-06-15 field normalization and deployment update](UPDATE_REPORT_2026-06-15_FIELD_NORMALIZATION_AND_DEPLOYMENT.md)
@@ -307,7 +308,7 @@ Use $adalterome-knowledge-synthesis to create a PSEN1 knowledge packet with an e
 Equivalent script:
 
 ```bash
-python skills/adalterome-knowledge-synthesis/scripts/build_knowledge_synthesis.py --gene PSEN1 --output-dir outputs/psen1_knowledge --candidate-limit 200 --organized-limit 18
+python skills/adalterome-knowledge-synthesis/scripts/build_knowledge_synthesis.py --gene PSEN1 --output-dir outputs/psen1_knowledge --organized-limit 18
 ```
 
 Supported analytical patterns:
@@ -344,9 +345,11 @@ Knowledge synthesis packets are designed as evaluation objects for
 the packet does not prove an AD mechanism, does not replace expert review, and
 does not treat AI-organized groups as final biological conclusions.
 
-For quick smoke tests, use at least `--candidate-limit 20`. For manuscript-scale
-evaluation, use larger candidate pools such as `--candidate-limit 200` or higher
-when API latency allows.
+By default, knowledge synthesis requests the current API maximum candidate pool
+of 500 rows per target, then narrows it with `--organized-limit`. For quick
+smoke tests, use at least `--candidate-limit 20`; lower values are raised to 20
+automatically. Reduce `--candidate-limit` only when latency or payload size
+matters more than coverage.
 
 ## Expert Case-Study Report
 

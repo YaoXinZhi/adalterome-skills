@@ -21,12 +21,13 @@ sys.path.insert(0, str(CASE_STUDY_SCRIPT_DIR))
 sys.path.insert(0, str(API_SCRIPT_DIR))
 
 import build_case_study_expert as legacy  # noqa: E402
-from evidence_fetch import API_MAX_TOP_K, api_selected_limit  # noqa: E402
+from evidence_fetch import API_MAX_TOP_K, SERVER_CURATION_MAX_SELECTED_LIMIT, api_selected_limit  # noqa: E402
 from evidence_curation import md  # noqa: E402
 from query_cache import write_cache_manifest  # noqa: E402
 
 
 DEFAULT_BASE_URL = os.environ.get("ADALTEROME_API_BASE_URL", "http://117.72.176.137/api/adalterome")
+DEFAULT_KNOWLEDGE_CANDIDATE_LIMIT = SERVER_CURATION_MAX_SELECTED_LIMIT
 MIN_KNOWLEDGE_CANDIDATE_LIMIT = 20
 
 PATTERNS = {
@@ -816,7 +817,12 @@ def main() -> int:
     parser.add_argument("--question", default="")
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL)
-    parser.add_argument("--candidate-limit", type=int, default=200, help="Candidate rows requested from server-side curation before evidence organization; values below 20 are raised to 20 for usable coverage.")
+    parser.add_argument(
+        "--candidate-limit",
+        type=int,
+        default=DEFAULT_KNOWLEDGE_CANDIDATE_LIMIT,
+        help="Candidate rows requested from server-side curation before evidence organization; defaults to the API maximum, and values below 20 are raised to 20 for usable coverage.",
+    )
     parser.add_argument("--organized-limit", type=int, default=18, help="Rows kept in the main organized packet.")
     parser.add_argument("--expert-limit", type=int, default=None, help="Deprecated alias for --organized-limit.")
     parser.add_argument("--curation-limit", type=int, default=API_MAX_TOP_K, help="Deprecated no-op retained for compatibility; capped event fallback remains disabled.")
