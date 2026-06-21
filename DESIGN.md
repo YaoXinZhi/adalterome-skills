@@ -2,6 +2,23 @@
 
 This repository follows the layered style of `r1seee/cucurlitbase-skills`.
 
+## Deployment and Trigger Strategy
+
+All skill folders remain installable so the unified entrypoint can route to
+stable helper workflows and advanced users can reproduce exact builder outputs.
+The user-facing trigger surface should not be flat:
+
+- `adalterome` is the public default entrypoint for ordinary questions.
+- `adalterome-knowledge-synthesis` is the public research/evaluation entrypoint
+  for knowledge packets, expert review sheets, scoring tables, and
+  AI-for-biomedical-knowledge-synthesis experiments.
+- `adalterome-api`, `adalterome-report`, `adalterome-gene-report`,
+  `adalterome-term-report`, `adalterome-hypothesis-report`,
+  `adalterome-compare-report`, and `adalterome-case-study-expert` are
+  internal/advanced direct-use helpers. Their descriptions should discourage
+  automatic selection for ordinary user questions unless the user explicitly
+  names the helper, asks for a direct builder script, or needs reproducibility.
+
 ## Skill Layers
 
 1. `adalterome`
@@ -10,32 +27,38 @@ This repository follows the layered style of `r1seee/cucurlitbase-skills`.
    - Ensures final answers mention report outputs and raw-data cache locations when scripts are run.
 
 2. `adalterome-api`
+   - Internal/advanced direct-use helper, normally reached through `adalterome`.
    - Lowest-level retrieval skill.
    - Calls the live AD-Alterome REST API.
    - Preserves exact sentence evidence, PubMed links, Event chains, and normalized Evidence blocks.
    - Caches raw API JSON payloads locally by exact request URL for repeat use and manual inspection.
 
 3. `adalterome-report`
+   - Internal/advanced direct-use helper, normally reached through `adalterome`.
    - Presentation skill.
    - Converts API outputs into a fixed report contract.
    - Keeps provenance and evidence sections stable across runs.
 
 4. `adalterome-gene-report`
+   - Internal/advanced direct-use helper, normally reached through `adalterome`.
    - Research-style report skill.
    - Builds a deep Markdown draft for one gene.
    - Supports mechanism synthesis, evidence caveats, and follow-up gap analysis.
 
 5. `adalterome-term-report`
+   - Internal/advanced direct-use helper, normally reached through `adalterome`.
    - Research-style report skill for phenotypes, ontology terms, and pathological processes.
    - Uses `/term/overview` and `/term/curation`, with `/term/events` as capped fallback.
    - Emphasizes top genes, top hypotheses, evidence traces, and broad-term caveats.
 
 6. `adalterome-hypothesis-report`
+   - Internal/advanced direct-use helper, normally reached through `adalterome`.
    - Research-style report skill for AD hypothesis support.
    - Uses `/hypothesis/overview` and `/hypothesis/curation`, with `/hypothesis/support` as capped fallback.
    - Separates curated hypothesis labels from original sentence evidence.
 
 7. `adalterome-compare-report`
+   - Internal/advanced direct-use helper, normally reached through `adalterome`.
    - Research-style report skill for two-gene comparison.
    - Uses `/compare/genes` plus per-gene overview and curation packages for both genes.
    - Keeps common patterns and gene-specific evidence separate.
@@ -47,6 +70,7 @@ This repository follows the layered style of `r1seee/cucurlitbase-skills`.
    - Frames AI output as an evaluation object for `AI for Biomedical Knowledge Synthesis`, not as final biological claims or paper-ready mechanism conclusions.
 
 9. `adalterome-case-study-expert`
+   - Legacy/internal direct-use helper, normally not selected unless explicitly requested.
    - Legacy compatibility layer for older narrative-style case-study outputs.
    - Uses AD-Alterome full-pool curation first, then applies coverage checks, comparison-balance checks, transparent expert evidence scoring, long-tail protection, and AD pathology-oriented biological trimming.
    - Produces a two-layer output: a case-study narrative plus an audit appendix with scored evidence and exact sentence traces.

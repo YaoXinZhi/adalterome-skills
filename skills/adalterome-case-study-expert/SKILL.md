@@ -1,11 +1,15 @@
 ---
 name: adalterome-case-study-expert
-description: Build legacy AD pathologist-style AD-Alterome case-study narratives. Use only when the user explicitly asks for the older narrative case-study style. For publication-facing evidence organization, expert review sheets, scoring tables, AI-for-biomedical-knowledge-synthesis evaluation, or outputs that should be assessed rather than treated as final conclusions, prefer adalterome-knowledge-synthesis.
+description: Legacy/internal direct-use AD-Alterome compatibility helper for older AD pathologist-style case-study narratives. Normally do not select for ordinary user-facing AD-Alterome questions; use only when the user explicitly names adalterome-case-study-expert or asks for the older narrative case-study style. For publication-facing evidence organization, expert review sheets, scoring tables, or AI-for-biomedical-knowledge-synthesis evaluation, prefer adalterome-knowledge-synthesis.
 ---
 
 # AD-Alterome Case Study Expert
 
 Use this compatibility skill when the user explicitly wants AD-Alterome evidence interpreted as an older scientific case-study narrative.
+
+> Direct-use boundary: this is a legacy/internal helper. For ordinary
+> AD-Alterome questions, start from `adalterome`; for manuscript-facing expert
+> evaluation, use `adalterome-knowledge-synthesis`.
 
 For manuscript-facing work, prefer `adalterome-knowledge-synthesis`. The knowledge synthesis skill keeps the same AD-Alterome-first provenance discipline but outputs a knowledge packet, evidence map, expert review sheet, evaluation record, and provenance manifest so AI-organized content can be scored by human experts.
 

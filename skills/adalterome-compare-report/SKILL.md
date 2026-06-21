@@ -1,11 +1,15 @@
 ---
 name: adalterome-compare-report
-description: Build two-gene AD-Alterome comparison reports. Use when the user asks to compare two genes such as APOE vs APP, MAPT vs APP, or PSEN1 vs PSEN2 using AD-Alterome API overviews, shared and distinct phenotype/process features, shared and distinct AD hypotheses, curated representative evidence for each gene, top and long-tail gene-alteration/phenotype/process patterns, PubMed links, mechanism differences, and common patterns.
+description: Internal/advanced direct-use AD-Alterome helper for reproducible two-gene comparison report generation. Normally do not select for ordinary user-facing AD-Alterome questions; adalterome invokes this helper after it detects a two-gene comparison query. Use directly only when the user explicitly names adalterome-compare-report, asks for the compare report builder script, or needs to reproduce a known comparison report output contract.
 ---
 
 # AD-Alterome Compare Report
 
 Use this skill when the user wants a structured comparison of two genes in AD-Alterome.
+
+> Direct-use boundary: this is an internal/advanced helper. For ordinary
+> two-gene AD-Alterome comparison questions, start from `adalterome`; use this
+> skill directly only for explicit builder-script or reproducibility tasks.
 
 ## Quick Start
 

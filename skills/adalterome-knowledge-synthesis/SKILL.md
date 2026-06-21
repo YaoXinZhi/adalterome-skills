@@ -1,12 +1,16 @@
 ---
 name: adalterome-knowledge-synthesis
-description: Build researcher-facing AD-Alterome knowledge synthesis packets for expert evaluation. Use when the user asks to organize Alzheimer disease alteration evidence, prepare an evidence map, generate an expert review sheet, evaluate AI-for-biomedical-knowledge-synthesis, compare AD-Alterome against generic LLM/RAG outputs, inspect long-tail evidence, or create publication-facing but non-conclusive knowledge packets from gene, phenotype/process, hypothesis, multi-gene, gene-set, recommendation, or hypothesis/network queries.
+description: Public research/evaluation AD-Alterome entrypoint for AI-for-biomedical-knowledge-synthesis. Use directly when the user explicitly asks to organize Alzheimer disease alteration evidence, prepare an evidence map, generate an expert review sheet, evaluate AI-for-biomedical-knowledge-synthesis, compare AD-Alterome against generic LLM/RAG outputs, inspect long-tail evidence, or create publication-facing but non-conclusive knowledge packets from gene, phenotype/process, hypothesis, multi-gene, gene-set, recommendation, or hypothesis/network queries. Ordinary AD-Alterome questions can start from adalterome.
 ---
 
 # AD-Alterome Knowledge Synthesis
 
 Use this skill when the user wants AD-Alterome evidence organized for human
 expert review rather than turned into final biological conclusions.
+
+> Public research entry: users may call this skill directly for knowledge
+> synthesis and expert-evaluation workflows. For ordinary AD-Alterome lookup or
+> report requests, start from `adalterome`.
 
 This is the preferred publication-facing synthesis layer for the revised
 `AI for Biomedical Knowledge Synthesis` framing. It keeps AD-Alterome
@@ -79,6 +83,9 @@ python3 scripts/build_knowledge_synthesis.py --gene-set TREM2 TYROBP --hypothesi
    endpoints for publication-facing synthesis.
 3. Request a broad candidate pool with `--candidate-limit`, then keep a
    bounded organized subset with `--organized-limit`.
+   For quick smoke tests, use at least `--candidate-limit 20`; manuscript-scale
+   evaluation should usually use `--candidate-limit 200` or higher when API
+   latency allows.
 4. Inspect `data/coverage.json` before making claims.
 5. Use `knowledge_packet.md` as an AI-organized review object, not paper text.
 6. Give `expert_review_sheet.tsv` to human reviewers for rubric scoring.

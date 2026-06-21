@@ -1,11 +1,15 @@
 ---
 name: adalterome-report
-description: Turn AD-Alterome API results into fixed-format user-facing evidence reports. Use when the user wants a stable gene report, phenotype/process report, AD hypothesis support report, two-gene comparison report, evidence summary with PubMed links, or any AD-Alterome output whose section order, query provenance, original sentence evidence, and caveats should remain consistent across turns.
+description: Internal/advanced direct-use AD-Alterome fixed-report formatter for reproducible evidence packets. Normally do not select for ordinary user-facing AD-Alterome questions; adalterome invokes this helper after routing. Use directly only when the user explicitly names adalterome-report, asks for the fixed report output contract, or needs to reproduce a known fixed-format report from API results.
 ---
 
 # AD-Alterome Report
 
 Use this skill for stable presentation and reporting. Fetch data through the sibling `adalterome-api` skill and keep the output format fixed.
+
+> Direct-use boundary: this is an internal/advanced report formatter. For
+> ordinary user-facing AD-Alterome questions, start from `adalterome`; use this
+> skill directly only for explicit fixed-report or reproducibility tasks.
 
 ## Quick Start
 

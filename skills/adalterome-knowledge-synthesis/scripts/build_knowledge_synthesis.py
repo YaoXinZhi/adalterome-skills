@@ -27,6 +27,7 @@ from query_cache import write_cache_manifest  # noqa: E402
 
 
 DEFAULT_BASE_URL = os.environ.get("ADALTEROME_API_BASE_URL", "http://117.72.176.137/api/adalterome")
+MIN_KNOWLEDGE_CANDIDATE_LIMIT = 20
 
 PATTERNS = {
     "auto",
@@ -716,7 +717,8 @@ def evaluation_record(
         "mode": mode,
         "analytical_pattern": pattern,
         "question": question,
-        "candidate_limit_requested": args.candidate_limit,
+        "candidate_limit_requested": getattr(args, "candidate_limit_requested", args.candidate_limit),
+        "candidate_limit_effective": args.candidate_limit,
         "candidate_limit_api_capped": api_selected_limit(args.candidate_limit),
         "organized_limit": args.organized_limit,
         "coverage": coverage,
@@ -775,6 +777,7 @@ def provenance_manifest(
         "analytical_pattern": pattern,
         "question": question,
         "base_url": args.base_url,
+        "candidate_limit_requested": getattr(args, "candidate_limit_requested", args.candidate_limit),
         "candidate_limit": args.candidate_limit,
         "organized_limit": args.organized_limit,
         "timeout": args.timeout,
@@ -813,7 +816,7 @@ def main() -> int:
     parser.add_argument("--question", default="")
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL)
-    parser.add_argument("--candidate-limit", type=int, default=200, help="Candidate rows requested from server-side curation before evidence organization.")
+    parser.add_argument("--candidate-limit", type=int, default=200, help="Candidate rows requested from server-side curation before evidence organization; values below 20 are raised to 20 for usable coverage.")
     parser.add_argument("--organized-limit", type=int, default=18, help="Rows kept in the main organized packet.")
     parser.add_argument("--expert-limit", type=int, default=None, help="Deprecated alias for --organized-limit.")
     parser.add_argument("--curation-limit", type=int, default=API_MAX_TOP_K, help="Deprecated no-op retained for compatibility; capped event fallback remains disabled.")
@@ -821,6 +824,13 @@ def main() -> int:
     args = parser.parse_args()
     if args.expert_limit is not None:
         args.organized_limit = args.expert_limit
+    args.candidate_limit_requested = args.candidate_limit
+    if args.candidate_limit < MIN_KNOWLEDGE_CANDIDATE_LIMIT:
+        print(
+            f"Adjusted --candidate-limit from {args.candidate_limit} to {MIN_KNOWLEDGE_CANDIDATE_LIMIT} for usable knowledge-synthesis coverage.",
+            file=sys.stderr,
+        )
+        args.candidate_limit = MIN_KNOWLEDGE_CANDIDATE_LIMIT
 
     mode = infer_request_mode(args)
     pattern = infer_pattern(args, mode)

@@ -1,11 +1,15 @@
 ---
 name: adalterome-gene-report
-description: Build deep researcher-facing AD-Alterome gene reports from one Alzheimer disease gene query. Use when the user wants a multi-section Markdown/DOCX-ready literature evidence report with AD-Alterome API gene overview, curated representative evidence, top and long-tail gene-alteration/phenotype/process patterns, PubMed links, phenotype/process and hypothesis interpretation, mechanism-stratified synthesis, original sentence traces, comparison-ready context, and follow-up research gaps.
+description: Internal/advanced direct-use AD-Alterome helper for reproducible one-gene deep report generation. Normally do not select for ordinary user-facing AD-Alterome questions; adalterome invokes this helper after it detects a gene query. Use directly only when the user explicitly names adalterome-gene-report, asks for the gene report builder script, or needs to reproduce a known one-gene report output contract.
 ---
 
 # AD-Alterome Gene Report
 
 Use this skill when the user wants a research-style report for one AD-related gene, not a short API answer.
+
+> Direct-use boundary: this is an internal/advanced helper. For ordinary
+> one-gene AD-Alterome questions, start from `adalterome`; use this skill
+> directly only for explicit builder-script or reproducibility tasks.
 
 ## Workflow
 

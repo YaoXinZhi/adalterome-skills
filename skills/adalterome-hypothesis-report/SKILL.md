@@ -1,11 +1,15 @@
 ---
 name: adalterome-hypothesis-report
-description: Build deep AD hypothesis support reports from AD-Alterome. Use when the user asks for a researcher-facing report about Amyloid Hypothesis, Tau Protein Hypothesis, Neuroinflammation Hypothesis, oxidative stress, mitochondrial autophagy, vascular hypothesis, or any AD hypothesis-centered evidence summary with top genes, top phenotype/process features, curated representative sentences, top and long-tail gene/gene-alteration/phenotype/process patterns, PubMed links, and support patterns.
+description: Internal/advanced direct-use AD-Alterome helper for reproducible AD hypothesis support report generation. Normally do not select for ordinary user-facing AD-Alterome questions; adalterome invokes this helper after it detects a hypothesis query. Use directly only when the user explicitly names adalterome-hypothesis-report, asks for the hypothesis report builder script, or needs to reproduce a known hypothesis report output contract.
 ---
 
 # AD-Alterome Hypothesis Report
 
 Use this skill when the user wants a deep report for one AD hypothesis rather than a short list of supporting records.
+
+> Direct-use boundary: this is an internal/advanced helper. For ordinary
+> hypothesis-centered AD-Alterome questions, start from `adalterome`; use this
+> skill directly only for explicit builder-script or reproducibility tasks.
 
 ## Quick Start
 

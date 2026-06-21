@@ -1,11 +1,15 @@
 ---
 name: adalterome-term-report
-description: Build deep phenotype, downstream biological process, ontology term, or pathological-process reports from AD-Alterome. Use when the user asks for a researcher-facing report about a phenotype or process such as mitochondrial dysfunction, neuroinflammation, amyloid processing, synaptic dysfunction, an HPO/GO/MeSH term, or any AD-Alterome phenotype/process evidence summary with API top genes, AD hypotheses, curated representative evidence, top and long-tail gene/gene-alteration/phenotype/process patterns, original evidence sentences, PubMed links, and follow-up interpretation.
+description: Internal/advanced direct-use AD-Alterome helper for reproducible phenotype/process deep report generation. Normally do not select for ordinary user-facing AD-Alterome questions; adalterome invokes this helper after it detects a phenotype, downstream biological process, ontology term, or pathological-process query. Use directly only when the user explicitly names adalterome-term-report, asks for the term report builder script, or needs to reproduce a known phenotype/process report output contract.
 ---
 
 # AD-Alterome Phenotype / Process Report
 
 Use this skill when the user wants a deep report for one phenotype, ontology term, or pathological process rather than a short API answer.
+
+> Direct-use boundary: this is an internal/advanced helper. For ordinary
+> phenotype/process AD-Alterome questions, start from `adalterome`; use this
+> skill directly only for explicit builder-script or reproducibility tasks.
 
 ## Quick Start
 

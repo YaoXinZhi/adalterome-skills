@@ -4,19 +4,34 @@ AD-Alterome Skills provides a set of Codex skills for querying AD-Alterome and t
 
 These skills are designed for users who want to explore AD-related genes, phenotypes, ontology terms, hypotheses, and sentence-level evidence without manually assembling API calls or reformatting PubMed-linked evidence tables. The publication-facing framing is **AI for Biomedical Knowledge Synthesis**: AI organizes complex alteration evidence for expert evaluation; it does not replace expert review or directly establish disease mechanisms.
 
+## Recommended Invocation Model
+
+Install all skill folders, but treat the user-facing surface as two public
+entrypoints:
+
+- `adalterome`: default entrypoint for ordinary AD-Alterome questions.
+- `adalterome-knowledge-synthesis`: direct research/evaluation entrypoint for
+  knowledge packets, evidence maps, expert review sheets, scoring tables, and
+  AI-for-biomedical-knowledge-synthesis experiments.
+
+All other `adalterome-*` skills remain available as internal/advanced
+direct-use helpers for routing, debugging, reproducibility, and fixed builder
+scripts. Ordinary users should not need to choose among gene, phenotype/process,
+hypothesis, comparison, report, API, or legacy case-study skills.
+
 ## Skill Index
 
 | Skill | Status | Purpose | Trigger keywords |
 | --- | --- | --- | --- |
-| `adalterome` | Recommended | Unified entrypoint that routes natural-language AD-Alterome questions to API lookup, fixed report, deep report, knowledge synthesis, comparison, or legacy case-study mode. | "AD-Alterome", "query AD-Alterome", "write AD-Alterome report", "knowledge synthesis", "organize AD evidence" |
-| `adalterome-api` | Stable | Query AD-Alterome REST API for schema, hypotheses, gene events, term events, hypothesis support, full-pool curation packages, overviews, two-gene comparison, original evidence sentences, and PubMed links. | "query AD-Alterome", "gene events", "term events", "hypothesis support", "PubMed evidence", "PMID evidence" |
-| `adalterome-report` | Stable | Convert AD-Alterome API results into fixed-format evidence reports with stable sections, source links, original sentences, and caveats. | "fixed report", "standard report", "evidence summary", "AD-Alterome report" |
-| `adalterome-gene-report` | Advanced | Generate deep researcher-facing gene reports with API overview statistics, server-side full-pool curation, PubMed links, phenotype/process and hypothesis interpretation, mechanism synthesis, top and long-tail patterns, and research priorities. | "deep gene report", "MAPT report", "APOE evidence dossier", "mechanism synthesis" |
-| `adalterome-term-report` | Advanced | Generate deep phenotype, ontology term, or pathological-process reports with API top genes, hypotheses, server-side full-pool curation, PubMed links, top and long-tail gene/gene-alteration/phenotype/process patterns, and mechanism-oriented interpretation. | "phenotype report", "process report", "mitochondrial dysfunction", "neuroinflammation" |
-| `adalterome-hypothesis-report` | Advanced | Generate deep AD hypothesis support reports with top genes, top phenotype/process features, server-side full-pool curation, source-traceable evidence, and support pattern synthesis. | "hypothesis report", "Amyloid Hypothesis", "Tau Protein Hypothesis", "support evidence" |
-| `adalterome-compare-report` | Advanced | Generate two-gene comparison reports with shared/distinct phenotype/process features, shared/distinct hypotheses, and full-pool curation traces for each gene. | "compare genes", "APOE vs APP", "gene comparison", "shared mechanisms" |
-| `adalterome-knowledge-synthesis` | Recommended for evaluation | Generate researcher-facing knowledge packets, evidence maps, expert review sheets, evaluation records, and provenance manifests for AI-for-biomedical-knowledge-synthesis experiments. | "knowledge synthesis", "evidence organization", "expert review sheet", "scoring table", "long-tail evidence", "AI evaluation" |
-| `adalterome-case-study-expert` | Legacy/compatibility | Generate older AD pathology case-study narratives with audit appendices. Prefer `adalterome-knowledge-synthesis` for publication-facing work where AI output should be evaluated rather than used as final text. | "legacy case study", "AD pathology narrative", "biological cut" |
+| `adalterome` | Public default | Unified entrypoint that routes natural-language AD-Alterome questions to API lookup, fixed report, deep report, knowledge synthesis, comparison, or legacy case-study helper workflows. | "AD-Alterome", "query AD-Alterome", "write AD-Alterome report", "organize AD evidence" |
+| `adalterome-knowledge-synthesis` | Public research/evaluation | Generate researcher-facing knowledge packets, evidence maps, expert review sheets, evaluation records, and provenance manifests for AI-for-biomedical-knowledge-synthesis experiments. | "knowledge synthesis", "evidence organization", "expert review sheet", "scoring table", "long-tail evidence", "AI evaluation" |
+| `adalterome-api` | Internal/advanced direct-use | Raw REST API, schema, cache, and payload helper used by the unified entrypoint and report builders. | "explicit adalterome-api", "raw API debug", "schema inspection", "reproduce API payload" |
+| `adalterome-report` | Internal/advanced direct-use | Fixed-format evidence report formatter for reproducible report contracts. | "explicit adalterome-report", "fixed report contract", "reproduce fixed report" |
+| `adalterome-gene-report` | Internal/advanced direct-use | One-gene deep report builder used after routing detects a gene query. | "explicit adalterome-gene-report", "gene report builder", "reproduce one-gene report" |
+| `adalterome-term-report` | Internal/advanced direct-use | Phenotype/process deep report builder used after routing detects a phenotype, ontology, or pathological-process query. | "explicit adalterome-term-report", "term report builder", "reproduce phenotype/process report" |
+| `adalterome-hypothesis-report` | Internal/advanced direct-use | AD hypothesis support report builder used after routing detects a hypothesis-centered query. | "explicit adalterome-hypothesis-report", "hypothesis report builder", "reproduce hypothesis report" |
+| `adalterome-compare-report` | Internal/advanced direct-use | Two-gene comparison report builder used after routing detects a comparison query. | "explicit adalterome-compare-report", "compare report builder", "reproduce comparison report" |
+| `adalterome-case-study-expert` | Legacy/internal direct-use | Older narrative case-study helper kept for compatibility. Prefer `adalterome-knowledge-synthesis` for publication-facing evaluation work. | "explicit adalterome-case-study-expert", "legacy case study", "older narrative case-study style" |
 
 ## Report vs Knowledge Synthesis
 
@@ -52,6 +67,7 @@ The scripts use only Python standard library modules.
 
 ## Update Reports
 
+- [2026-06-21 entrypoint routing and skill hierarchy update](UPDATE_REPORT_2026-06-21_ENTRYPOINT_ROUTING.md)
 - [2026-06-20 knowledge synthesis revision update](UPDATE_REPORT_2026-06-20_KNOWLEDGE_SYNTHESIS.md)
 - [2026-06-20 knowledge synthesis revision plan](KNOWLEDGE_SYNTHESIS_REVISION_PLAN_2026-06-20.md)
 - [2026-06-15 field normalization and deployment update](UPDATE_REPORT_2026-06-15_FIELD_NORMALIZATION_AND_DEPLOYMENT.md)
@@ -88,9 +104,12 @@ cp -R skills/adalterome-case-study-expert "${CODEX_HOME:-$HOME/.codex}/skills/"
 
 Restart Codex after installation so the skills can be discovered.
 
-Most users can invoke `adalterome` and ask in natural language. The unified
-skill routes the request to the correct specialized skill. Advanced users can
-still call the lower-level skills directly.
+Most users should invoke only `adalterome` and ask in natural language. The
+unified skill routes the request to the correct specialized helper. Users doing
+publication-facing AI-for-biomedical-knowledge-synthesis experiments may invoke
+`adalterome-knowledge-synthesis` directly. Advanced users can still call the
+lower-level skills directly for reproducibility, debugging, or fixed script
+contracts.
 
 ## Local Data Cache
 
@@ -324,6 +343,10 @@ Knowledge synthesis packets are designed as evaluation objects for
 `AI for Biomedical Knowledge Synthesis`. They explicitly include non-claims:
 the packet does not prove an AD mechanism, does not replace expert review, and
 does not treat AI-organized groups as final biological conclusions.
+
+For quick smoke tests, use at least `--candidate-limit 20`. For manuscript-scale
+evaluation, use larger candidate pools such as `--candidate-limit 200` or higher
+when API latency allows.
 
 ## Expert Case-Study Report
 

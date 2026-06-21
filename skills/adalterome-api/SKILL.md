@@ -1,11 +1,16 @@
 ---
 name: adalterome-api
-description: Query the live AD-Alterome REST API for Alzheimer disease literature evidence. Use when Codex needs current data from an AD-Alterome API service to inspect schema, list AD hypotheses, retrieve gene-centered events, phenotype/process-centered events, hypothesis support evidence, gene/phenotype/hypothesis overviews, compare two genes, return PubMed links, or expose exact original evidence sentences through the normalized Evidence payload.
+description: Internal/advanced direct-use AD-Alterome helper for raw REST API inspection, schema checks, cache debugging, and reproducible payload retrieval. Normally do not select for ordinary user-facing AD-Alterome questions; route through adalterome unless the user explicitly names adalterome-api, asks for raw API/debug output, or requests a direct API script.
 ---
 
 # AD-Alterome API
 
 Use this skill to query AD-Alterome through the REST API instead of guessing database contents from memory.
+
+> Direct-use boundary: this is an internal/advanced helper. For ordinary
+> user-facing AD-Alterome questions, start from `adalterome`; use this skill
+> directly only for explicit raw API, schema, cache, debugging, or reproducible
+> payload tasks.
 
 ## Quick Start
 

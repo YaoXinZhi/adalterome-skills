@@ -1,11 +1,17 @@
 ---
 name: adalterome
-description: Unified AD-Alterome entrypoint. Use when the user asks any AD-Alterome question and should not need to choose between API, gene, phenotype/process, hypothesis, comparison, knowledge synthesis, evaluation, or legacy case-study skills. Route the request to the most appropriate AD-Alterome skill, preserve original evidence and PubMed links, and report where raw query data were saved.
+description: Public default AD-Alterome entrypoint. Use for ordinary user-facing AD-Alterome questions so the user does not need to choose between API, gene, phenotype/process, hypothesis, comparison, knowledge synthesis, evaluation, or legacy case-study helper skills. Route the request to the most appropriate AD-Alterome workflow, preserve original evidence and PubMed links, and report where raw query data were saved.
 ---
 
 # AD-Alterome Unified Skill
 
 Use this as the default entrypoint for AD-Alterome work. The user should be able to invoke one skill and ask in natural language; decide the best downstream workflow from the question.
+
+## Public Entrypoint Hierarchy
+
+- Ordinary users should invoke `adalterome`.
+- Manuscript/evaluation users may invoke `adalterome-knowledge-synthesis` directly when they explicitly need knowledge packets, evidence maps, expert review sheets, scoring tables, or AI-for-biomedical-knowledge-synthesis evaluation materials.
+- Other `adalterome-*` skills are internal/advanced direct-use helpers. Use them directly only when the user explicitly names that skill, asks for a specific builder script, or is reproducing a known report/API output contract.
 
 ## Routing
 
