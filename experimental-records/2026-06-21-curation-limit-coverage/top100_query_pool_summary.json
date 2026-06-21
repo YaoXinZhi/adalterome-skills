@@ -1,0 +1,32 @@
+{
+  "Genes": {
+    "n": 100,
+    "above_500": 12,
+    "at_or_below_500": 88,
+    "median": 201,
+    "p90": 561,
+    "p95": 1019,
+    "max": 2700,
+    "max_query": "MAPT [Entrez:4137]"
+  },
+  "Phenotype/process": {
+    "n": 100,
+    "above_500": 24,
+    "at_or_below_500": 76,
+    "median": 254,
+    "p90": 682,
+    "p95": 777,
+    "max": 2819,
+    "max_query": "AD [MESH:D000544]"
+  },
+  "Hypotheses": {
+    "n": 11,
+    "above_500": 11,
+    "at_or_below_500": 0,
+    "median": 2599,
+    "p90": 5304,
+    "p95": 8588,
+    "max": 8588,
+    "max_query": "Amyloid Hypothesis"
+  }
+}

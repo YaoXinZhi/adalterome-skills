@@ -1,0 +1,212 @@
+category,rank,query_value,event_unique_count,curated_pool_count,exceeds_500
+Genes,1,MAPT [Entrez:4137],7916,2700,True
+Genes,2,PRESENILIN 1 [Entrez:5663],4727,2398,True
+Genes,3,AMYLOID PRECURSOR PROTEIN [Entrez:351],4963,2310,True
+Genes,4,APOE [Entrez:348],3986,1845,True
+Genes,5,PS1 [Entrez:338399],2966,1653,True
+Genes,6,TREM2 [Entrez:54209],2158,1019,True
+Genes,7,PRESENILIN 2 [Entrez:5664],1499,909,True
+Genes,8,ALPHA-SYNUCLEIN [Entrez:6622],2842,781,True
+Genes,9,BACE [Entrez:23621],963,589,True
+Genes,10,BDNF-AS [Entrez:497258],1754,562,True
+Genes,11,SOD1 [Entrez:6647],2794,561,True
+Genes,12,PS2 [Entrez:338412],762,556,True
+Genes,13,PROGRANULIN [Entrez:2896],1770,500,False
+Genes,14,SORL1 [Entrez:6653],684,500,False
+Genes,15,ABCA7 [Entrez:10347],553,500,False
+Genes,16,CLU [Entrez:1191],504,459,False
+Genes,17,TDP-43 [Entrez:23435],1834,453,False
+Genes,18,TNF [Entrez:7124],997,445,False
+Genes,19,INTERLEUKIN-6 [Entrez:3569],767,417,False
+Genes,20,SPI1 [Entrez:6688],869,416,False
+Genes,21,AQP4 [Entrez:361],566,366,False
+Genes,22,MTHFR [Entrez:4524],839,365,False
+Genes,23,ESR1 [Entrez:2099],765,350,False
+Genes,24,SIRT1 [Entrez:23411],721,336,False
+Genes,25,AKT1 [Entrez:207],752,316,False
+Genes,26,NLRP3 [Entrez:114548],599,316,False
+Genes,27,TOM40 [Entrez:10452],448,300,False
+Genes,28,CDK5 [Entrez:1020],412,300,False
+Genes,29,BIN1 [Entrez:274],329,298,False
+Genes,30,C9ORF72 [Entrez:203228],1226,294,False
+Genes,31,NFKB1 [Entrez:4790],594,277,False
+Genes,32,C1D [Entrez:10438],395,273,False
+Genes,33,PP2A [Entrez:5524],412,271,False
+Genes,34,CX3CR1 [Entrez:1524],411,269,False
+Genes,35,IL1B [Entrez:3553],441,266,False
+Genes,36,PRP [Entrez:5621],838,258,False
+Genes,37,ABCA1 [Entrez:19],451,255,False
+Genes,38,PICALM [Entrez:8301],258,250,False
+Genes,39,CR1 [Entrez:1378],283,249,False
+Genes,40,HFE [Entrez:3077],404,246,False
+Genes,41,ADAM10 [Entrez:102],330,232,False
+Genes,42,BRAIN-DERIVED NEUROTROPHIC FACTOR [Entrez:627],313,232,False
+Genes,43,LRRK2 [Entrez:120892],1470,229,False
+Genes,44,HUNTINGTIN [Entrez:3064],1031,222,False
+Genes,45,GSK3B [Entrez:2932],295,220,False
+Genes,46,TMEM106B [Entrez:54664],440,212,False
+Genes,47,TLR4 [Entrez:7099],437,212,False
+Genes,48,INSULIN DEGRADING ENZYME [Entrez:3416],266,209,False
+Genes,49,CREB1 [Entrez:1385],317,208,False
+Genes,50,ACE [Entrez:1636],374,202,False
+Genes,51,CA1 [Entrez:759],251,201,False
+Genes,52,CD33 [Entrez:945],203,200,False
+Genes,53,PARK6 [Entrez:65018],867,199,False
+Genes,54,VPS35 [Entrez:55737],509,198,False
+Genes,55,JNK [Entrez:5599],340,195,False
+Genes,56,GSK3A [Entrez:2931],262,194,False
+Genes,57,HDAC6 [Entrez:10013],314,191,False
+Genes,58,DAP12 [Entrez:7305],288,190,False
+Genes,59,ERK [Entrez:5594],403,182,False
+Genes,60,MTOR [Entrez:2475],475,177,False
+Genes,61,PRKAB1 [Entrez:5564],329,176,False
+Genes,62,AGE [Entrez:5973],289,175,False
+Genes,63,NEP [Entrez:4311],213,172,False
+Genes,64,GRIN2B [Entrez:2904],263,171,False
+Genes,65,CALHM1 [Entrez:255022],176,170,False
+Genes,66,P62 [Entrez:23636],485,169,False
+Genes,67,SLC1A2 [Entrez:6506],327,165,False
+Genes,68,PGC-1ALPHA [Entrez:10891],367,164,False
+Genes,69,NFE2L2 [Entrez:4780],350,164,False
+Genes,70,PLCG2 [Entrez:5336],228,159,False
+Genes,71,TP53 [Entrez:7157],757,157,False
+Genes,72,CTSD [Entrez:1509],302,156,False
+Genes,73,COMT [Entrez:1312],461,154,False
+Genes,74,HMOX1 [Entrez:3162],312,152,False
+Genes,75,TFEB [Entrez:7942],293,152,False
+Genes,76,APOC1 [Entrez:341],189,151,False
+Genes,77,BRI [Entrez:9445],259,150,False
+Genes,78,CYSTATIN C [Entrez:1471],253,148,False
+Genes,79,DYRK1A [Entrez:1859],322,146,False
+Genes,80,NGF [Entrez:4803],224,145,False
+Genes,81,ALDH2 [Entrez:217],286,143,False
+Genes,82,BECN1 [Entrez:8678],265,143,False
+Genes,83,IL1A [Entrez:3552],243,143,False
+Genes,84,GFAP [Entrez:2670],392,142,False
+Genes,85,IGF1 [Entrez:3479],272,142,False
+Genes,86,NGFR [Entrez:4804],201,142,False
+Genes,87,NOTCH3 [Entrez:4854],420,138,False
+Genes,88,BCHE [Entrez:590],159,138,False
+Genes,89,TNFAIP1 [Entrez:7126],228,137,False
+Genes,90,LDLR [Entrez:3949],347,136,False
+Genes,91,TMED9 [Entrez:54732],150,136,False
+Genes,92,BCL2 [Entrez:596],325,135,False
+Genes,93,SIRT3 [Entrez:23410],275,134,False
+Genes,94,ATG5 [Entrez:9474],275,133,False
+Genes,95,CYP46A1 [Entrez:10858],170,133,False
+Genes,96,CD2AP [Entrez:23607],144,133,False
+Genes,97,STAT3 [Entrez:6774],312,132,False
+Genes,98,WWC1 [Entrez:23286],147,132,False
+Genes,99,MITOFUSIN-2 [Entrez:9927],399,131,False
+Genes,100,SIRT2 [Entrez:22933],209,130,False
+Phenotype/process,1,AD [MESH:D000544],4330,2819,True
+Phenotype/process,2,protein [GO:0003675],4333,1662,True
+Phenotype/process,3,AD,2136,1540,True
+Phenotype/process,4,Expression,3092,1284,True
+Phenotype/process,5,Onset [HP:0003674],2111,1021,True
+Phenotype/process,6,cognitive decline [MESH:D003072],1209,777,True
+Phenotype/process,7,activation [ADMO:0000042],1607,724,True
+Phenotype/process,8,memory [GO:0007613],1003,708,True
+Phenotype/process,9,Neurodegeneration [HP:0002180],1327,695,True
+Phenotype/process,10,biosynthetic process [GO:0009058],1698,693,True
+Phenotype/process,11,signaling [GO:0023052],1658,682,True
+Phenotype/process,12,pathway [ADMO:0000100],1583,670,True
+Phenotype/process,13,cell [GO:0005623],2009,664,True
+Phenotype/process,14,neurodegenerations [MESH:D019636],1189,640,True
+Phenotype/process,15,binding [GO:0005488],1610,615,True
+Phenotype/process,16,Dementia [HP:0000726],1111,593,True
+Phenotype/process,17,phosphorylation [GO:0016310],1027,593,True
+Phenotype/process,18,developmental process [GO:0032502],1686,591,True
+Phenotype/process,19,neuronal death [MESH:D009410],1090,586,True
+Phenotype/process,20,Mitochondrial inheritance [HP:0001427],1338,583,True
+Phenotype/process,21,Alzheimer disease [HP:0002511],641,578,True
+Phenotype/process,22,death [GO:0016265],1336,570,True
+Phenotype/process,23,Alzheimer's disease,562,531,True
+Phenotype/process,24,Late onset [HP:0003584],760,528,True
+Phenotype/process,25,Cognitive impairment [HP:0100543],634,495,False
+Phenotype/process,26,PD [MESH:D010300],983,492,False
+Phenotype/process,27,All [HP:0000001],1400,481,False
+Phenotype/process,28,inflammatory response [GO:0006954],958,451,False
+Phenotype/process,29,induction by symbiont of host programmed cell death [GO:0052042],794,446,False
+Phenotype/process,30,macroautophagy [GO:0016236],891,443,False
+Phenotype/process,31,activity,946,432,False
+Phenotype/process,32,Sporadic [HP:0003745],752,421,False
+Phenotype/process,33,execution phase of apoptosis [GO:0097194],1054,416,False
+Phenotype/process,34,metabolic process [GO:0008152],912,405,False
+Phenotype/process,35,aging [GO:0007568],674,400,False
+Phenotype/process,36,memory deficits [MESH:D008569],494,392,False
+Phenotype/process,37,biological regulation [GO:0065007],761,369,False
+Phenotype/process,38,cell death [GO:0008219],695,346,False
+Phenotype/process,39,4137,361,340,False
+Phenotype/process,40,catabolic process [GO:0009056],701,336,False
+Phenotype/process,41,intracellular anatomical structure [GO:0005622],549,331,False
+Phenotype/process,42,Neuroinflammation [HP:0033429],395,303,False
+Phenotype/process,43,11820,301,299,False
+Phenotype/process,44,learning [GO:0007612],363,292,False
+Phenotype/process,45,cognition [GO:0050890],348,276,False
+Phenotype/process,46,mitochondrion [GO:0005739],519,273,False
+Phenotype/process,47,neurotoxicity [MESH:D020258],382,269,False
+Phenotype/process,48,hyperphosphorylation [GO:0048151],274,261,False
+Phenotype/process,49,membrane [GO:0016020],585,257,False
+Phenotype/process,50,gene expression [GO:0010467],497,256,False
+Phenotype/process,51,351,257,253,False
+Phenotype/process,52,Healthy [HP:0032322],486,251,False
+Phenotype/process,53,secretion [GO:0046903],479,245,False
+Phenotype/process,54,behavioral deficits [MESH:D001523],588,241,False
+Phenotype/process,55,levels,497,240,False
+Phenotype/process,56,mitochondrial dysfunction [MESH:D028361],476,239,False
+Phenotype/process,57,aggregation,438,237,False
+Phenotype/process,58,Mild [HP:0012825],380,235,False
+Phenotype/process,59,homeostatic process [GO:0042592],413,214,False
+Phenotype/process,60,transport [GO:0006810],510,213,False
+Phenotype/process,61,sporadic tauopathies [MESH:D024801],253,213,False
+Phenotype/process,62,toxicity [MESH:D064420],433,209,False
+Phenotype/process,63,chromosome [GO:0005694],724,204,False
+Phenotype/process,64,cognitive function,220,201,False
+Phenotype/process,65,Lateral [HP:0025275],457,196,False
+Phenotype/process,66,DNA-templated transcription [GO:0006351],559,195,False
+Phenotype/process,67,cleavage [ADMO:0000066],279,194,False
+Phenotype/process,68,nervous system diseases [MESH:D009422],603,193,False
+Phenotype/process,69,Amyloidosis [HP:0011034],266,189,False
+Phenotype/process,70,process [ADMO:0000105],368,188,False
+Phenotype/process,71,Depression [HP:0000716],461,185,False
+Phenotype/process,72,Severe [HP:0012828],1107,183,False
+Phenotype/process,73,growth [GO:0040007],816,182,False
+Phenotype/process,74,signal transduction [GO:0007165],393,180,False
+Phenotype/process,75,extracellular region [GO:0005576],289,179,False
+Phenotype/process,76,Neurofibrillary tangles [HP:0002185],190,177,False
+Phenotype/process,77,oxidative stress,316,171,False
+Phenotype/process,78,interaction,356,170,False
+Phenotype/process,79,soluble fraction [GO:0005625],272,169,False
+Phenotype/process,80,"mRNA cis splicing, via spliceosome [GO:0045292]",449,167,False
+Phenotype/process,81,Progressive [HP:0003676],552,164,False
+Phenotype/process,82,LOAD,165,164,False
+Phenotype/process,83,Frontotemporal dementia [HP:0002145],376,163,False
+Phenotype/process,84,behavior [GO:0007610],444,162,False
+Phenotype/process,85,Amyotrophic lateral sclerosis [HP:0007354],428,162,False
+Phenotype/process,86,phagocytosis [GO:0006909],191,162,False
+Phenotype/process,87,tumor [MESH:D009369],907,160,False
+Phenotype/process,88,Affected [HP:0032320],464,160,False
+Phenotype/process,89,Chronic [HP:0011010],439,158,False
+Phenotype/process,90,impaired learning and memory [MESH:D007859],224,152,False
+Phenotype/process,91,Memory impairment [HP:0002354],173,150,False
+Phenotype/process,92,Huntington's disease [MESH:D006816],314,146,False
+Phenotype/process,93,Central [HP:0030645],369,144,False
+Phenotype/process,94,Schizophrenia [HP:0100753],613,142,False
+Phenotype/process,95,Frequency [HP:0040279],320,141,False
+Phenotype/process,96,encephalopathies [MESH:D001927],300,141,False
+Phenotype/process,97,synapse [GO:0045202],195,139,False
+Phenotype/process,98,familial AD,141,135,False
+Phenotype/process,99,association,250,132,False
+Phenotype/process,100,function,305,131,False
+Hypotheses,1,Amyloid Hypothesis,33127,8588,True
+Hypotheses,2,Neuroinflammation Hypothesis,20255,5304,True
+Hypotheses,3,Tau Protein Hypothesis,17401,4965,True
+Hypotheses,4,Oxidative Stress Hypothesis,9385,2951,True
+Hypotheses,5,Vascular Hypothesis,7681,2684,True
+Hypotheses,6,Mitochondrial Autophagy Hypothesis,8738,2599,True
+Hypotheses,7,Abnormal Autophagy Hypothesis,8419,2550,True
+Hypotheses,8,Glutamatergic Excitotoxicity Hypothesis,4338,1753,True
+Hypotheses,9,Cholinergic Hypothesis,1618,767,True
+Hypotheses,10,Metal Ion Hypothesis,1560,724,True
+Hypotheses,11,Microbiota-Gut-Brain Axis Hypothesis,1243,689,True

@@ -21,6 +21,41 @@ selected_limit = 500
 The knowledge synthesis builder now uses this value by default for
 `--candidate-limit`.
 
+## Top-100 Query-Pool Burden
+
+To judge whether 500 rows are enough, I added a DB-level analysis using
+`curated_query_stats.curated_pool_count`. This value estimates how many curated
+candidate rows would need to be returned to expose the full curated pool for
+each query target. It is not the raw event total.
+
+![Top-100 curated query-pool counts](experimental-records/2026-06-21-curation-limit-coverage/top100_query_pool_counts.png)
+
+| Query class | Top list | At or below 500 | Above 500 | Median | P90 | Max |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| Genes | 100 | 88 | 12 | 201 | 561 | 2700: MAPT [Entrez:4137] |
+| Phenotype/process | 100 | 76 | 24 | 254 | 682 | 2819: AD [MESH:D000544] |
+| Hypotheses | 11 canonical hypotheses | 0 | 11 | 2599 | 5304 | 8588: Amyloid Hypothesis |
+
+Interpretation:
+
+- `selected_limit=500` fully covers most top-100 gene and phenotype/process
+  targets after curation-pool filtering, but it still truncates the heavy head.
+- For hypothesis queries, 500 is a stable high-throughput sampling budget, not a
+  full-pool return budget: all 11 canonical hypotheses exceed 500 curated rows.
+- Therefore, 500 is appropriate as the current maximum default candidate budget
+  for knowledge synthesis, while reports should continue to expose aggregate
+  statistics and clearly state that high-frequency targets are sampled.
+
+The source files for this analysis are:
+
+- `experimental-records/2026-06-21-curation-limit-coverage/top100_query_pool_counts.csv`
+- `experimental-records/2026-06-21-curation-limit-coverage/top100_query_pool_summary.json`
+- `scripts/plot_curation_limit_coverage.py`
+
+Hypothesis names were canonicalized by stripping numeric prefixes such as
+`(2)` and merging aliases. Noisy explanatory fragments in hypothesis query
+values were excluded from the canonical-hypothesis panel.
+
 ## Direct API Stability Checks
 
 Representative direct `/curation` requests with `source=curated`:
