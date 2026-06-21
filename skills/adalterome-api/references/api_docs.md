@@ -41,6 +41,7 @@ also write `data/cache_manifest.json` into the task output directory.
 | Hypothesis support | `GET /hypothesis/support` | `hypothesis`, `top_k` |
 | Hypothesis overview | `GET /hypothesis/overview` | `hypothesis` |
 | Hypothesis curation | `GET /hypothesis/curation` | `hypothesis`, `selected_limit`, `source` |
+| Compound curation | `GET /compound/curation` | any two or three of `gene`, `term`, `hypothesis`; `selected_limit`, `source`, `fallback` |
 | Gene comparison | `GET /compare/genes` | `gene_a`, `gene_b` |
 
 ## General Response Shape
@@ -83,7 +84,7 @@ Ranking favors records whose sentences contain the target, gene, term, alteratio
 
 ## Full-Pool Curation Endpoints
 
-Deep report builders should use `/gene/curation`, `/term/curation`, and `/hypothesis/curation`. These endpoints default to `source=curated`: the API reads the offline curated evidence pool built from complete query pools, then hydrates selected raw event IDs for exact sentences and PubMed links. If curation is unavailable, report builders should emit a partial report with the curation failure reason rather than falling back to capped event endpoints. Use `source=raw` only for compatibility or debugging; broad raw queries can be slow.
+Deep report builders should use `/gene/curation`, `/term/curation`, `/hypothesis/curation`, and `/compound/curation`. These endpoints default to `source=curated`: the API reads the offline curated evidence pool built from complete query pools, then hydrates selected raw event IDs for exact sentences and PubMed links. If curation is unavailable, report builders should emit a partial report with the curation failure reason rather than falling back to capped event endpoints. Use `source=raw` only for compatibility or debugging; broad raw queries can be slow. `/compound/curation` currently supports `source=curated` only.
 
 For example, `GET /term/curation?term=mitochondrial+dysfunction&selected_limit=30&source=curated` uses the curated term pool, filters alias-expanded rows back to the requested term fields, and returns:
 
@@ -101,6 +102,18 @@ For example, `GET /term/curation?term=mitochondrial+dysfunction&selected_limit=3
 
 Use `global_statistics` for complete query-pool distributions. Use
 `dominant_clusters`, `query_relative_patterns`, and `representative_evidence` for compact reports. Use `candidate_evidence` for AD expert pruning and paper-level case studies.
+
+Compound curation supports researcher questions that combine biological axes,
+for example `PRKN` plus `Mitochondrial Autophagy Hypothesis`, or `APOE` plus
+`lipid metabolism` plus `Vascular Hypothesis`. The server first resolves each
+axis into curated query IDs, retrieves the offline curated pools for each axis,
+and intersects them by `raw_event_id`. This means sampling and long-tail
+selection occur after the strict combination query, not after independently
+selected top-k results. If the strict intersection has no event, the default
+`fallback=axis_merge` returns an explicitly marked union of the axis pools for
+exploratory context; set `fallback=none` to require a strict intersection.
+The response includes `compound_axis_summary`, `compound_match_event_count`,
+and `coverage_scope.fallback_used`.
 
 Hypothesis fields in the source SQLite table can contain comma-separated multiple
 hypotheses. The API and skill curation layer split those values before catalog

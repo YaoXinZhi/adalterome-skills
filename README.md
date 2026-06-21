@@ -68,6 +68,7 @@ The scripts use only Python standard library modules.
 ## Update Reports
 
 - [2026-06-21 entrypoint routing and skill hierarchy update](UPDATE_REPORT_2026-06-21_ENTRYPOINT_ROUTING.md)
+- [2026-06-21 compound curation update](UPDATE_REPORT_2026-06-21_COMPOUND_CURATION.md)
 - [2026-06-21 curation limit stability test](UPDATE_REPORT_2026-06-21_CURATION_LIMIT_STABILITY.md)
 - [2026-06-20 knowledge synthesis revision update](UPDATE_REPORT_2026-06-20_KNOWLEDGE_SYNTHESIS.md)
 - [2026-06-20 knowledge synthesis revision plan](KNOWLEDGE_SYNTHESIS_REVISION_PLAN_2026-06-20.md)
@@ -325,6 +326,9 @@ python skills/adalterome-knowledge-synthesis/scripts/build_knowledge_synthesis.p
 
 # Hypothesis/network entry
 python skills/adalterome-knowledge-synthesis/scripts/build_knowledge_synthesis.py --gene-set TREM2 TYROBP --hypothesis "Neuroinflammation Hypothesis" --axis "TREM2-DAP12 neuroinflammatory axis" --pattern hypothesis_network --output-dir outputs/trem2_dap12_axis
+
+# Compound entry: true gene / phenotype-process / hypothesis combination query
+python skills/adalterome-knowledge-synthesis/scripts/build_knowledge_synthesis.py --gene PRKN --hypothesis "Mitochondrial Autophagy Hypothesis" --output-dir outputs/prkn_mitochondrial_autophagy
 ```
 
 Expected outputs:
@@ -344,6 +348,18 @@ Knowledge synthesis packets are designed as evaluation objects for
 `AI for Biomedical Knowledge Synthesis`. They explicitly include non-claims:
 the packet does not prove an AD mechanism, does not replace expert review, and
 does not treat AI-organized groups as final biological conclusions.
+
+Natural-language use is preferred. The script examples above are the
+reproducible execution layer used by Codex after a user asks, for example,
+"PRKN 在线粒体自噬假说中有哪些病理机制证据？" Ordinary users do not need to
+manually choose CLI parameters.
+
+When a question combines gene, phenotype/process, and/or hypothesis axes,
+knowledge synthesis calls `/compound/curation` first. The API resolves each
+axis against the offline curated pools and intersects events by `raw_event_id`
+before diversity sampling. Only when the strict combination is empty does the
+default `axis_merge` fallback return a clearly marked exploratory union of the
+axis pools.
 
 By default, knowledge synthesis requests the current API maximum candidate pool
 of 500 rows per target, then narrows it with `--organized-limit`. For quick

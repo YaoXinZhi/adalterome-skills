@@ -25,6 +25,7 @@ Choose the smallest workflow that answers the user:
 - Use `adalterome-compare-report` when the user asks to compare two genes and wants a stable structured evidence dossier.
 - Use `adalterome-knowledge-synthesis` when the user asks for AI for biomedical knowledge synthesis, evidence organization, evidence topology, literature-review support, expert review sheets, scoring tables, evaluation materials, hallucination/accuracy/usefulness assessment, long-tail evidence review, analytical patterns, or publication-facing outputs that should be evaluated by human experts rather than treated as final conclusions.
 - Use `adalterome-knowledge-synthesis` for analytical patterns such as single-gene `PSEN1`, multi-gene `APOE vs APP`, gene-set review, `MAPT` phenotype landscape, or `TREM2-DAP12 neuroinflammatory axis`.
+- Use `adalterome-knowledge-synthesis` for combination questions that bind any two or three of gene, phenotype/process, and hypothesis, such as `PRKN` within the mitochondrial autophagy hypothesis. Route these through compound curation first, not by separately querying each axis and merging top-k results.
 - Use `adalterome-case-study-expert` only when the user explicitly asks for the older narrative case-study style or AD pathologist-style argument. Prefer `adalterome-knowledge-synthesis` for manuscript experiments and expert scoring.
 
 If the request is ambiguous, start with `adalterome-api` to inspect the target and available hypotheses, then route to the report builder that matches the discovered target.
@@ -67,6 +68,7 @@ Natural-language requests and expected routing:
 - "比较 APP 和 APOE 的证据组织，并生成专家评分表" -> `adalterome-knowledge-synthesis`
 - "为 PSEN1 生成 knowledge synthesis packet" -> `adalterome-knowledge-synthesis`
 - "整理 TREM2-DAP12 neuroinflammatory axis 的证据拓扑" -> `adalterome-knowledge-synthesis`
+- "PRKN 在线粒体自噬假说中有哪些病理机制证据？" -> `adalterome-knowledge-synthesis` using compound curation
 - "比较 APP 和 APOE 的病理机制" -> `adalterome-compare-report`, or `adalterome-knowledge-synthesis` if the output is for expert evaluation
 - "给我几个 PMID 证据句子" -> `adalterome-api`
 

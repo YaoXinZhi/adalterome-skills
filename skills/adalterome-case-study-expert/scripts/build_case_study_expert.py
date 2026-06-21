@@ -22,6 +22,7 @@ from evidence_fetch import (  # noqa: E402
     api_selected_limit,
     curation_package_from_response,
     curation_unavailable_response,
+    fetch_compound_curation_with_error,
     request_json,
     request_json_optional,
     selected_limit_attempts,
@@ -436,8 +437,17 @@ def fetch_target(
     timeout: float,
     candidate_limit: int,
     curation_limit: int,
+    gene: str | None = None,
+    term: str | None = None,
+    hypothesis: str | None = None,
 ) -> dict[str, Any]:
-    query_type = {"gene": "gene", "term": "term", "hypothesis": "hypothesis", "compare_gene": "compare_gene"}[kind]
+    query_type = {
+        "gene": "gene",
+        "term": "term",
+        "hypothesis": "hypothesis",
+        "compare_gene": "compare_gene",
+        "compound": "compound",
+    }[kind]
     if kind in {"gene", "compare_gene"}:
         curation_url, curation_payload, fallback_reason = try_curation(
             base_url,
@@ -507,6 +517,46 @@ def fetch_target(
             evidence_payload = curation_unavailable_response(
                 tool="query_hypothesis_curation",
                 query={"hypothesis": label, "selected_limit": api_selected_limit(candidate_limit)},
+                query_type=query_type,
+                request_url=curation_url,
+                reason=fallback_reason,
+                overview=overview,
+            )
+            curation = curation_package_from_response(evidence_payload) or {}
+    elif kind == "compound":
+        curation_url, curation_payload, fallback_reason = fetch_compound_curation_with_error(
+            base_url,
+            gene=gene,
+            term=term,
+            hypothesis=hypothesis,
+            timeout=timeout,
+            selected_limit=candidate_limit,
+        )
+        overview_url = ""
+        overview: dict[str, Any] = {
+            "tool": "compound_overview",
+            "status": "partial",
+            "query": {"gene": gene, "term": term, "hypothesis": hypothesis},
+            "count": 0,
+            "data": {},
+            "meta": {"message": "compound curation is summarized inside coverage_scope and compound_axis_summary"},
+        }
+        overview_error = None
+        if curation_payload:
+            evidence_url = curation_url
+            evidence_payload = curation_payload
+            curation = curation_package_from_response(curation_payload) or {}
+            fallback_reason = None
+        else:
+            evidence_url = curation_url
+            evidence_payload = curation_unavailable_response(
+                tool="query_compound_curation",
+                query={
+                    "gene": gene,
+                    "term": term,
+                    "hypothesis": hypothesis,
+                    "selected_limit": api_selected_limit(candidate_limit),
+                },
                 query_type=query_type,
                 request_url=curation_url,
                 reason=fallback_reason,

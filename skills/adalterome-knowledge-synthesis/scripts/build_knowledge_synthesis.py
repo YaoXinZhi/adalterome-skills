@@ -22,7 +22,7 @@ sys.path.insert(0, str(API_SCRIPT_DIR))
 
 import build_case_study_expert as legacy  # noqa: E402
 from evidence_fetch import API_MAX_TOP_K, SERVER_CURATION_MAX_SELECTED_LIMIT, api_selected_limit  # noqa: E402
-from evidence_curation import md  # noqa: E402
+from evidence_curation import hypothesis_values, md  # noqa: E402
 from query_cache import write_cache_manifest  # noqa: E402
 
 
@@ -39,6 +39,7 @@ PATTERNS = {
     "phenotype_process",
     "hypothesis",
     "hypothesis_network",
+    "compound",
 }
 
 REVIEW_DIMENSIONS = [
@@ -114,6 +115,9 @@ def infer_request_mode(args: argparse.Namespace) -> str:
         return "compare"
     if args.gene_set:
         return "gene_set"
+    axis_count = sum(1 for value in [args.gene, args.term, args.hypothesis] if value)
+    if axis_count >= 2:
+        return "compound"
     if args.gene:
         return "gene"
     if args.term:
@@ -126,6 +130,8 @@ def infer_request_mode(args: argparse.Namespace) -> str:
 def infer_pattern(args: argparse.Namespace, mode: str) -> str:
     if args.pattern != "auto":
         return args.pattern
+    if mode == "compound":
+        return "compound"
     if args.axis or (args.gene_set and args.hypothesis):
         return "hypothesis_network"
     if mode == "compare":
@@ -152,6 +158,15 @@ def default_question(args: argparse.Namespace, mode: str, pattern: str) -> str:
     if mode == "gene_set":
         genes = ", ".join(args.gene_set or [])
         return f"Organize AD-Alterome evidence for the gene set {genes} for expert review."
+    if mode == "compound":
+        axes = []
+        if args.gene:
+            axes.append(f"gene {args.gene}")
+        if args.term:
+            axes.append(f"phenotype/process {args.term}")
+        if args.hypothesis:
+            axes.append(f"hypothesis {args.hypothesis}")
+        return "Organize AD-Alterome evidence matching " + ", ".join(axes) + " for expert review."
     if mode == "gene" and pattern == "recommendation":
         return f"Organize the {args.gene} phenotype landscape and long-tail evidence for expert review."
     if mode == "gene":
@@ -168,6 +183,15 @@ def output_title(args: argparse.Namespace, mode: str, pattern: str) -> str:
         return f"{args.gene_a} vs {args.gene_b}"
     if mode == "gene_set":
         return "Gene set: " + ", ".join(args.gene_set or [])
+    if mode == "compound":
+        axes = []
+        if args.gene:
+            axes.append(str(args.gene).strip().upper())
+        if args.term:
+            axes.append(str(args.term).strip())
+        if args.hypothesis:
+            axes.append(str(args.hypothesis).strip())
+        return " + ".join(axes)
     if mode == "gene":
         return str(args.gene).strip().upper()
     if mode == "term":
@@ -180,6 +204,8 @@ def pruning_mode(mode: str, pattern: str) -> str:
         return "compare"
     if pattern in {"hypothesis", "hypothesis_network"}:
         return "hypothesis"
+    if pattern == "compound":
+        return "compound"
     if mode == "compare":
         return "compare"
     return mode
@@ -252,6 +278,20 @@ def fetch_datasets(args: argparse.Namespace, mode: str, pattern: str) -> tuple[l
                 curation_limit=args.curation_limit,
             )
         )
+    elif mode == "compound":
+        datasets.append(
+            legacy.fetch_target(
+                kind="compound",
+                label=output_title(args, mode, pattern),
+                base_url=args.base_url,
+                timeout=args.timeout,
+                candidate_limit=args.candidate_limit,
+                curation_limit=args.curation_limit,
+                gene=str(args.gene).strip().upper() if args.gene else None,
+                term=str(args.term).strip() if args.term else None,
+                hypothesis=str(args.hypothesis).strip() if args.hypothesis else None,
+            )
+        )
     elif mode == "term":
         datasets.append(
             legacy.fetch_target(
@@ -280,6 +320,19 @@ def fetch_datasets(args: argparse.Namespace, mode: str, pattern: str) -> tuple[l
 def count_values(items: list[dict[str, Any]], field: str, limit: int = 10) -> list[dict[str, Any]]:
     counter = Counter(str(item.get(field) or "").strip() for item in items if str(item.get(field) or "").strip())
     return [{"value": value, "count": count} for value, count in counter.most_common(limit)]
+
+
+def count_hypotheses(items: list[dict[str, Any]], limit: int = 10) -> list[dict[str, Any]]:
+    counter: Counter[str] = Counter()
+    for item in items:
+        for hypothesis in hypothesis_values(item):
+            if hypothesis.lower() not in legacy.UNINFORMATIVE_DISPLAY_VALUES:
+                counter[hypothesis] += 1
+    return [{"value": value, "count": count} for value, count in counter.most_common(limit)]
+
+
+def top_hypothesis_labels(items: list[dict[str, Any]], limit: int = 6) -> list[str]:
+    return [item["value"] for item in count_hypotheses(items, limit=limit)]
 
 
 def curation_summary(dataset: dict[str, Any]) -> dict[str, Any]:
@@ -459,7 +512,7 @@ def render_ai_synthesis(
     strata = legacy.mechanism_counts(items).most_common(5)
     genes = legacy.top_field(items, "Gene", limit=8)
     terms = legacy.top_field(items, "TermName", limit=8)
-    hypotheses = legacy.top_field(items, "Hypothesis", limit=6)
+    hypotheses = top_hypothesis_labels(items, limit=6)
     long_tail_count = sum(1 for item in items if item.get("IsLongTailEvidence"))
     lines.extend(
         [
@@ -887,7 +940,7 @@ def main() -> int:
         ],
         "top_genes": count_values(included, "Gene", limit=10),
         "top_phenotype_processes": count_values(included, "TermName", limit=10),
-        "top_hypotheses": count_values(included, "Hypothesis", limit=10),
+        "top_hypotheses": count_hypotheses(included, limit=10),
         "long_tail_organized_count": sum(1 for item in included if item.get("IsLongTailEvidence")),
         "non_claims": evaluation_record(
             title=title,

@@ -345,3 +345,29 @@ def fetch_hypothesis_curation_with_error(
         timeout,
         selected_limit,
     )
+
+
+def fetch_compound_curation_with_error(
+    base_url: str,
+    *,
+    gene: str | None = None,
+    term: str | None = None,
+    hypothesis: str | None = None,
+    timeout: float,
+    selected_limit: int = 30,
+    fallback: str = "axis_merge",
+) -> tuple[str, dict[str, Any] | None, str | None]:
+    params: dict[str, Any] = {"fallback": fallback}
+    if gene:
+        params["gene"] = str(gene).strip().upper()
+    if term:
+        params["term"] = str(term).strip()
+    if hypothesis:
+        params["hypothesis"] = str(hypothesis).strip()
+    return _remote_curation_with_error(
+        base_url,
+        "/compound/curation",
+        params,
+        timeout,
+        selected_limit,
+    )
