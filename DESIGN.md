@@ -30,6 +30,7 @@ The user-facing trigger surface should not be flat:
    - Internal/advanced direct-use helper, normally reached through `adalterome`.
    - Lowest-level retrieval skill.
    - Calls the live AD-Alterome REST API.
+   - Exposes reproducible commands for schema, event samples, single-axis curation, compound curation, and two-gene comparison.
    - Preserves exact sentence evidence, PubMed links, Event chains, and normalized Evidence blocks.
    - Caches raw API JSON payloads locally by exact request URL for repeat use and manual inspection.
 
@@ -66,6 +67,7 @@ The user-facing trigger surface should not be flat:
 8. `adalterome-knowledge-synthesis`
    - Publication-facing knowledge organization layer above report skills.
    - Uses AD-Alterome full-pool curation first, then applies coverage checks, comparison-balance checks, transparent AI organization scoring, long-tail protection, duplicate merging, and evidence grouping.
+   - For compound gene / phenotype-process / hypothesis questions, calls `/compound/curation` so the server intersects curated pools by `raw_event_id` before sampling.
    - Produces an expert-evaluable output package: `knowledge_packet.md`, `evidence_map.md`, `expert_review_sheet.tsv`, `evaluation_record.json`, `provenance_manifest.json`, and raw data manifests.
    - Frames AI output as an evaluation object for `AI for Biomedical Knowledge Synthesis`, not as final biological claims or paper-ready mechanism conclusions.
 
@@ -94,6 +96,30 @@ Knowledge synthesis mode adds a separate transparent AI organization score for r
 Legacy case-study mode keeps the earlier narrative workflow for compatibility, but publication-facing experiments should prefer knowledge synthesis packets plus expert review sheets.
 
 Large genes and broad hypotheses can expose curation risk. When full-pool curation is unavailable and a report falls back to `api_sentence_sample`, the expert layer must label conclusions as exploratory and avoid absence-of-evidence claims. In two-gene comparisons, unequal curation scope or strongly different coverage ratios must downgrade strong contrastive conclusions.
+
+## Retrieval and Curation Flow
+
+The repository is designed for remote use through the public API. Installed
+skills do not require a local AD-Alterome SQLite database.
+
+```text
+User question
+  -> public entrypoint selection
+  -> deterministic builder script
+  -> public REST API request
+  -> server-side curated pool / event hydration
+  -> local JSON cache and task data files
+  -> report, knowledge packet, or expert review sheet
+```
+
+Single-axis report-grade retrieval uses `/gene/curation`, `/term/curation`, or
+`/hypothesis/curation`. Compound retrieval uses `/compound/curation` when at
+least two of gene, phenotype/process, and hypothesis are present. The compound
+endpoint must be treated as the primary retrieval path for those questions:
+strict event intersection happens on the server before diversity sampling,
+long-tail protection, representative selection, and knowledge organization.
+The `axis_merge` fallback is exploratory context only and must remain visibly
+marked when used.
 
 ## Repository Layout
 

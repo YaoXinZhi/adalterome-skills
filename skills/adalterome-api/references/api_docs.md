@@ -115,6 +115,12 @@ exploratory context; set `fallback=none` to require a strict intersection.
 The response includes `compound_axis_summary`, `compound_match_event_count`,
 and `coverage_scope.fallback_used`.
 
+Direct helper command:
+
+```bash
+python3 scripts/query_adalterome.py compound-curation --gene PRKN --hypothesis "Mitochondrial Autophagy Hypothesis" --selected-limit 30 --output report
+```
+
 Hypothesis fields in the source SQLite table can contain comma-separated multiple
 hypotheses. The API and skill curation layer split those values before catalog
 listing, unique counts, top-hypothesis aggregation, long-tail hypothesis detection,

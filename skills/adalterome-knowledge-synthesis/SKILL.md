@@ -29,6 +29,8 @@ Use this skill for:
 - hallucination/accuracy/usefulness evaluation materials
 - single-gene, multi-gene, gene-set, phenotype/process, hypothesis, and
   hypothesis/network analytical patterns
+- compound questions combining any two or three of gene, phenotype/process, and
+  hypothesis axes
 - long-tail evidence screening
 - fair comparison with generic LLM or RAG baselines
 
@@ -73,6 +75,11 @@ interface. In ordinary use, the user asks in natural language through
 `adalterome` or `adalterome-knowledge-synthesis`; Codex extracts the gene,
 phenotype/process, hypothesis, comparison, or compound axes and calls the
 builder with the matching arguments.
+
+For example, a natural-language question such as "PRKN 在线粒体自噬假说中有哪些
+病理机制证据？" should be interpreted as a compound gene + hypothesis query and
+routed through `/compound/curation`, not as two separate single-axis searches
+merged after top-k selection.
 
 ## Expected Outputs
 

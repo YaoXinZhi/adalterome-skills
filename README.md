@@ -19,13 +19,51 @@ direct-use helpers for routing, debugging, reproducibility, and fixed builder
 scripts. Ordinary users should not need to choose among gene, phenotype/process,
 hypothesis, comparison, report, API, or legacy case-study skills.
 
+## Architecture
+
+AD-Alterome Skills are layered, not a flat collection of unrelated skills.
+
+```text
+Natural-language question
+  -> adalterome                         public default router
+     -> adalterome-knowledge-synthesis  public research/evaluation packet layer
+     -> report builders                 gene / phenotype-process / hypothesis / compare
+     -> adalterome-api                  raw REST, schema, cache, reproducible payload helper
+        -> public AD-Alterome REST API  overview, event, curation, compound curation endpoints
+           -> offline curated pool      event IDs, final annotation, coverage-first sampling
+```
+
+The retrieval layer is API-first. Remote users do not need local SQLite data:
+the public API serves curated query pools, event-level evidence, PubMed links,
+and report-grade curation packages. Skill scripts save the returned raw JSON
+locally for audit and repeat analysis.
+
+For ordinary single-axis questions, report builders call `/gene/curation`,
+`/term/curation`, or `/hypothesis/curation`. For questions combining any two or
+three of gene, phenotype/process, and hypothesis, knowledge synthesis calls
+`/compound/curation` first. The server intersects offline curated pools by
+`raw_event_id`, then performs diversity sampling and long-tail protection on
+the strict combination result. Only when that strict intersection is empty does
+the optional `axis_merge` fallback return a clearly marked exploratory union.
+
+## Current Feature Matrix
+
+| User need | Recommended entry | Retrieval behavior | Main output |
+| --- | --- | --- | --- |
+| Ordinary natural-language AD-Alterome lookup | `adalterome` | Routes to the smallest matching helper | Evidence answer or report path |
+| One gene, phenotype/process, or hypothesis dossier | `adalterome` | Server-side full-pool curation for the target axis | Markdown report plus raw JSON |
+| Two-gene comparison | `adalterome` | `/compare/genes` plus per-gene curation packages | Comparative report |
+| Combination question such as gene + hypothesis | `adalterome` or `adalterome-knowledge-synthesis` | `/compound/curation` strict event intersection, with marked fallback if empty | Knowledge packet and expert worksheet |
+| Publication-facing AI evaluation | `adalterome-knowledge-synthesis` | Broad curated candidate pool, AI organization, provenance manifest | Knowledge packet, evidence map, review sheet |
+| Raw API debugging or reproducibility | `adalterome-api` | Direct REST command with local request cache | JSON, summary, report, or evidence Markdown |
+
 ## Skill Index
 
 | Skill | Status | Purpose | Trigger keywords |
 | --- | --- | --- | --- |
-| `adalterome` | Public default | Unified entrypoint that routes natural-language AD-Alterome questions to API lookup, fixed report, deep report, knowledge synthesis, comparison, or legacy case-study helper workflows. | "AD-Alterome", "query AD-Alterome", "write AD-Alterome report", "organize AD evidence" |
-| `adalterome-knowledge-synthesis` | Public research/evaluation | Generate researcher-facing knowledge packets, evidence maps, expert review sheets, evaluation records, and provenance manifests for AI-for-biomedical-knowledge-synthesis experiments. | "knowledge synthesis", "evidence organization", "expert review sheet", "scoring table", "long-tail evidence", "AI evaluation" |
-| `adalterome-api` | Internal/advanced direct-use | Raw REST API, schema, cache, and payload helper used by the unified entrypoint and report builders. | "explicit adalterome-api", "raw API debug", "schema inspection", "reproduce API payload" |
+| `adalterome` | Public default | Unified entrypoint that routes natural-language AD-Alterome questions to API lookup, fixed report, deep report, knowledge synthesis, comparison, compound curation, or legacy case-study helper workflows. | "AD-Alterome", "query AD-Alterome", "write AD-Alterome report", "organize AD evidence" |
+| `adalterome-knowledge-synthesis` | Public research/evaluation | Generate researcher-facing knowledge packets, evidence maps, expert review sheets, evaluation records, and provenance manifests for AI-for-biomedical-knowledge-synthesis experiments, including compound gene / phenotype-process / hypothesis questions. | "knowledge synthesis", "evidence organization", "expert review sheet", "scoring table", "long-tail evidence", "AI evaluation" |
+| `adalterome-api` | Internal/advanced direct-use | Raw REST API, schema, cache, curation, compound curation, and payload helper used by the unified entrypoint and report builders. | "explicit adalterome-api", "raw API debug", "schema inspection", "reproduce API payload" |
 | `adalterome-report` | Internal/advanced direct-use | Fixed-format evidence report formatter for reproducible report contracts. | "explicit adalterome-report", "fixed report contract", "reproduce fixed report" |
 | `adalterome-gene-report` | Internal/advanced direct-use | One-gene deep report builder used after routing detects a gene query. | "explicit adalterome-gene-report", "gene report builder", "reproduce one-gene report" |
 | `adalterome-term-report` | Internal/advanced direct-use | Phenotype/process deep report builder used after routing detects a phenotype, ontology, or pathological-process query. | "explicit adalterome-term-report", "term report builder", "reproduce phenotype/process report" |
@@ -67,6 +105,7 @@ The scripts use only Python standard library modules.
 
 ## Update Reports
 
+- [2026-06-21 GitHub documentation and helper surface sync](UPDATE_REPORT_2026-06-21_GITHUB_DOCS_SYNC.md)
 - [2026-06-21 entrypoint routing and skill hierarchy update](UPDATE_REPORT_2026-06-21_ENTRYPOINT_ROUTING.md)
 - [2026-06-21 compound curation update](UPDATE_REPORT_2026-06-21_COMPOUND_CURATION.md)
 - [2026-06-21 curation limit stability test](UPDATE_REPORT_2026-06-21_CURATION_LIMIT_STABILITY.md)
@@ -178,6 +217,23 @@ Equivalent script:
 ```bash
 python skills/adalterome-api/scripts/query_adalterome.py term-curation --term "mitochondrial dysfunction" --selected-limit 30 --output report
 ```
+
+### Retrieve Compound Curation
+
+```text
+Use $adalterome-api to retrieve the strict PRKN evidence pool inside the Mitochondrial Autophagy Hypothesis.
+```
+
+Equivalent script:
+
+```bash
+python skills/adalterome-api/scripts/query_adalterome.py compound-curation --gene PRKN --hypothesis "Mitochondrial Autophagy Hypothesis" --selected-limit 30 --output report
+```
+
+Compound curation requires at least two of `--gene`, `--term`, and
+`--hypothesis`. It intersects curated pools by event ID before sampling; use
+`--fallback none` when you want an empty result instead of the marked
+`axis_merge` exploratory fallback.
 
 ### Retrieve Hypothesis Support
 

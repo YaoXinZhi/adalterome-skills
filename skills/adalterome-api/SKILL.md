@@ -22,6 +22,7 @@ python3 scripts/query_adalterome.py hypotheses --output summary
 python3 scripts/query_adalterome.py gene-curation --gene MAPT --selected-limit 30 --source curated --output report
 python3 scripts/query_adalterome.py term-curation --term "mitochondrial dysfunction" --selected-limit 30 --output report
 python3 scripts/query_adalterome.py hypothesis-curation --hypothesis "Amyloid Hypothesis" --selected-limit 30 --output evidence-md
+python3 scripts/query_adalterome.py compound-curation --gene PRKN --hypothesis "Mitochondrial Autophagy Hypothesis" --selected-limit 30 --output report
 python3 scripts/query_adalterome.py compare --gene-a APOE --gene-b APP --output report
 ```
 
@@ -51,13 +52,14 @@ to bypass caching, or `ADALTEROME_CACHE_DIR` to choose a cache directory.
 2. Use `schema` to verify fields if the API shape is uncertain.
 3. Use `hypotheses` before hypothesis search when the exact hypothesis name is unclear.
 4. Use `gene-curation`, `term-curation`, or `hypothesis-curation` for report-grade full-pool event deduplication, long-tail sampling, mechanism-stratified curation, and complete curated-query statistics.
-5. Use `gene-overview`, `term-overview`, or `hypothesis-overview` only as auxiliary aggregate summaries when needed.
-6. Use `gene-events`, `term-events`, or `hypothesis-support` only for legacy/debug small sentence samples, not for reports or large genes.
-7. Use `compare` for two-gene shared/distinct phenotype/process and hypothesis summaries.
-8. Preserve `Evidence.sentence`, `Evidence.pubmed_url`, and `Evidence.event` in user-facing answers.
-9. Do not invent PubMed links; only use `PMID` or `Evidence.pubmed_url` returned by the API.
-10. Do not display or interpret `EvidenceScore` in skill-facing reports; it may remain in raw API JSON for compatibility.
-11. Tell the user where raw payloads were saved when a script output includes `## Local Data Cache` or `data/cache_manifest.json`.
+5. Use `compound-curation` when a question combines any two or three of gene, phenotype/process, and hypothesis axes. It should be a true server-side combination query, not a local merge of separately selected top evidence.
+6. Use `gene-overview`, `term-overview`, or `hypothesis-overview` only as auxiliary aggregate summaries when needed.
+7. Use `gene-events`, `term-events`, or `hypothesis-support` only for legacy/debug small sentence samples, not for reports or large genes.
+8. Use `compare` for two-gene shared/distinct phenotype/process and hypothesis summaries.
+9. Preserve `Evidence.sentence`, `Evidence.pubmed_url`, and `Evidence.event` in user-facing answers.
+10. Do not invent PubMed links; only use `PMID` or `Evidence.pubmed_url` returned by the API.
+11. Do not display or interpret `EvidenceScore` in skill-facing reports; it may remain in raw API JSON for compatibility.
+12. Tell the user where raw payloads were saved when a script output includes `## Local Data Cache` or `data/cache_manifest.json`.
 
 ## Supported Tasks
 
@@ -77,6 +79,12 @@ to bypass caching, or `ADALTEROME_CACHE_DIR` to choose a cache directory.
 - `gene-curation --gene GENE --selected-limit 30 --source curated`
 - `term-curation --term TERM --selected-limit 30 --source curated`
 - `hypothesis-curation --hypothesis HYPOTHESIS --selected-limit 30 --source curated`
+- `compound-curation --gene GENE --term TERM --hypothesis HYPOTHESIS --selected-limit 30`
+
+For `compound-curation`, provide at least two of `--gene`, `--term`, and
+`--hypothesis`. The default `--fallback axis_merge` returns an explicitly
+marked exploratory union only when the strict event intersection is empty; use
+`--fallback none` to require strict intersection.
 
 ### Retrieve overviews
 
@@ -111,7 +119,13 @@ Event-style endpoints return a normalized evidence block:
 
 ## Evidence Curation Layer
 
-Deep report skills use `scripts/evidence_fetch.py` plus `scripts/evidence_curation.py` as an intermediate layer between API retrieval and final summaries. When the API server exposes `/gene/curation`, `/term/curation`, and `/hypothesis/curation`, the builders retrieve a server-side curation package from the offline curated pool by default (`source=curated`). The curated pool is built from the complete matched query pool, applies coverage-first sampling and high-frequency downsampling, preserves long-tail evidence, and re-ranks rows with `event_expert_annotation_final`. The curation layer performs query-specific event deduplication, computes query-relative top and long-tail patterns for genes, gene-alteration pairs, phenotypes, and hypotheses where relevant, groups evidence into a small stable set of evidence types, and creates candidate mechanism strata for expert interpretation.
+Deep report skills use `scripts/evidence_fetch.py` plus `scripts/evidence_curation.py` as an intermediate layer between API retrieval and final summaries. When the API server exposes `/gene/curation`, `/term/curation`, `/hypothesis/curation`, and `/compound/curation`, the builders retrieve a server-side curation package from the offline curated pool by default (`source=curated`). The curated pool is built from the complete matched query pool, applies coverage-first sampling and high-frequency downsampling, preserves long-tail evidence, and re-ranks rows with `event_expert_annotation_final`. The curation layer performs query-specific event deduplication, computes query-relative top and long-tail patterns for genes, gene-alteration pairs, phenotypes, and hypotheses where relevant, groups evidence into a small stable set of evidence types, and creates candidate mechanism strata for expert interpretation.
+
+Compound curation resolves each provided axis, intersects curated pools by
+`raw_event_id`, and only then applies diversity sampling and long-tail
+protection. If the strict intersection is empty, `fallback=axis_merge` returns a
+clearly marked exploratory union; this fallback must not be described as direct
+combined evidence.
 
 The curation package now separates broad case-study candidates from compact display evidence:
 

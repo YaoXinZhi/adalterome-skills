@@ -47,13 +47,28 @@ def endpoint_for_args(args: argparse.Namespace) -> tuple[str, dict[str, Any]]:
         return "/hypothesis/overview", {"hypothesis": args.hypothesis}
     if command == "hypothesis-curation":
         return "/hypothesis/curation", {"hypothesis": args.hypothesis, "selected_limit": args.selected_limit, "source": args.source}
+    if command == "compound-curation":
+        axes = {
+            "gene": args.gene,
+            "term": args.term,
+            "hypothesis": args.hypothesis,
+        }
+        provided_axes = {key: value for key, value in axes.items() if value}
+        if len(provided_axes) < 2:
+            raise SystemExit("compound-curation requires at least two of --gene, --term, and --hypothesis")
+        return "/compound/curation", {
+            **provided_axes,
+            "selected_limit": args.selected_limit,
+            "source": args.source,
+            "fallback": args.fallback,
+        }
     if command == "compare":
         return "/compare/genes", {"gene_a": args.gene_a, "gene_b": args.gene_b}
     raise SystemExit(f"Unsupported command: {command}")
 
 
 def is_curation_command(command: str) -> bool:
-    return command in {"gene-curation", "term-curation", "hypothesis-curation"}
+    return command in {"gene-curation", "term-curation", "hypothesis-curation", "compound-curation"}
 
 
 def request_payload(args: argparse.Namespace, path: str, params: dict[str, Any]) -> tuple[str, dict[str, Any]]:
@@ -334,6 +349,13 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--hypothesis", required=True)
     p.add_argument("--selected-limit", type=int, default=30)
     p.add_argument("--source", choices=["curated", "raw"], default="curated")
+    p = sub.add_parser("compound-curation")
+    p.add_argument("--gene")
+    p.add_argument("--term")
+    p.add_argument("--hypothesis")
+    p.add_argument("--selected-limit", type=int, default=30)
+    p.add_argument("--source", choices=["curated"], default="curated")
+    p.add_argument("--fallback", choices=["axis_merge", "none"], default="axis_merge")
     p = sub.add_parser("compare")
     p.add_argument("--gene-a", required=True)
     p.add_argument("--gene-b", required=True)
